@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<title>TourBox - Payment</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/shop-payment.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div id="container" v-cloak>
+		<div class="container-wrapper">
+			<div class="wrapper-left" v-cloak>
+				<div class="left-title">TourBox</div>
+				<div class="left-link" v-if="!isM">
+					<a href="shop-cart.html">Information</a>
+					<i class="iconfont iconarrow-right"></i>
+					<a href="shop-order.html">Shipping</a>
+					<i class="iconfont iconarrow-right"></i>
+					<a href="shop-payment.html">Payment</a>
+				</div>
+
+				<div class="left-info">
+					<div class="info-item">
+						<div class="item-detail">
+							<div class="detail-key"><span>Contact</span></div>
+							<p class="detail-text">
+								<span>{{orderInfo.orderEmail}}</span>
+							</p>
+						</div>
+						<div class="item-change" @click="changeEmailInfo('order_email')">change</div>
+					</div>
+					<div class="info-item">
+						<div class="item-detail">
+							<div class="detail-key"><span>Ship to</span></div>
+							<p class="detail-text">
+								<span v-if="orderInfo.orderCompany">{{orderInfo.orderCompany}},</span>
+								<span v-if="orderInfo.orderAddress">{{orderInfo.orderAddress}},</span>
+								<span v-if="orderInfo.orderApartment">{{orderInfo.orderApartment}},</span>
+								<span v-if="orderInfo.postalCode">{{orderInfo.postalCode}},</span>
+								<span v-if="orderInfo.cityName">{{orderInfo.cityName}},</span>
+								<span v-if="orderInfo.stateName">{{orderInfo.stateName}},</span>
+								<span v-if="orderInfo.countryName">{{orderInfo.countryName}}</span>
+							</p>
+						</div>
+						<div class="item-change" @click="changeEmailInfo('order_firstName')">change</div>
+					</div>
+				</div>
+
+				<div class="left-payment">
+					<div class="payment-title"><span>Contact information</span></div>
+					<div class="payment-text"><span>All transactions are secure and encrypted.</span></div>
+					<div class="payment-list">
+						<div class="list-card" @click="selectPayWay(false)">
+							<div class="card-text">
+								<i class="iconfont iconradiochecked" v-if="!cardCheckShow"></i>
+								<i class="iconfont iconradiobox i-active" v-if="cardCheckShow"></i>
+								<span>Credit card</span>
+							</div>
+							<div class="card-icon">
+								<img
+									src="//cdn.shopify.com/s/assets/payment_icons/visa-319d545c6fd255c9aad5eeaad21fd6f7f7b4fdbdb1a35ce83b89cca12a187f00.svg"
+									alt="">
+								<img
+									src="//cdn.shopify.com/s/assets/payment_icons/master-173035bc8124581983d4efa50cf8626e8553c2b311353fbf67485f9c1a2b88d1.svg"
+									alt="">
+								<img
+									src="//cdn.shopify.com/s/assets/payment_icons/american_express-2264c9b8b57b23b0b0831827e90cd7bcda2836adc42a912ebedf545dead35b20.svg"
+									alt="">
+							</div>
+						</div>
+						<div class="list-paypal" @click="selectPayWay(true)">
+							<i class="iconfont iconradiochecked" v-if="cardCheckShow"></i>
+							<i class="iconfont iconradiobox i-active" v-if="!cardCheckShow"></i>
+							<img
+								src="//cdn.shopify.com/s/assets/checkout/offsite-gateway-logos/paypal@2x-768388b0667bef1aa9a7cf02fa1cc2184c2915a90d4cdd62dde223f74f2acbfc.png"
+								alt="">
+						</div>
+					</div>
+				</div>
+				<div class="left-submit">
+					<div class="submit" @click="confirmOrder"><span>Continue to payment</span></div>
+				</div>
+			</div>
+			<div class="wrapper-right" v-cloak>
+				<div class="right-commodity">
+					<div class="commodity-item" v-for="(item, index) in commodityList">
+						<div class="item-detail">
+							<div class="detail-portrait">
+								<img :src="item.portraitUrl" alt="item">
+								<div class="portrait-badge">{{item.qty}}</div>
+							</div>
+							<div class="detail-title"><span>{{item.title}}</span></div>
+						</div>
+						<div class="item-amount"><span>{{item.amount*item.qty}}$</span></div>
+					</div>
+				</div>
+				<div class="right-order">
+					<p><span>Subtotal</span><span>{{totalAmount}}$</span></p>
+					<p><span>Shipping</span><span>Calculated at next step</span></p>
+				</div>
+				<div class="right-total">
+					<p><span>Total</span><span>{{totalAmount}}$</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+	<!-- public resources -->
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://js.stripe.com/v3/"></script>
+	<script src="js/pages/shop-payment.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

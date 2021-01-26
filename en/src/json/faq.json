@@ -1,0 +1,42 @@
+[
+	{
+		"title":"What is TourBox?",
+		"description":"TourBox is an innovative controller for software control in the digital creative field. The comprehensive customised feature can adapt to any work scenarios. Our application TourBox Console can deeply customise the TourBox. You can preset the TourBox based on your usage habits in different software. For example, Photoshop, Lightroom, PaintTool SAI, Capture one, Final cut pro, Premiere, and so on. Personalise your TourBox to fit your workflow and create your own presets!",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Is TourBox compatible with Windows and macOS?",
+		"description":"Yes, TourBox is supporting Windows 7 or higher and macOS 10.10 or higher.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Do I need to pay for the delivery?",
+		"description":"No, TourBox is free shipping worldwide from our Chinese warehouse.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Do I need to pay for customs duty/tax?",
+		"description":"For any supporters living outside of USA, please be aware of your local import or relevant tax laws. Depending on which country you live in, you may be required to pay import tax or other tax on this item.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Where do I download the software and the Quick Start Guide?",
+		"description":"Please visit <a href='https://www.tourboxtech.com/en/downloads.html' target='_target'>https://www.tourboxtech.com/en/downloads.html</a>"
+	},
+	{
+		"title":"Have problems with the application installation?",
+		"description":"Please refer to the installation guide while you have issues."
+	},
+	{
+		"title":"Still got questions?",
+		"description":"Please contact us via support@tourboxtech.com for more support."
+	},
+	{
+		"title":"What is the customs duty?",
+		"description":"Customs Duty is a tariff or tax imposed on goods when transported across international borders. The purpose of Customs Duty is to protect each country's economy, residents, jobs, environment, etc., by controlling the flow of goods, especially restrictive and prohibited goods, into and out of the country. This fee is charged by your country, not us or the post office."
+	}
+]

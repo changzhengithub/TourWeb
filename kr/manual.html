@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<title>TourBox사용 설명서</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/maunal.css" />
+	<!-- public resources -->
+	<script src="js/iframe_api.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<div id="container" v-cloak>
+		<div class="banner1">
+			<div class="banner1-logo" v-if="isM">
+				<img src="//r.tourboxtech.com/kr/src/images/logo.png" alt="logo">
+			</div>
+			<h1 class="title">TourBox사용 설명서</h1>
+		</div>
+		<div class="banner2">
+			<div class="banner-left">
+				<div class="banner-nav" v-cloak>
+					<div class="nav-menu" v-for="(navItem, navIndex) in pageData.navList" :key="navIndex">
+						<div class="menu-tip" @click="openMore(navIndex)">
+							<div :class="{'btm-border': !navItem.show && isM}">
+								<span>{{navItem.title}}</span>
+								<span class="iconfont" :class="navItem.show?'iconarrow-up':'iconarrow-down'"
+									v-if="navItem.slideList.length"></span>
+							</div>
+						</div>
+						<transition name="fade">
+							<div class="menu-list" :style="{height: (navItem.slideList.length * 0.5) +'rem'}"
+								v-if="navItem.show && navItem.slideList.length">
+								<div class="list-item" :class="{'active': item.activeShow && !isM}" @click="loadRight(navIndex, index)"
+									v-for="(item, index) in navItem.slideList" :key="index">{{item.title}}</div>
+							</div>
+						</transition>
+					</div>
+				</div>
+			</div>
+			<div class="banner-right" v-if="!isM">
+				<div class="right-media">
+					<div class="media">
+						<div class="play-mask" v-if="!isPlayVideo"
+							style="background: url('//r.tourboxtech.com/kr/src/images/video-mask.jpg') center center / 100% 100% no-repeat;">
+							<div @click="playTouTubeVideo"><span class="iconfont iconbofang"></span></div>
+						</div>
+						<div id="player" style="width: 100%; height: 100%;"></div>
+						<div v-if="palyVideoError" class="video-error"><span class="iconfont iconstop"></span></div>
+					</div>
+				</div>
+				<div class="right-content" v-for="(item, index) in rightPageData" :key="'right'+index">
+					<h1 class="title" v-if="item.title">{{item.title}}</h1>
+					<div class="content-text" v-if="item.text">
+						<p :class="{'wrap': navIndex == 0 && listIndex == 1}" v-for="(textItem, textIndex) in item.text"
+							:key="textIndex" v-html="textItem"></p>
+					</div>
+					<div class="content-description" :class="{'yotube-show': showVideo && index == 0}" v-if="item.des">
+						<p :class="{'left': item.desActive}" v-for="(desItem, desIndex) in item.des" :key="desIndex"
+							v-html="desItem"></p>
+					</div>
+					<p class="content-warning" v-if="item.warning" v-html="item.warning"></p>
+					<div class="content-banner" v-if="item.imgUrl">
+						<img v-if="item.imgUrl" :src="item.imgUrl" alt="banner">
+					</div>
+					<div class="content-text2" v-if="item.text2">
+						<p :class="{'wrap': navIndex == 0 && listIndex == 1}" v-for="(text2Item, text2Index) in item.text2"
+							:key="text2Index" v-html="text2Item"></p>
+					</div>
+					<div class="content-player" v-if="item.videoUrl">
+						<div class="player-video">
+							<div v-if="item.videoError" class="video-error">
+								<img src="//r.tourboxtech.com/kr/src/images/loading.gif" alt="loading">
+							</div>
+							<iframe width="100%" height="100%"
+								:src="'https://www.youtube.com/embed/'+item.videoUrl+'?enablejsapi=1&autoplay=1&loop=1&playlist='+item.videoUrl"
+								frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+								allowfullscreen @load="iframeLoad(index)"></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- footer -->
+	<div id="footer"></div>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/maunal.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

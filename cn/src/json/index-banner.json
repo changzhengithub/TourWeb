@@ -1,0 +1,32 @@
+{
+	"banner": {
+		"title1":"TOURBOX",
+		"title2":"YOUR HANDY STUDIO",
+		"description":"IT IS WORTH TO TRY",
+		"title3": "TourBox Wins Great Success",
+		"title4": "on Makuake Crowdfunding",
+		"buttonName": "了解更多"
+	},
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.cn/src/images/index-first-seconds.jpg",
+		"mobileBannerBg": "//r.tourboxtech.cn/src/images/index-first-seconds-mobile.png"
+	},
+	"updata": {
+		"updataTitle": "TourBox Console 2.0 现已正式推出！",
+		"updataTextMannary": "新增功能：",
+		"updataTextDes": [
+			"针对于Lightroom进行了大量优化，新增全套Lightroom内置功能与全新预设，大幅提升Lightroom下的操作体验",
+			"开放了Tour键的自定义功能",
+			"优化了多国语言的显示",
+			"HUD系统新增了面向Lightroom的HSL提示器"
+		],
+		"updataBtnName": "下载"
+	},
+	"indexNew": {
+		"newTitle": "新闻中心",
+		"newYear": "2020",
+		"newMonth": "Feb",
+		"newText": "TourBox Wins Great Success on Makuake Crowdfunding",
+		"newBtnName": "更多>"
+	}
+}

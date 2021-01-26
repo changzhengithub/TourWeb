@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<title>TourBox - Download</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/downloads.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<div id="container" v-cloak>
+		<div class="container-banner" style="display: block !important; background-color: transparent !important;">
+			<div class="banner-detail">
+				<h1>TOURBOX 콘솔</h1>
+				<div class="detail-parame">
+					<p class="parame-text">소프트웨어 버전 : 2.2.4</p>
+					<p class="parame-text">마지막 업데이트 : 2021.01.14</p>
+					<p class="parame-text">파일 크기 : macOS(60M)/Windows(70M)</p>
+					<p class="parame-text">운영 시스템 : Windows 7 이상 / macOS 10.10 이상</p>
+					<p class="parame-text">언어 : 영어, 일본어, 한국어, 중국어(번체), 중국어 간체, 독일어, 프랑스어, 스페인어, 이탈리어</p>
+				</div>
+				<div class="detail-btn btn-desk">
+					<a href="mac-download.html"><span>macOS</span><i class="iconfont iconmac"></i></a>
+					<a href="src/downloads/TourBox Win_2.2.4.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
+				</div>
+				<div class="detail-btn btn-mobile">
+					<a href="src/downloads/TourBox macOS_2.2.4.zip"><span>macOS</span><i class="iconfont iconmac"></i></a>
+					<a href="src/downloads/TourBox Win_2.2.4.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="container-interate">
+			<div class="interate-content">
+				<div class="content-item" v-for="(version, index) in versions" :key="index">
+					<div class="item-edition">
+						<p>{{version.editionNum}}</p>
+						<p>{{version.editionDate}}</p>
+					</div>
+					<div class="item-des">
+						<p class="des-title">{{version.versionTitle}}</p>
+						<p class="des-summary">{{version.summary}}</p>
+						<ul class="des-text" v-for="(des, desIndex) in version.desList" :key="desIndex">
+							<li class="text-title" v-if="des.title" :class="{'list-type': index == versions.length - 3}">{{des.title}}
+							</li>
+							<li class="text-detail" :class="{'list-type': index != versions.length - 3}"
+								v-for="(text, textIndex) in des.textList" :key="textIndex">{{text}}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- footer -->
+	<div id="footer"></div>
+	
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/downloads.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

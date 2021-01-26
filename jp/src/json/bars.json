@@ -1,0 +1,118 @@
+{
+	"deskList": [
+		{
+			"name": "ホーム",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "製品について",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "リソース",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "フォーラム",
+					"link": "https://forum.tourboxtech.com/",
+					"target":"_blank"
+				},
+				{
+					"linkName": "ニュース",
+					"link": "news.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "プロモーション同盟",
+					"link": "affiliate.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "ダウンロード",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "ソフトウェア",
+					"link": "downloads.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "プリセット",
+					"link": "presets.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "サポート",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "マニュアル",
+					"link": "manual.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "FAQ",
+					"link": "faq.html",
+					"target":"_self"
+				}
+			]
+		}
+
+	],
+	"mobileList": [
+		{
+			"name": "ホーム",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "製品について",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "フォーラム",
+			"href": "https://forum.tourboxtech.com/",
+			"target":"_blank"
+		},
+		{
+			"name": "ニュース",
+			"href": "news.html",
+			"target":"_self"
+		},
+		{
+			"name": "プロモーション同盟",
+			"href": "affiliate.html",
+			"target":"_self"
+		},
+		{
+			"name": "ソフトウェア",
+			"href": "downloads.html",
+			"target":"_self"
+		},
+		{
+			"name": "プリセット",
+			"href": "presets.html",
+			"target":"_self"
+		},
+		{
+			"name": "マニュアル",
+			"href": "manual.html",
+			"target":"_self"
+		},
+		{
+			"name": "FAQ",
+			"href": "faq.html",
+			"target":"_self"
+		}
+	]
+}

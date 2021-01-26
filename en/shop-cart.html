@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<title>TourBox - Cart</title>
+		<!-- public resources -->
+		<link rel="canonical" href="https://www.tourboxtech.com/" />
+		<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="css/header.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/shop-cart.css" />
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-123518466-3');
+		</script>
+	</head>
+	<body>
+		<header id="header"></header>
+		<div id="container" v-cloak>
+			<div class="container-wrapper">
+				<div class="wrapper-title" v-if="isM"><span>{{shopCartData.title}}</span></div>
+				<div class="wrapper-left">
+					<div class="left-title" v-if="!isM"><span>{{shopCartData.title}}</span></div>
+					<div class="left-summary"><span>{{shopCartData.summary}}</span></div>
+					<div class="left-protocol">
+						<ul class="protocol-list">
+							<li class="list-item" v-for="(item, index) in shopCartData.cartText" :key="'key'+index" v-html="item"></li>
+						</ul>
+					</div>
+				</div>
+				<div class="wrapper-right">
+					<div class="right-empty" v-if="!commodityList.length">
+						<div class="empty-portrait"></div>
+						<div class="empty-detail">
+							<p>CART EMPTY</p>
+							<p>Your cart is empty, start shopping</p>
+						</div>
+					</div>
+					<div class="right-commodity" v-if="commodityList.length">
+						<div class="commodity-item" v-for="(item, index) in commodityList" :key="'key'+index">
+							<div class="item-portrait">
+								<img :src="item.portraitUrl" alt="commodity">
+							</div>
+							<div class="item-detail">
+								<div class="detail-close"  @click="deleteCartShop(index)"><i class="iconfont iconclose"></i></div>
+								<p class="detail-title">{{item.title}}</p>
+								<p class="detail-description">{{item.description}}</p>
+								<p class="detail-amount"><span>Qty: {{item.qty}}</span><span>{{item.amount}}$</span></p>
+								<p class="detail-quantity"><i class="iconfont iconsubtract" @click="reduceAmount(index)"></i><i class="iconfont iconadd" @click="addAmount(index)"></i></p>
+							</div>
+						</div>
+					</div>
+					<div class="right-order" v-if="commodityList.length">
+						<div class="order-detail">
+							<p><span>SUBTOTAL</span><span>{{totalAmount}}$</span></p>
+							<p>Free Worldwide Shipping</p>
+						</div>
+						<div class="order-sumbit" @click="submitOrder"><span>CHECKOUT</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="footer"></div>
+		<!-- public resources -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pages/shop-cart.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

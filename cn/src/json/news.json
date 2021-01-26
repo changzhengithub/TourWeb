@@ -1,0 +1,74 @@
+{
+	"news":[
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news07.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/basic-img/news-detail06.jpg",
+			"time": "2020.05",
+			"timeYear": "2020",
+			"timeMonth": "05",
+			"title": "TourBox在台湾超高额完成众筹目标",
+			"update_time": 1579065760,
+			"summarize": "Tourbox在啧啧( www.zeczec.com) 筹众活动中，在70天之内成功筹集1,070万元新台币和获得了2800名支持者。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news06.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail07.jpg",
+			"time": "2020.03",
+			"timeYear": "2020",
+			"timeMonth": "03",
+			"title": "TourBox在Makuake众筹中获得巨大成功",
+			"update_time": 1579065760,
+			"summarize": "在60天的Makuake众筹中，TourBox在日本市场赢得了巨大成功，获得了2800名支持者和3800万日元的众筹金额。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news05.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail05.jpg",
+			"time": "2020.01",
+			"timeYear": "2020",
+			"timeMonth": "01",
+			"title": "在CES上遇见我们",
+			"update_time": 1579065760,
+			"summarize": "2020年1月7日至10日，TourBox Tech团队参加拉斯维加斯CES展，展位号是Booth No.52823，Sands Expo, Level 1, Hall G EUREKA PARK。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news04.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail04.jpg",
+			"time": "2019.12",
+			"timeYear": "2019",
+			"timeMonth": "12",
+			"update_time": 1579065601,
+			"title": "TourBox在Makuake上开启日本市场众筹",
+			"summarize": "2019年12月17日，TourBox上线Makuake开启日本市场众筹，上线一天破500万日元，截止2020年1月5日，众筹额超1400万日元。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news03.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail03.jpg",
+			"time": "2019.10",
+			"timeYear": "2019",
+			"timeMonth": "10",
+			"update_time": 1579065681,
+			"title": "TourBox参加香港电子展",
+			"summarize": "2019年10月14日至16日，TourBox Tech团队受邀参加香港秋季电子展，分享了以TourBox为核心的全新一代人机交互解决方案。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news02.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail02.jpg",
+			"time": "2019.08",
+			"timeYear": "2019",
+			"timeMonth": "07",
+			"update_time": 1579065912,
+			"title": "TourBox实现全面量产",
+			"summarize": "2019年7月，TourBox全面量产交付。软件版本升级到1.1，获得大量消费者好评。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.cn/src/images/news01.jpg",
+			"imgDetailUrl": "//r.tourboxtech.cn/src/images/news-detail01.jpg",
+			"time": "2019.01",
+			"timeYear": "2019",
+			"timeMonth": "01",
+			"update_time": 1579017600,
+			"title": "崭露头角——TourBox在Kickstarter上开启全球众筹",
+			"summarize": "2018年10月8日，TourBox首次登陸全球众筹网站Kickstarter，获得来自58个国家2000+名用户支持。总众筹额超过22万美金。"
+		}
+	]
+}

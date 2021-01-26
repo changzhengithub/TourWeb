@@ -1,0 +1,74 @@
+{
+	"news":[
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news07.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail06.jpg",
+			"time": "May.2020",
+			"timeYear": "2020",
+			"timeMonth": "May",
+			"title": "Tremendous Victories For TourBox | Successfully launched crowdfunding campaign in Taiwan",
+			"update_time": 1579065760,
+			"summarize": "Tourbox has launched crowdfunding campaign on www.zeczec.com which resulted in 2800 backers and reached NT $10.7 million was raised within 70 days."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news06.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/index-news.jpg",
+			"time": "Mar.2020",
+			"timeYear": "2020",
+			"timeMonth": "Mar",
+			"title": "TourBox Wins Great Success on Makuake Crowdfunding",
+			"update_time": 1579065760,
+			"summarize": "In 60 days' Makuake crowdfunding, TourBox wins great success in the Japanese market and got 2800 backers and 38 million yen crowdfunding amounts."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news05.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail05.jpg",
+			"time": "Jan.2020",
+			"timeYear": "2020",
+			"timeMonth": "Jan",
+			"title": "Meet Us at CES",
+			"update_time": 1579065760,
+			"summarize": "TourBox Tech will attend CES 2020 in Las Vegas on 7-10 Jan 2020. Meet us at Booth No. 52823, Sands Expo, Level 1, Hall G EUREKA PARK."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news04.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail04.jpg",
+			"time": "Dec.2019",
+			"timeYear": "2019",
+			"timeMonth": "Dec",
+			"update_time": 1579065601,
+			"title": "TourBox Launches Crowdfunding on Makuake",
+			"summarize": "On December 17, 2019, TourBox launched crowdfunding in the Japanese market on Makuake. On the day of launch, it broke 5 million yen. As of January 5, 2020, the crowdfunding amount exceeds 14 million yen."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news03.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail03.jpg",
+			"time": "Oct.2019",
+			"timeYear": "2019",
+			"timeMonth": "Oct",
+			"update_time": 1579065681,
+			"title": "TourBox Brings Innovative Human-Computer Interaction Solution to HKTDC",
+			"summarize": "TourBox Tech was invited to participate in Hong Kong Electronics Fair (Autumn Edition) on 14-16 October 2019. During the exhibition, TourBox shared a new generation of human-computer interaction solution."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news02.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail02.jpg",
+			"time": "Aug.2019",
+			"timeYear": "2019",
+			"timeMonth": "Aug",
+			"update_time": 1579065912,
+			"title": "TourBox Finished Mass Production",
+			"summarize": "In July 2019, TourBox finished mass production and started the first round shipping. The TourBox Console application was upgraded to 1.1 and received a lot of good reviews from users."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news01.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail01.jpg",
+			"time": "Jan.2019",
+			"timeYear": "2019",
+			"timeMonth": "Jan",
+			"update_time": 1579017600,
+			"title": "Budding - TourBox Launches Crowdfunding on Kickstarter",
+			"summarize": "On October 8, 2018, TourBox launched crowdfunding on Kickstarter and got 2000+ backers from 58 countries. The total crowdfunding amount is more than 220,000 USD."
+		}
+	]
+}

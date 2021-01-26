@@ -1,0 +1,18 @@
+{
+	"title":"Wir würden gerne Ihre Meinung hören.",
+	"description":"Wir freuen uns über Ihr Feedback, Ihre Vorschläge und Kommentare zu TourBox.",
+	"tab":[
+		{
+			"title":"Marketing-Kooperation",
+			"description":"Für eine Marketing-Kooperation kontaktieren Sie uns bitte über media@tourboxtech.com"
+		},
+		{
+			"title":"Geschäftsanfragen",
+			"description":"Für Geschäftsanfragen kontaktieren Sie uns bitte über marketing@tourboxtech.com"
+		},
+		{
+			"title":"Technischer Support",
+			"description":"Bei technischen Fragen zum Produkt kontaktieren Sie uns bitte über support@tourboxtech.com"
+		}
+	]
+}

@@ -1,0 +1,92 @@
+{
+	"banner":{
+		"title1":"The Ultimate Controller",
+		"title2":"for Creators",
+		"title3":"",
+		"bannerBg":"//r.tourboxtech.com/en/src/images/product-banner.jpg",
+		"mobileBannerBg":"//r.tourboxtech.com/en/src/images/product-banner-mobile.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/en/src/images/product-banner-mobile_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/en/src/images/product-banner-mobile_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/en/src/images/product-banner-mobile_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/en/src/images/product-banner-mobile_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/en/src/images/product-banner_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/en/src/images/product-banner_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/en/src/images/product-banner_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/en/src/images/product-banner_04.jpg"
+	},
+
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/en/src/images/index-first-second.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/en/src/images/index-first-second-mobile.png"
+	},
+	"spellBanner": {
+		"bannerBg": "//r.tourboxtech.com/en/src/images/product-spell-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/en/src/images/product-spell-banner-mobile.jpg"
+	},
+	"thirdBanner": {
+		"bannerBg": "//r.tourboxtech.com/en/src/images/product-third-section-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/en/src/images/product-third-section-banner-mobile.jpg"
+	},
+	"footerBanner": {
+		"bannerBg": "//r.tourboxtech.com/en/src/images/product-third-section-banner02.jpg"
+	},
+	"firstDes": {
+		"title1": "Spare",
+		"title2": " creators the trouble of using complicated shortcut keys and endless keyboard inputs. Creators can now take comprehensive control of their workflow.",
+		"text": "Whether it is brush control, video and audio editing, image control, parameter adjustment or tool switching, you can use TourBox to operate creative software in an incredibly intuitive way."
+	},
+	"lantern": {
+		"describeList": [
+			{
+				"title": "Multi-Dimensional Layout, One Hand Operation",
+				"text": "TourBox adopts multi-dimensional layouts on its front and both sides, allowing you to easily control the whole device without even moving your wrist."
+			},
+			{
+				"title": "Streamlined Design",
+				"text": "Greatly reduces the fatigue of high-intensity creative work"
+			},
+			{
+				"title": "Durability",
+				"text": "More than 200,000 component calibrations"
+			},
+			{
+				"title": "Versatile USB-C Port",
+				"text": "For faster data transmission"
+			},
+			{
+				"title": "Compatibility",
+				"text": "Supports both Windows and Mac operating systems"
+			}
+		],
+		"hoverList": [
+			{
+				"title": "01",
+				"text": "Multi-Dimensional Layout"
+			},
+			{
+				"title": "02",
+				"text": "Streamlined Design"
+			},
+			{
+				"title": "03",
+				"text": "Durability"
+			},
+			{
+				"title": "04",
+				"text": "Versatile USB-C Port"
+			},
+			{
+				"title": "05",
+				"text": "Compatibility"
+			}
+		],
+		"slideList": [
+			"//r.tourboxtech.com/en/src/images/gs-banner.png",
+			"//r.tourboxtech.com/en/src/images/product-first-second-main04.png",
+			"//r.tourboxtech.com/en/src/images/product-first-second-main08.jpg",
+			"//r.tourboxtech.com/en/src/images/product-first-second-main05.png",
+			"//r.tourboxtech.com/en/src/images/product-first-second-main07.jpg"
+		]
+	}
+	
+}

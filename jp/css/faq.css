@@ -1,0 +1,20 @@
+#container{width:100%;position:relative}
+.banner1{width:100%;padding:.35rem 0 .1rem 1.5rem;height:1rem;background-color:rgba(22,29,37,1)}
+.banner1>.title{color:#fff;font-size:0.26rem;}
+.banner2{background-color:#fff;width:100%;padding:.6rem 1.5rem}
+.banner2>div{margin:0;padding:.2rem 0;position:relative}
+.banner2>div::after{position:absolute;content:"";left:0;top:100%;width:100%;height:2px;background-color:#324a5b}
+.banner2>div>.faq-title{font-size:.24rem;color:#324a5b;margin-bottom:.15rem;line-height:1.5}
+.banner2>div>.faq-description{font-size:.16rem;color:#999;line-height:1.5;padding-left:.15rem}
+.banner2>div>.faq-description>a{font-size:.16rem;color:#999;line-height:1.5;padding-left:.05rem}
+.banner2>div img{width:200px}
+@media only screen and (max-width:767px){.banner1{width:100%;padding:.15rem 0;text-align:center;height:auto}
+.banner1>.title{font-size:0.2rem}
+.banner1>.tab>span{margin:0 0.06rem;color:#999}
+.banner2{background-color:#fff;width:100%;padding:.2rem .2rem .5rem .2rem}
+.banner2>div{margin:0;padding:.2rem 0;position:relative}
+.banner2>div::after{height:1px}
+.banner2>div>.faq-title{font-size:.18rem;color:#324a5b;margin-bottom:.15rem;line-height:1.5}
+.banner2>div>.faq-description{width:100%;font-size:.14rem;color:#999;line-height:1.5;padding-left:0;word-wrap:break-word}
+.banner2>div>.faq-description>a{font-size:.16rem;color:#999;line-height:1.5;padding-left:.05rem}
+}

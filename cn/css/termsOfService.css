@@ -1,0 +1,61 @@
+#container {
+	width: 100%;
+	position: relative;
+	padding-bottom: .4rem;
+}
+
+.container-title {
+	text-align: center;
+	font-size: .36rem;
+	font-weight: bold;
+	color: #7F7F7F;
+	padding: .5rem 0;
+	margin-bottom: .2rem;
+}
+
+.container-artical {
+	width: 9.3rem;
+	min-height: 2rem;
+	padding: 0.48rem 0.36rem;
+	margin: 0 auto;
+	border: 1px solid rgb(223, 222, 222);
+	background-color: rgb(248, 249, 253);
+	box-shadow: rgba(0, 0, 0, .14) 0px 1px 4px 0px;
+}
+
+.artical-detail {
+	width: 100%;
+}
+
+.artical-detail>p {
+	line-height: 1.5;
+	font-size: .14rem;
+}
+
+
+@media only screen and (max-width:767px) {
+	#container {
+		padding-bottom: .3rem;
+	}
+	
+	.container-title {
+		font-size: .26rem;
+		font-weight: bold;
+		padding: .2rem 0;
+		margin-bottom: 0;
+	}
+	
+	.container-artical {
+		width: 100%;
+		padding: 0.3rem 0.2rem;
+	}
+	
+	.artical-detail {
+		width: 100%;
+	}
+	
+	.artical-detail>p {
+		line-height: 1.4;
+		font-size: .18rem;
+	}
+}

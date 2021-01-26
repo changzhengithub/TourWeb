@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<title>TourBox - Order</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/shop-order.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<header id="header"></header>
+	<div id="container">
+		<div class="container-wrapper">
+			<div class="wrapper-left" v-cloak>
+				<div class="left-title">TourBox</div>
+				<div class="left-link" v-if="!isM">
+					<a href="shop-cart.html">Information</a>
+					<i class="iconfont iconarrow-right"></i>
+					<a href="shop-order.html">Shipping</a>
+					<i class="iconfont iconarrow-right"></i>
+					<a href="shop-payment.html">Payment</a>
+				</div>
+				<!-- <div class="left-checkout">
+					<div class="checkout-title"><span>Express checkout</span></div>
+					<div class="checkout-express">PayPal</div>
+					<div id="pay"></div>
+				</div>
+				<div class="left-or">
+					<div class="or-title"><span>OR</span></div>
+				</div> -->
+				<div class="left-form">
+					<div class="form-list">
+						<div class="list-title"><span>Contact information</span></div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'error-active': orderEmailError,'focus-active': orderEmailActive}">
+									<label for="email" v-if="orderEmail">Email</label>
+									<input class="order-input" :class="{'input-active': orderEmail}" id="email" :autofocus="emailInputAutoFocus" v-model="orderEmail"
+										type="text" placeholder="Email" @focus="emailFocus" @blur="emailBlur">
+								</div>
+								<p class="item-error" v-if="orderEmailError">Enter a valid email</p>
+							</div>
+						</div>
+					</div>
+					<div class="form-list">
+						<div class="list-title"><span>Shipping address</span></div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'error-active': firstNameError, 'focus-active': firstNameActive}">
+									<label for="firstName" v-if="firstName">First name</label>
+									<input class="order-input" :class="{'input-active': firstName}" id="firstName" :autofocus="firstNameInputAutoFocus" v-model="firstName"
+										type="text" placeholder="First name" @focus="firstNameFocus" @blur="firstNameBlur">
+								</div>
+								<p class="item-error" v-if="firstNameError">Enter a first name</p>
+							</div>
+							<div class="input-item">
+								<div class="item-box" :class="{'error-active': lastNameError, 'focus-active': lastNameActive}">
+									<label for="lastName" v-if="lastName">Last name</label>
+									<input class="order-input" :class="{'input-active': lastName}" id="lastName" v-model="lastName"
+										type="text" placeholder="First name" @focus="lastNameFocus" @blur="lastNameBlur">
+								</div>
+								<p class="item-error" v-if="lastNameError">Enter a last name</p>
+							</div>
+						</div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'focus-active': orderCompanyActive}">
+									<label for="company" v-if="orderCompany">Company (optional)</label>
+									<input class="order-input" :class="{'input-active': orderCompany}" id="company" v-model="orderCompany"
+										type="text" placeholder="Company (optional)" @focus="companyFocus" @blur="companyBlur">
+								</div>
+								<!-- <p class="item-error">xxxxxx</p> -->
+							</div>
+						</div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'error-active': orderAddressError, 'focus-active': orderAddressActive}">
+									<label for="address" v-if="orderAddress">Address</label>
+									<input class="order-input" :class="{'input-active': orderAddress}" id="address" v-model="orderAddress"
+										type="text" placeholder="Address" @focus="addressFocus" @blur="addressBlur">
+								</div>
+								<p class="item-error" v-if="orderAddressError">Enter an address</p>
+							</div>
+						</div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'focus-active': orderApartmentActive}">
+									<label for="apartment" v-if="orderApartment">Apartment, suite, etc. (optional)</label>
+									<input class="order-input" :class="{'input-active': orderApartment}" id="apartment"
+										v-model="orderApartment" type="text" placeholder="Apartment, suite, etc. (optional)"
+										@focus="apartmentFocus" @blur="apartmentBlur">
+								</div>
+								<!-- <p class="item-error">xxxxxx</p> -->
+							</div>
+						</div>
+						<div class="list-select">
+							<div class="select-item">
+								<div class="select-country"
+									:class="{'value-active': countryName,'focus-active': countryToggle, 'select-active': !countryToggle}"
+									@click="toggleCountry">
+									<span class="address-label" v-if="countryName">Country</span>
+									<span class="address-placeholder" v-if="!countryName">Country</span>
+									<span class="address-value">{{countryName}}</span>
+									<div class="address-arrow"></div>
+									<ul class="country-list" v-if="countryToggle">
+										<li class="list-item" :class="{'active': countryIndex == index}"
+											v-for="(country, index) in addressArr" :key="index" @click="selectCountry(country, index)">
+											{{country.countryName}}</li>
+									</ul>
+								</div>
+							</div>
+							<div class="select-item" v-if="cityArr.length != 0">
+								<div class="select-city"
+									:class="{'value-active': stateName,'focus-active': cityToggle, 'select-active': !cityToggle}"
+									@click="toggleCity">
+									<span class="address-label" v-if="stateName">City</span>
+									<span class="address-placeholder" v-if="!stateName">City</span>
+									<span class="address-value">{{stateName}}</span>
+									<div class="address-arrow"></div>
+									<ul class="city-list" v-if="cityToggle">
+										<li class="list-item" :class="{'active': cityIndex == index}" v-for="(city, index) in cityArr"
+											:key="index" @click="selectCity(city, index)">{{city.stateName}}</li>
+									</ul>
+								</div>
+								<p class="item-error" v-if="cityIsSelect">Select a state / province</p>
+							</div>
+							<div class="select-item" v-if="areaArr.length != 0">
+								<div class="select-area"
+									:class="{'value-active': cityName,'focus-active': areaToggle, 'select-active': !areaToggle}"
+									@click="toggleArea">
+									<span class="address-label" v-if="cityName">City</span>
+									<span class="address-placeholder" v-if="!cityName">City</span>
+									<span class="address-value">{{cityName}}</span>
+									<div class="address-arrow"></div>
+									<ul class="area-list" v-if="areaToggle">
+										<li class="list-item" :class="{'active': areaIndex == index}" v-for="(area, index) in areaArr"
+											:key="index" @click="selectArea(area, index)">{{area.cityName}}</li>
+									</ul>
+								</div>
+								<p class="item-error" v-if="areaIsSelect">Select a city / area</p>
+							</div>
+						</div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'focus-active': postalCodeActive}">
+									<label for="postalCode" v-if="postalCode">Postal code</label>
+									<input class="order-input" :class="{'input-active': postalCode}" id="postalCode" v-model="postalCode"
+										type="number" placeholder="Postal code" @focus="postalCodeFocus" @blur="postalCodeBlur">
+								</div>
+								<!-- <p class="item-error" v-if="postalCodeError">Enter a ZIP / postal code</p> -->
+							</div>
+						</div>
+						<div class="list-input">
+							<div class="input-item">
+								<div class="item-box" :class="{'error-active': orderPhoneError, 'focus-active': orderPhoneActive}">
+									<label for="phone" v-if="orderPhone">Phone</label>
+									<input class="order-input" :class="{'input-active': orderPhone}" id="phone" v-model="orderPhone"
+										type="number" placeholder="Phone" @focus="phoneFocus" @blur="phoneBlur">
+								</div>
+								<p class="item-error" v-if="orderPhoneError">Enter a valid phone number</p>
+							</div>
+						</div>
+					</div>
+					<div class="form-submit">
+						<div class="submit" @click="confirmOrder"><span>Continue to payment</span></div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper-right" v-cloak>
+				<div class="right-commodity">
+					<div class="commodity-item" v-for="(item, index) in commodityList">
+						<div class="item-detail">
+							<div class="detail-portrait">
+								<img :src="item.portraitUrl" alt="item">
+								<div class="portrait-badge">{{item.qty}}</div>
+							</div>
+							<div class="detail-title"><span>{{item.title}}</span></div>
+						</div>
+						<div class="item-amount"><span>{{item.amount*item.qty}}$</span></div>
+					</div>
+				</div>
+				<div class="right-discount" style="display: none;">
+					<div class="list-input">
+						<div class="input-item">
+							<div class="item-box">
+								<label for="discount" v-if="discountCode">Discount code</label>
+								<input class="order-input" :class="{'input-active': discountCode}" id="discount" v-model="discountCode"
+									type="text" placeholder="Discount code">
+							</div>
+							<p class="item-error">xxxxxx</p>
+						</div>
+					</div>
+					<div class="discount-apply"><span>Apply</span></div>
+				</div>
+				<div class="right-order">
+					<p><span>Subtotal</span><span>{{totalAmount}}$</span></p>
+					<p><span>Shipping</span><span>Calculated at next step</span></p>
+				</div>
+				<div class="right-total">
+					<p><span>Total</span><span>{{totalAmount}}$</span></p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"></div>
+	<!-- public resources -->
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/check.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/shop-order.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

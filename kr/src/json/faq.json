@@ -1,0 +1,20 @@
+[
+	{
+		"title":"Q) TourBox를 사용하여 Photoshop, Lightroom 및 Premium 이외의 소프트웨어를 조작할 수 있습니까?",
+		"description":"A: TourBox는 키보드 단축키를 매우 잘 매핑 할 수 있습니다. 단축키 사용이 필요한 소프트웨어인 경우, 모두 Tourbox로 간단한 단축키 조작을 즐길 수 있습니다.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Q) 소프트웨어 및 빠른 설치 가이드는 어디서 다운로드 할 수 있습니까?",
+		"description":"A: <a href='https://www.tourboxtech.com/kr/downloads.html' target='_target'>https://www.tourboxtech.com/kr/downloads.html</a> 를 방문하십시오.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Q) TourBox는 Windows 및 macOS와 모두 호환됩니까?",
+		"description":"A: 예. TourBox는 Windows 7 이상 및 macOS 10.10 이상을 지원합니다.",
+		"support_use":true,
+		"open":false
+	}
+]

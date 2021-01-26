@@ -1,0 +1,62 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-12-06 16:33:21
+ * @LastEditTime : 2019-12-19 13:34:22
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \tourbox\en\components\ig_forWindows.html
+ -->
+<!DOCTYPE html>
+<style type="text/css">
+	.windows-guide-download {
+		padding: .1rem .2rem;
+		background-color: #f1f1f1;
+		border-radius: .04rem;
+		color: #333;
+		font-size: .16rem;
+		margin-bottom: .1rem;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+	}
+
+	.windows-guide-download>a {
+		display: inline-block;
+		color: #10A5F1;
+		text-decoration: none;
+	}
+
+	.pdf-container {
+		height: 6rem;
+		width: 100%;
+		border: none;
+		overflow: hidden;
+	}
+	.pdf-container>embed{
+		border: none;
+	}
+</style>
+<div id="windows" v-cloak>
+	<div class="windows-guide-download" v-if="false">
+		<a :href="connectPdf" target="_blank" v-text="connectText"></a>
+	</div>
+	<div class="windows-guide-download">
+		<span v-text="text"></span>
+		<a :href="pdf" download>Download</a>
+	</div>
+	<div class="pdf-container">
+		<embed :src="pdf" width="100%" height="100%">
+	</div>
+</div>
+<script type="text/javascript">
+	new Vue({
+		el: "#windows",
+		data: {
+			text: "Windows Installation Guide",
+			pdf: "src/pdf/Installation-Guide-forwindows.pdf",
+			connectText:"How to Solve Problem of “TourBox is connecting” under Windows system",
+			connectPdf:"src/pdf/Installation-Guide-forwindows.pdf"
+		},
+		methods: {}
+	})
+</script>

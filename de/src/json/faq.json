@@ -1,0 +1,20 @@
+[
+	{
+		"title":"Frage: Kann ich mit TourBox auch andere Software als Photoshop, Lightroom und Premiere benutzen?",
+		"description":"Antwort: TourBox kann ausgezeichnet für Tastenkürzel eingesetzt werden. Solange eine Software Tastenkürzel verwendet, können Sie TourBox verwenden, um deren Eingabe zu vereinfachen.",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Frage: Wo lade ich die Software und die Kurzanleitung herunter?",
+		"description":"Antwort: Bitte besuchen Sie <a href='https://www.tourboxtech.com/de/downloads.html' target='_target'>https://www.tourboxtech.com/de/downloads.html</a>。",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Frage: Ist TourBox mit Windows und MacOS kompatibel?",
+		"description":"Antwort: Ja, TourBox unterstützt Windows 7 oder höher und MacOS 10.10 oder höher.",
+		"support_use":true,
+		"open":false
+	}
+]

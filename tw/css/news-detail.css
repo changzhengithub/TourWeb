@@ -1,0 +1,142 @@
+#container {
+	position: relative;
+	width: 100%;
+	min-height: 8rem;
+	background-color: #f9f9f9;
+}
+
+[v-cloak] {
+	display: none;
+}
+
+
+.news-detail {
+	width: 8rem;
+	margin: 0 auto;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+.detail-banner {
+	width: 100%;
+	margin-bottom: .4rem;
+}
+
+.detail-banner>img {
+	width: 100%;
+	height: auto;
+}
+
+.detail-title {
+	width: 100%;
+	line-height: 1.5;
+	margin-bottom: .3rem;
+	font-size: .24rem;
+	font-weight: 700;
+	color: #333333;
+}
+
+.detail-time {
+	width: 100%;
+	margin-bottom: .3rem;
+	font-size: .12rem;
+	color: #666;
+}
+
+.detail-time::after {
+	content: '';
+	display: block;
+	width: .3rem;
+	height: .04rem;
+	margin-top: .05rem;
+	background-color: #00cfcb;
+	-webkit-transform: skew(-35deg);
+	-ms-transform: skew(-35deg);
+	transform: skew(-35deg);
+}
+
+.detail-summary {
+	width: 100%;
+	line-height: 1.5;
+	margin-bottom: .3rem;
+	font-size: .18rem;
+	font-weight: 600;
+	color: #333333;
+}
+
+.detail-description {
+	width: 100%;
+	line-height: 1.5;
+	margin-bottom: .3rem;
+	font-size: .16rem;
+	color: #333333;
+}
+
+
+@media only screen and (max-width:767px) {
+	.news-detail {
+		width: 100%;
+		padding-top: .3rem;
+		padding-bottom: .3rem;
+	}
+
+	.detail-banner {
+		width: 100%;
+		margin-bottom: .3rem;
+	}
+
+	.detail-banner>img {
+		width: 100%;
+		height: auto;
+	}
+
+	.detail-title {
+		width: 100%;
+		padding: 0 .2rem;
+		margin-bottom: .2rem;
+		line-height: 1.5;
+		font-size: .3rem;
+		font-weight: 700;
+		color: #333333;
+	}
+
+	.detail-time {
+		width: 100%;
+		padding: 0 .2rem;
+		margin-bottom: .2rem;
+		font-size: .14rem;
+		color: #666;
+	}
+
+	.detail-time::after {
+		content: '';
+		display: block;
+		width: .4rem;
+		height: .04rem;
+		margin-top: .05rem;
+		background-color: #00cfcb;
+		-webkit-transform: skew(-35deg);
+		-ms-transform: skew(-35deg);
+		transform: skew(-35deg);
+	}
+
+	.detail-summary {
+		width: 100%;
+		padding: 0 .2rem;
+		margin-bottom: .3rem;
+		line-height: 1.5;
+		font-size: .2rem;
+		font-weight: 600;
+		color: #333333;
+	}
+
+	.detail-description {
+		width: 100%;
+		padding: 0 .2rem;
+		margin-bottom: .3rem;
+		line-height: 1.5;
+		font-size: .18rem;
+		color: #333333;
+	}
+
+}

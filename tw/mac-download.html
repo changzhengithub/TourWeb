@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<!-- public resources -->
+		<link rel="canonical" href="https://www.tourboxtech.com/" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+		<!-- page private resources -->
+		<link rel="stylesheet" type="text/css" href="css/mac-download.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="css/maunal.css" /> -->
+		<!-- public resources -->
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/Router.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/iframe_api.js" type="text/javascript" charset="utf-8"></script>
+		<title>TourBox - Download</title>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-123518466-3');
+		</script>
+	</head>
+	<body>
+		<!-- header -->
+		<header id="header"></header>
+		<div id="container" v-cloak>
+			<div class="container-nav">
+				<div class="nav-bar">
+					<div class="bar-sticky">
+						<ul class="sticky-list">
+							<!-- <li class="list-sub">
+								<div class="circle"></div>
+								<div class="sub-text"><span>安裝驅動</span></div>
+							</li> -->
+							<li class="list-sub">
+								<div class="circle"></div>
+								<div class="sub-text"><span>安裝軟體</span></div>
+							</li>
+							<li class="list-sub">
+								<div class="circle"></div>
+								<div class="sub-text"><span>安全性與隱私權</span></div>
+							</li>
+						</ul>
+						<div class="sticky-download">
+							<a href="src/downloads/TourBox macOS_2.2.4.zip">下載</a>
+							<a href="manual.html">說明書</a>
+						</div>
+						<div class="sticky-note">
+							<p class="note-title">註意：</p>
+							<p class="note-text">升級軟体時，僅需覆蓋安裝最新版本的TourBox控制中心，無需重複安裝驅動；</p>
+							<p class="note-text">如果您使用的是macOS系統，並且您升級前的軟體是V1.0版本，請先將您的預設清單導出做備份，以防數據丟失。</p>
+						</div>
+					</div>
+				</div>
+				<div class="nav-content">
+					<div class="content-title">
+						<p>macOS 安裝指南</p>
+					</div>
+					<!-- <div class="content-header">
+						<div class="item-document">
+							<p>1. 在將TourBox連結到電腦之前，請先下載並安裝驅動以及最新的TourBox控制中心軟體。</p>
+							<div class="document-img guide-img-normal">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac01.png" alt="Guide Image">
+							</div>
+						</div>
+					</div> -->
+					<!-- <div class="content-item nav-first">
+						<div class="item-document">
+							<p style="font-weight: 600; margin-bottom: 0.4rem;">驅動安裝</p>
+							<p>1.1、下載完成後，請先安裝驅動。</p>
+							<p>1.2、确认 系統偏好設定 → 安全性與隱私權 → 一般 → AppStore 和已识别的开发者 置于选中状态</p>
+							<div class="document-step">
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac101.png" alt="Guide Image">
+								</div>
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac102.png" alt="Guide Image">
+								</div>
+							</div>
+						</div>
+						<div class="item-document">
+							<p>1.3、點選安裝文檔 "Install CP210x VCP Driver"，安裝驅動</p>
+							<div class="document-img guide-img-normal">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac201.png" alt="Guide Image">
+							</div>
+						</div>
+						<div class="item-document">
+							<p>1.4、按照如下步驟安裝，直至驅動安裝完成。</p>
+							<p>安裝可能需要花費 2 分鐘，請耐心等待。</p>
+							<div class="document-step">
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac301.png" alt="Guide Image">
+								</div>
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac302.png" alt="Guide Image">
+								</div>
+							</div>
+							<div class="document-step">
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac303.png" alt="Guide Image">
+								</div>
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac304.png" alt="Guide Image">
+								</div>
+							</div>
+							<div class="document-step">
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac305.png" alt="Guide Image">
+								</div>
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac306.png" alt="Guide Image">
+								</div>
+							</div>
+							<div class="document-step">
+								<div class="step-common">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac307.png" alt="Guide Image">
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<div class="content-item nav-second">
+						<div class="item-document">
+							<p style="font-weight: 600; margin-bottom: 0.4rem;">軟體安裝</p>
+							<p>1.1、點選安裝文檔 "TourBox Consoel Setup.pkg"，安裝 TourBox Console</p>
+							<div class="document-img guide-img-normal">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second01.png" alt="Guide Image">
+							</div>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second02.png" alt="Guide Image">
+							</div>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second03.png" alt="Guide Image">
+							</div>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second04.png" alt="Guide Image">
+							</div>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second05.png" alt="Guide Image">
+							</div>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-second06.png" alt="Guide Image">
+							</div>
+						</div>
+					</div>
+
+					<div class="content-item nav-third">
+						
+						<div class="item-document">
+							<p style="font-weight: 600;">安裝後，請運行TourBox軟體，並按照彈跳視窗的指引完成系統設定。</p>
+							<p style="font-weight: 600;">不同的macOS系統的彈跳視窗可能不同。</p>
+						</div>
+
+						<div class="item-document">
+							<p>2.1、請先運行TourBox的軟體，然後在系統偏好設定中允許macOS打開它。</p>
+							<p>系統偏好設定 → 安全性與隱私權 → 一般 → 強制打開</p>
+							<div class="document-step">
+								<div class="step-first">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac07.png" alt="Guide Image">
+								</div>
+								<div class="step-second">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac08.png" alt="Guide Image">
+								</div>
+							</div>
+						</div>
+
+						<div class="item-document">
+							<p>2.2、請再次運行TourBox控制台，然後點選打開。</p>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac09.png" alt="Guide Image">
+							</div>
+						</div>
+
+						<div class="item-document">
+							<p>2.3、在彈跳視窗中點選允許系統事件訪問。</p>
+							<div class="document-img guide-img-little">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac10.png" alt="Guide Image">
+							</div>
+						</div>
+
+						<div class="item-document">
+							<p>2.4、請完成輔助功能設定：</p>
+							<p>系統偏好設定 → 安全性與隱私權 → 隱私權 → 輔助使用 → TourBox Console</p>
+							<div class="document-setting">
+								<div class="setting-first">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-third05.png" alt="Guide Image">
+								</div>
+								<div class="setting-second">
+									<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac-third06.png" alt="Guide Image">
+								</div>
+							</div>
+						</div>
+
+						<div class="item-document">
+							<p>2.5、請關閉鍵盤設定助手。</p>
+							<div class="document-img guide-img-normal">
+								<img src="//r.tourboxtech.com/tw/src/images/guide-tw-mac13.png" alt="Guide Image">
+							</div>
+						</div>
+				
+					</div>
+				</div>
+			</div>
+	
+		</div>
+		<!-- footer -->
+		<div id="footer"></div>
+		<!-- public resources -->
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!-- page private resources -->
+		<script src="js/pages/mac-download.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//load header and footer
+			if ($(window).innerWidth() >= 768) {
+				$("#header").load("components/header.html");
+				$("#footer").load("components/footer.html");
+			} else {
+				$("#header").load("components/m_header.html");
+				$("#footer").load("components/m_footer.html");
+			}
+			$(window).resize(function() {
+				if ($(window).innerWidth() >= 768) {
+					$("#header").load("components/header.html");
+					$("#footer").load("components/footer.html");
+				} else {
+					$("#header").load("components/m_header.html");
+					$("#footer").load("components/m_footer.html");
+				}
+			})
+		</script>
+	</body>
+</html>

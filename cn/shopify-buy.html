@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Shopify Shop" />
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>TourBox - Shopify 商店</title>
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="css/index.css" /> -->
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+	<style>
+		[v-cloak] {
+			display: none;
+		}
+
+		.shopify {
+			width: 100%;
+			min-height: 100vh;
+		}
+
+		.wrapper {
+			height: 100%;
+			padding-top: 2rem;
+		}
+
+		.header {
+			transition: background-color .8s;
+			background-color: rgba(255, 255, 255, .9)
+		}
+
+		.header-buy>span {
+			display: none
+		}
+
+		.header-buy {
+			position: absolute;
+			top: 50%;
+			right: 1.9rem;
+			z-index: 9;
+			transform: translateY(-50%)
+		}
+
+		.header-buy>a {
+			height: .28rem;
+			padding: 0 .15rem;
+			font-size: .14rem;
+			color: #fff;
+			background-image: linear-gradient(218deg, #004ffc 4%, #3f6ef6 94%);
+			border-radius: .15rem;
+		}
+
+		.header-desk .desk-language {
+			margin-left: 1rem
+		}
+
+		.header .buy-active {
+			position: fixed;
+			top: 0
+		}
+
+		.header-black {
+			background-color: rgba(29, 29, 31, 0.3);
+			box-shadow: none
+		}
+
+		.header-black>.header-desk .nav-logo {
+			background-image: url('//r.tourboxtech.cn/basic-img/logo-white-2.0.png')
+		}
+
+		.header-black>.header-desk .item-link {
+			color: #fff
+		}
+
+		.header-black>.header-desk .bar-item::before {
+			background-color: #fff
+		}
+
+		.header-black>.header-desk .bar-item::after {
+			background-color: #fff
+		}
+
+		.header-black>.header-desk .sub-link {
+			color: #fff
+		}
+
+		.header-black>.header-desk .language-default {
+			color: #fff
+		}
+
+		.header-black>.header-desk .language-select>.select-item {
+			color: #fff
+		}
+
+		.header-black>.header-desk .item-bar {
+			background-color: rgba(29, 29, 31, 0.72);
+			box-shadow: none
+		}
+
+		.header-black>.header-desk .sub-link:hover {
+			background-color: rgba(200, 200, 200, 0.5)
+		}
+
+		.header-black>.header-desk .language-select {
+			background-color: rgba(29, 29, 31, 0.72);
+			box-shadow: none
+		}
+
+		.header-black>.header-desk .language-select>.select-item:hover {
+			background-color: rgba(200, 200, 200, 0.5)
+		}
+
+		@media only screen and (max-width:767px) {
+			.font-title {
+				font-size: .3rem
+			}
+
+			.shopify {
+				width: 100%;
+				min-height: 100vh;
+			}
+
+			.wrapper {
+				height: 100%;
+				padding: 1rem 0 .5rem 0;
+			}
+
+			.header {
+				position: absolute
+			}
+
+			.header-desk .desk-language {
+				margin-left: 0
+			}
+
+			.header-buy>span {
+				display: block
+			}
+
+			.header-buy {
+				position: absolute;
+				top: .44rem;
+				left: 0;
+				right: 0;
+				z-index: 99;
+				width: 100%;
+				height: .44rem;
+				padding: 0 .2rem 0 .2rem;
+				font-size: .18rem;
+				color: #fff;
+				background-color: #1C1C1E;
+				transform: translateY(0%)
+			}
+
+			.header-buy>a {
+				height: .28rem;
+				padding: 0 .15rem;
+				font-size: .14rem;
+				color: #fff;
+				background-image: linear-gradient(218deg, #004ffc 4%, #3f6ef6 94%);
+				border-radius: .15rem;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<!-- header -->
+	<section id="shopify" class="shopify" v-cloak>
+		<!-- header -->
+		<header class="header">
+			<div class="header-desk flex-vc">
+				<nav class="desk-nav flex-vb flex-1">
+					<a class="nav-logo" href="index.html"></a>
+					<ul class="nav-bar flex-vc">
+						<li class="bar-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+							<ul class="item-bar" v-if="item.linkList">
+								<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+									<a class="sub-link flex-center" :href="linkItem.link"
+										:target="linkItem.target">{{linkItem.linkName}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="desk-language ">
+					<div class="language-default flex-vb">
+						<span>简体中文</span>
+						<i class="iconfont icondian"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-item flex-center" @click="checkLanguage('en')">English</li>
+						<li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
+						<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+						<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="header-mobile flex-vb">
+				<div class="mobile-nav">
+					<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+						<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+					</div>
+					<ul class="nav-list">
+						<li class="list-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-vb" :href="item.href" :target="item.target">
+								<span>{{item.name}}</span>
+								<i class="iconfont iconarrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a class="mobile-logo" href="index.html"></a>
+				<div class="mobile-language" v-show="!openMenuShow">
+					<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+						<span v-show="!openLanguageShow">简体中文</span>
+						<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-title flex-vc"><span>选择语言</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span>
+						<li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span>
+						</li>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="header-buy flex-vb">
+				<span>TourBox 2020</span>
+				<a class="flex-center" href="shopify-buy.html" target="_blank">购买</a>
+			</div>
+		</header>
+		<div class="wrapper">
+			<div id='collection-component-1609129466857'></div>
+		</div>
+	</section>
+	<!-- footer -->
+	<footer id="footer"></footer>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+		new Vue({
+			el: "#shopify",
+			data: {
+				isM: false,
+				openMenuShow: false,
+				openLanguageShow: false,
+				navList: [],
+			},
+			created: function () {
+				var that = this;
+				that.judgeIsMobile()
+				that.getNavList();
+			},
+			methods: {
+				getNavList: function () {
+					var that = this;
+					$.getJSON("src/json/bars.json", function (result) {
+						that.navList = that.isM ? result.mobileList : result.deskList;
+					})
+				},
+				openMenu: function () {
+					var that = this;
+					that.openMenuShow = !that.openMenuShow;
+					that.openLanguageShow = false;
+					$(".header-mobile .nav-list").slideToggle("fast");
+				},
+				openLanguage: function () {
+					var that = this;
+					that.openLanguageShow = !that.openLanguageShow;
+					that.openMenuShow = false;
+					$(".header-mobile .language-select").slideToggle("fast");
+				},
+				checkLanguage: function (lan) {
+					window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
+				},
+				judgeIsMobile: function () {
+					var that = this;
+					if (window.innerWidth < 768) {
+						that.isM = true;
+					} else {
+						that.isM = false;
+					}
+					window.addEventListener('resize', function (e) {
+						if (window.innerWidth < 768) {
+							that.isM = true;
+						} else {
+							that.isM = false;
+						}
+					})
+				}
+			}
+		})
+	</script>
+
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		(function () {
+			var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+			if (window.ShopifyBuy) {
+				if (window.ShopifyBuy.UI) {
+					ShopifyBuyInit();
+				} else {
+					loadScript();
+				}
+			} else {
+				loadScript();
+			}
+
+			function loadScript() {
+				var script = document.createElement('script');
+				script.async = true;
+				script.src = scriptURL;
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+				script.onload = ShopifyBuyInit;
+			}
+
+			function ShopifyBuyInit() {
+				var client = ShopifyBuy.buildClient({
+					domain: 'tourbox-tech.myshopify.com',
+					storefrontAccessToken: 'f642429bcb9aa5193c0c42eac9a176e4',
+				});
+				ShopifyBuy.UI.onReady(client).then(function (ui) {
+					ui.createComponent('collection', {
+						id: '172137414789',
+						node: document.getElementById('collection-component-1609129466857'),
+						moneyFormat: '%24%7B%7Bamount%7D%7D',
+						options: {
+							"product": {
+								"styles": {
+									"product": {
+										"@media (min-width: 601px)": {
+											"max-width": "calc(25% - 20px)",
+											"margin-left": "20px",
+											"margin-bottom": "50px",
+											"width": "calc(25% - 20px)"
+										},
+										"img": {
+											"height": "calc(100% - 15px)",
+											"position": "absolute",
+											"left": "0",
+											"right": "0",
+											"top": "0"
+										},
+										"imgWrapper": {
+											"padding-top": "calc(75% + 15px)",
+											"position": "relative",
+											"height": "0"
+										}
+									},
+									"button": {
+										"font-family": "Open Sans, sans-serif",
+										"font-weight": "bold",
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px",
+										":hover": {
+											"background-color": "#1ea8de"
+										},
+										"background-color": "#21bbf7",
+										":focus": {
+											"background-color": "#1ea8de"
+										},
+										"border-radius": "6px"
+									},
+									"quantityInput": {
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px"
+									}
+								},
+								"text": {
+									"button": "Add to cart"
+								},
+								"googleFonts": [
+									"Open Sans"
+								]
+							},
+							"productSet": {
+								"styles": {
+									"products": {
+										"@media (min-width: 601px)": {
+											"margin-left": "-20px"
+										}
+									}
+								}
+							},
+							"modalProduct": {
+								"contents": {
+									"img": false,
+									"imgWithCarousel": true,
+									"button": false,
+									"buttonWithQuantity": true
+								},
+								"styles": {
+									"product": {
+										"@media (min-width: 601px)": {
+											"max-width": "100%",
+											"margin-left": "0px",
+											"margin-bottom": "0px"
+										}
+									},
+									"button": {
+										"font-family": "Open Sans, sans-serif",
+										"font-weight": "bold",
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px",
+										":hover": {
+											"background-color": "#1ea8de"
+										},
+										"background-color": "#21bbf7",
+										":focus": {
+											"background-color": "#1ea8de"
+										},
+										"border-radius": "6px"
+									},
+									"quantityInput": {
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px"
+									}
+								},
+								"googleFonts": [
+									"Open Sans"
+								],
+								"text": {
+									"button": "Add to cart"
+								}
+							},
+							"cart": {
+								"styles": {
+									"button": {
+										"font-family": "Open Sans, sans-serif",
+										"font-weight": "bold",
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px",
+										":hover": {
+											"background-color": "#1ea8de"
+										},
+										"background-color": "#21bbf7",
+										":focus": {
+											"background-color": "#1ea8de"
+										},
+										"border-radius": "6px"
+									}
+								},
+								"text": {
+									"total": "Subtotal",
+									"button": "Checkout"
+								},
+								"popup": false,
+								"googleFonts": [
+									"Open Sans"
+								]
+							},
+							"toggle": {
+								"styles": {
+									"toggle": {
+										"font-family": "Open Sans, sans-serif",
+										"font-weight": "bold",
+										"background-color": "#21bbf7",
+										":hover": {
+											"background-color": "#1ea8de"
+										},
+										":focus": {
+											"background-color": "#1ea8de"
+										}
+									},
+									"count": {
+										"font-size": "16px"
+									}
+								},
+								"googleFonts": [
+									"Open Sans"
+								]
+							}
+						},
+					});
+				});
+			}
+		})();
+		/*]]>*/
+	</script>
+
+</body>
+
+
+</html>

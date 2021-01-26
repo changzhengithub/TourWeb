@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Get the latest news and updates from TourBox.">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>TourBox Affiliate Program</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/affiliate-program.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<!-- container -->
+	<div class="affiliate-program" id="container" v-cloak>
+		<div class="program-left">
+			<div class="left-title">
+				<h1 class="left-title">TourBox제휴 프로그램</h1>
+			</div>
+			<div class="left-text">
+				<p>TourBox는 디지털 창작자를 위해 특별히 설계된 역대급 소프트웨어 컨트롤러입니다. 우리는 이제 소셜 채널, 블로그, 개인 웹 사이트 또는 창의적인 커뮤니티를 통해 우리 에 합류하고
+					TourBox를 홍보하려는 잠재력이 큰 크리에이터를 찾고 있습니다. 고품질적이고 지속 검토 가능한 리뷰 하나를 통해 탐스럽게 커미션 수입을 올릴 수 있습니다.</p>
+			</div>
+		</div>
+		<div class="program-right">
+			<p class="right-tip">관심이 있으시면 아래 양식으로 정보를 제출하십시오！연락드릴겠습니다!</p>
+			<div class="right-form">
+				<div class="form-item">
+					<div class="item-input">
+						<label for="first-name">이름</label>
+						<input id="first-name" v-model="firstName" type="text" @input="clearTipMessage">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="last-name">성</label>
+						<input id="last-name" v-model="lastName" type="text" @input="clearTipMessage">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="email">이메일</label>
+						<input id="email" v-model="email" type="text" @input="clearTipMessage">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="country">국가</label>
+						<input id="country" v-model="country" type="text" @input="clearTipMessage">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="website">훔페이지</label>
+						<input id="website" v-model="website" type="text">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input ">
+						<label for="facebook">페이스북</label>
+						<input id="facebook" v-model="facebook" type="text">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="youTube">유튜브</label>
+						<input id="youTube" v-model="youtube" type="text">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="instagram">인스타그램</label>
+						<input id="instagram" v-model="instagram" type="text">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="twitter">트위터</label>
+						<input id="twitter" v-model="twitter" type="text">
+					</div>
+				</div>
+				<div class="form-item">
+					<div class="item-input">
+						<label for="about-you">자세한 정보 :</label>
+						<textarea id="about-you" v-model="aboutYou" cols="30" rows="4"></textarea>
+					</div>
+				</div>
+				<div class="form-tip" :style="{color: tipColor}">{{tipMsg}}</div>
+				<div class="form-submit">
+					<button @click="submitInformation">제출</button>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer"></div>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/affiliate-program.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+
+</html>

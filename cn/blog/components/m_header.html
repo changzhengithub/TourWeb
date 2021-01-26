@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<head>
+	<style type="text/css">
+		.index-mobile-nav{
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 10000;
+			width: 100%;
+			height: .44rem;
+		}
+	
+		.mobile-nav-header {
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			padding: 0 .15rem;
+			background-color: #f8f8f8;
+			border-bottom: 1px solid #f1f1f1;
+		}
+	
+		
+		.mobile-nav-header-logo{
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: 9;
+			display: block;
+			width: 0.4rem;
+			transform: translateX(-50%) translateY(-50%);
+			-webkit-transform: translateX(-50%) translateY(-50%);
+		}
+	
+		.mobile-nav-header-logo>img {
+			width: 100%;
+		}
+	
+		.mobile-nav-header-left>.iconfont{
+			font-size: .24rem;
+			color: #bec2c9;
+		}
+	
+		.mobile-nav-header-right {
+			height: auto;
+		}
+	
+		.mobile-nav-header-right-link {
+			display: block;
+			text-align: center;
+			padding: .06rem .1rem .06rem .1rem;
+			font-size: .12rem;
+			color: #fff;
+			font-weight: 500;
+			border-radius: .05rem;
+			background-image: linear-gradient(to bottom, #42adff, #02C9F0);
+		}
+	
+		.mobile-nav-header-right-link>img {
+			width: 0.24rem;
+			height: 0.24rem;
+		}
+	
+		.mobile-nav-menu {
+			position: absolute;
+			top: 100%;
+			left: 0;
+			z-index: 999;
+			display: none;
+			width: 100%;
+			height: calc(100vh - 0.44rem);
+			background-color: #f8f8f8;
+		}
+	
+		.mobile-nav-menu-item {
+			display: block;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			width: 100%;
+			padding: 0.15rem 0.2rem;
+			color: inherit;
+			border-bottom: 1px solid #e9e9e9;
+		}
+	
+		.mobile-nav-menu-item-text {
+			font-size: .14rem;
+			color: #333;
+		}
+	
+		.mobile-nav-menu-item>.iconfont {
+			font-size: .14rem;
+			color: #333;
+		}
+		
+	</style>
+</head>
+<div class="index-mobile-nav" id="nav" v-cloak>
+	<div class="mobile-nav-header">
+		<div class="mobile-nav-header-left" @click="openMenu">
+			<span class="iconfont iconbars" :class="{iconclose: openMenuShow}"></span>
+		</div>
+		<a class="mobile-nav-header-logo">
+			<img src="//r.tourboxtech.cn/basic-img/logo-black-2.0.png" alt="Image loading failed" >
+		</a>
+		<div class="mobile-nav-header-right">
+			<div id='product-component-1589254179271' style="width: 100px !important;"></div>
+			<!-- <a :href="url" class="right-link" target="_blank">
+				<img src="//r.tourboxtech.cn/src/images/buy.png" >
+			</a> -->
+			<!-- <a class="right-link" :href="url" target="_blank">Buy Now</a> -->
+		</div>
+	</div>
+	<div class="mobile-nav-menu" ref="menu">
+		<a class="mobile-nav-menu-item" v-for="(item,index) in bars" :key="'bar-'+index" :href="item.href" v-if="item.mobileShow">
+			<span class="mobile-nav-menu-item-text">{{item.name}}</span>
+			<span class="iconfont iconarrow-right"></span>
+		</a>
+	</div>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el:"#nav",
+		data:{
+			openMenuShow:false,
+			bars:[],
+			url:"https://store.tourboxtech.com/products/tourbox"
+		},
+		mounted:function() {
+			var _this = this;
+			_this.getBars();
+		},
+		methods:{
+			getBars:function(){
+				var _this = this;
+				$.getJSON("/cn/blog/src/json/bars.json", function(result) {
+					_this.bars = result;
+				})
+			},
+			openMenu: function(){
+				var _this = this;
+				_this.openMenuShow = !_this.openMenuShow;
+				if(_this.openMenuShow){
+					$(".mobile-nav-menu").slideDown("fast");
+				}else{
+					$(".mobile-nav-menu").slideUp("fast");
+				}
+			}
+		}
+	})
+</script>
+
+<script type="text/javascript">
+	/*<![CDATA[*/
+	(function () {
+		var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+		if (window.ShopifyBuy) {
+			if (window.ShopifyBuy.UI) {
+				ShopifyBuyInit();
+			} else {
+				loadScript();
+			}
+		} else {
+			loadScript();
+		}
+
+		function loadScript() {
+			var script = document.createElement('script');
+			script.async = true;
+			script.src = scriptURL;
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+			script.onload = ShopifyBuyInit;
+		}
+
+		function ShopifyBuyInit() {
+			var client = ShopifyBuy.buildClient({
+				domain: 'store.tourboxtech.com',
+				storefrontAccessToken: 'f642429bcb9aa5193c0c42eac9a176e4',
+			});
+			ShopifyBuy.UI.onReady(client).then(function (ui) {
+				ui.createComponent('product', {
+					id: '4826136182917',
+					node: document.getElementById('product-component-1589254179271'),
+					moneyFormat: '%24%7B%7Bamount%7D%7D',
+					options: {
+						"product": {
+							"styles": {
+								"product": {
+									"width": "100px"
+								},
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-size": "16px",
+									"padding": "5px 10px 6px 10px",
+									"margin-top": "-20px !important",
+									"border-radius": "6px",
+									"outline": "none",
+									"background-image": "linear-gradient(to bottom, #42adff, #02C9F0);"
+								},
+								"quantityInput": {
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px"
+								}
+							},
+							"buttonDestination": "checkout",
+							"contents": {
+								"img": false,
+								"title": false,
+								"price": false
+							},
+							"text": {
+								"button": "购买"
+							},
+							"googleFonts": [
+								"Open Sans"
+							]
+						},
+						"productSet": {
+							"styles": {
+								"products": {
+									"@media (min-width: 601px)": {
+										"margin-left": "-20px"
+									}
+								}
+							}
+						},
+						"modalProduct": {
+							"contents": {
+								"img": false,
+								"imgWithCarousel": true,
+								"button": false,
+								"buttonWithQuantity": true
+							},
+							"styles": {
+								"product": {
+									"@media (min-width: 601px)": {
+										"max-width": "100%",
+										"margin-left": "0px",
+										"margin-bottom": "0px"
+									}
+								},
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									"background-color": "#21bbf7",
+									":focus": {
+										"background-color": "#1ea8de"
+									},
+									"border-radius": "6px"
+								},
+								"quantityInput": {
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px"
+								}
+							},
+							"googleFonts": [
+								"Open Sans"
+							],
+							"text": {
+								"button": "Add to cart"
+							}
+						},
+						"cart": {
+							"styles": {
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									"background-color": "#21bbf7",
+									":focus": {
+										"background-color": "#1ea8de"
+									},
+									"border-radius": "6px"
+								}
+							},
+							"text": {
+								"total": "Subtotal",
+								"button": "Checkout"
+							},
+							"popup": false,
+							"googleFonts": [
+								"Open Sans"
+							]
+						},
+						"toggle": {
+							"styles": {
+								"toggle": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"background-color": "#21bbf7",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									":focus": {
+										"background-color": "#1ea8de"
+									}
+								},
+								"count": {
+									"font-size": "16px"
+								}
+							},
+							"googleFonts": [
+								"Open Sans"
+							]
+						}
+					},
+				});
+			});
+		}
+	})();
+	/*]]>*/
+</script>

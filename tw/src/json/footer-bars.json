@@ -1,0 +1,111 @@
+{
+	"right":[
+		{
+			"name": "TourBox",
+			"children": [{
+					"name": "關於我們",
+					"url": "about-us.html"
+				},
+				{
+					"name": "聯絡我們",
+					"url": "contact-us.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "條款",
+			"children": [{
+					"name": "使用條款",
+					"url": "terms-of-use.html"
+				},
+				{
+					"name": "隱私政策",
+					"url": "privacy-policy.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "探索",
+			"children": [
+				{
+					"name": "論壇",
+					"target":"_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "新聞",
+					"url": "news.html"
+				},
+				{
+					"name": "推廣聯盟",
+					"url": "affiliate.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "下載中心",
+			"children": [
+				{
+					"name": "軟體",
+					"url": "downloads.html"
+				},
+				{
+					"name": "預設",
+					"url": "presets.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "支援",
+			"children": [
+				{
+					"name": "說明書",
+					"url": "manual.html"
+				},
+				{
+					"name": "常見問題",
+					"url": "faq.html"
+				},
+				{
+					"name": "支援中心",
+					"url": "support.html"
+				}
+			],
+			"open":false
+		}
+	],
+	"left": {
+		"title": "訂閱我們",
+		"description": "想收到TourBox的最新消息及活動資訊，請立即訂閱我們。",
+		"inc": "2020 TourBox Tech Inc. All Right Reserved.",
+		"placeholder": "電郵地址",
+		"emailError": "輸入的不是電子郵件地址",
+		"emailSuccess": "成功訂閱",
+		"emailAlready": "您已經有帳戶！",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxTaiwan",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/Tourboxtech",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

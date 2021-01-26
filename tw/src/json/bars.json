@@ -1,0 +1,118 @@
+{
+	"deskList": [
+		{
+			"name": "主頁",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "產品",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "探索",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "論壇",
+					"link": "https://forum.tourboxtech.com/",
+					"target":"_blank"
+				},
+				{
+					"linkName": "新聞",
+					"link": "news.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "推廣聯盟",
+					"link": "affiliate.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "下載中心",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "軟體",
+					"link": "downloads.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "預設",
+					"link": "presets.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "支援",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "說明書",
+					"link": "manual.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "常見問題",
+					"link": "faq.html",
+					"target":"_self"
+				}
+			]
+		}
+
+	],
+	"mobileList": [
+		{
+			"name": "主頁",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "產品",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "論壇",
+			"href": "https://forum.tourboxtech.com/",
+			"target":"_blank"
+		},
+		{
+			"name": "新聞",
+			"href": "news.html",
+			"target":"_self"
+		},
+		{
+			"name": "推廣聯盟",
+			"href": "affiliate.html",
+			"target":"_self"
+		},
+		{
+			"name": "軟體",
+			"href": "downloads.html",
+			"target":"_self"
+		},
+		{
+			"name": "預設",
+			"href": "presets.html",
+			"target":"_self"
+		},
+		{
+			"name": "說明書",
+			"href": "manual.html",
+			"target":"_self"
+		},
+		{
+			"name": "常見問題",
+			"href": "faq.html",
+			"target":"_self"
+		}
+	]
+}

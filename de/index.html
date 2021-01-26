@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+	content="Das ultimative Werkzeug für Kreative" />
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>Das ultimative Werkzeug für Kreative.</title>
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<section id="index" class="index" v-cloak>
+		<!-- main -->
+		<main class="index-main">
+			<!-- banner -->
+			<section class="main-banner">
+				<div class="banner-headline">
+					<p class="headline-name ">TourBox <span>2020</span></p>
+					<p class="headline-title ">Das ultimative Werkzeug für Kreative</p>
+					<p class="headline-price ">€169</p>
+					<div class="headline-link flex-center ">
+						<a class="link-item felex-center" href="product.html">Mehr erfahren<i class="iconfont iconarrow-right"></i></a>
+						<!-- <div class="link-item flex-center"><div id='product-component-1589254179271' style="width: 100px !important;"></div><i class="iconfont iconarrow-right"></i></div> -->
+					</div>
+				</div>
+			</section>
+			<!-- new -->
+			<section class="mian-update" :class="{'flex-vb': !isM}">
+				<div class="update-item lazy" data-bg="//r.tourboxtech.com/en/src/images/index-update01-2.1.4.jpg">
+					<div class="item-content item-active">
+						<h1>TourBox Console 2.2.4 – jetzt erhältlich</h1>
+						<a href="downloads.html">Mehr erfahren<i class="iconfont iconarrow-right"></i></a>
+					</div>
+				</div>
+				<div class="update-item lazy" data-bg="//r.tourboxtech.com/en/src/images/index-update02-2.0.4.jpg">
+					<div class="item-content">
+						<h1>TourBox hat sein Crowdfunding-Ziel in Taiwan übertroffen</h1>
+						<a href="news.html">Mehr erfahren<i class="iconfont iconarrow-right"></i></a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</section>
+	<!-- footer -->
+	<footer id="footer"></footer>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		(function () {
+			loadBannerBg();
+			initLazy();
+
+			function loadBannerBg() {
+				var imgUrl = window.flag ?  '//r.tourboxtech.com/en/src/images/product-banner-2.0.1.jpg' : '//r.tourboxtech.com/en/src/images/product-banner-mobile-2.0.1.jpg'
+				var img = new Image();
+				img.src = imgUrl;
+				img.onload = function () {
+					$('.headline-name').addClass('top-animate')
+					$('.headline-title').addClass('middle-animate')
+					$('.headline-price').addClass('bottom-animate')
+					$('.headline-link').addClass('link-animate')
+				}
+			}
+
+			function initLazy() {
+				new LazyLoad({
+					threshold: 300
+				});
+			}
+			// var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+			// if (window.ShopifyBuy) {
+			// 	if (window.ShopifyBuy.UI) {
+			// 		ShopifyBuyInit();
+			// 	} else {
+			// 		loadScript();
+			// 	}
+			// } else {
+			// 	loadScript();
+			// }
+
+			// function loadScript() {
+			// 	var script = document.createElement('script');
+			// 	script.async = true;
+			// 	script.src = scriptURL;
+			// 	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+			// 	script.onload = ShopifyBuyInit;
+			// }
+
+			// function ShopifyBuyInit() {
+			// 	var client = ShopifyBuy.buildClient({
+			// 		domain: 'store.tourboxtech.com',
+			// 		storefrontAccessToken: 'f642429bcb9aa5193c0c42eac9a176e4',
+			// 	});
+			// 	ShopifyBuy.UI.onReady(client).then(function (ui) {
+			// 		ui.createComponent('product', {
+			// 			id: '4826136182917',
+			// 			node: document.getElementById('product-component-1589254179271'),
+			// 			moneyFormat: '%24%7B%7Bamount%7D%7D',
+			// 			options: {
+			// 				"product": {
+			// 					"styles": {
+			// 						"product": {
+			// 							"width": "120px"
+			// 						},
+			// 						"button": {
+			// 							"font-family": "Open Sans, sans-serif",
+			// 							"font-size": "22px",
+			// 							"color": "#2997ff",
+			// 							"padding": "5px",
+			// 							"margin-top": "-20px !important",
+			// 							"border-radius": "25px",
+			// 							"outline": "none",
+			// 							"background-color": "transparent",
+			// 							":hover": {
+			// 								"background-color": "transparent"
+			// 							},
+			// 							":focus": {
+			// 								"background-color": "transparent"
+			// 							},
+			// 						},
+			// 						"quantityInput": {
+			// 							"font-size": "16px",
+			// 							"padding-top": "16px",
+			// 							"padding-bottom": "16px"
+			// 						}
+			// 					},
+			// 					"buttonDestination": "checkout",
+			// 					"contents": {
+			// 						"img": false,
+			// 						"title": false,
+			// 						"price": false
+			// 					},
+			// 					"text": {
+			// 						"button": "Kaufen"
+			// 					},
+			// 					"googleFonts": [
+			// 						"Open Sans"
+			// 					]
+			// 				},
+			// 				"productSet": {
+			// 					"styles": {
+			// 						"products": {
+			// 							"@media (min-width: 601px)": {
+			// 								"margin-left": "-20px"
+			// 							}
+			// 						}
+			// 					}
+			// 				},
+			// 				"modalProduct": {
+			// 					"contents": {
+			// 						"img": false,
+			// 						"imgWithCarousel": true,
+			// 						"button": false,
+			// 						"buttonWithQuantity": true
+			// 					},
+			// 					"styles": {
+			// 						"product": {
+			// 							"@media (min-width: 601px)": {
+			// 								"max-width": "100%",
+			// 								"margin-left": "0px",
+			// 								"margin-bottom": "0px"
+			// 							}
+			// 						},
+			// 						"button": {
+			// 							"font-family": "Open Sans, sans-serif",
+			// 							"font-weight": "bold",
+			// 							"font-size": "16px",
+			// 							"padding-top": "16px",
+			// 							"padding-bottom": "16px",
+			// 							":hover": {
+			// 								"background-color": "#1ea8de"
+			// 							},
+			// 							"background-color": "#21bbf7",
+			// 							":focus": {
+			// 								"background-color": "#1ea8de"
+			// 							},
+			// 							"border-radius": "6px"
+			// 						},
+			// 						"quantityInput": {
+			// 							"font-size": "16px",
+			// 							"padding-top": "16px",
+			// 							"padding-bottom": "16px"
+			// 						}
+			// 					},
+			// 					"googleFonts": [
+			// 						"Open Sans"
+			// 					],
+			// 					"text": {
+			// 						"button": "Add to cart"
+			// 					}
+			// 				},
+			// 				"cart": {
+			// 					"styles": {
+			// 						"button": {
+			// 							"font-family": "Open Sans, sans-serif",
+			// 							"font-weight": "bold",
+			// 							"font-size": "16px",
+			// 							"padding-top": "16px",
+			// 							"padding-bottom": "16px",
+			// 							":hover": {
+			// 								"background-color": "#1ea8de"
+			// 							},
+			// 							"background-color": "#21bbf7",
+			// 							":focus": {
+			// 								"background-color": "#1ea8de"
+			// 							},
+			// 							"border-radius": "6px"
+			// 						}
+			// 					},
+			// 					"text": {
+			// 						"total": "Subtotal",
+			// 						"button": "Checkout"
+			// 					},
+			// 					"popup": false,
+			// 					"googleFonts": [
+			// 						"Open Sans"
+			// 					]
+			// 				},
+			// 				"toggle": {
+			// 					"styles": {
+			// 						"toggle": {
+			// 							"font-family": "Open Sans, sans-serif",
+			// 							"font-weight": "bold",
+			// 							"background-color": "#21bbf7",
+			// 							":hover": {
+			// 								"background-color": "#1ea8de"
+			// 							},
+			// 							":focus": {
+			// 								"background-color": "#1ea8de"
+			// 							}
+			// 						},
+			// 						"count": {
+			// 							"font-size": "16px"
+			// 						}
+			// 					},
+			// 					"googleFonts": [
+			// 						"Open Sans"
+			// 					]
+			// 				}
+			// 			},
+			// 		});
+			// 	});
+			// }
+		})();
+		/*]]>*/
+	</script>
+</body>
+
+
+</html>

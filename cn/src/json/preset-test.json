@@ -1,0 +1,675 @@
+{
+	"presetNav": ["图像", "视频", "其他"],
+	"presetSubnav": [
+		{
+      "title": "DaVinci Resolve",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 1,
+			"subnavIndex": 7
+		},
+		{
+			"title": "Photoshop",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "status": 0,
+			"subnavIndex": 0
+		},
+		{
+      "title": "Lightroom",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 0,
+			"subnavIndex": 1
+		},
+		{
+      "title": "Affinity Photo",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 0,
+			"subnavIndex": 2
+		},
+		{
+      "title": "Capture One",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 0,
+			"subnavIndex": 3
+		},
+		{
+      "title": "Premiere",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 1,
+			"subnavIndex": 4
+		},
+		{
+      "title": "Final Cut Pro X",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 1,
+			"subnavIndex": 5
+		},
+		{
+      "title": "Clip Studio Paint",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 0,
+			"subnavIndex": 6
+		},
+		{
+      "title": "Chrome",
+      "desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 2,
+			"subnavIndex": 8
+		}
+	],
+	"presetList": [
+    {
+			"title":"Photoshop",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 0,
+      "author": "TourBox",
+      "isOfficial": true,
+			"subnavName": "Photoshop",
+			"language": "EN/JP/KR/TC",
+			"date": "2019.10",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Photoshop-en.tb"
+				},
+				{
+					"lan": "KR",
+					"url": "src/preset/Photoshop-kr.tb"
+				},
+				{
+					"lan": "JP",
+					"url": "src/preset/Photoshop-jp.tb"
+				},
+				{
+					"lan": "TC",
+					"url": "src/preset/Photoshop-繁.tb"
+				}
+			]
+		},
+		{
+			"title":"Photoshop",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Sky",
+      "isOfficial": false,
+			"status": 0,
+			"subnavName": "Photoshop",
+			"language": "CN",
+			"date": "2020.09",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Sky Photoshop CN - 天空梵城.tb"
+				}
+			]
+		},
+		{
+			"title":"Photoshop",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Andy99",
+      "isOfficial": false,
+			"status": 0,
+			"subnavName": "Photoshop",
+			"language": "DE",
+			"date": "2019.11",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "DE",
+					"url": "src/preset/Photoshop Deutsch by Andy99.tb"
+				}
+			]
+    },
+    {
+			"title":"Lightroom",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+			"status": 1,
+      "author": "TourBox",
+      "isOfficial": true,
+			"subnavName": "Lightroom",
+			"language": "EN/KR/TC/JP",
+			"date": "2020.03",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Lightroom-en.tb"
+				},
+				{
+					"lan": "KR",
+					"url": "src/preset/Lightroom-kr.tb"
+				},
+				{
+					"lan": "TC",
+					"url": "src/preset/Lightroom-繁.tb"
+				},
+				{
+					"lan": "JP-MAC",
+					"url": "src/preset/Lightroom-Mac-jp.tb"
+				},
+				{
+					"lan": "JP-WIN",
+					"url": "src/preset/Lightroom-Win-jp.tb"
+				}
+			]
+		},
+		{
+			"title":"Lightroom",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Where and Wander",
+      "isOfficial": false,
+			"status": 1,
+			"subnavName": "Lightroom",
+			"language": "EN",
+			"date": "2020.08",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Kien Lam Lightroom.tb"
+				}
+			]
+		},
+		{
+			"title":"Lightroom",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Ben",
+      "isOfficial": false,
+			"status": 1,
+			"subnavName": "Lightroom",
+			"language": "EN",
+			"date": "2020.01",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Lightroom-Edit by Ben.tb"
+				}
+			]
+		},
+		{
+			"title":"Lightroom",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "jonny back",
+      "isOfficial": false,
+			"status": 1,
+			"subnavName": "Lightroom",
+			"language": "EN",
+			"date": "2019.10",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "Lightroom_v1",
+					"url": "src/preset/Lightroom_v1 by jonny back.tb"
+				},
+				{
+					"lan": "Lightroom_v2",
+					"url": "src/preset/Lightroom_v2 by jonny back.tb"
+				},
+				{
+					"lan": "Lightroom_v3",
+					"url": "src/preset/Lightroom_v3 by jonny back.tb"
+				}
+			]
+		},
+		{
+			"title":"Lightroom",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "froggystuff",
+      "isOfficial": false,
+			"status": 1,
+			"subnavName": "Lightroom",
+			"language": "EN",
+			"date": "2019.08",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Beells_Lightroom_Film by froggystuff.tb"
+				}
+			]
+		},
+		{
+			"title":"Affinity Photo",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Nir VaNa",
+      "isOfficial": false,
+			"status": 2,
+			"subnavName": "Affinity Photo",
+			"language": "EN",
+			"date": "2019.09",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Affinity Photo by Nir VaNa.tb"
+				}
+			]
+		},
+		{
+			"title":"Capture One",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "John",
+      "isOfficial": false,
+			"status": 3,
+			"subnavName": "Capture One",
+			"language": "EN",
+			"date": "2020.06",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Capture One-en-John.tb"
+				}
+			]
+		},
+		{
+			"title":"Capture One",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Wesley Chen",
+      "isOfficial": false,
+			"status": 3,
+			"subnavName": "Capture One",
+			"language": "TC",
+			"date": "2020.07",
+			"system": "Win",
+			"downloadUrlList": [
+				{
+					"lan": "TC",
+					"url": "src/preset/Capture One Pro with default keys v2 by Wesley Chen  .tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "麦汐帆",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "CN",
+			"date": "2020.08",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Premiere-cn-mxf-麦汐帆.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "zkk",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "CN",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Premiere-cn-zkk.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "honey",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "KR",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "KR",
+					"url": "src/preset/premiere-kr-honey.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "森山",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "JP",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "JP",
+					"url": "src/preset/Premiere-JP-森山.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "df",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "EN",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Premiere-en-df.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "黄豪志",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "TC",
+			"date": "2020.04",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "TC",
+					"url": "src/preset/Premiere-tw-黄豪志.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "黃狗大帥哥",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "TC",
+			"date": "2020.04",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "TC",
+					"url": "src/preset/黃狗大帥哥的Premiere預設.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "PeterK",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "EN",
+			"date": "2019.09",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Premiere with Tags for Mac by PeterK.tb"
+				}
+			]
+		},
+		{
+			"title":"Premiere",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Jessepeej",
+      "isOfficial": false,
+			"status": 4,
+			"subnavName": "Premiere",
+			"language": "EN",
+			"date": "2019.08",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Premiere by Jessepeej.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "XiaoLei",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "CN",
+			"date": "2020.08",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Final Cut Pro X-cn-XiaoLei.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Where and Wander",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "EN",
+			"date": "2020.08",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Kien Lam FCPX.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "dfhs",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "CN",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Final Cut Pro-cn-dfhs.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "df",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "EN",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Final Cut Pro-en-df.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "honey",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "KR",
+			"date": "2020.05",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "KR",
+					"url": "src/preset/Final Cut Pro-kr-honey.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "黄豪志",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "TC",
+			"date": "2020.04",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "TC",
+					"url": "src/preset/Final Cut Pro-tw-黄豪志.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "栄美",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "JP",
+			"date": "2020.02",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "JP",
+					"url": "src/preset/Final Cut Pro-JP-栄美.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Ron Kapon",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "EN",
+			"date": "2020.02",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Final Cut Pro X by Ron Kapon.tb"
+				}
+			]
+		},
+		{
+			"title":"Final Cut Pro X",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Jack Jack Jacky",
+      "isOfficial": false,
+			"status": 5,
+			"subnavName": "Final Cut Pro X",
+			"language": "EN",
+			"date": "2020.06",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/240620FinalCutPro X--Jack Jack Jacky.tb"
+				}
+			]
+		},
+		{
+			"title":"Clip Studio Paint",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "た　ま",
+      "isOfficial": false,
+			"subnavName": "Clip Studio Paint",
+			"status": 6,
+			"language": "JP",
+			"date": "2020.08",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "JP",
+					"url": "src/preset/CLIP STUDIO PAINT-jp-た　ま.tb"
+				}
+			]
+		},
+		{
+			"title":"Clip Studio Paint",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "阿尼",
+      "isOfficial": false,
+			"subnavName": "Clip Studio Paint",
+			"status": 6,
+			"language": "TC",
+			"date": "2020.03",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "TC",
+					"url": "src/preset/Clip-Studio-Paint-台湾阿尼.tb"
+				}
+			]
+		},
+		{
+			"title":"DaVinci Resolve",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Tom Antos",
+      "isOfficial": false,
+			"subnavName": "DaVinci Resolve",
+			"status": 7,
+			"language": "EN",
+			"date": "2020.07",
+			"system": "Win & Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Davinci Resolve by Tom Antos.tb"
+				}
+			]
+		},
+		{
+			"title":"DaVinci Resolve",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Lockson",
+      "isOfficial": false,
+			"subnavName": "DaVinci Resolve",
+			"status": 7,
+			"language": "CN",
+			"date": "2020.09",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/DAVINC - Lockson-中文.tb"
+				}
+			]
+		},
+		{
+			"title":"Chrome",
+			"desc": "Photoshop的自定义配置文件为您提供了其默认快捷方式提供的所有功能：各种编辑工具，传输工具，选择操作，光标工具，记录工具，切换不同的视图和窗格以及文件操作。",
+      "author": "Kien",
+      "isOfficial": false,
+			"subnavName": "Chrome",
+			"status": 8,
+			"language": "EN",
+			"date": "2020.09",
+			"system": "Mac",
+			"downloadUrlList": [
+				{
+					"lan": "EN",
+					"url": "src/preset/Kien ChromeEN.tb"
+				}
+			]
+		}
+	]
+}

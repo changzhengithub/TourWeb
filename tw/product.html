@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+		content="TourBox，前所未有的軟體控制器， 專為數位創作者而誕生。不論是圖形圖像類軟體，還是繪畫類軟體，又或是影像與聲音類軟體，都可以使用TourBox以更自然，直觀的操控方式，增強創意者的控制力，從而全面提升創作體驗。">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<title>TourBox - 前所未有的軟體控制器， 專為數位創作者而誕生</title>
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/product.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<section id="index" class="index" v-cloak>
+		<!-- header -->
+		<header class="header">
+			<div class="header-desk flex-vc">
+				<nav class="desk-nav flex-vb flex-1">
+					<a class="nav-logo" href="index.html"></a>
+					<ul class="nav-bar flex-vc">
+						<li class="bar-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+							<ul class="item-bar" v-if="item.linkList">
+								<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+									<a class="sub-link flex-center" :href="linkItem.link"
+										:target="linkItem.target">{{linkItem.linkName}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="desk-language ">
+					<div class="language-default flex-vb">
+						<span>繁體中文</span>
+						<i class="iconfont icondian"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-item flex-center" @click="checkLanguage('cn')">简体中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('en')">English</li>
+						<li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
+						<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+						<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="header-mobile flex-vb">
+				<div class="mobile-nav">
+					<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+						<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+					</div>
+					<ul class="nav-list">
+						<li class="list-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-vb" :href="item.href" :target="item.target">
+								<span>{{item.name}}</span>
+								<i class="iconfont iconarrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a class="mobile-logo" href="index.html"></a>
+				<div class="mobile-language " v-show="!openMenuShow">
+					<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+						<span v-show="!openLanguageShow">繁體中文</span>
+						<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-title flex-vc"><span>選擇語言</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('cn')"><span>中国大陆</span><span>简体中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span>
+						</li>
+						<li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="header-buy flex-vb">
+				<span>TourBox 2020</span>
+				<a class="flex-center" href="shopify-buy.html" target="_blank">購買</a>
+			</div>
+		</header>
+
+		<!-- main -->
+		<main class="index-main">
+			<!-- global fixed video -->
+			<section class="main-player">
+				<div class="player-video flex-center">
+					<div class="video-close" @click.prevent="closePlayer">
+						<span class="iconfont iconclose"></span>
+					</div>
+					<div class="video-container"></div>
+				</div>
+			</section>
+			<!-- banner -->
+			<section class="main-banner">
+				<div class="banner-container">
+					<div class="container-content">
+						<div class="content-detail">
+							<p class="detail-title font-title">使用如你所想</p>
+							<p class="detail-text">
+								全新的旋鈕調校和按鍵優化，操作行雲流水、信心十足。人體工學設計，一手掌控創作流程。自由靈活的適配性，圍繞使用情境的內建功能，無論繪畫、設計、圖片後期還是影音剪輯，TourBox都以最直覺的方式簡單操作，更加快捷、高效、無縫。<span>TourBox
+									2020款將帶來前所未有的操作體驗。</span></p>
+							<p class="detail-subtitle">TourBox 2020款將帶來前所未有的操作體驗。</p>
+							<div class="detail-link flex-center">
+								<div class="link-item flex-vc" @click="openFixedVideo('k87nHj2w6k0')">
+									<span>觀看影片</span>
+									<i class="iconfont iconbofang"></i>
+								</div>
+								<div class="link-item flex-vc" @click="openFixedVideo('KnRKJcLDi1Y')">
+									<span>他們都在用</span>
+									<i class="iconfont iconbofang"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content-next">
+							<p class="next-title font-title">哈，工作就像在玩填色遊戲。</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- second -->
+			<section class="section-second">
+				<div class="second-wrapper">
+					<section class="wrapper-full wrapper-first">
+						<div class="first-title">
+							<p class="title-text font-title">哈，</p>
+							<p class="title-text font-title">工作就像在玩填色遊戲。</p>
+						</div>
+						<div class="full-sticky">
+							<div class="sticky-element">
+								<div class="element-top"></div>
+								<div class="element-right"></div>
+								<div class="element-bottom"></div>
+								<div class="element-left"></div>
+								<div class="element-play">
+									<video id="second-first-video" v-if="!isAndroid"
+									muted="true"
+									loop="true"
+									playsinline
+									webkit-playsinline="true"
+									x5-video-player-type="h5"
+									x-webkit-airplay="true"
+									x5-video-orientation="portraint" 
+									x5-video-player-fullscreen="true"
+									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-01-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-01-mobile-2.0.1.mp4'"
+									></video>
+									<!-- For Android -->
+  								<canvas id="second-first-canvas" v-if="isAndroid"></canvas>
+									<figure class="play-image"></figure>
+								</div>
+								<div class="element-text">
+									<p class="font-text">
+										一邊畫畫，一邊轉動TourBox上的旋鈕去調整你想要的筆刷的大小、流量、硬度、透明度，並通過滾輪去放大縮小畫面，按住按鍵去拖曳畫布。這一系列的操作，TourBox輕鬆控制，單手無需移動。完美配合滑鼠或者數位板。
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="wrapper-card wrapper-second">
+						<div class="card-detail flex-vc">
+							<div class="detail-left">
+								<p>這樣的操作，過癮。</p>
+							</div>
+							<div class="detail-right">
+								<p>在Adobe Lightroom裡，只需輕輕轉動旋鈕，就可以輕鬆調整曝光、對比度、暗部、亮部等各種參數。<span>眼睛只需關注畫面的變化，無需緊盯參數滑桿，回歸到創作本身吧。</span></p>
+							</div>
+						</div>
+						<div class="card-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+								poster="//r.tourboxtech.com/tw/src/images/product-second-02-mask-2.0.png"
+								data-src="//r.tourboxtech.com/tw/src/videos/product-second-02-2.0.2.mp4"></video>
+						</div>
+					</section>
+
+					<section class="wrapper-card wrapper-third">
+						<div class="card-detail flex-vc">
+							<div class="detail-left">
+								<p>爽。</p>
+							</div>
+							<div class="detail-right">
+								<p>這就是我一直想要的剪輯工具，轉盤、旋鈕和滾輪。<span>不論是快速移動時間軸，還是逐幀步進、抑或縮放時間軸，隨心所欲。</span></p>
+							</div>
+						</div>
+						<div class="card-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+								poster="//r.tourboxtech.com/tw/src/images/product-second-03-mask-2.0.png"
+								data-src="//r.tourboxtech.com/tw/src/videos/product-second-03-2.0.2.mp4"></video>
+						</div>
+					</section>
+
+					<section class="wrapper-full wrapper-fourth">
+						<div class="fourth-title">
+							<div class="title-desk">
+								<p class="font-title">全新調校的旋鈕，準確、平滑、順暢。</p>
+							</div>
+							<div class="title-mobile">
+								<p class="font-title">全新調校的旋鈕，</p>
+								<p class="font-title">準確、平滑、順暢。</p>
+							</div>
+						</div>
+						<div class="full-sticky">
+							<div class="sticky-element">
+								<div class="element-top"></div>
+								<div class="element-right"></div>
+								<div class="element-bottom"></div>
+								<div class="element-left"></div>
+								<div class="element-play">
+									<video id="second-fourth-video" v-if="!isAndroid"
+									muted="true" 
+									loop="true"
+									playsinline
+									webkit-playsinline="true"
+									x5-video-player-type="h5"
+									x-webkit-airplay="true"
+									x5-video-orientation="portraint" 
+									x5-video-player-fullscreen="true"
+									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-04-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-04-mobile-2.0.1.mp4'"></video>
+									<canvas id="second-fourth-canvas" v-if="isAndroid"></canvas>
+									<figure class="play-image"></figure>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<!-- third -->
+			<section class="section-third">
+				<div class="third-title">
+					<div class="title-desk">
+						<p class="font-title">長鍵、短鍵、Top鍵、側鍵， </p>
+						<p class="font-title">手指很自然的就找到了它們。</p>
+					</div>
+					<div class="title-mobile">
+						<p class="font-title">長鍵、短鍵、Top鍵、側鍵， </p>
+						<p class="font-title">手指很自然的就找到了它們。</p>
+					</div>
+				</div>
+				<div class="third-banner lazy" data-bg="//r.tourboxtech.com/tw/src/images/product-third01-2.0.4.png"></div>
+			</section>
+			<!-- fourth -->
+			<section class="section-fourth">
+				<div class="fourth-title">
+					<p class="font-title">對，這就是我要的控制器。</p>
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/tw/src/images/product-fourth-swiper01-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-title">對，這就是我要的控制器。</p>
+								<div class="detail-summary">
+									<p class="font-title">精細製造</p>
+								</div>
+								<div class="detail-text">
+									<p>嚴選制造技術，人體工學設計，完美貼合手掌，20萬次的耐久性測試，它不是電子玩具，它是給創作者真正的工具。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/tw/src/images/product-fourth-swiper02-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-title">對，這就是我要的控制器。</p>
+								<div class="detail-summary">
+									<p class="font-title">單手操作</p>
+								</div>
+								<div class="detail-text">
+									<p>單手免視操作，便於攜帶，桌面上完全沒存在感，無論是辦公室還是咖啡廳，都可以隨時開始創作。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/tw/src/images/product-fourth-swiper03-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-title">對，這就是我要的控制器。</p>
+								<div class="detail-summary">
+									<p class="font-title">穩健可靠</p>
+								</div>
+								<div class="detail-text">
+									<p>合適的重量，穩定，不會輕易移動，讓操作信心十足。</p>
+									<!-- <p>让操作信心十足。</p> -->
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/tw/src/images/product-fourth-swiper04-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-title">對，這就是我要的控制器。</p>
+								<div class="detail-summary">
+									<p class="font-title">手感親膚</p>
+								</div>
+								<div class="detail-text">
+									<p>良好的握持感，舒適、溫潤、無冰冷感。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- fifth -->
+			<section class="section-fifth">
+				<div class="fifth-content">
+					<div class="fifth-title">
+						<p class="title font-title">這樣操控，很歡樂。</p>
+					</div>
+					<div class="fifth-text">
+						<p class="text font-text ">滾輪、旋鈕抑或轉盤，在縮放畫面、旋轉畫布、時間軸縮放等一系列的編輯類操作中，都可以配合TourBox側鍵、長鍵、短鍵等其他按鍵實現更加進階的功能。 </p>
+					</div>
+					<div class="fifth-list flex-vb flex-wrap">
+						<div class="list-item" :class="item.className" v-for="(item, index) in toastVideoList" :key="index"
+							@click="openSubToast(index)">
+							<div class="item-icon"></div>
+							<p>{{item.itemText}}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- fifth fixed toast video -->
+			<section class="fifth-toast" v-show="subToastShow" @click="closeSubToast">
+				<div class="toast-content">
+					<div class="content-detail" @click.stop>
+						<div class="content-close" @click="closeSubToast">
+							<i class="iconfont iconclose-circle"></i>
+						</div>
+						<div class="content-title">
+							<p>{{subTitle}}</p>
+						</div>
+						<div class="content-text">
+							<p v-html="subText"></p>
+						</div>
+						<div class="content-player">
+							<div class="player-shade flex-center" v-if="!fifthToastIconShow">
+								<i class="iconfont iconvideoplay" @click="playSubToastVideo"></i>
+							</div>
+							<div class="player-video">
+								<video id="subToastVideo" playsinline webkit-playsinline="true" poster="" src=""></video>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- sixth -->
+			<section class="section-sixth">
+				<div class="sixth-title">
+					<p class="font-title">不僅僅如此，客製化更出彩</p>
+				</div>
+				<div class="sixth-sticky">
+					<div class="sticky-title">
+						<p class="font-title">不僅僅如此，客製化更出彩</p>
+						<!-- <p class="font-title">自定义更出彩</p> -->
+					</div>
+					<div class="sticky-element">
+						<figure class="element-image lazy" data-bg="//r.tourboxtech.com/tw/src/images/product-sixth-scale-2.0.png">
+						</figure>
+						<div class="element-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video id="sixth-video" class="lazy" playsinline webkit-playsinline="true" muted="true" loop="true"
+								data-src="//r.tourboxtech.com/tw/src/videos/product-sixth-01-2.0.2.mp4"></video>
+							<figure class="play-image lazy" data-bg="//r.tourboxtech.com/tw/src/images/product-sixth-01-mask-2.0.4.jpg">
+							</figure>
+						</div>
+					</div>
+					<div class="sticky-text">
+						<p class="font-text">
+							只需将軟體所使用的快捷鍵設定到TourBox上，就可以大幅降低操作難度，加快操作效率，提升創作体验。您也可以根據自身的使用習慣和軟體的不同， 來設定屬於自己的TourBox。
+						</p>
+					</div>
+				</div>
+				<div class="sixth-detail">
+					<div class="detail-sticky">
+						<div class="sticky-float">
+							<div class="float-first">
+								<p class="font-text">
+									只需将軟體所使用的快捷鍵設定到TourBox上，就可以大幅降低操作難度，加快操作效率，提升創作体验。您也可以根據自身的使用習慣和軟體的不同， 來設定屬於自己的TourBox。
+								</p>
+							</div>
+
+							<div class="float-second float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> 不熟悉快捷鍵？<span>沒問題</span> </p>
+									</div>
+									<div class="title-mobile">
+										<p>不熟悉快捷鍵？</p>
+										<p><span>沒問題</span></p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										所有創意軟體的快捷鍵，都可以擁有易讀的標籤，來說明它的實際功能。配合强大直觀的互動式提示系統，讓TourBox的使用异常簡單。可釘選於荧幕的互動式HUD、可一鍵顯示的可視化導覽圖，配合TourBox可獨特鍵位形態，讓你無需再低頭查看按鍵，無需硬記功能，無需適應，即用即上手！
+									</p>
+								</div>
+							</div>
+
+							<div class="float-third float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> 同時使用多套創意軟體？<span>沒問題</span> </p>
+									</div>
+									<div class="title-mobile">
+										<p>同時使用多套創意軟體？</p>
+										<p><span>沒問題</span></p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										在創作過程中，TourBox會根據不同的創意軟體，無感自動切換預設清單，創作過程更加流暢。甚至在使用Chrome、YouTube等其他軟體時，TourBox都可以自動切換到對應的預設清單。
+									</p>
+								</div>
+							</div>
+							<div class="float-fourth float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> 把滑鼠功能​​設定到TourBox上？<span>沒問題</span> </p>
+									</div>
+									<div class="title-mobile">
+										<p>把滑鼠功能​​設定到TourBox上？</p>
+										<p><span>沒問題</span></p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										不僅僅是鍵盤上的所有快捷鍵，滑鼠上的功能也可以完美映射到TourBox上，不論是左鍵、右鍵、中鍵還是滾輪。去實現你想要的更多可能吧。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="sticky-banner">
+							<div class="banner-bg lazy"
+								:data-bg="!isM ? '//r.tourboxtech.com/tw/src/images/product-sixth-no-2.0.4.jpg' : '//r.tourboxtech.com/tw/src/images/product-sixth-no-mobile-2.0.4.jpg'">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sixth-youtube">
+					<div class="youtube-title">
+						<p class="font-title">一邊上手，一邊上癮</p>
+					</div>
+					<div class="youtube-text">
+						<p class="font-text ">
+							TourBox不論是硬體還是軟體的設計，都完全從使用者的邏輯出發，你使用一段時間後，會發現和它融為一體。它單手操作的佈局、直覺化的輸入形態、強大的客製化功能會讓你越發得心應手。沒錯，真正的工具一定是手的延伸，幫助創意者以最直覺的方式去創作、思考與掌控。
+						</p>
+					</div>
+					<div class="youtube-banner lazy"
+						:data-bg="!isM ? '//r.tourboxtech.com/tw/src/images/product-sixth-youtube-2.0.4.jpg' : '//r.tourboxtech.com/tw/src/images/product-sixth-youtube-mobile-2.0.4.jpg'"
+						@click="openFixedVideo('KnRKJcLDi1Y')">
+						<div class="banner-watch flex-vc">
+							<span>他們都在用</span>
+							<i class="iconfont iconbofang"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- seventh -->
+			<section class="section-seventh">
+				<div class="seventh-title">
+					<p>艺术家的最强武器</p>
+				</div>
+				<div class="seventh-summary">
+					<p>TourBox 2020</p>
+				</div>
+				<div class="seventh-price">
+					<p>$169</p>
+				</div>
+				<div class="seventh-buy flex-center">
+					<a class="flex-center" href="shopify-buy.html" target="_blank">購買</a>
+					<!-- <div id='product-component-1599469984813'></div> -->
+				</div>
+				<!-- <div class="seventh-btn">
+					<a class="flex-center" href="https://store.tourboxtech.com/" target="_blank">立即購買</a>
+				</div> -->
+			</section>
+		</main>
+
+	</section>
+	<!-- footer -->
+	<footer class="footer" id="footer"></footer>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jsmpeg.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/product.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		(function () {
+			initLazy();
+
+			function initLazy() {
+				new LazyLoad({
+					threshold: 800
+				});
+			}
+		})();
+		/*]]>*/
+	</script>
+</body>
+
+</html>

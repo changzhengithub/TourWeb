@@ -1,0 +1,20 @@
+[
+	{
+		"title":"Q ) 我能用TourBox操作Photoshop、Lightroom、Premiere以外的软件吗？",
+		"description":"A : TourBox能出色的映射键盘快捷键，只要是需要使用快捷键的软件，您都可以使用它来简化您的快捷键操作。",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Q ) 在哪里下载软件和快速入门指南？",
+		"description":"A : 请访问 <a href='http://www.tourboxtech.cn/downloads.html' target='_target'>https://www.tourboxtech.cn/downloads.html</a>。",
+		"support_use":true,
+		"open":false
+	},
+	{
+		"title":"Q ) TourBox与Windows和macOS都兼容吗？",
+		"description":"A : 是的，TourBox支持Windows 7或更高版本以及macOS 10.10或更高版本。",
+		"support_use":true,
+		"open":false
+	}
+]

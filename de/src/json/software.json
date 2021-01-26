@@ -1,0 +1,18 @@
+{
+	"macOs":
+	{
+		"name":"macOS",
+		"date":"2019-08-02",
+		"url":"src/downloads/TourBox Console.dmg",
+		"text":"Download dmg",
+		"icon":"iconfont iconmac"
+	},
+	"windows":
+	{
+		"name":"Windows",
+		"date":"2019-08-02",
+		"url":"src/downloads/TourBox Console Setup.exe",
+		"text":"Download exe",
+		"icon":"iconfont iconwin"
+	}
+}

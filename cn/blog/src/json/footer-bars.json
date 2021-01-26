@@ -1,0 +1,93 @@
+{
+	"right":[
+		{
+			"name": "TourBox",
+			"children": [{
+					"name": "关于我们",
+					"url": "/cn/about-us.html"
+				},
+				{
+					"name": "联络我们",
+					"url": "/cn/contact-us.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "条款",
+			"children": [{
+					"name": "使用条款",
+					"url": "/cn/terms-of-use.html"
+				},
+				{
+					"name": "隐私政策",
+					"url": "/cn/privacy-policy.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "探索",
+			"children": [
+				{
+					"name": "论坛",
+					"target":"_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "新闻",
+					"url": "/cn/news.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "支持",
+			"children": [
+				{
+					"name": "下载中心",
+					"url": "/cn/downloads.html"
+				},
+				{
+					"name": "说明书",
+					"url": "/cn/manual.html"
+				},
+				{
+					"name": "常见问题",
+					"url": "/cn/faq.html"
+				}
+			],
+			"open":false
+		}
+	],
+	"left": {
+		"title": "订阅我们",
+		"description": "想收到TourBox的最新消息及活动资讯，请立即订阅我们。",
+		"inc": "2020 TourBox Tech Inc. All Right Reserved.",
+		"placeholder": "请输入邮箱",
+		"emailError": "邮箱错误",
+		"emailSuccess": "订阅成功",
+		"emailAlready": "您已经订阅！",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxofficial",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/Tourboxtech",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

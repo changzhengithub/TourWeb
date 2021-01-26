@@ -1,0 +1,18 @@
+{
+	"title":"我们希望听到您的意见",
+	"description":"我们欢迎您对TourBox的反馈，建议和意见。 ",
+	"tab":[
+		{
+			"title":"营销合作",
+			"description":"有关营销合作，请通过media@tourboxtech.com与我们联系。"
+		},
+		{
+			"title":"业务咨询",
+			"description":"有关业务咨询，请通过marketing@tourboxtech.com与我们联系。"
+		},
+		{
+			"title":"技术支持",
+			"description":"如有任何产品技术问题，请通过微信联系TourBox小助手。"
+		}
+	]
+}

@@ -1,0 +1,109 @@
+{
+	"right": [{
+			"name": "TourBox",
+			"children": [{
+					"name": "私たちについて",
+					"url": "about-us.html"
+				},
+				{
+					"name": "お問い合わせ",
+					"url": "contact-us.html"
+				}
+			],
+			"open": false
+		},
+		{
+			"name": "規約・ガイドライン",
+			"children": [{
+					"name": "利用規約",
+					"url": "terms-of-use.html"
+				},
+				{
+					"name": "個人情報保護方針",
+					"url": "privacy-policy.html"
+				}
+			],
+			"open": false
+		},
+		{
+			"name": "リソース",
+			"children": [{
+					"name": "フォーラム",
+					"target": "_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "ニュース",
+					"url": "news.html"
+				},
+				{
+					"name": "プロモーション同盟",
+					"url": "affiliate.html"
+				}
+			],
+			"open": false
+		},
+		{
+			"name": "ダウンロード",
+			"children": [
+				{
+					"name": "ソフトウェア",
+					"url": "downloads.html"
+				},
+				{
+					"name": "プリセット",
+					"url": "presets.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "サポート",
+			"children": [
+				{
+					"name": "マニュアル",
+					"url": "manual.html"
+				},
+				{
+					"name": "FAQ",
+					"url": "faq.html"
+				},
+				{
+					"name": "ヘルプセンター",
+					"url": "support.html"
+				}
+			],
+			"open": false
+		}
+	],
+	"left": {
+		"title": "メールマガジンのご登録",
+		"description": "TourBoxの最新情報をお送りします",
+		"placeholder": "メールアドレス入力",
+		"inc": "2020 TourBox Tech Inc. All Right Reserved.",
+		"emailError": "正しいメールアドレスを入力してください。",
+		"emailSuccess": "登録に成功しました。",
+		"emailAlready": "同じメールアドレスで複数の登録はできません。",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxJapan",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/TourBoxJapan",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

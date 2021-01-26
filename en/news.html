@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="Get the latest news and updates from TourBox.">
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>TourBox News</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/news.css" />
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<!-- container -->
+	<div class="news" id="container" v-cloak>
+		<div class="news-list">
+			<div class="list-item" v-for="(item, index) in newsList" :key="'key'+index">
+				<a class="item-img" :href="'news-details.html?news_id='+index" target="_self">
+					<!-- <img :src="'//www.tourboxtech.com/svc/'+item.thumbnail" alt=""> -->
+					<img :src="item.imgUrl" alt="">
+				</a>
+				<!-- <p class='item-time'>{{new Date(item.update_time*1000).toLocaleDateString()}}</p> -->
+				<p class='item-time'>{{item.time}}</p>
+				<a class="item-title" :href="'news-details.html?news_id='+index" target="_self">
+					<p>{{item.title}}</p>
+				</a>
+				<div class="item-summarize">
+					<p class="summarize-text">{{item.brief}}</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- footer -->
+	<div id="footer"></div>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/news.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+
+</html>

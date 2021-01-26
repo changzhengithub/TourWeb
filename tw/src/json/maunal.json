@@ -1,0 +1,594 @@
+{
+	"navList": [
+		{
+			"title": "認識TourBox",
+			"slideList": [
+				{
+					"title": "簡介",
+					"activeShow": false
+				},
+				{
+					"title": "安裝TourBox控制軟體",
+					"activeShow": false
+				},
+				{
+					"title": "TourBox 控制軟體",
+					"activeShow": false
+				}
+			],
+			"list": ["簡介","安裝TourBox控制軟體","TourBox 控制軟體"],
+			"show": false
+		},
+		{
+			"title": "Photoshop 預設說明",
+			"slideList": [
+				{
+					"title": "筆刷控制",
+					"activeShow": false
+				},
+				{
+					"title": "畫面控制",
+					"activeShow": false
+				},
+				{
+					"title": "工具切換",
+					"activeShow": false
+				},
+				{
+					"title": "選區操作",
+					"activeShow": false
+				},
+				{
+					"title": "參數調整",
+					"activeShow": false
+				},
+				{
+					"title": "其他功能",
+					"activeShow": false
+				},
+				{
+					"title": "客製化",
+					"activeShow": false
+				}
+			],
+			"list": ["筆刷控制","畫面控制","工具切換","選區操作","參數調整","其他功能","客製化"],
+			"show": false
+		},
+		{
+			"title": "Lightroom 預設說明",
+			"slideList": [],
+			"list": ["參數調整", "面板切換","畫面控制","調整工具切換","筆刷控制","客製化"],
+			"show": false
+		},
+		{
+			"title": "為其他軟體創建預設",
+			"slideList": [
+				{
+					"title": "新增預設",
+					"activeShow": false
+				},
+				{
+					"title": "配置預設",
+					"activeShow": false
+				},
+				{
+					"title": "建立快捷鍵標籤",
+					"activeShow": false
+				},
+				{
+					"title": "導入與導出",
+					"activeShow": false
+				}
+			],
+			"list": ["新增預設", "配置預設","建立快捷鍵標籤","導入與導出"],
+			"show": false
+		},
+		{
+			"title": "便利功能",
+			"slideList": [
+				{
+					"title": "HUD",
+					"activeShow": false
+				},
+				{
+					"title": "Guide",
+					"activeShow": false
+				},
+				{
+					"title": "自動切換預設",
+					"activeShow": false
+				}
+			],
+			"list": ["HUD","Guide","自動切換預設"],
+			"show": false
+		}
+	],
+	"pageList": [
+		[
+			[
+				{
+					"desActive": true,
+					"title": "簡介",
+					"text": null,
+					"des": [
+						"TourBox為創意者設計，是真正實用、便利、符合人體工程學的創作工具。",
+						"只需將創意軟件所使用的快捷鍵設置到TourBox上，即可大幅降低操作難度，加快操作效率，提升創意體驗。",
+						"不論是筆刷調整、畫面控制、影像與聲音剪輯、參數調整、工具切換等操作，皆可用最直覺的方式簡單完成。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"TourBox設備上包含旋鈕、滾輪、轉盤與11個按鍵。",
+						"不論是旋轉操作還是按鍵操作都可以被設定為鍵盤快捷方式或TourBox控制台的內建功能，適應各類創意軟件的操作需求。",
+						"旋鈕、滾輪、轉盤或按鍵除了獨立操作，也可進行配合，實現豐富且快捷的操作方式。"
+					],
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/gs-banner.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "安裝TourBox控制軟體",
+					"text": [
+						"1、前往TourBox官網<a href='https://www.tourboxtech.com/tw/downloads.html' target='_target'>https://www.tourboxtech.com/downloads.html</a>下載匹配您電腦版本的驅動程式及最新的TourBox控制軟體。",
+						"2、安裝下載好的驅動程式，等待安裝完成。",
+						"3、安裝TourBox控制軟體。"
+					],
+					"des": "",
+					"warning": "",
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "連結TourBox與電腦",
+					"text": null,
+					"des": null,
+					"summary": [
+						"1、開啟TourBox控制軟體，控制中心將提示您連結TourBox設備。",
+						"2、使用傳輸線將TourBox上的Type C接口與電腦端的USB接口連結，並確認指示燈已亮起。",
+						"3、如連結成功，TourBox控制軟體將自動進入主界面。"
+					],
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/connect.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "預設清單區",
+					"text": null,
+					"des": [
+						"預設清單可存儲與管理多份TourBox的功能預設。",
+						"可對預設進行新增/刪除、導入/導出、排序和標簽編輯等操作。",
+						"選中預設，即可載入其功能配置。",
+						"預設清單中已內建Adobe Photoshop software和Adobe Lightroom software的兩套默認預設。"
+					],
+					"wraning": "",
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/kzt01.jpg",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "預設控制區",
+					"text": null,
+					"des": [
+						"預設配置區的每一行對應TourBox上相應的旋鈕、按鍵或組合操作，點選相應行位修改其對應功能。",
+						"可在彈出目錄中進行瀏覽、搜索與選擇所需功能，或使用鍵盤直接鍵入快捷鍵進行配置。"
+					],
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/kzt02.jpg",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "筆刷控制",
+					"text": null,
+					"des": [
+						"轉動旋鈕 <span class='sprite-key key-icon-05'></span> 筆刷大小。",
+						"按住長鍵時 <span class='sprite-key key-icon-08'></span> 轉動旋鈕 <span class='sprite-key key-icon-05'></span> 筆刷不透明度。",
+						"按住短鍵時 <span class='sprite-key key-icon-09'></span> 轉動旋鈕 <span class='sprite-key key-icon-05'></span> 筆刷硬度。",
+						"按住橫鍵時 <span class='sprite-key key-icon-04'></span> 轉動旋鈕 <span class='sprite-key key-icon-05'></span> 筆刷流量。"
+					],
+					"imgUrl": "",
+					"videoUrl": "BpJC-TADWoY",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"在任何筆刷類工具中都可使用，如畫筆類工具 <span class='sprite-gj gj-icon-02'></span> 、圖章類工具 <span class='sprite-gj gj-icon-06'></span> 、修補類工具 <span class='sprite-gj gj-icon-08'></span> 、橡皮擦工具 <span class='sprite-gj gj-icon-07'></span> 等。"
+					],
+					"des": [
+						"按住長鍵 <span class='sprite-key key-icon-08'></span> 配合滑鼠進行取色、圖章類工具、吸管工具組、單獨顯示圖層等功能（alt）。",
+						"雙擊長鍵 <span class='sprite-key key-icon-08'></span> 切換前景色/背景色。"
+					],
+					"imgUrl": "",
+					"videoUrl": "hWnD_uK19a8",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "畫面控制",
+					"text": null,
+					"des": [
+						"滾動滾輪 <span class='sprite-key key-icon-03'></span> 畫面放大/縮小。",
+						"按下滾輪 <span class='sprite-key key-icon-03'></span> 縮放至熒幕大小。",
+						"按住短鍵 <span class='sprite-key key-icon-09'></span> 配合滑鼠進行畫面拖曳。"
+					],
+					"imgUrl": "",
+					"videoUrl": "tKal0d7EtNQ",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "工具切換",
+					"text": null,
+					"des": [
+						"使用十字鍵 <span class='sprite-key key-icon-01'></span> 切換筆刷類工具（畫筆類工具 <span class='sprite-gj gj-icon-02'></span> 、圖章類工具 <span class='sprite-gj gj-icon-06'></span> 、修補類工具 <span class='sprite-gj gj-icon-08'></span> 、橡皮擦工具 <span class='sprite-gj gj-icon-07'></span> ）。",
+						"按住側鍵 <span class='sprite-key key-icon-02'></span> ，使用十字鍵 <span class='sprite-key key-icon-01'></span> 切換選區類工具（選框類工具 <span class='sprite-gj gj-icon-09'></span> 、套索類工具 <span class='sprite-gj gj-icon-05'></span> 、魔術棒工具 <span class='sprite-gj gj-icon-04'></span> 、裁切工具 <span class='sprite-gj gj-icon-01'></span> ）。",
+						"按住十字鍵 <span class='sprite-key key-icon-01'></span> 同時滾動滾輪 <span class='sprite-key key-icon-03'></span> 可切換工具子目錄。"
+					],
+					"imgUrl": "",
+					"videoUrl": "iDWFi6qJ9D4",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"開啟HUD以隨時查看十字鍵各方向所對應的工具。",
+						"長按Tour鍵 <span class='sprite-key key-icon-10'></span> 以開啟/關閉HUD。",
+						"HUD可用鼠標拖曳至熒幕任意位置，右鍵點選HUD可設定樣式。"
+					],
+					"imgUrl": "",
+					"videoUrl": "Ej-zb07t158",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "選區操作",
+					"text": null,
+					"des": [
+						"在運用選框類工具、套索類工具、魔術棒工具等選區工具時。",
+						"按住橫鍵 <span class='sprite-key key-icon-04'></span> 配合滑鼠框選-增加選區。",
+						"按住長鍵 <span class='sprite-key key-icon-08'></span> 配合滑鼠框選-減少選區。",
+						"按住橫鍵 <span class='sprite-key key-icon-04'></span> ，使用十字鍵對所選選區進行操作（羽化選取範圍、填色、反轉選取範圍、任意變形）。",
+						"側鍵 <span class='sprite-key key-icon-02'></span> +長鍵 <span class='sprite-key key-icon-08'></span> 取消選區。"
+					],
+					"imgUrl": "",
+					"videoUrl": "MGaE_i6ZJzQ",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "參數調整",
+					"text": null,
+					"des": [
+						"點選任意參數條後即可通過轉盤 <span class='sprite-key key-icon-06'></span> 進行調整。"
+					],
+					"imgUrl": "",
+					"videoUrl": "hVAyQZQWW4g",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "其他功能",
+					"text": null,
+					"des": [
+						"側鍵 <span class='sprite-key key-icon-02'></span> +短鍵 <span class='sprite-key key-icon-09'></span>  – 儲存檔案（ctrl+s）。",
+						"雙擊短鍵 <span class='sprite-key key-icon-09'></span>  - 還原（ctrl+z）。",
+						"C1/C2鍵 <span class='sprite-key key-icon-07'></span> -切換最後狀態/重做。",
+						"按住長鍵 <span class='sprite-key key-icon-08'></span> ，滾動滾輪 <span class='sprite-key key-icon-03'></span> -切換圖層。",
+						"按住侧键 <span class='sprite-key key-icon-02'></span> ，滾動滾輪 <span class='sprite-key key-icon-03'></span> -切換混合模式。"
+					],
+					"imgUrl": "",
+					"videoUrl": "jOO96oK39eQ",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "客製化",
+					"text": null,
+					"des": [
+						"在預設配置區可對Photoshop預設的功能進行客製化。",
+						"預設配置區的每一行對應TourBox上相應的旋鈕、按鍵或組合操作，點選相應行位修改其對應功能。",
+						"所需的Photoshop功能可在彈出目錄中進行瀏覽、搜索與選擇，或使用鍵盤直接鍵入快捷鍵進行配置。"
+					],
+					"imgUrl": "",
+					"videoUrl": "mOclUoF4D-8",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"操作TourBox上的任意旋鈕或按鍵，即可快速定位到對應行位以便配置。"
+					],
+					"imgUrl": "",
+					"videoUrl": "RtGwf1mEiRo",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"desActive": true,
+					"title": "Lightroom 預設說明",
+					"text": [
+						"TourBox 軟體 2.0 版本新增了關於Lightroom相關的一系列的內建功能，讓TourBox可以快速對Lightroom中任意滑桿進行直接調整，無需滑鼠配合。",
+						"同時開放了Tour鍵 <span class='sprite-key key-icon-10'></span> 的客製化，可設定為任意功能。"
+					],
+					"des": [
+						"<i>注：首次開啟新版TourBox 軟體後，請重啟Lightroom。</i>"
+					],
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/lr11.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"更新後的默認Lightroom預設："
+					],
+					"des": [
+						"1、用按鍵選擇滑桿，用旋鈕 <span class='sprite-key key-icon-05'></span> 調整數值。",
+						"2、任意轉盤 <span class='sprite-key key-icon-06'></span> 或旋鈕 <span class='sprite-key key-icon-05'></span> 操作也可被設定為指定滑桿的參數調整。",
+						"3、按下Tour鍵 <span class='sprite-key key-icon-10'></span> 重置滑桿數值。",
+						"4、滾輪 <span class='sprite-key key-icon-03'></span> 可快速選擇HSL中的顏色，按下滾輪 <span class='sprite-key key-icon-03'></span> 切換H/S/L，同樣使用旋鈕 <span class='sprite-key key-icon-05'></span> 進行參數調整。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"LR基本面板中最常用的四個功能，可通過四個大按鍵進行選擇。"
+					],
+					"text2": [
+						"選擇後使用 旋鈕 <span class='sprite-key key-icon-05'></span> 調整參數。"
+					],
+					"des": [
+						"橫鍵 <span class='sprite-key key-icon-04'></span> ：色溫",
+						"側鍵 <span class='sprite-key key-icon-02'></span> ：色調",
+						"長鍵 <span class='sprite-key key-icon-08'></span> ：曝光度",
+						"短鍵 <span class='sprite-key key-icon-09'></span> ：對比"
+					],
+					"imgUrl": "",
+					"videoUrl": "dZp-Nr1hm5M",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"LR基本面板剩餘的9個滑桿，通過十字鍵 <span class='sprite-key key-icon-01'></span> 進行選擇。"
+					],
+					"des": [
+						"選擇滑桿後，同樣通過旋鈕 <span class='sprite-key key-icon-05'></span> 調整參數。"
+					],
+					"imgUrl": "",
+					"videoUrl": "kJ_LyZwCExw",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"十字鍵 <span class='sprite-key key-icon-01'></span> 功能可通過HUD進行熒幕提示。"
+					],
+					"des": [],
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/lr33.jpg",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": "",
+					"des": "",
+					"imgUrl": "//r.tourboxtech.com/tw/src/images/lr22.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"滾輪 <span class='sprite-key key-icon-03'></span> 選擇HSL中的顏色類別，按下滾輪 <span class='sprite-key key-icon-03'></span> 切換H/S/L。"
+					],
+					"des": [
+						"選擇後同樣通過旋鈕 <span class='sprite-key key-icon-05'></span> 調整參數。"
+					],
+					"imgUrl": "",
+					"videoUrl": "_q4wuH-CZVU",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"長鍵 <span class='sprite-key key-icon-08'></span> +旋鈕 <span class='sprite-key key-icon-05'></span> 為直接調整銳利度。",
+						"短鍵 <span class='sprite-key key-icon-09'></span> +旋鈕 <span class='sprite-key key-icon-05'></span> 為直接調整裁剪後暗角。",
+						"將滑鼠指向需要調整的參數滑桿（無需點選），可使用TourBox的轉盤 <span class='sprite-key key-icon-06'></span> 進行參數調節。",
+						"使用C1鍵 <span class='sprite-key key-icon-07'></span> ，快速檢視修改前後的效果。"
+					],
+					"des": [],
+					"imgUrl": "",
+					"videoUrl": "82nvloTR0e0",
+					"videoError": true
+				}
+
+			]
+		],
+		[
+			[
+				{
+					"title": "新增預設",
+					"text": null,
+					"des": [
+						"在TourBox控制台的預設列表區點選 <span class='sprite-key key-icon-13'></span> 按鈕新增預設。",
+						"在彈出的界面中為新預設命名，並選擇預設類型。",
+						"預設類型包括預制的Photoshop預設、Lightroom預設，或全新的空白預設。"
+					],
+					"imgUrl": "",
+					"videoUrl": "xYUu09kmG9M",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "配置預設",
+					"text": null,
+					"des": [
+						"在預設配置區可對當前預設進行配置和修改。",
+						"預設配置區的每一行對應TourBox上相應的旋鈕、按鍵或組合操作，點選相應行位配置其對應功能。",
+						"在彈出目錄中選擇所需功能，或使用鍵盤直接鍵入快捷鍵進行配置。"
+					],
+					"imgUrl": "",
+					"videoUrl": "WRRrpp8181E",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"操作TourBox上的任意旋鈕或按鍵，即可快速定位到對應行位以便配置。"
+					],
+					"imgUrl": "",
+					"videoUrl": "We93xRZnKeA",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "建立快捷鍵標籤",
+					"text": null,
+					"des": [
+						"在配置預設時，可對鍵入的快捷鍵添加標籤。點選 <span class='sprite-key key-icon-12'></span> 圖標以添加或修改標籤，點選“OK”鍵保存。",
+						"標籤用於描述快捷鍵在軟體中所對應的功能。",
+						"快捷鍵如有標簽，TourBox控制中心中將會優先顯示標簽，否則將顯示鍵值。"
+					],
+					"imgUrl": "",
+					"videoUrl": "lZdUwAtyb-M",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"點選預設名稱左側的 <span class='sprite-key key-icon-11'></span> 按鈕，可以開啟標簽管理界面，對本預設的標簽進行批量添加與管理。"
+					],
+					"imgUrl": "",
+					"videoUrl": "nshnQ3CCcfI",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "導入與導出",
+					"text": [
+						"點選預設名稱左側的 <span class='sprite-key key-icon-11'></span> 按鈕，可以導入與導出預設。"
+					],
+					"des": null,
+					"imgUrl": "",
+					"videoUrl": "GDC5crijBto",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"TourBox官網將不斷推出新的預設，可供下載與導入使用。",
+						"您也可以導出預設分享給他人，或在TourBox討論區下載他人分享的預設導入使用。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "HUD",
+					"text": null,
+					"des": [
+						"HUD為十字鍵的提示器，可訂選於熒幕，用於隨時查看十字鍵各方向所對應的功能。",
+						"按下橫鍵 <span class='sprite-key key-icon-04'></span> 或側鍵 <span class='sprite-key key-icon-02'></span> 時，HUD將實時切換顯示橫鍵 <span class='sprite-key key-icon-04'></span> +十字鍵 <span class='sprite-key key-icon-01'></span> 或側鍵 <span class='sprite-key key-icon-02'></span> +十字鍵 <span class='sprite-key key-icon-01'></span> 時所對應的功能。"
+					],
+					"imgUrl": "",
+					"videoUrl": "0Qu-iHN0QcY",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"可在狀態欄目錄中開啟/關閉十字鍵的HUD。",
+						"可將任意按鍵設定爲快捷開啓/關閉十字鍵的HUD（內建功能）。",
+						"HUD可用滑鼠拖曳至熒幕任意位置，右鍵點選HUD可設定樣式。"
+					],
+					"imgUrl": "",
+					"videoUrl": "Mup7c1qr_Rc",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Guide",
+					"text": [
+						"導覽圖以可視化的方式，將TourBox的佈局分為三個區域，供使用者快速查看預設功能。",
+						"可將任意按鍵設定為開啟/關閉導覽圖（內建功能），方便快速查看TourBox的功能設定。"
+					],
+					"des": [
+						"旋轉區：旋鈕、滾輪與轉盤",
+						"控制區：長鍵、短鍵、橫鍵、側鍵",
+						"工具區：十字鍵、c1/c2鍵"
+					],
+					"imgUrl": "",
+					"videoUrl": "O7lQrpbTvO8",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "自動切換預設",
+					"text": null,
+					"des": [
+						"打開“自動切換”可以自動切換預設。",
+						"將預設鏈接到相應的軟件。",
+						"打開Linked軟件（自動切換到相應的預設而不會中斷编辑）。"
+					],
+					"imgUrl": "",
+					"videoUrl": "6wZl8NkgeBY",
+					"videoError": true
+				},
+				{
+					"title": "快速切換預設",
+					"text": null,
+					"des": [
+						"在預設清單區中，點亮預設的 <span class='sprite-key key-icon-16'></span>，可將其設為常用預設。",
+						"可將任意按鍵的功能設定為切換常用預設“切換預設（內建功能）” ",
+						"拖動預設列以排列預設順序"
+					],
+					"imgUrl": "",
+					"videoUrl": "C-LATktEoEI",
+					"videoError": true
+				}
+			]
+		]
+	]
+}

@@ -1,0 +1,30 @@
+{
+	"title":"お問い合わせ",
+	"description":"TourBoxに関するフィードバック、ご提案、ご意見などをお聞かせください",
+	"tab":[
+		{
+			"title":"販売協力について",
+			"description": [
+				"販売協力に関するお問い合わせは",
+				"こちらから",
+				"marketing-jp@tourboxtech.com"
+			]
+		},
+		{
+			"title":"各種お取引について",
+			"description": [
+				"お取引に関するお問い合わせは",
+				"こちらから",
+				"marketing-jp@tourboxtech.com"
+			]
+		},
+		{
+			"title":"テクニカルサポート",
+			"description": [
+				"製品に関する技術的なご質問は",
+				"こちらから",
+				"support@tourboxtech.com"
+			]
+		}
+	]
+}

@@ -1,0 +1,85 @@
+[v-cloak] {
+	display: none;
+}
+
+.cpplus {
+	width: 100%;
+	min-height: 100vh;
+}
+
+.header {
+	background-color: #fff;
+}
+
+.desk-shop {
+  position: relative;
+  width: 150px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.desk-shop:hover .shop-list{
+	visibility: visible;
+}
+
+.desk-shop>.shop-title {
+  width: .86rem;
+  height: .26rem;
+  font-size: .14rem;
+  color: #fff;
+  border-radius: .15rem;
+  background-image: linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);
+}
+
+.desk-shop>.shop-list {
+  position: absolute;
+  left: 0;
+  top: .55rem;
+  z-index: 9;
+  visibility: hidden;
+  width: 100%;
+  padding-bottom:.05rem;
+  background-color:rgba(255,255,255,.8);
+  box-shadow:1px 1px 1px 0px #eee
+}
+
+.desk-shop>.shop-list>.list-item {
+  width:100%;
+  height:.3rem;
+}
+.desk-shop>.shop-list>.list-item>a {
+  font-size: 14px;
+  color:#6d6d6d;
+  background: transparent;
+}
+.desk-shop>.shop-list>.list-item:hover{background-color:#f2f2f2;color:#333}
+
+.header-buy {
+  display: none;
+}
+
+.header .buy-active{position:fixed;top:0}
+.header-black{background-color:rgba(29,29,31,0.3);box-shadow:none}
+.header-black>.header-desk .nav-logo{background-image:url('//r.tourboxtech.com/en/basic-img/logo-white-2.0.png')}
+.header-black>.header-desk .item-link{color:#fff}
+.header-black>.header-desk .bar-item::before{background-color:#fff}
+.header-black>.header-desk .bar-item::after{background-color:#fff}
+.header-black>.header-desk .sub-link{color:#fff}
+.header-black>.header-desk .language-default{color:#fff}
+.header-black>.header-desk .language-select>.select-item{color:#fff}
+.header-black>.header-desk .item-bar{background-color:rgba(29,29,31,0.72);box-shadow:none}
+.header-black>.header-desk .sub-link:hover{background-color:rgba(200,200,200,0.5)}
+.header-black>.header-desk .language-select{background-color:rgba(29,29,31,0.72);box-shadow:none}
+.header-black>.header-desk .language-select>.select-item:hover{background-color:rgba(200,200,200,0.5)}
+
+/* main */
+.cpplus-main {
+  width: 100%;
+  padding: 3rem 0 0 0;
+	background-color: #fff;
+}
+
+.cpplus-main>h1 {
+  font-size: .5rem;
+  text-align: center;
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<title>TourBox User Manual</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css"/>
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<!-- page private resources -->
+	<link rel="stylesheet" type="text/css" href="css/maunal-detail.css" />
+	<!-- public resources -->
+	<script src="js/iframe_api.js" type="text/javascript" charset="utf-8"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+<body>
+	<!-- header -->
+	<!-- <header id="header"></header> -->
+	<div id="container" v-cloak>
+		<div class="banner1">
+			<div class="banner1-title">
+				<div class="back" @click="backNav"></div>
+				<h1 class="title">{{titleText}}</h1>
+			</div>
+			<div class="banner1-nav">
+				<span :class="{'disabled': navIndex == 0 && listIndex == 0}" @click="prveItem">Previous</span>
+				<span :class="{'disabled': navIndex == 4 && listIndex == 2}" @click="nextItem">Next</span>
+			</div>
+		</div>
+		<div class="container-content">
+			<div class="content-media" v-if="showVideo">
+				<div class="media">
+					<div class="play-mask" v-if="!isPlayVideo"
+						style="background: url('//r.tourboxtech.com/en/src/images/video-mask.jpg') center center / 100% 100% no-repeat;">
+						<div @click="playTouTubeVideo"><span class="iconfont iconbofang"></span></div>
+					</div>
+					<div id="player" style="width: 100%; height: 100%;"></div>
+					<div v-if="palyVideoError" class="video-error"><span class="iconfont iconstop"></span></div>
+				</div>
+			</div>
+			<div class="right-content" v-for="(item, index) in rightPageData" :key="index">
+				<h1 class="title">{{item.title}}</h1>
+				<div class="content-text" v-if="item.text">
+					<p :class="{'wrap': navIndex == 0 && listIndex == 1}" v-for="(textItem, textIndex) in item.text"
+					:key="textIndex" v-html="textItem"></p>
+				</div>
+				<div class="content-description" :class="{'yotube-show': showVideo && index == 0}" v-if="item.des">
+					<p :class="{'left': item.desActive}" v-for="(desItem, desIndex) in item.des" :key="desIndex"
+					v-html="desItem"></p>
+				</div>
+				<p class="content-warning" v-if="item.warning" v-html="item.warning"></p>
+				<div class="content-banner" v-if="item.imgUrl">
+					<img v-if="item.imgUrl" :src="item.imgUrl" alt="banner">
+				</div>
+				<div class="content-text2" v-if="item.text2">
+					<p :class="{'wrap': navIndex == 0 && listIndex == 1}" v-for="(text2Item, text2Index) in item.text2"
+						:key="text2Index" v-html="text2Item"></p>
+				</div>
+				<div class="content-player" v-if="item.videoUrl">
+					<div class="player-video" v-if="item.videoUrl">
+						<div v-if="item.videoError" class="video-error">
+							<img src="//r.tourboxtech.com/en/src/images/loading.gif" alt="loading">
+						</div>
+						<iframe width="100%" height="100%"
+							:src="'https://www.youtube.com/embed/'+item.videoUrl+'?enablejsapi=1&autoplay=1&loop=1&playlist='+item.videoUrl"
+							frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen @load="iframeLoad(index)"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+		<section class="footer">
+			<p>2020 TourBox Tech Inc. All Right Reserved.</p>
+			<div class="footer-link">
+				<a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+			</div>
+		</section>
+	</div>
+	<!-- footer -->
+	<!-- <div id="footer"></div> -->
+	<!-- public resources -->
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/Router.js" type="text/javascript" charset="utf-8"></script>
+	<!-- page private resources -->
+	<script src="js/pages/maunal-detail.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.tourbox-mobile-footer {
+		width: 100%;
+		background-color: rgba(22, 29, 37, 1);
+		color: #eeeeee;
+	}
+	.mobile-footer-back {
+		display: flex;
+		display: -webkit-flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		height: .5rem;
+		font-size: .12rem;
+		border-bottom: 1px solid #4a4a4a;
+	}
+
+	.mobile-footer-back>.iconfont {
+		font-size: .2rem;
+		margin-left: .1rem;
+	}
+
+	.mobile-footer-nav {
+		width: 100%;
+		padding: 0 0.15rem;
+	}
+
+	.mobile-footer-nav-menu {
+		width: 100%;
+	}
+
+	.mobile-footer-nav-menu-title {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 100%;
+		height: .6rem;
+		font-size: .16rem;
+		border-bottom: 1px solid #4a4a4a;
+	}
+
+	.mobile-footer-nav-menu-title>.iconfont {
+		font-size: .12rem;
+		font-weight: 700;
+	}
+
+	.mobile-footer-nav-menu-link {
+		display: none;
+		width: 100%;
+		height:auto;
+	}
+
+	.mobile-footer-nav-menu-link>a{
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		align-items: center;
+		width: 100%;
+		height: .6rem;
+		padding: 0 0.15rem;
+		font-size: .16rem;
+		color: #eee;
+		border-bottom: 1px solid #4a4a4a;
+	}
+	
+	.mobile-footer-subscibe {
+		width: 100%;
+		margin-top: .3rem;
+		padding: 0 0.15rem .2rem 0.15rem;
+	}
+
+	.mobile-footer-subscibe-title {
+		margin-bottom: .1rem;
+		line-height: 1.5;
+		font-size: .14rem;
+	}
+
+	.mobile-footer-subscibe-text {
+		margin-bottom: 0.06rem;
+		line-height: 1.5;
+		font-size: .14rem;
+	}
+
+	.mobile-footer-subscibe-form {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		width: 100%;
+		margin-top: .1rem;
+	}
+
+	.mobile-footer-subscibe-form-input {
+		width: 85%;
+		height: .36rem;
+		padding: 0.06rem 0.12rem;
+		font-size: .14rem;
+		color: #eee;
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		border-left: 1px solid #999;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background: transparent;
+	}
+
+	.mobile-footer-subscibe-form-submit {
+		position: relative;
+		width: 15%;
+		border: none;
+		outline: none;
+		background-color: #fff;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+	}
+
+	.mobile-footer-subscibe-form-submit>.iconfont {
+		font-size: .2rem;
+		color: #333;
+	}
+
+	.mobile-footer-subscibe-tip {
+		width: 100%;
+		padding: .05rem 0;
+	}
+
+	.mobile-footer-subscibe-tip-msg {
+		width: 100%;
+		line-height: 1.2;
+		font-size: .16rem;
+	}
+
+	.mobile-footer-subscibe-link {
+		width: 100%;
+		margin: .2rem 0 .2rem 0;
+	}
+
+	.mobile-footer-subscibe-link-item {
+		margin-right: .2rem;
+	}
+
+	.mobile-footer-subscibe-link-item>.iconfont {
+		font-size: .2rem;
+		color: #eee;
+	}
+
+	.mobile-footer-subscibe-inc {
+		width: 100%;
+		line-height: 1.2;
+		font-size: .14rem;
+	}
+
+	.mobile-footer-subscibe-legal {
+		width: 100%;
+		margin-top: .2rem;
+	}
+
+	.mobile-footer-subscibe-legal>a {
+		font-size: .14rem;
+		color: #eee;
+		text-decoration: none;
+	}
+
+	.mobile-footer-subscibe-legal>span {
+		margin: 0 .1rem;
+	}
+
+
+	.theme-white {
+		background-color: #fff;
+		color: #333;
+	}
+
+	.theme-white .mobile-footer-back {
+		border-bottom:1px solid #ddd;
+	}
+
+	.theme-white .mobile-footer-nav-menu-title {
+		border-bottom:1px solid #ddd;
+	}
+
+	.theme-white .mobile-footer-nav-menu-link>a {
+		color: #333;
+		border-bottom: 1px solid #ddd;
+	}
+
+	.theme-white .mobile-footer-subscibe-form-input {
+		color: #333;
+		border-top: 1px solid #ccc;
+		border-bottom: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+		background: transparent;
+	}
+
+	.theme-white .mobile-footer-subscibe-form-submit {
+		background-color: rgba(22, 29, 37, 1);
+	}
+
+	.theme-white .mobile-footer-subscibe-form-submit>.iconfont {
+		color: #fff;
+	}
+
+
+	.theme-white .mobile-footer-subscibe-link-item>.iconfont {
+		color: #666;
+	}
+
+	.theme-white .mobile-footer-subscibe-legal>a {
+		color: #333;
+	}
+
+</style>
+
+<div class="tourbox-mobile-footer" :class="{'theme-white': themeSelect}" id="m_footer" v-cloak>
+	<div class="mobile-footer-back" @click="goTop">
+		<span >Back to top</span>
+		<span class="iconfont iconarrow-up" ></span>
+	</div>
+
+	<div class="mobile-footer-nav">
+		<div class="mobile-footer-nav-menu" v-for="(item, index) in rightData" :key="index" v-if="index != 1">
+			<p class="mobile-footer-nav-menu-title" @click="slideToggle(index)">
+				<span >{{item.name}}</span>
+				<span class="iconfont iconadd" :class="{iconreduce: item.open}"></span>
+			</p>
+			<div class="mobile-footer-nav-menu-link">
+				<a :target="link.target?link.target:'_self'" :href="link.url" v-for="link in item.children">{{link.name}}</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="mobile-footer-subscibe">
+		<p class="mobile-footer-subscibe-title">{{leftData.title}}</p>
+		<p class="mobile-footer-subscibe-text">{{leftData.description}}</p>
+		<div class="mobile-footer-subscibe-form">
+			<input class="mobile-footer-subscibe-form-input" v-model="email" type="text" :placeholder="leftData.placeholder" @input="clearTipMessage">
+			<button class="mobile-footer-subscibe-form-submit" :disabled="isDisabled" @click="subscribeUs" type="button" >
+				<span class="iconfont iconarrow-right"></span>
+			</button>
+		</div>
+		<div class="mobile-footer-subscibe-tip">
+			<p class="mobile-footer-subscibe-tip-msg" :style="{color: tipColor}">{{tipMsg}}</p>
+		</div>
+		<div class="mobile-footer-subscibe-link">
+			<a class="mobile-footer-subscibe-link-item" :title="item.name" :href="item.url" target="_blank" v-for="(item, index) in leftData.links" :key="index">
+				<span class="iconfont" :class="item.class"></span>
+			</a>
+		</div>
+		<p class="mobile-footer-subscibe-inc">{{leftData.inc}}</p>
+		<div class="mobile-footer-subscibe-legal">
+			<a href="terms-of-use.html" >Terms of Use</a>
+			<span>|</span>
+			<a href="privacy-policy.html" >Privacy Policy</a>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el:"#m_footer",
+		data:{
+			tipMsg: "",
+			email: "",
+			tipColor: '',
+			leftData: {},
+			rightData: [],
+			isDisabled: false,
+			themeSelect: false
+		},
+		mounted:function(){
+			var _this = this;
+			_this.getFootBars();
+			_this.getUrl();
+		},
+		methods:{
+			getUrl: function () {
+				var _this = this;
+				var index = location.pathname.lastIndexOf("/");
+				if (index > -1) {
+					var page = location.pathname.substring(index + 1);
+					if (page == "index.html" || page == "" || page == "/" || page == "product.html") {
+						this.themeSelect = true
+					}
+				}
+			},
+			getFootBars:function(){
+				var _this = this;
+				$.getJSON("/en/blog/src/json/footer-bars.json", function(result) {
+					_this.leftData = result.left;
+					_this.rightData = result.right;
+				})
+			},
+			clearTipMessage () {
+				if (!this.tipMsg) return
+				this.tipMsg = ''
+			},
+			goTop:function(){
+				$("html,body").animate({
+					scrollTop:0
+				}, 400)
+			},
+			slideToggle: function(index){
+				var _this = this;
+				_this.rightData[index].open = !_this.rightData[index].open
+				if (index > 1) {
+					$('.mobile-footer-nav-menu-link').eq(index-1).slideToggle("fast");
+				} else {
+					$('.mobile-footer-nav-menu-link').eq(index).slideToggle("fast");
+				}
+			},
+			// 提交邮箱
+			subscribeUs: function () {
+				var _this = this;
+				_this.isDisabled = true
+				if (!_this.email) {
+					_this.isDisabled = false
+					return
+				}
+				if (!_this.isEmail(_this.email)) {
+					_this.tipMsg = _this.leftData.emailError
+					_this.email = ""
+					_this.tipColor = "#da4f49"
+					_this.isDisabled = false
+					return
+				}
+				$.ajax({
+					url: "https://www.tourboxtech.com/shop-api/email",
+					type: "post",
+					dataType: "json",
+					data: {
+						"email": _this.email,
+						"source": "en"
+					},
+					success: function () {
+						_this.tipMsg = _this.leftData.emailSuccess
+						_this.tipColor = "#5bb75b"
+						_this.email = ""
+						_this.isDisabled = false
+					},
+					error: function () {
+						_this.tipMsg = _this.leftData.emailAlready
+						_this.tipColor = "#da4f49"
+						_this.email = ""
+						_this.isDisabled = false
+					}
+				})
+			},
+			isEmail: function(str) {
+				var re = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+				if (re.test(str) != true) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+	})
+</script>

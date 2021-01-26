@@ -1,0 +1,272 @@
+{
+	"versions": [
+		{
+			"editionNum": "V.2.2.4",
+			"editionDate": "2021.01.14",
+			"versionTitle": "2.2.4 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"The software better adapts to different external keyboards.",
+						"Increase the 'global process' funtionality . The preset associated with 'global process' will be switched automatically for programs that are not linked to a specific preset.",
+						"Add built-in functions related to Lightroom color grading.",
+						"Fix bugs and enhance performance."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.2.3",
+			"editionDate": "2020.12.21",
+			"versionTitle": "2.2.3 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Fix the bugs."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.2.2",
+			"editionDate": "2020.12.14",
+			"versionTitle": "2.2.2 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Firmware upgrading to 2.1, fixing bugs.",
+						"Adding import preset button.",
+						"Optimizing UI display.",
+						"Database upgrading to improve stability and performance.",
+						"Supporting Apple Silicon."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.2.1",
+			"editionDate": "2020.11.20",
+			"versionTitle": "2.2.1 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Optimize the shortcut mechanism.",
+						"Optimize the performance.",
+						"Speed up the preset switching.",
+						"Speed up the connection of the device.",
+						"Fix the bugs."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.2",
+			"editionDate": "2020.10.17",
+			"versionTitle": "2.2 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Firmware has upgraded to 2.0, new combinations added: Short button + C1 & Short button + C2.",
+						"Premiere-related built-in functions added.",
+						"Default Premiere presets added: Premiere editing preset and Premiere color grading preset.",
+						"The number of presets that can be stored increased to 30.",
+						"Multiple presets can be linked to the same software to suit different workflows.",
+						"If multiple presets are linked to the same software, you can use the built-in function 'Switch Presets' to switch between these presets.",
+						"Slow mode is added for rotary operations.",
+						"The mode of sending command after releasing is added for the Tall button, Short button, Top button, and Side button.",
+						"When ‘auto-switch presets’ function is enabled, the size, position, colour and transparency of the HUD will be remembered according to different software.",
+						"Optimized the display of the HUD.",
+						"Notification switch added.",
+						"Upgraded Lightroom plug-in, and fixed bugs.",
+						"Optimised the Console interface.",
+						"New languages supported: German, French, Spanish and Italian."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.1.3",
+			"editionDate": "2020.08.08",
+			"versionTitle": "2.1.3 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Firmware has upgraded to 1.7 to optimize the double-click experience.",
+						"Application icons will be displayed when auto-switch preset is on.",
+						"Optimize the display effect and speed of all bubble tips in TourBox Console."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.1.2",
+			"editionDate": "2020.07.24",
+			"versionTitle": "2.1.2 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Firmware has upgraded to 1.6 to optimize the accuracy of the Knob, Scroll, and Dial.",
+						"Built-in function added: move the timeline pointer. You can set this function to Knob, Scroll, or Dial, dynamically moving the timeline pointer in Final Cut Pro, Premiere Pro, and any other video editing software according to the rotation speed.",
+						"Optimize the shortcut sending mechanism.",
+						"Enhance built-in functions that related to the mouse scroll.",
+						"Unplug TourBox will close Dpad’s HUD automatically. ",
+						"Optimize firmware upgrade mechanism.",
+						"Language support: Simplified Chinese added."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.1.1",
+			"editionDate": "2020.07.16",
+			"versionTitle": "2.1.1 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Firmware has upgraded to 1.4 which has fixed the bugs.",
+						"Added switch for long pressing the button to send continuous command. Switch on the function of long pressing the button to send continuous command by clicking the RPT icon from the respective column.",
+						"HUD enable to adjust opacity intelligently."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.1",
+			"editionDate": "2020.07.13",
+			"versionTitle": "2.1 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"The firmware has upgraded to 1.3 which has fixed the problem of device need to be re-plugged after the system sleep and other firmware bugs.",
+						"Added the function of automatically switching the preset according to the respective software.",
+						"Optimise the shortcuts transmit functions.",
+						"Added multiple built-in functions for Adobe Lightroom.",
+						"Added the function to adjust parameters in the tools of Adobe Lightroom.",
+						"Optimise the Photoshop relevant built-in functions.",
+						"Added mouse scroll and buttons relevant built-in functions.",
+						"Added the option to start automatically when switch on your computer.",
+						"Hold the button to send command continuously.",
+						"Fixed the problem of cannot input for Insert.",
+						"HUD status can be memorized.",
+						"Interface optimization and other bugs have fixed."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.2.0",
+			"editionDate": "2020.04.29",
+			"versionTitle": "2.0 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Add a complete set of Lightroom-related built-in functions and renew default Lightroom preset, fully optimize for Lightroom and significantly improve Lightroom experience.",
+						"Add customizable function to the Tour button.",
+						"Optimize UI for Multilanguage.",
+						"Add a new pop-up window for Lightroom’s HSL settings in the HUD system.",
+						"Fix some Mac users’ problems of brush flow and brush opacity interference under Photoshop built-in function.",
+						"Fix the ALT and mouse operation problem.",
+						"Fix known errors in tags.",
+						"Optimize the process in building new presets.",
+						"Fix some bugs."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.1.1.4",
+			"editionDate": "2020.3",
+			"versionTitle": "1.1.4 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "Built-In functions: ",
+					"textList": [
+						"“Adjust value (Dynamic)” added —— Adjust speed can be dynamically changed according to the rotation speed."
+					]
+				},
+				{
+					"title": "Multilanguage: ",
+					"textList": [
+						"Japanese added.",
+						"Traditional Chinese added.",
+						"Korean added"
+					]
+				},
+				{
+					"title": "Bugs fixed: ",
+					"textList": [
+						"Display and interaction issues of Pop-up windows solved.",
+						"MacOS connection issues solved."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.1.1",
+			"editionDate": "2019.12",
+			"versionTitle": "V.1.1 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Moves the Edit tags option, the Import option, and the Export option to the ellipsis drop-down menu of each preset.",
+						"Adds the Preferences menu, including the Tour button settings and the HUD settings.",
+						"Adds Favorite icon. Now you can mark presets as Favorite, and switch the Favorite presets quickly with the Tour Button.",
+						"Adds a default preset for the Adobe Lightroom Software.",
+						"Supports multi-language shortcuts.",
+						"More built-in functions.",
+						"Enhances the Tag system. The setting interface can edit the tag of the current shortcut instantly.",
+						"Optimizes preset reset function. Supports to reset the preset to the initially imported preset.",
+						"Optimizes the display of the Console and the Guide.",
+						"Optimizes the display of the HUD, adds interactive effects.",
+						"Optimizes the help information.",
+						"Fixes connection issues and optimizes connection speed.",
+						"Improves performance and fixes bugs."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "V.1.1 Beta",
+			"editionDate": "2019.10",
+			"versionTitle": "V 1.1 Beta Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Official Lightroom preset added.",
+						"Optimise interface display (Console, Guide, and HUD).",
+						"Improve connecting stability.",
+						"Support multilanguage inputs.",
+						"Enhance Tour button function, add the switch preset function.",
+						"Add new built-in functions.",
+						"Improvement performance and fix bugs."
+					]
+				}
+			]
+		}
+	]
+}

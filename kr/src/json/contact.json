@@ -1,0 +1,18 @@
+{
+	"title":"고객님의 의견을 듣고 싶습니다.",
+	"description":"TourBox에 대한 피드백, 제안 및 의견을 보내 주세요.",
+	"tab":[
+		{
+			"title":"마케팅 제휴",
+			"description":"마케팅 제휴와 관련 문의 사항은 media@tourboxtech.com으로 문의하십시오. "
+		},
+		{
+			"title":"비즈니스 문의",
+			"description":"비즈니스 관계와 관련 문의 사항은 marketing@tourboxtech.com을 통해 문의하십시오."
+		},
+		{
+			"title":"기술 지원",
+			"description":"제품 기술과 관련 문의 사항은 support@tourboxtech.com을 통해 문의하십시오."
+		}
+	]
+}

@@ -1,0 +1,40 @@
+{
+	"banner":{
+		"title1":"TOURBOX",
+		"title2":"前所未有的創意軟體控制器",
+		"description":"專為數位創作者而誕生",
+		"buttonName": "了解更多",
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/index-banner-2.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/tw/src/images/index-banner-mobile02.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/tw/src/images/index-banner-mobile02_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/tw/src/images/index-banner-mobile02_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/tw/src/images/index-banner-mobile02_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/tw/src/images/index-banner-mobile02_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/tw/src/images/index-banner-2_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/tw/src/images/index-banner-2_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/tw/src/images/index-banner-2_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/tw/src/images/index-banner-2_04.jpg"
+	},
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/index-first-seconds.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/tw/src/images/index-first-seconds-mobile.png"
+	},
+	"updata": {
+		"updataTitle": "TourBox Console 2.0 現已正式釋出！",
+		"updataTextMannary": "新增功能：",
+		"updataTextDes": [
+			"針對於Lightroom進行了大量優化，新增全套Lightroom內建功能與全新預設，大幅提升使用Lightroom時的操作體驗",
+			"開放了Tour鍵的客製化功能。",
+			"優化了多國語言的顯示。",
+			"HUD系統新增了針對Lightroom的HSL提示器。"
+		],
+		"updataBtnName": "下載"
+	},
+	"indexNew": {
+		"newTitle": "新聞中心",
+		"newYear": "2020",
+		"newMonth": "01",
+		"newText": "TourBox Wins Great Success on Makuake Crowdfunding",
+		"newBtnName": "更多>"
+	}
+}

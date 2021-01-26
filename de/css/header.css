@@ -1,0 +1,53 @@
+.header{position:fixed;top:0;left:0;right:0;z-index:999;width:100%;height:.55rem;padding:0 .6rem 0 1.2rem;background-color:#fff;box-shadow:0 0 1px 1px #eee;transition:all .5s}
+/* desk */
+.header>.header-desk{visibility:visible;width:100%;height:100%}
+.header>.header-mobile{visibility:hidden;height:0}
+.header-desk>.desk-nav{height:100%}
+.header-desk .nav-logo{display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.com/en/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%}
+.header-desk .nav-logo>img{width:100%;height:100%}
+.header-desk .nav-bar{height:100%}
+.header-desk .bar-item{position:relative;width:1.4rem;height:100%}
+.header-desk .bar-item::after{position:absolute;top:50%;right:0;z-index:9;display:block;content:"";width:1px;height:.17rem;background-color:#bbbbbb;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+.header-desk .bar-item:last-of-type:after{display:none}
+.header-desk .bar-item::before{position:absolute;left:50%;bottom:0.1rem;z-index:9;display:block;content:"";width:40%;height:2px;opacity:0;background-color:#6d6c6c;-webkit-transform:translateX(-50%);transform:translateX(-50%);transition:opacity .5s}
+.header-desk .item-link{width:100%;height:100%;font-size:.14rem;color:#6d6d6d}
+.header-desk .item-bar{position:absolute;left:0;top:.55rem;z-index:9;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 2px 1px #eee}
+.header-desk .bar-sub{width:100%;height:.3rem}
+.header-desk .sub-link{width:100%;height:100%;font-size:.12rem;color:#6d6d6d}
+.header-desk .bar-item:hover::before{opacity:1}
+.header-desk .bar-item:hover .item-bar{display:block}
+.header-desk .sub-link:hover{background-color:#f2f2f2;color:#333}
+.header-desk .desk-buy{height:.3rem;padding:0 .15rem;margin:0 0rem 0 .2rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);cursor:pointer}
+.header-desk .desk-language{position:relative;height:100%;padding:0 .2rem;margin-left:.2rem;cursor:pointer}
+.header-desk .language-default{width:100%;height:100%;font-size:.14rem;color:#6a6a6a}
+.header-desk .language-default>i{font-size:.2rem;color:#3d6df6}
+.header-desk .language-select{position:absolute;top:.55rem;left:0;z-index:1;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 1px 0px #eee}
+.header-desk .select-item{width:100%;height:.3rem;font-size:.12rem;color:#6d6d6d}
+.header-desk .desk-language:hover .language-select{display:block}
+.header-desk .select-item:hover{background-color:#f2f2f2;color:#333}
+/* mobile */
+@media only screen and (max-width:767px){
+.header{width:100%;height:.44rem;padding:0 0.1rem 0 .15rem;transition:all .5s}
+.header>.header-desk{visibility:hidden;width:100%;height:0;overflow:hidden}
+.header>.header-mobile{visibility:visible;height:100%}
+.header-mobile .mobile-logo{position:absolute;left:50%;top:50%;z-index:9;display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.com/en/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%;transform:translate(-50%,-50%)}
+.header-mobile .mobile-logo>img{width:100%;height:100%}
+.header-mobile .nav-toggle>i{font-size:.24rem;color:#6a6a6a}
+.header-mobile>.mobile-nav{position:relative;z-index:100}
+.header-mobile .nav-list{position:fixed;top:.44rem;left:0;right:0;z-index:999;display:none;width:100vw;height:calc(100vh - 0.44rem);background-color:#fff}
+.header-mobile .list-item{position:relative;width:100%}
+.header-mobile .list-item::after{position:absolute;top:auto;right:auto;bottom:0;left:0;z-index:9;content:"";width:100%;height:1px;background-color:#ddd;-webkit-transform:translateY(0%);transform:translateY(0%)}
+.header-mobile .list-item:last-of-type:after{display:none}
+.header-mobile .item-link{width:100%;height:.4rem;padding:0 .1rem 0 .25rem;font-size:.16rem;color:#6d6d6d}
+.header-mobile .item-link>i{font-size:.2rem;color:#6d6d6d}
+.header-mobile .language-default{width:100%;height:100%;font-size:.16rem;color:#6a6a6a}
+.header-mobile .language-default>i{font-size:.2rem;color:#3d6df6}
+.header-mobile .icon-active>i{font-size:.24rem;color:#6a6a6a}
+.header-mobile .language-select{position:fixed;top:.44rem;left:0;z-index:999;display:none;width:100%;height:calc(100vh - 0.44rem);background-color:rgba(255,255,255,1)}
+.header-mobile .select-title{width:100%;height:.4rem;padding:0 .2rem;font-size:.14rem;color:#303233;background-color:#f7f9fa}
+.header-mobile .select-item{width:100%;height:.4rem;padding:0 .2rem;font-size:.16rem}
+.header-mobile .select-item>span:first-of-type{color:#333}
+.header-mobile .select-item>span:last-of-type{color:#a2a7aa}
+.header-mobile .mobile-buy{position:absolute;top:.44rem;left:0;right:0;z-index:99;width:100%;height:.44rem;padding:0 .2rem;font-size:.18rem;color:#fff;background-color:#1C1C1E}
+.header-mobile .buy{height:.3rem;padding:0 .15rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%)}
+}

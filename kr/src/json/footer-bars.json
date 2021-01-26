@@ -1,0 +1,111 @@
+{
+	"right":[
+		{
+			"name": "TourBox",
+			"children": [{
+					"name": "회사 소개",
+					"url": "about-us.html"
+				},
+				{
+					"name": "문의",
+					"url": "contact-us.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "약관",
+			"children": [{
+					"name": "서비스 약관",
+					"url": "terms-of-use.html"
+				},
+				{
+					"name": "개인정보 처리방침",
+					"url": "privacy-policy.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "탐색",
+			"children": [
+				{
+					"name": "커뮤니티",
+					"target":"_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "뉴스",
+					"url": "news.html"
+				},
+				{
+					"name": "제휴 프로그램",
+					"url": "affiliate.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "다운로드 센터",
+			"children": [
+				{
+					"name": "소프트웨어",
+					"url": "downloads.html"
+				},
+				{
+					"name": "프리셋",
+					"url": "presets.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "고객지원",
+			"children": [
+				{
+					"name": "사용 설명서",
+					"url": "manual.html"
+				},
+				{
+					"name": "FAQ",
+					"url": "faq.html"
+				},
+				{
+					"name": "지원 센터",
+					"url": "support.html"
+				}
+			],
+			"open":false
+		}
+	],
+	"left": {
+		"title": "구독",
+		"description": "TourBox 최신 소식 및 이벤트 정보를 받아보세요.",
+		"inc": "2020 TourBox Tech lnc. All Right Reserved.",
+		"placeholder": "이메일 주소",
+		"emailError": "입력한 전자 우편 주소가 아닙니다!",
+		"emailSuccess": "가입 성공",
+		"emailAlready": "이미 계정이 있습니다!",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxKorea",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/Tourboxtech",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

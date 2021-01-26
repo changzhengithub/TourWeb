@@ -1,0 +1,59 @@
+[v-cloak]{display:none}
+#container{position:relative;width:100%;min-height:100vh}
+.container-banner{width:100%;height:3.9rem;background:url('//r.tourboxtech.com/en/src/images/dwon-banner02.png') 0 0 no-repeat;background-size:cover;border-bottom:7px solid #000}
+.container-banner>.banner-detail{width:50%;height:100%;padding-top:.8rem;padding-left:1.5rem}
+.container-banner>.banner-detail>h1{width:100%;font-weight:400;font-size:0.26rem;color:#555;line-height:1.5;margin-bottom:.15rem}
+.container-banner>.banner-detail>.detail-parame{width:100%}
+.container-banner>.banner-detail>.detail-parame>.parame-text{width:100%;font-size:0.14rem;color:#555;line-height:1.6}
+.container-banner>.banner-detail>.detail-btn{width:100%;padding-top:.25rem}
+.container-banner>.banner-detail>.detail-btn>a{display:inline-block;width:1.2rem;height:.34rem;margin:0 .3rem 0 0;text-align:center;color:#fff;line-height:.34rem;background-color:#21a9dd}
+.container-banner>.banner-detail>.detail-btn>a>span{margin-right:.1rem;font-size:.14rem}
+.container-banner>.banner-detail>.detail-btn>a>i{font-size:.16rem}
+.container-banner>.banner-detail>.btn-desk{display:block}
+.container-banner>.banner-detail>.btn-mobile{display:none}
+.container-interate{width:100%;padding-left:3rem}
+.interate-content{position:relative;width:100%;padding-bottom:.3rem}
+.interate-content::after{position:absolute;left:0;top:0;z-index:9;content:"";display:block;width:2px;height:100%;background-color:#ccc}
+.interate-content>.content-item{display:flex;display:-webkit-flex;justify-content:flex-start;width:100%;padding-top:.5rem}
+.interate-content>.content-item>.item-edition{position:relative;width:2.5rem;height:100%;padding-left:.6rem}
+.interate-content>.content-item>.item-edition::after{position:absolute;left:0;top:.3rem;z-index:9;content:"";display:block;width:.3rem;height:1px;background-color:#ccc}
+.interate-content>.content-item>.item-edition::before{position:absolute;left:.3rem;top:.26rem;z-index:9;content:"";display:block;width:.1rem;height:.1rem;border-radius:50%;background-color:#02C9F0}
+.interate-content>.content-item>.item-edition>p:first-of-type{width:100%;margin-bottom:.1rem;font-size:.28rem}
+.interate-content>.content-item>.item-edition>p:last-of-type{width:100%;font-size:.14rem}
+.interate-content>.content-item>.item-des{width:6rem;height:100%;padding-left:.2rem}
+.item-des>.des-title{margin-bottom:.2rem;font-size:.22rem;color:#333}
+.item-des>.des-summary{margin-bottom:.2rem;font-size:.18rem;color:#aaa}
+.item-des>.des-text{padding-left:.2rem;margin-bottom:.2rem;font-size:.18rem;color:#555}
+.item-des>.des-text>.text-title{margin-bottom:.05rem;font-size:.16rem;color:#555}
+.item-des>.des-text>.text-detail{line-height:1.5;font-size:.14rem;color:#555}
+.list-type{list-style-type:square}
+@media only screen and (max-width:767px){#container{width:100%;position:relative}
+.container-banner{width:100%;height:6rem;background:url('//r.tourboxtech.com/en/src/images/dwon-banner-mobile.jpg');background-position:left 0 bottom 0;background-repeat:no-repeat;background-size:contain;border-bottom:7px solid #000}
+.container-banner>.banner-detail{width:100%;height:100%;padding-top:.3rem;padding-left:.3rem}
+.container-banner>.banner-detail>h1{width:100%;font-weight:400;font-size:0.26rem;color:#555;line-height:1.5;margin-bottom:.15rem}
+.container-banner>.banner-detail>.detail-parame{width:100%}
+.container-banner>.banner-detail>.detail-parame>.parame-text{width:100%;padding-right:.2rem;font-size:0.14rem;color:#555;line-height:1.6}
+.container-banner>.banner-detail>.detail-btn{width:100%;padding-top:.15rem}
+.container-banner>.banner-detail>.detail-btn>a{display:inline-block;width:1.2rem;height:.34rem;margin:0 .3rem 0 0;text-align:center;color:#fff;line-height:.34rem;background-color:#21a9dd}
+.container-banner>.banner-detail>.detail-btn>a>span{margin-right:.1rem;font-size:.12rem}
+.container-banner>.banner-detail>.detail-btn>a>i{font-size:.14rem}
+.container-banner>.banner-detail>.btn-desk{display:none}
+.container-banner>.banner-detail>.btn-mobile{display:block}
+.container-interate{width:100%;padding:.3rem 0 0 0}
+.interate-content{position:relative;width:100%;padding-bottom:.3rem}
+.interate-content::after{display:none}
+.interate-content>.content-item{display:block;width:100%;padding:.25rem .2rem 0 .1rem}
+.interate-content>.content-item>.item-edition{display:flex;display:-webkit-flex;justify-content:flex-start;align-items:center;width:100%;margin-bottom:.1rem;padding-left:.2rem;color:#999}
+.interate-content>.content-item>.item-edition>p:first-of-type{width:auto;margin-bottom:0rem;font-size:.16rem}
+.interate-content>.content-item>.item-edition>p:last-of-type{width:auto;margin-left:.1rem;font-size:.14rem}
+.interate-content>.content-item>.item-edition::after{display:none}
+.interate-content>.content-item>.item-edition::before{display:none}
+.interate-content>.content-item>.item-des{width:100%}
+.item-des>.des-title{margin-bottom:.2rem;font-size:.18rem;color:#333}
+.item-des>.des-summary{margin-bottom:.2rem;font-size:.14rem;color:#aaa}
+.item-des>.des-text{padding-left:.1rem;margin-bottom:.2rem;font-size:.18rem;color:#555}
+.item-des>.des-text>.text-title{margin-bottom:.05rem;font-size:.16rem;color:#555}
+.item-des>.des-text>.text-detail{line-height:1.5;font-size:.14rem;color:#555}
+.list-type{list-style-type:square}
+}.tourbox-animation-original{transition:all 600ms;-webkit-transition:all 600ms}
+.tourbox-animation{opacity:0;transform:translateY(1rem)}

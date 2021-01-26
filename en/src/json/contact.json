@@ -1,0 +1,18 @@
+{
+	"title":"We Want To Hear From You",
+	"description":"We welcome your feedback, suggestions and comments about TourBox. ",
+	"tab":[
+		{
+			"title":"Marketing Cooperation",
+			"description":"For marketing cooperation please contact us via media@tourboxtech.com"
+		},
+		{
+			"title":"Business Inquiries",
+			"description":"For business relationship please contact us via marketing@tourboxtech.com "
+		},
+		{
+			"title":"Technical Support",
+			"description":"For any product technical questions, please contact us via please contact us via support@tourboxtech.com"
+		}
+	]
+}

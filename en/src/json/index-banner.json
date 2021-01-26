@@ -1,0 +1,42 @@
+{
+	"banner": {
+		"title1":"TOURBOX",
+		"title2":"YOUR HANDY STUDIO",
+		"description":"IT IS WORTH TO TRY",
+		"title3": "TourBox Wins Great Success",
+		"title4": "on Makuake Crowdfunding",
+		"buttonName": "Learn More",
+		"bannerBg": "//r.tourboxtech.com/en/src/images/index-banner-2.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/en/src/images/index-banner-mobile02.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/en/src/images/index-banner-mobile02_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/en/src/images/index-banner-mobile02_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/en/src/images/index-banner-mobile02_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/en/src/images/index-banner-mobile02_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/en/src/images/index-banner-2_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/en/src/images/index-banner-2_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/en/src/images/index-banner-2_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/en/src/images/index-banner-2_04.jpg"
+	},
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/en/src/images/index-first-seconds.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/en/src/images/index-first-seconds-mobile.png"
+	},
+	"updata": {
+		"updataTitle": "TourBox Console Application v.2.0 Released",
+		"updataTextMannary": "New features:",
+		"updataTextDes": [
+			"Add a complete set of Lightroom-related built-in functions and renew default Lightroom preset, fully optimize for Lightroom and significantly improve Lightroom experience.",
+			"Add customizable function to the Tour button.",
+			"Optimize UI for Multilanguage.",
+			"Add a new pop-up window for Lightroom’s HSL settings in the HUD system."
+		],
+		"updataBtnName": "Download"
+	},
+	"indexNew": {
+		"newTitle": "News Center",
+		"newYear": "2020",
+		"newMonth": "Feb",
+		"newText": "TourBox Wins Great Success on Makuake Crowdfunding",
+		"newBtnName": "MORE>"
+	}
+}

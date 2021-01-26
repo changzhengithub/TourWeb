@@ -1,0 +1,36 @@
+{
+	"tab": {
+		"title": "Downloads",
+		"prefix": {
+			"text": "Tourbox",
+			"url": "index.html"
+		},
+		"suffix": {
+			"text": "Downloads",
+			"url": "downloads.html"
+		}
+	},
+	"banner2": {
+		"elFirst": "Software & Drivers",
+		"elSecond": "Installation Guide",
+		"elSecondItem1": "For Mac",
+		"elSecondItem2": "For Windows",
+		"elFirth": "Quick Start Guide"
+	},
+	"mobileBanner": {
+		"title1": {
+			"text1": "Step 1.",
+			"text2": "Install the Driver"
+		},
+		"tip1": "*Please check if you have successfully installed the Driver while your device is not working.",
+		"title2": {
+			"text1": "Step 2.",
+			"text2": "Install the TourBox Console"
+		},
+		"tip2": "*Please refer to the installation guide while you have issues.",
+		"requirement": {
+			"title": "System Requirement",
+			"text": "macOS 10.10 or higher / Windows 7 or higher"
+		}
+	}
+}

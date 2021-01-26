@@ -1,0 +1,74 @@
+{
+	"news":[
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news07.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail06.jpg",
+			"time": "2020/05",
+			"timeYear": "2020",
+			"timeMonth": "05",
+			"title": "TourBoxは台湾クラファンで目標を達成",
+			"update_time": 1579065760,
+			"summarize": "TourBoxはzeczec(www.zeczec.com)でクラウドファンディングを開催し、70日以内に2800人のサポーターさんからご支援をいただき、1070万ドルの支援金を調達できました。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news06.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/index-news.jpg",
+			"time": "2020/03",
+			"timeYear": "2020",
+			"timeMonth": "03",
+			"title": "TourBoxはマクアケクラファンで大成功を収めました。",
+			"update_time": 1579065760,
+			"summarize": "60日を渡るマクアケクラファンでは、TourBoxは大成功を収め、2800名のサポーターさんから3800万円の支援金を調達致しました。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news05.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail05.jpg",
+			"time": "2020/1",
+			"timeYear": "2020",
+			"timeMonth": "Jan",
+			"update_time": 1579065760,
+			"title": "Meet us at CES",
+			"summarize": "TourBox Techチームは2020年1月7日から10日までに、ラスベガスで「CES 2020」に出展。ブース情報：Booth No.52823，Sands Expo, Level 1, Hall G EUREKA PARK。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news04.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail04.jpg",
+			"time": "2019/12",
+			"timeYear": "2019",
+			"timeMonth": "Dec",
+			"update_time": 1579065601,
+			"title": "「TourBox」はMakuakeクラファンを以て、日本初上陸。",
+			"summarize": "2019年12月17日、「TourBox」はMakuakeにて正式に日本クラファンをスタート。最終支援金額は3800万円を超え、大盛況につき終了。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news03.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail03.jpg",
+			"time": "2019/10",
+			"timeYear": "2019",
+			"timeMonth": "Oct",
+			"update_time": 1579065681,
+			"title": "「TourBox」HKTDC 2019に出展",
+			"summarize": "2019年10月14日から16日、TourBox Techはご招待いただき、HKTDC 2019での出展を果たし、展覧会で「TourBox」を中心に新しいマンマシンインタラクティブソリューションを紹介。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news02.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail02.jpg",
+			"time": "2019/8",
+			"timeYear": "2019",
+			"timeMonth": "Aug",
+			"update_time": 1579065912,
+			"title": "「TourBox」量産化を実現",
+			"summarize": "「TourBox」は2019年7月を以て量産、及び納品を全面的に始めました。バージョンは1.1にアップデートし、好評を博しました。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/jp/src/images/news01.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/jp/src/images/news-detail01.jpg",
+			"time": "2019/1",
+			"timeYear": "2019",
+			"timeMonth": "Jan",
+			"update_time": 1579017600,
+			"title": "頭角を現わす――TourBoxは世界に向けてKickstarterクラファン開始",
+			"summarize": "2018年10月8日、「TourBox」は世界最大級クラウドファンディングサイトKickstarterにて初クラファンを開催し、58カ国からの2400以上のユーザーたちの支援を得て、総計22万ドルの集金を獲得。"
+		}
+	]
+}

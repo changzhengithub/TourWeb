@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+	content="TourBox is an innovative controller for any creative software like Photoshop, Lightroom, PaintTool SAI, Capture one, Final cut pro, Premiere, and more. The comprehensive customised feature can adapt to any work scenarios. Our application TourBox Console can deeply customise the TourBox. You can preset the TourBox based on your usage habits in different software. Personalise your TourBox to fit your workflow and create your own presets!" />
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>TourBox - The Ultimate Controller for Creators</title>
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index.css" />
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+	<!-- Event snippet for 亚马逊网站-跳转. -->
+	<script>
+		function gtag_report_conversion(url) {
+			var callback = function () {
+				if (typeof (url) != 'undefined') {
+					window.location = url;
+				}
+			};
+			gtag('event', 'conversion', {
+				'send_to': 'AW-452806235/6rF7CMPMs_EBENuM9dcB',
+				'event_callback': callback
+			});
+			return false;
+		}
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<section id="index" class="index" v-cloak>
+		<header class="header">
+			<div class="header-desk flex-vc">
+				<nav class="desk-nav flex-vb flex-1">
+					<a class="nav-logo" href="index.html"></a>
+					<ul class="nav-bar flex-vc">
+						<li class="bar-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+							<ul class="item-bar" v-if="item.linkList">
+								<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+									<a class="sub-link flex-center" :href="linkItem.link"
+										:target="linkItem.target">{{linkItem.linkName}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="desk-shop flex-center">
+					<div class="shop-title flex-center"><span>Buy Now</span></div>
+					<div class="shop-list">
+						<div class="list-item flex-center">
+							<a href="shopify-buy.html" target="_blank">TourBox Store</a>
+						</div>
+						<div class="list-item flex-center" onclick="gtag_report_conversion('https://www.amazon.com/dp/B08HCV1JGB?ref=myi_title_dp')">
+							<span>Amazon Store</span>
+							<!-- <a href="https://www.amazon.com/dp/B08HCV1JGB?ref=myi_title_dp" target="_blank">Amazon Store</a> -->
+						</div>
+					</div>
+				</div>
+				<div class="desk-language ">
+					<div class="language-default flex-vb">
+						<span>English</span>
+						<i class="iconfont icondian"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-item flex-center" @click="checkLanguage('cn')">简体中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
+						<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+						<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="header-mobile flex-vb">
+				<div class="mobile-nav">
+					<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+						<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+					</div>
+					<ul class="nav-list">
+						<li class="list-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-vb" :href="item.href" :target="item.target">
+								<span>{{item.name}}</span>
+								<i class="iconfont iconarrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a class="mobile-logo" href="index.html"></a>
+				<div class="mobile-language" v-show="!openMenuShow">
+					<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+						<span v-show="!openLanguageShow">English</span>
+						<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-title flex-vc"><span>Select Language</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('cn')"><span>中国大陆</span><span>简体中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
+					</ul>
+				</div>
+			</div>
+	
+			<div class="header-buy">
+				<div class="buy-nav flex-vb">
+					<div class="nav-left">TourBox 2020</div>
+					<div class="nav-right" @click="openBuyNow">Buy Now</div>
+				</div>
+				<div class="buy-list">
+					<a class="list-item flex-vb" href="shopify-buy.html" target="_self" >
+						<span>TourBox Store</span>
+						<i class="iconfont iconarrow-right"></i>
+					</a>
+					<a class="list-item flex-vb" onclick="gtag_report_conversion('https://www.amazon.com/dp/B08HCV1JGB?ref=myi_title_dp')">
+						<span>Amazon Store</span>
+						<i class="iconfont iconarrow-right"></i>
+					</a>
+				</div>
+			</div>
+		</header>
+		<!-- main -->
+		<main class="index-main">
+			<!-- banner -->
+			<section class="main-banner">
+				<div class="banner-headline">
+					<p class="headline-name ">TourBox <span>2020</span></p>
+					<p class="headline-title ">The Ultimate Controller for Creators</p>
+					<p class="headline-price ">$169</p>
+					<div class="headline-link flex-center ">
+						<a class="link-item felex-center" href="product.html">Learn More <i class="iconfont iconarrow-right"></i></a>
+						<!-- <div class="link-item flex-center"><div id='product-component-1589254179271' style="width: 120px !important;"></div><i class="iconfont iconarrow-right"></i></div> -->
+					</div>
+				</div>
+			</section>
+			<!-- new -->
+			<section class="mian-update" :class="{'flex-vb': !isM}">
+				<div class="update-item lazy" data-bg="//r.tourboxtech.com/en/src/images/index-update01-2.1.4.jpg">
+					<div class="item-content item-active">
+						<h1>TourBox Console Application 2.2.4 Released</h1>
+						<!-- <h1>现已正式推出！</h1> -->
+						<a href="downloads.html">Learn More<i class="iconfont iconarrow-right"></i></a>
+					</div>
+				</div>
+				<div class="update-item lazy" data-bg="//r.tourboxtech.com/en/src/images/index-update02-2.0.4.jpg">
+					<div class="item-content">
+						<h1>Tremendous Victories For TourBox | Successfully launched crowdfunding campaign in Taiwan</h1>
+						<!-- <h1>额完成众筹目标</h1> -->
+						<a href="news.html">Learn More<i class="iconfont iconarrow-right"></i></a>
+					</div>
+				</div>
+			</section>
+		</main>
+	</section>
+	<!-- footer -->
+	<footer id="footer"></footer>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/index.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		(function () {
+			loadBannerBg();
+			initLazy();
+
+			function loadBannerBg() {
+				var imgUrl = window.flag ?  '//r.tourboxtech.com/en/src/images/product-banner-2.0.1.jpg' : '//r.tourboxtech.com/en/src/images/product-banner-mobile-2.0.1.jpg'
+				var img = new Image();
+				img.src = imgUrl;
+				img.onload = function () {
+					$('.headline-name').addClass('top-animate')
+					$('.headline-title').addClass('middle-animate')
+					$('.headline-price').addClass('bottom-animate')
+					$('.headline-link').addClass('link-animate')
+				}
+			}
+			function initLazy() {
+				new LazyLoad({
+					threshold: 300
+				});
+			}
+		})();
+	</script>
+</body>
+
+
+</html>

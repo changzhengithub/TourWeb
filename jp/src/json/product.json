@@ -1,0 +1,94 @@
+{
+	"banner":{
+		"title1":"真のツール",
+		"title2":"クリエイターの最強武器",
+		"title3":"",
+		"bannerBg":"//r.tourboxtech.com/jp/src/images/product-banner.jpg",
+		"mobileBannerBg":"//r.tourboxtech.com/jp/src/images/product-banner-mobile.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/jp/src/images/product-banner-mobile_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/jp/src/images/product-banner-mobile_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/jp/src/images/product-banner-mobile_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/jp/src/images/product-banner-mobile_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/jp/src/images/product-banner_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/jp/src/images/product-banner_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/jp/src/images/product-banner_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/jp/src/images/product-banner_04.jpg"
+	},
+
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/index-first-second.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/jp/src/images/index-first-second-mobile.png"
+	},
+	"spellBanner": {
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/product-spell-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/jp/src/images/product-spell-banner-mobile.jpg"
+	},
+	"thirdBanner": {
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/product-third-section-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/jp/src/images/product-third-section-banner-mobile.jpg"
+	},
+	"footerBanner": {
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/product-third-section-banner02.jpg"
+	},
+	
+	"firstDes": {
+		"title1": "創作者",
+		"title2": "再也不會被複雜的快捷鍵所困擾，擺脫鍵盤單調低效率的輸入方式，一手掌握整個創作流程。",
+		"text": "不論是筆刷控制、影片與聲音剪輯、畫面控制、參數調整還是工具切換等操作，都可以用TourBox，以最直覺的方式簡單操作。"
+	},
+	"lantern": {
+		"describeList": [
+			{
+				"title": "片手でブラインドタッチ、楽々使用",
+				"text": "TourBoxは正・側両面の立体的なレイアウトを採用しており、腕を動かすことなく容易に操作することが可能です。"
+			},
+			{
+				"title": "エッジの流線型デザイン",
+				"text": "高強度の作業による疲労感を低減"
+			},
+			{
+				"title": "強い耐久性",
+				"text": "２０万回以上の耐久性の優れたデバイスの選択"
+			},
+			{
+				"title": "Type-Cインターフェース",
+				"text": "汎用性とスピードの向上"
+			},
+			{
+				"title": "システム対応",
+				"text": "macOS/Windows両方に対応"
+			}
+		],
+		"hoverList": [
+			{
+				"title": "01",
+				"text": "立体的レイアウト"
+			},
+			{
+				"title": "02",
+				"text": "流線型デザイン"
+			},
+			{
+				"title": "03",
+				"text": "耐久性"
+			},
+			{
+				"title": "04",
+				"text": "Type-cインターフェース"
+			},
+			{
+				"title": "05",
+				"text": "Win/Mac対応"
+			}
+		],
+		"slideList": [
+			"//r.tourboxtech.com/jp/src/images/gs-banner.png",
+			"//r.tourboxtech.com/jp/src/images/product-first-second-main04.png",
+			"//r.tourboxtech.com/jp/src/images/product-first-second-main08.jpg",
+			"//r.tourboxtech.com/jp/src/images/product-first-second-main05.png",
+			"//r.tourboxtech.com/jp/src/images/product-first-second-main07.jpg"
+		]
+	}
+
+	
+}

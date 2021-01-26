@@ -1,0 +1,74 @@
+{
+	"news":[
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news07.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail06.jpg",
+			"time": "2020.05",
+			"timeYear": "2020",
+			"timeMonth": "05",
+			"title": "TourBox在台灣超高額完成眾籌目標",
+			"update_time": 1579065760,
+			"summarize": "Tourbox在嘖嘖( www.zeczec.com) 籌眾活動中，在70天之內成功籌集1,070萬元新台幣和獲得了2800名支持者。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news06.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/index-news.jpg",
+			"time": "2020.03",
+			"timeYear": "2020",
+			"timeMonth": "03",
+			"title": "TourBox在Makuake眾籌中獲得巨大成功",
+			"update_time": 1579065760,
+			"summarize": "在60天的Makuake眾籌中，TourBox在日本市場贏得了巨大成功，獲得了2800名支持者和3800萬日元的眾籌金額。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news05.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail05.jpg",
+			"time": "2020.01",
+			"timeYear": "2020",
+			"timeMonth": "01",
+			"title": "在CES上遇見我們",
+			"update_time": 1579065760,
+			"summarize": "2020年1.7-1.10，TourBox Tech團隊參加拉斯維加斯CES展，展位號是Booth No.52823，Sands Expo, Level 1, Hall G EUREKA PARK。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news04.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail04.jpg",
+			"time": "2019.12",
+			"timeYear": "2019",
+			"timeMonth": "12",
+			"update_time": 1579065601,
+			"title": "TourBox在Makuake上開啟日本市場眾籌",
+			"summarize": "2019年12月17日，TourBox上線Makuake開啟日本市場眾籌，上線一天破500萬日元，截止2020年1月5日，眾籌額超1400萬日元。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news03.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail03.jpg",
+			"time": "2019.10",
+			"timeYear": "2019",
+			"timeMonth": "10",
+			"update_time": 1579065681,
+			"title": "TourBox參加香港電子展",
+			"summarize": "2019年10月14日至16日，TourBox Tech團隊受邀參加香港秋季電子展，分享了以TourBox為核心的全新一代人機交互解決方案。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news02.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail02.jpg",
+			"time": "2019.08",
+			"timeYear": "2019",
+			"timeMonth": "08",
+			"update_time": 1579065912,
+			"title": "TourBox實現全面量產",
+			"summarize": "2019年7月，TourBox全面量產交付。軟體版本升級到1.1，獲得大量消費者好評。"
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/tw/src/images/news01.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/tw/src/images/news-detail01.jpg",
+			"time": "2019.01",
+			"timeYear": "2019",
+			"timeMonth": "01",
+			"update_time": 1579017600,
+			"title": "嶄露頭角——TourBox在Kickstarter上開啟全球眾籌",
+			"summarize": "2018年10月8日，TourBox首次登陸全球眾籌網站Kickstarter，獲得來自58個國家2000+名用戶支援。總眾籌額超過22萬美金。"
+		}
+	]
+}

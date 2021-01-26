@@ -1,0 +1,595 @@
+{
+	"navList": [
+		{
+			"title": "Introduce TourBox",
+			"slideList": [
+				{
+					"title": "Overview",
+					"activeShow": false
+				},
+				{
+					"title": "Installation and Connection",
+					"activeShow": false
+				},
+				{
+					"title": "TourBox Console",
+					"activeShow": false
+				}
+			],
+			"list": ["Overview","Installation and Connection","TourBox Console"],
+			"show": false
+		},
+		{
+			"title": "Photoshop Preset Settings",
+			"slideList": [
+				{
+					"title": "Brush Control",
+					"activeShow": false
+				},
+				{
+					"title": "Image Control",
+					"activeShow": false
+				},
+				{
+					"title": "Switch between Tools",
+					"activeShow": false
+				},
+				{
+					"title": "Select Areas",
+					"activeShow": false
+				},
+				{
+					"title": "Parameter Adjustment",
+					"activeShow": false
+				},
+				{
+					"title": "Other Functions",
+					"activeShow": false
+				},
+				{
+					"title": "Custom Settings",
+					"activeShow": false
+				}
+			],
+			"list": ["Brush Control","Image Control","Switch between Tools","Select Areas","Parameter Adjustment","Other Functions","Custom Settings"],
+			"show": false
+		},
+		{
+			"title": "Lightroom Preset Settings",
+			"slideList": [],
+			"list": ["Parameter Adjustment", "Switch between Panels","Image Control","Switch between Adjustment Tools","Brush Control","Custom Settings"],
+			"show": false
+		},
+		{
+			"title": "Create Presets for Other Software",
+			"slideList": [
+				{
+					"title": "Create Presets",
+					"activeShow": false
+				},
+				{
+					"title": "Preset Settings",
+					"activeShow": false
+				},
+				{
+					"title": "Create Tags for Shortcuts",
+					"activeShow": false
+				},
+				{
+					"title": "Import/Export Presets",
+					"activeShow": false
+				}
+			],
+			"list": ["Create Presets", "Preset Settings","Create Tags for Shortcuts","Import/Export Presets"],
+			"show": false
+		},
+		{
+			"title": "Convenient Functions",
+			"slideList": [
+				{
+					"title": "HUD",
+					"activeShow": false
+				},
+				{
+					"title": "Guide",
+					"activeShow": false
+				},
+				{
+					"title": "Automatic Switch between Presets",
+					"activeShow": false
+				}
+			],
+			"list": ["HUD","Guide","Automatic Switch between Presets"],
+			"show": false
+		}
+	],
+	"pageList": [
+		[
+			[
+				{
+					"desActive": true,
+					"title": "Overview",
+					"text": null,
+					"des": [
+						"TourBox is a powerful, easy-to-use creative tool dedicatedly designed for creators.",
+						"Simply by matching creative software’s shortcuts to TourBox, the difficulty of operating the software can be greatly reduced, lifting your work efficiency and user experience to a new level.",
+						"TourBox allows you to design in the most intuitive way, no matter it is adjusting brush tools, controlling image, editing video and audio, adjusting parameters, and switching between tools."
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"TourBox is equipped with a Knob, a Scroll, a Dial and other eleven buttons.",
+						"Either a rotation of a wheel or a press of a button can initiate keyboard Shortcuts or functions built in TourBox’s console.",
+						"You can also use the Knob, Scroll, Dial or buttons independently or in combinations to achieve a variety of functions."
+					],
+					"imgUrl": "//r.tourboxtech.com/en/src/images/gs-banner.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Install TourBox Console",
+					"text": [
+						"1. Visit TourBox official website: <a href='https://www.tourboxtech.com/downloads.html#/' target='_target'>https://www.tourboxtech.com/downloads.html#/</a>to download the Drive based on your computer version as well as the latest TourBox Console application.",
+						"2. Run the Driver and wait until the installation completes.",
+						"3. Install TourBox Console application."
+					],
+					"des": "",
+					"warning": "",
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "Connect TourBox to a Computer",
+					"text": null,
+					"des": null,
+					"summary": [
+						"1. Open TourBox console, and a prompt will remind you to connect TourBox to your computer.",
+						"2. Connect the USB-C port on TourBox to the USB-A port on your computer with the USB cable, and ensure the LED indicator is on.",
+						"3. TourBox console will automatically enter the main interface after it is successfully connected to your computer."
+					],
+					"imgUrl": "//r.tourboxtech.com/en/src/images/connect.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Preset List",
+					"text": null,
+					"des": [
+						"You can save and manage multiple presets in Preset List, such as creating, deleting, importing, exporting, sorting presets, and editing preset tags.",
+						"Select a preset to load it.",
+						"Two default presets for Adobe Photoshop and Adobe Lightroom have been imported to the Preset List."
+					],
+					"wraning": "",
+					"imgUrl": "//r.tourboxtech.com/en/src/images/kzt01.jpg",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "Preset Settings",
+					"text": null,
+					"des": [
+						"Columns in Preset Settings correspond to the functions of the wheels, the buttons and the combinations. Click a column, and you can adjust the according settings.",
+						"In the pop-up menu, you can view, search and choose desired functions, or adjust settings with shortcuts on your keyboard."
+					],
+					"imgUrl": "//r.tourboxtech.com/en/src/images/kzt02.jpg",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "Brush Control",
+					"text": null,
+					"des": [
+						"To adjust the brush size, rotate the Knob <span class='sprite-key key-icon-05'></span>.",
+						"To adjust brush opacity, hold the Tall button <span class='sprite-key key-icon-08'></span> and rotate the Knob <span class='sprite-key key-icon-05'></span> simultaneously.",
+						"To adjust brush hardness, hold the Short button <span class='sprite-key key-icon-09'></span>and rotate the Knob <span class='sprite-key key-icon-05'></span> simultaneously.",
+						"To adjust brush flow, hold the Top button <span class='sprite-key key-icon-04'></span> and rotate the Knob <span class='sprite-key key-icon-05'></span> simultaneously."
+					],
+					"imgUrl": "",
+					"videoUrl": "XwNQTxaSsHE",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"You can use any brush tools <span class='sprite-gj gj-icon-02'></span> as well as stamp tools <span class='sprite-gj gj-icon-06'></span>, healing tools <span class='sprite-gj gj-icon-08'></span> eraser tools <span class='sprite-gj gj-icon-07'></span>more."
+					],
+					"des": [
+						"To achieve functions such as eyedropper, clone stamp, display just one layer, hold the Tall button <span class='sprite-key key-icon-08'></span> and click your mouse simultaneously.",
+						"To switch between foreground and background colors, double-click the Tall button <span class='sprite-key key-icon-08'></span>."
+					],
+					"imgUrl": "",
+					"videoUrl": "y-YGskYLNpU",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Image Control",
+					"text": null,
+					"des": [
+						"To zoom in and out, roll the Scroll <span class='sprite-key key-icon-03'></span>.",
+						"To let images fit the screen, press the Scroll <span class='sprite-key key-icon-03'></span>.",
+						"To drag images, hold the Short button <span class='sprite-key key-icon-09'></span> and drag your mouse."
+					],
+					"imgUrl": "",
+					"videoUrl": "Qhz1QJP0vYo",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Switch between tools",
+					"text": null,
+					"des": [
+						"You can switch between brush tools <span class='sprite-gj gj-icon-02'></span> stamp tools <span class='sprite-gj gj-icon-06'></span>, healing tools <span class='sprite-gj gj-icon-08'></span>, eraser tools <span class='sprite-gj gj-icon-07'></span>with the Dpad buttons <span class='sprite-key key-icon-01'></span>.",
+						"To switch between marquee tools <span class='sprite-gj gj-icon-09'></span> lasso tools <span class='sprite-gj gj-icon-05'></span>, quick selection <span class='sprite-gj gj-icon-03'></span>/ magic wand tools <span class='sprite-gj gj-icon-04'></span>and crop tools <span class='sprite-gj gj-icon-01'></span>, hold the Side button <span class='sprite-key key-icon-02'></span>, then press the Dpad buttons <span class='sprite-key key-icon-01'></span>.",
+						"To switch between tool submenus, hold the Dpad buttons <span class='sprite-key key-icon-01'></span> and roll the Scroll <span class='sprite-key key-icon-03'></span> simultaneously."
+					],
+					"imgUrl": "",
+					"videoUrl": "VCXzJHeYU4k",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"Open HUD, and you can check the according tools mapped to each Dpad button at any time.",
+						"To open or close HUD, hold the Tour button <span class='sprite-key key-icon-10'></span>.",
+						"You can drag HUD to any position of the screen with your mouse, and right click the HUD to change the HUD settings."
+					],
+					"imgUrl": "",
+					"videoUrl": "p0n-kTPKmMc",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Select Areas",
+					"text": [
+						"When using tools such as marquee, lasso, magic wand to select an area,"
+					],
+					"des": [
+						"Hold the Top button <span class='sprite-key key-icon-04'></span>, and drag a box with your mouse to enlarge a selected area.",
+						"Hold the Tall button <span class='sprite-key key-icon-08'></span>, and drag a box with your mouse to narrow a selected area.",
+						"Hold the Top button <span class='sprite-key key-icon-04'></span>, and press the Dpad buttons <span class='sprite-key key-icon-01'></span> to achieve functions such as feathering, filling, inverse selection and free transform.",
+						"Hold the Side button <span class='sprite-key key-icon-02'></span> and Tall button <span class='sprite-key key-icon-08'></span> to cancel selecting an area."
+					],
+					"imgUrl": "",
+					"videoUrl": "szhelvrdV4U",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Parameter Adjustment",
+					"text": null,
+					"des": [
+						"Click any parameter bar, and you can adjust parameters with the Dial <span class='sprite-key key-icon-06'></span>."
+					],
+					"imgUrl": "",
+					"videoUrl": "1w5peFCuwnE",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Other Functions",
+					"text": null,
+					"des": [
+						"Press the Side Button <span class='sprite-key key-icon-02'></span> and Short button <span class='sprite-key key-icon-09'></span> - Save (Ctrl+ S)",
+						"Double-click Short button <span class='sprite-key key-icon-09'></span> - Undo/Redo.",
+						"Press C1/ C2 button <span class='sprite-key key-icon-07'></span> - Step backward/Step forward",
+						"Hold the Tall button <span class='sprite-key key-icon-08'></span>, and roll the Scroll <span class='sprite-key key-icon-03'></span> simultaneously to switch between layers.",
+						"Hold the Side button <span class='sprite-key key-icon-02'></span>, and roll the Scroll <span class='sprite-key key-icon-03'></span> simultaneously to switch between blend modes."
+					],
+					"imgUrl": "",
+					"videoUrl": "bwHd6DZbvVA",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Custom Settings",
+					"text": null,
+					"des": [
+						"You can custom the Photoshop preset in Preset Settings according to your preference. ",
+						"Columns in Preset Settings correspond to the functions of the wheels, the buttons and the combinations. Click a column, and you can adjust the according settings.",
+						"In the pop-up menu, you can view, search and choose desired functions, or adjust settings with shortcuts on your keyboard."
+					],
+					"imgUrl": "",
+					"videoUrl": "wlZ6qOFQJKk",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"You can press buttons or rotate wheels on TourBox to indicate the related columns immediately."
+					],
+					"imgUrl": "",
+					"videoUrl": "WeFks7Ya-ok",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"desActive": true,
+					"title": "Lightroom Preset Settings",
+					"text": [
+						"TourBox Console 2.0 adds a complete set of Lightroom-related built-in functions that allow digital creators to adjust Lightroom sliders without using a mouse. ",
+						"In addition, digital creators can assign any preferred functions to the Tour button <span class='sprite-key key-icon-10'></span>. "
+					],
+					"des": [
+						"<i>Note: Please reboot Lightroom when you activate TourBox Console 2.0 version for the  time.</i>"
+					],
+					"imgUrl": "//r.tourboxtech.com/en/src/images/lr11.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Default Lightroom Presets features in TourBox Console v 2.0:"
+					],
+					"des": [
+						"Press buttons to select sliders. Rotate the Knob <span class='sprite-key key-icon-05'></span> to alter values.",
+						"Rotation of the Dial <span class='sprite-key key-icon-06'></span> or Knob <span class='sprite-key key-icon-05'></span> can be configured to adjust values of any selected sliders.",
+						"Press Tour button <span class='sprite-key key-icon-10'></span> to reset selected sliders to initial values.",
+						"Rotate the Scroll <span class='sprite-key key-icon-03'></span> to quick select the colors in HSL setting.",
+						"Press the Scroll <span class='sprite-key key-icon-03'></span> to switch among H/S/L, then rotate the Knob <span class='sprite-key key-icon-05'></span> to adjust the selected slider."
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Four most commonly used functions in LR Basic Panel can be controlled by Prime four buttons on TourBox."
+					],
+					"text2": [
+						"Press the button to select slider then rotate the Knob <span class='sprite-key key-icon-05'></span> to adjust selected slider."
+					],
+					"des": [
+						"Top Button <span class='sprite-key key-icon-04'></span>: Temperature",
+						"Side Button <span class='sprite-key key-icon-02'></span>: Tint",
+						"Tall Button <span class='sprite-key key-icon-08'></span>: Exposure",
+						"Short Button <span class='sprite-key key-icon-09'></span>: Contrast"
+					],
+					"imgUrl": "",
+					"videoUrl": "kQIOhX5KxCU",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Other 9 sliders in LR Basic Panel can be controlled by Dpad <span class='sprite-key key-icon-01'></span> and its combinations."
+					],
+					"des": [
+						"Press the button to select slider then rotate the Knob <span class='sprite-key key-icon-05'></span> to adjust selected slider."
+					],
+					"imgUrl": "",
+					"videoUrl": "GQR5NcRiKVc",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"HUD can stay on the screen and display functions of Dpad <span class='sprite-key key-icon-01'></span> and its combinations. "
+					],
+					"des": "",
+					"imgUrl": "//r.tourboxtech.com/en/src/images/lr33.jpg",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": "",
+					"des": "",
+					"imgUrl": "//r.tourboxtech.com/en/src/images/lr22.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Press the Scroll <span class='sprite-key key-icon-03'></span> to switch among H/S/L.Rotate the Scroll <span class='sprite-key key-icon-03'></span> to select color. "
+					],
+					"des": [
+						"Then rotate the Knob <span class='sprite-key key-icon-05'></span>to adjust selected slider."
+					],
+					"imgUrl": "",
+					"videoUrl": "_CBqlqBJ5J0",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Hold Tall button <span class='sprite-key key-icon-08'></span> + rotate the Knob <span class='sprite-key key-icon-05'></span> to adjust sharpening amount. ",
+						"Hold Short button <span class='sprite-key key-icon-09'></span> + rotate the Knob <span class='sprite-key key-icon-05'></span> to control Post-crop Vignettes.",
+						"Point your cursor to parameter adjustment sliders (clicking is not necessary) to adjust the slider value with the Dial <span class='sprite-key key-icon-06'></span> on TourBox.",
+						"Press C1 button <span class='sprite-key key-icon-07'></span> to view Before and After."
+					],
+					"des": [],
+					"imgUrl": "",
+					"videoUrl": "GhAvHERGEkY",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "Create Presets",
+					"text": null,
+					"des": [
+						"Click <span class='sprite-key key-icon-13'></span> icon to create a new preset in the Preset List.",
+						"Name the preset and choose a preset type in the pop-up window.",
+						"Preset types include Photoshop preset, Lightroom preset, and blank preset."
+					],
+					"imgUrl": "",
+					"videoUrl": "AYZfJkElbAY",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Preset Settings",
+					"text": null,
+					"des": [
+						"You can configure or adjust presets in Preset Settings according to your preference. ",
+						"Columns in Preset Settings correspond to the functions of the wheels, the buttons and the combinations. Click a column, and you can adjust the according settings.",
+						"In the pop-up menu, you can view, search and choose desired functions, or adjust settings with shortcuts on your keyboard."
+					],
+					"imgUrl": "",
+					"videoUrl": "r5qUDZcWpQc",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"You can press buttons or rotate wheels on TourBox to indicate the related columns immediately."
+					],
+					"imgUrl": "",
+					"videoUrl": "CJ9-Z6gBNfo",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Create Tags for Shortcuts",
+					"text": null,
+					"des": [
+						"You can create tags for shortcuts when configuring presets. Click <span class='sprite-key key-icon-12'></span> icon and you can add or edit tags, click OK to save the tags.",
+						"You can use tags to describe the according shortcuts functions in the software.",
+						"If a shortcut has a tag, the tag will be shown on TourBox console, otherwise the console will show the shortcut name."
+					],
+					"imgUrl": "",
+					"videoUrl": "mbyGv-1GVC8",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"Click <span class='sprite-key key-icon-11'></span> icon on the left side of a preset name, you can enter the tag management interface to add or manage tags in batches for current preset."
+					],
+					"imgUrl": "",
+					"videoUrl": "_duYnyfC8nU",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Import/Export Presets",
+					"text": [
+						"To import or export a preset, click <span class='sprite-key key-icon-11'></span> icon on the left side of the preset name."
+					],
+					"des": null,
+					"imgUrl": "",
+					"videoUrl": "9fD17BpUuOQ",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"New presets will be available on official TourBox website for you to download and use.",
+						"You can also export your preset and share it with others, or download and use presets shared by other users in TourBox Forum."
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "HUD",
+					"text": null,
+					"des": [
+						"As a proxy for Dpad buttons, the HUD could constantly stay on the screen for you to check functions mapped to each button of the Dpad at any time.",
+						"Press the Top button <span class='sprite-key key-icon-04'></span> or Side button <span class='sprite-key key-icon-02'></span>, the functions of the Top button <span class='sprite-key key-icon-04'></span> and Dpad button <span class='sprite-key key-icon-01'></span>, or the functions of the Side button <span class='sprite-key key-icon-02'></span> and the Dpad button <span class='sprite-key key-icon-01'></span> will be shown on HUD."
+					],
+					"imgUrl": "",
+					"videoUrl": "Wi_RcG4UyGE",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"You can use the tray menu to Open/Close the HUD.",
+						"You can configure any button to Open/Close the HUD (built-in function) quickly.",
+						"You can drag the HUD to any position of the screen with your mouse, and right click the HUD to change the HUD settings."
+					],
+					"imgUrl": "",
+					"videoUrl": "KqiqCSbM3Is",
+					"videoError": true
+				}
+			],
+			[
+
+				{
+					"title": "Guide",
+					"text": [
+						"Guide shows three sections of TourBox for users to view presets quickly.",
+						"You can configure any button as Open/Close the Guide (built-in function) to help your quickly check all your TourBox settings."
+					],
+					"des": [
+						"Rotation Section: Knob, Scroll and Dial.",
+						"Prime Four Section: Tall button, Short button, Top button and Side button.",
+						"Kit Section: Dpad, C1/C2."
+					],
+					"imgUrl": "",
+					"videoUrl": "12QV6IphfJA",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "Automatic Switch between Presets",
+					"text": null,
+					"des": [
+						"Switch on “Auto Switch” for switching presets automatically.",
+						"Link the presets to the respective software.",
+						"Open Linked software (Automatically switch to the respective preset without interruption)."
+					],
+					"imgUrl": "",
+					"videoUrl": "MhOMWpzct0A",
+					"videoError": true
+				},
+				{
+					"title": "Quick Switch between Presets",
+					"text": null,
+					"des": [
+						"In Preset List, you could mark the preset as a favorite by lighting up the <span class='sprite-key key-icon-16'></span> icon on the right side of the presets.",
+						"You can configure any button as Switch Preset (built-in function) to shift favorite presets.",
+						"Drag the preset column to arrange the presets order."
+					],
+					"imgUrl": "",
+					"videoUrl": "sLQESANyJfg",
+					"videoError": true
+				}
+			]
+		]
+	]
+}

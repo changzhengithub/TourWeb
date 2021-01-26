@@ -1,0 +1,165 @@
+[v-cloak]{display:none}
+.font-title{font-size:.5rem}
+.font-text{font-size:.18rem}
+@keyframes topAnimate{0%{opacity:0;transform:translate3d(0,100%,0)}
+100%{opacity:1;transform:translate3d(0,0%,0)}
+}.index{width:100%;min-height:100vh}
+
+/* #header{
+  position: relative;
+  background-color: rgba(0, 0, 0, .3);
+} */
+.index-main{position: relative;width:100%;padding-bottom:.3rem;background-color:#fff}
+
+.main-player{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;display:none;width:100%;height:100%;background-color:rgba(0,0,0,.6)}
+.main-player>.player-video{position:relative;z-index:9999;width:100%;height:100%}
+.main-player>.player-video>.video-container{width:12rem;height:6.75rem;background-color:#000}
+.main-player>.player-video>.video-container>iframe{width:100%;height:100%;border:none}
+.main-player>.player-video>.video-container>video{width:100%;height:100%;vertical-align:baseline;visibility:visible}
+.main-player>.player-video>.video-close{position:absolute;top:.6rem;right:.5rem;z-index:99;cursor:pointer}
+.main-player>.player-video>.video-close>.iconfont{font-size:.3rem;color:#fff}
+
+.main-banner{position:relative;z-index:9;width:100%;height:100vh;background-color: #fff;background-image:url('//r.tourboxtech.cn/src/images/product-banner-2.0.1.jpg');background-position:center 0;background-repeat:no-repeat;background-size:contain;}
+.main-banner::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .3);
+}
+.main-banner .banner-headline{position:relative;z-index:9;width:100%;height:100%;padding-top:25vh}
+.banner-headline>.headline-name{position:relative;z-index:9;width:100%;text-align:center;font-size:1.2rem;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-name>span{font-size:.8rem;letter-spacing:-1px;color:#fff}
+.banner-headline>.headline-title{position:relative;z-index:9;width:100%;margin-bottom:.1rem;text-align:center;font-size:.4rem;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-price{position:relative;z-index:9;width:100%;margin-bottom:.3rem;text-align:center;font-size:.26rem;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link{position:relative;z-index:9;width:100%;opacity:0;transform:translate3d(0,100%,0)}
+
+.banner-headline>.headline-link>.link-item{
+  padding: .05rem .2rem;
+  font-size: .16rem;
+  color: #333;
+  border-radius: .15rem;
+  background-color: #fff;
+  cursor: pointer;
+
+  /* margin:0 .2rem; */
+  /* font-size:24px; */
+  /* color:#2997ff; */
+  /* text-shadow:1px 1px #262626; */
+}
+.banner-headline>.headline-link>.link-item>i{margin-top:5px;font-size:24px}
+.main-banner .banner-headline>.top-animate{animation:topAnimate 1s .5s forwards}
+.main-banner .banner-headline>.middle-animate{animation:topAnimate .8s .8s forwards}
+.main-banner .banner-headline>.bottom-animate{animation:topAnimate .5s 1.2s forwards}
+.main-banner .banner-headline>.link-animate{animation:topAnimate .5s 1.3s forwards}
+
+.main-placeholder {
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+}
+
+.placeholder-active {
+  height: 0;
+}
+
+.main-second {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+  background-image:url('//r.tourboxtech.cn/src/images/product-banner-2.0.1.jpg');
+  background-position:center center;
+  background-repeat:no-repeat;
+  background-size:contain;
+}
+
+.shade-static {
+  position: relative;
+}
+
+.main-second>.second-detail{
+  position: relative;
+  width:100%;
+  height: 100%;
+  padding-top: 2rem;
+}
+
+.main-second>.second-detail::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  display: block;
+  content: "";
+  width:100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, .7);
+}
+.main-second>.second-detail>.detail-title{position:relative;z-index:9;width:100%;text-align:center;line-height:1.5;font-size:.5rem;color:#141433}
+.main-second>.second-detail>.detail-text{position:relative;z-index:9;width:8rem;margin:0 auto;text-align:center;line-height:1.5;font-size:.22rem;color:#4e4e4e}
+.main-second>.second-detail>.detail-text>span{display:none}
+.main-second>.second-detail>.detail-subtitle{position:relative;z-index:9;width:100%;margin-bottom:.2rem;text-align:center;font-size:.22rem;font-weight:600;color:#333}
+.main-second>.second-detail>.detail-link{position:relative;z-index:9;width:100%}
+.second-detail>.detail-link>.link-item{margin:0 .2rem;font-weight:700;font-size:.2rem;color:#313131;cursor:pointer}
+.second-detail>.detail-link>.link-item>i{margin-left:.1rem;margin-top:.05rem;font-size:.14rem;color:#313131}
+
+.mian-update{width:100%;padding:0 .1rem;background-color:#fff}
+.mian-update>.update-item{position:relative;width:50%;height:4.5rem;background-position:center center;background-repeat:no-repeat;background-size:contain}
+.mian-update>.update-item>.item-bg{position:absolute;left:0;top:0;right:0;bottom:0;z-index:0;width:100%;height:100%;padding:0 .1rem}
+.mian-update>.update-item>.item-bg>img{width:100%;height:100%}
+.mian-update>.update-item>.item-content{position:relative;z-index:1;width:100%;height:100%;padding-top:.6rem;text-align:center}
+.mian-update>.update-item>.item-content>h1{font-size:.3rem;color:#fff;font-weight:400;line-height:1.5}
+.mian-update>.update-item>.item-content>a{display:block;margin-top:.1rem;font-size:.16rem;color:#2a96fe;font-weight:400;line-height:1.5}
+.mian-update>.update-item>.item-active>h1{font-size:.3rem;color:#000000;font-weight:400;line-height:1.5}
+@media only screen and (max-width:767px){.font-title{font-size:.3rem}
+.font-text{font-size:.18rem}
+.index-main{width:100%;padding-bottom:.3rem;background-color:#fff}
+
+.main-player{position:fixed;top:0;left:0;right:0;bottom:0;z-index:9999;width:100%;height:100%;background-color:rgba(0,0,0,.6)}
+.main-player>.player-video{position:relative;z-index:9999;width:100%;height:100%}
+.main-player>.player-video>.video-container{width:100%;height:2.1rem}
+.main-player>.player-video>.video-container>video{width:100%;height:100%;vertical-align:baseline;visibility:visible;object-fit:cover}
+.main-player>.player-video>.video-container>iframe{width:100%;height:100%;border:none}
+.main-player>.player-video>.video-close{position:absolute;top:.6rem;right:.3rem;z-index:99;cursor:pointer}
+.main-player>.player-video>.video-close>.iconfont{font-size:.3rem;color:#fff}
+
+.main-banner{position:relative;z-index:9;width:100%;height:6.67rem;margin-bottom:.1rem;background-image:url('//r.tourboxtech.cn/src/images/product-banner-mobile-2.0.1.jpg');background-position:center 0;background-repeat:no-repeat;background-size:contain}
+.main-banner .banner-headline{width:100%;height:100%;padding-top:30vh}
+.banner-headline>.headline-name{width:100%;margin-bottom:.2rem;text-align:center;font-family:'AvenirNext';font-size:.5rem;text-shadow:1px 2px 2px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-name>span{font-size:.5rem;letter-spacing:-1px;color:#fff}
+.banner-headline>.headline-title{width:100%;margin-bottom:.2rem;text-align:center;font-size:.26rem;text-shadow:1px 2px 2px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-price{width:100%;margin-bottom:.3rem;text-align:center;font-size:.2rem;color:#fff;text-shadow:1px 2px 2px #000;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link{width:100%;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link>.link-item{margin:0 .1rem;font-size:24px;color:#2997ff;text-shadow:none}
+.banner-headline>.headline-link>.link-item>i{margin-top:5px;font-size:24px}
+.main-banner .banner-headline>.top-animate{animation:topAnimate 0.8s forwards}
+.main-banner .banner-headline>.middle-animate{animation:topAnimate .6s .2s forwards}
+.main-banner .banner-headline>.bottom-animate{animation:topAnimate .4s .4s forwards}
+.main-banner .banner-headline>.link-animate{animation:topAnimate .4s 0.5s forwards}
+
+
+.main-second>.second-detail{position:absolute;top:25%;left:0;width:100%}
+.main-second>.second-detail>.detail-title{width:100%;margin-bottom:0.05rem;font-weight:600}
+.main-second>.second-detail>.detail-text{width:100%;padding:0 .5rem;margin:0 auto;margin-bottom:.3rem;text-align:left;line-height:1.8;font-size:.18rem;color:#4e4e4e}
+.main-second>.second-detail>.detail-text>span{display:inline;font-weight:700;font-size:.16rem;color:#000}
+.main-second>.second-detail>.detail-subtitle{display:none}
+.main-second>.second-detail>.detail-link{width:100%}
+.second-detail>.detail-link>.link-item{margin:0 .1rem;font-weight:600;font-size:.16rem;color:#434343;cursor:pointer}
+.second-detail>.detail-link>.link-item:first-of-type{margin:0 .3rem}
+.second-detail>.detail-link>.link-item>i{margin-left:.05rem;margin-top:.05rem;font-size:.12rem;color:#666}
+
+.mian-update{display: block; padding:0 0rem}
+.mian-update>.update-item{width:100%;height:2.4rem;margin-bottom:.1rem;background-position:center center;background-repeat:no-repeat;background-size:cover}
+.mian-update>.update-item>.item-bg{padding:0}
+.mian-update>.update-item>.item-content{padding-top:.4rem}
+.mian-update>.update-item>.item-content>h1{font-size:.22rem;line-height:1.2}
+.mian-update>.update-item>.item-content>a{font-size:.14rem}
+.mian-update>.update-item>.item-active>h1{font-size:.22rem;line-height:1.2}
+}

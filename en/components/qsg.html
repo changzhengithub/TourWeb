@@ -1,0 +1,58 @@
+<!--
+ * @Author: your name
+ * @Date: 2019-12-06 16:33:21
+ * @LastEditTime : 2019-12-19 14:08:30
+ * @LastEditors  : Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \tourbox\en\components\qsg.html
+ -->
+<!DOCTYPE html>
+<style type="text/css">
+	.qsg-guide-download {
+		padding: .1rem .2rem;
+		background-color: #f1f1f1;
+		border-radius: .04rem;
+		color: #333;
+		font-size: .16rem;
+		margin-bottom: .1rem;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: space-between;
+	}
+
+	.qsg-guide-download>a {
+		display: inline-block;
+		color: #10A5F1;
+		text-decoration: none;
+	}
+
+	.pdf-container {
+		height: 6rem;
+		width: 100%;
+		border: none;
+		overflow: hidden;
+	}
+	.pdf-container>embed{
+		border: none;
+	}
+</style>
+<div id="qsg" v-cloak>
+	<div class="qsg-guide-download">
+		<span v-text="text"></span>
+		<a :href="download_pdf" download>Download</a>
+	</div>
+	<div class="pdf-container">
+		<embed :src="prview_pdf" width="100%" height="100%">
+	</div>
+</div>
+<script type="text/javascript">
+	new Vue({
+		el: "#qsg",
+		data: {
+			text: "Quick Start Guide",
+			prview_pdf: "src/pdf/quickStartGuide.pdf",
+			download_pdf:"src/pdf/quickStartGuideForDownload.pdf"
+		},
+		methods: {},
+	})
+</script>

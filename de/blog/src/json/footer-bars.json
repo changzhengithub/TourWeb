@@ -1,0 +1,97 @@
+{
+	"right":[
+		{
+			"name": "TourBox",
+			"children": [{
+					"name": "About Us",
+					"url": "/en/about-us.html"
+				},
+				{
+					"name": "Contact Us",
+					"url": "/en/contact-us.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Legal",
+			"children": [{
+					"name": "Terms of Use",
+					"url": "/en/terms-of-use.html"
+				},
+				{
+					"name": "Privacy Policy",
+					"url": "/en/privacy-policy.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Explore",
+			"children": [
+				{
+					"name": "Forum",
+					"target":"_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "News",
+					"url": "/en/news.html"
+				},
+				{
+					"name": "Affiliate Program",
+					"url": "/en/affiliate.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Support",
+			"children": [
+				{
+					"name": "Download Center",
+					"url": "/en/downloads.html"
+				},
+				{
+					"name": "User Manual",
+					"url": "/en/manual.html"
+				},
+				{
+					"name": "FAQ",
+					"url": "/en/faq.html"
+				}
+			],
+			"open":false
+		}
+	],
+	"left": {
+		"title": "Subscribe",
+		"description": "Get the latest news from TourBox",
+		"inc": "2020 TourBox Tech Inc. All Right Reserved.",
+		"placeholder": "Your email address",
+		"emailError": "the input is not an email address",
+		"emailSuccess": "subscribe successfully",
+		"emailAlready": "You already have account! ",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxofficial",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/Tourboxtech",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

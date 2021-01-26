@@ -1,0 +1,590 @@
+{
+	"navList": [
+		{
+			"title": "TourBoxについて",
+			"slideList": [
+				{
+					"title": "TourBoxについて",
+					"activeShow": false
+				},
+				{
+					"title": "インストールと接続",
+					"activeShow": false
+				},
+				{
+					"title": "TourBoxコンソール",
+					"activeShow": false
+				}
+			],
+			"show": false
+		},
+		{
+			"title": "Photoshopにおけるプリセットについて",
+			"slideList": [
+				{
+					"title": "ブラシコントロール",
+					"activeShow": false
+				},
+				{
+					"title": "画面のコントロール",
+					"activeShow": false
+				},
+				{
+					"title": "ツールの切替",
+					"activeShow": false
+				},
+				{
+					"title": "選択範囲の作成",
+					"activeShow": false
+				},
+				{
+					"title": "パラメーターの調節",
+					"activeShow": false
+				},
+				{
+					"title": "他の機能",
+					"activeShow": false
+				},
+				{
+					"title": "カスタマイズ",
+					"activeShow": false
+				}
+			],
+			"show": false
+		},
+		{
+			"title": "Lightroomにおけるプリセットについて",
+			"slideList": [],
+			"show": false
+		},
+		{
+			"title": "他のソフトウエアにおけるプリセットの作成",
+			"slideList": [
+				{
+					"title": "プリセットの新規作成",
+					"activeShow": false
+				},
+				{
+					"title": "プリセットの設定",
+					"activeShow": false
+				},
+				{
+					"title": "タグの作成",
+					"activeShow": false
+				},
+				{
+					"title": "インポート＆エクスポート",
+					"activeShow": false
+				}
+			],
+			"show": false
+		},
+		{
+			"title": "便利機能",
+			"slideList": [
+				{
+					"title": "HUD",
+					"activeShow": false
+				},
+				{
+					"title": "ガイド機能",
+					"activeShow": false
+				},
+				{
+					"title": "プリセットオートスイッチ",
+					"activeShow": false
+				}
+			],
+			"show": false
+		}
+	],
+	"pageList": [
+		[
+			[
+				{
+					"desActive": true,
+					"title": "TourBoxについて",
+					"text": null,
+					"des": [
+						"TourBoxはクリエーターに向けて設計され、実用性と操作性を兼ね備えたコントローラーです。",
+						"クリエイティブソフトウエアにおけるショートカットをTourBoxに設定するだけで、作業難易度が大幅に下げられ、作業効率が向上し、快適なクリエイティブ作業環境も実現できます。",
+						"ブラシコントロールはもちろん、画面のコントロール、ビデオ＆オーディオの編集、パラメータの調節、ツールの切替などの操作は、直感的になり、簡単に行うことができます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"TourBoxデバイスは「ノブ」、「スクロール」、「ダイヤル」及び11個のボタンを含みます。",
+						"回転操作であれ、ボタン操作であれ、ショートカット或はコンソールのbuilt-in機能に設定し、各種クリエイティブソフトウエアに対応できます 。",
+						"「ノブ」、「スクロール」、「ダイヤル」、及び他のボタンは単独使用以外には組合わせられ、より多くの機能を実現できます。"
+					],
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/gs-banner.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "ドライバー及びTourBoxコンソールのインストール",
+					"text": [
+						"1．公式サイトのダウンロードページ<a href='https://www.tourboxtech.com/jp/downloads.html#/' target='_target'>https://www.tourboxtech.com/jp/downloads.html#/</a>にアクセスし、自分のPCシステムに応じて、最新のドライバーとTourBoxコンソールアプリケーションをダウンロードしてください。",
+						"2．ドライバーをインストールしてください。",
+						"3．TourBoxコンソールをインストールしてください。"
+					],
+					"des": "",
+					"wraning": "<img src='//r.tourboxtech.com/jp/src/images/wraning.png' />请确保您已经安装TourBox驱动，否则TourBox控制台无法正常使用！",
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "TourBoxとPCの接続方法",
+					"text": null,
+					"des": null,
+					"summary": [
+						"1．TourBoxコンソールを開き、TourBoxデバイスへ接続してくださいと提示されます。",
+						"2．TourBoxのType-CインターフェースとPCのUSBポートをType-Cケーブルで接続し、ライトが点灯することを確認してください。",
+						"3．接続が成功する場合、TourBoxコンソールが自動的にメインインターフェースに入ります。"
+					],
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/connect.png",
+					"videoUrl": "",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "プリセットリストエリア",
+					"text": null,
+					"des": [
+						"プリセットリストは、複数のプリセットを保存および管理できます。",
+						"プリセットの作成、削除、インポート/エクスポート、並べ替え、タグリストの編集等の操作ができます。",
+						"プリセットをクリックしすれば、該当する機能が作動されます。",
+						"プリセットリストには、Adobe Photoshop softwareとAdobe Lightroom softwareの2つのデフォルトプリセットが組み込まれています。"
+					],
+					"wraning": "",
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/kzt01.jpg",
+					"videoUrl": "",
+					"videoError": true	
+				},
+				{
+					"title": "プリセット設定エリア",
+					"text": null,
+					"des": [
+						"プリセット設定エリアの各行は、TourBoxのノブ部分、メインボタン部分、キットボタン部分，または組み合わせ操作に対応しています。「矢印」アイコンをクリックして、組み合わせ操作を表示/非表示ができます。",
+						"必要な機能はポップアップで確認、検索、選択を行うことができます。またはキーボードでショートカットを直接入力して設定することもできます。"
+					],
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/kzt02.jpg",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "ブラシコントロール",
+					"text": null,
+					"des": [
+						"「ノブ」<span class='sprite-key key-icon-05'></span> を回す-ブラシサイズ",
+						"「トール」<span class='sprite-key key-icon-08'></span> を押しながら「ノブ」<span class='sprite-key key-icon-05'></span> を回す-ブラシの不透明度",
+						"「ショート」<span class='sprite-key key-icon-09'></span> を押しながら「ノブ」<span class='sprite-key key-icon-05'></span> を回す-ブラシの硬さ",
+						"「トップ」<span class='sprite-key key-icon-04'></span> を押しながら「ノブ」<span class='sprite-key key-icon-05'></span> を回す-ブラシの流量"
+					],
+					"imgUrl": "",
+					"videoUrl": "BIjzHOTzsaA",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"全てのブラシ系ツールに通用します。例えばブラシツール <span class='sprite-gj gj-icon-02'></span> 、コピースタンプツール <span class='sprite-gj gj-icon-06'></span> 、修復ブラシツール <span class='sprite-gj gj-icon-08'></span> 、消しゴムツール <span class='sprite-gj gj-icon-07'></span> 等。"
+					],
+					"des": [
+						"「トール」<span class='sprite-key key-icon-08'></span> を押しながらマウスを使うことで、スポイトツールによる色の選択、参照画像の選定、レイヤーの単独表示などの機能を実現できます。（alt）。",
+						"「トール」<span class='sprite-key key-icon-08'></span> をダブルクリックし、描画色と背景色を入れ替えます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "cx-mbCLxVwc",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "画面のコントロール",
+					"text": null,
+					"des": [
+						"「スクロール」<span class='sprite-key key-icon-03'></span> を回す-ズームイン/アウト",
+						"「スクロール」<span class='sprite-key key-icon-03'></span> をクリック-画面サイズに合わせる",
+						"「ショート」<span class='sprite-key key-icon-09'></span> を押しながらマウスと合わせて、手のひらツールで画像をドラッグします。"
+					],
+					"imgUrl": "",
+					"videoUrl": "yUZVAnTgMWQ",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "ツールの切替",
+					"text": null,
+					"des": [
+						"十字キー<span class='sprite-key key-icon-01'></span> を使ってブラシ系ツールを切り替えます。（ブラシツール <span class='sprite-gj gj-icon-02'></span> 、コピースタンプツール <span class='sprite-gj gj-icon-06'></span> 、修復ブラシツール <span class='sprite-gj gj-icon-08'></span> 、消しゴムツール <span class='sprite-gj gj-icon-07'></span> ）",
+						"「サイド」<span class='sprite-key key-icon-02'></span> を押しながら十字キー<span class='sprite-key key-icon-01'></span> に合わせて選択範囲作成ツールを切り替えます。（長方形選択/楕円形選択ツール <span class='sprite-gj gj-icon-09'></span> 、なげなわ系ツール <span class='sprite-gj gj-icon-05'></span> 、クイック選択 <span class='sprite-gj gj-icon-03'></span> /自動選択ツール <span class='sprite-gj gj-icon-04'></span> 、切り抜きツール <span class='sprite-gj gj-icon-01'></span> ）",
+						"十字キー<span class='sprite-key key-icon-01'></span> を押しながら「スクロール」<span class='sprite-key key-icon-03'></span> に合わせてプルダウンメニューの中のツールを切り替えます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "PSfbfrv6WNU",
+					"videoError": true
+				},
+				{
+	
+					"title": "",
+					"text": null,
+					"des": [
+						"HUDを開き、十字キー<span class='sprite-key key-icon-01'></span> の各方向に対応するツールをリアルタイムで確認できます。",
+						"「Tour」<span class='sprite-key key-icon-10'></span> を長押しすることで、HUDを開く/閉じることができます。",
+						"マウスを使ってHUDをスクリーンの任意の位置にドラッグできます。HUDを右クリックし、HUDを設定できます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "knCyQs-p9rA",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "選択範囲の作成",
+					"text": null,
+					"des": [
+						"長方形選択/楕円形選択ツール、なげなわ系ツール、クイック選択/自動選択ツールなどの選択範囲作成ツールを使用する場合：",
+						"「トップ」<span class='sprite-key key-icon-04'></span> を押しながらマウスに合わせてドラッグ-選択範囲に追加",
+						"「トール」<span class='sprite-key key-icon-08'></span> を押しながらマウスに合わせてドラッグ-現在の選択範囲から一部削除",
+						"「トップ」<span class='sprite-key key-icon-04'></span> を押しながら十字キー<span class='sprite-key key-icon-01'></span> に合わせると、選択された範囲に対する操作ができます。（ぼかし、塗りつぶし、反転、自由変形）",
+						"「サイド」<span class='sprite-key key-icon-02'></span> と「トール」<span class='sprite-key key-icon-08'></span> を同時にクリック – 選択を解除"
+					],
+					"imgUrl": "",
+					"videoUrl": "x56TNhsjiwc",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "パラメーター調節",
+					"text": null,
+					"des": [
+						"任意のパラメータバーをクリックし、「ダイヤル」<span class='sprite-key key-icon-06'></span> を回せば、パラメーター値を調節できます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "rAvAmz2RGao",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "他の機能",
+					"text": null,
+					"des": [
+						"「サイド」<span class='sprite-key key-icon-02'></span> と「ショート」<span class='sprite-key key-icon-09'></span>  を同時にクリック – 保存（ctrl+s）",
+						"「ショート」<span class='sprite-key key-icon-09'></span>  をダブルクリック – 取り消し（ctrl+z）。",
+						"C1/C2<span class='sprite-key key-icon-07'></span> をクリック-前へ戻る/次に進む。",
+						"「トール」<span class='sprite-key key-icon-08'></span> を押しながら「スクロール」<span class='sprite-key key-icon-03'></span> に合わせる-レイヤーを切り替え",
+						"「サイド」<span class='sprite-key key-icon-02'></span> を押しながら「スクロール」<span class='sprite-key key-icon-03'></span> に合わせる-描画モードを切り替え"
+					],
+					"imgUrl": "",
+					"videoUrl": "HxvmkE6zvMY",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "カスタマイズ",
+					"text": null,
+					"des": [
+						"プリセット設定エリアでPhotoshopにおけるプリセットの機能をカスタマイズすることができます。",
+						"プリセット設定エリアの各行は、TourBoxのノブ部分、メインボタン部分、キットボタン部分、またはその組み合わせ操作に対応しています。行をクリックし、それに対応する機能を編集できます。",
+						"必要なPhotoshop機能はポップアップで確認、検索、選択を行うことができます。またはキーボードでショートカットを直接入力して設定することもできます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "SZLtdSA5BLo",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"回転系のボタンを回したり、他のボタンを押すことで、対応する行をすばやく見つけて、設定することができます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "PrCMSc_OP6c",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"desActive": true,
+					"title": "Lightroomにおけるプリセットについて",
+					"text": [
+						"TourBoxコンソールアプリケーションV2.0 では、Lightroom用のbuild-in機能をいくつ追加されました。追加されたbuild-in機能はLightroomにおけるパラメーター調節をより素早く行わせるもので、今までのマウスによるスライダー選択はもう必要ありません。 ",
+						"同時に、「Tour」ボタン<span class='sprite-key key-icon-10'></span> に対するカスタマイズは解禁され、任意の機能に設定可能。"
+					],
+					"des": [
+						"注意：最新バージョンのコンソールアプリケーションを初回起動後、Lightroomを再起動してください。"
+					],
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/lr11.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"アップグレード後のLightroomデフォルトプリセット："
+					],
+					"des": [
+						"１）押しボタンでスライダーを選択し、「ノブ」<span class='sprite-key key-icon-05'></span> でパラメーターを調節。",
+						"２）「ダイアル」<span class='sprite-key key-icon-06'></span> と「ノブ」<span class='sprite-key key-icon-05'></span> も、指定されたスライダーのパラメーターを調節する機能に設定可能。",
+						"３）「Tour」ボタン<span class='sprite-key key-icon-10'></span> でパラメーターをリセット。",
+						"４）「スクロール」<span class='sprite-key key-icon-03'></span> でHSL中の各色を選択することができます。「スクロール」<span class='sprite-key key-icon-03'></span> をクリックしてHSLの三要素間で切り替え、「ノブ」<span class='sprite-key key-icon-05'></span> でパラメーターを調節。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"Lightroomの基本補正の中で最も使われている四つのスライダーをそれぞれ、四つのメインボタンで選択します。"
+					],
+					"text2": [
+						"スライダーを選択し、「ノブ」<span class='sprite-key key-icon-05'></span> でパラメーターを調節。"
+					],
+					"des": [
+						"「トップ」<span class='sprite-key key-icon-04'></span> ：色温度",
+						"「サイド」<span class='sprite-key key-icon-02'></span> ：色かぶり補正",
+						"「トール」<span class='sprite-key key-icon-08'></span> ：露光量",
+						"「ショート」<span class='sprite-key key-icon-09'></span> ：コントラスト"
+					],
+					"imgUrl": "",
+					"videoUrl": "-WIEXxwowyk",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"基本補正の中の他の九つのスライダーを十字キー<span class='sprite-key key-icon-01'></span> で選択します。"
+					],
+					"des": [
+						"スライダーを選択し、「ノブ」<span class='sprite-key key-icon-05'></span> でパラメーターを調節。"
+					],
+					"imgUrl": "",
+					"videoUrl": "CuJXIXNNh4E",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"十字キー<span class='sprite-key key-icon-01'></span> における機能の割り当てはHUDを通してスクリーンで確認できます。 "
+					],
+					"des": "",
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/lr33.jpg",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": "",
+					"des": "",
+					"imgUrl": "//r.tourboxtech.com/jp/src/images/lr22.png",
+					"videoUrl": "",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"「スクロール」<span class='sprite-key key-icon-03'></span> を回してHSL中の各色を選択でき、クリックしてHSLの三要素間で切り替えることができます。"
+					],
+					"des": [
+						"スライダーを選択し、「ノブ」<span class='sprite-key key-icon-05'></span> でパラメーターを調節。"
+					],
+					"imgUrl": "",
+					"videoUrl": "8m_Z63mnq9Q",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": [
+						"「トール」<span class='sprite-key key-icon-08'></span> ＋「ノブ」<span class='sprite-key key-icon-05'></span> ：ディテールのシャープ適用量を調節。",
+						"「ショート」<span class='sprite-key key-icon-09'></span>  ＋「ノブ」<span class='sprite-key key-icon-05'></span> ：効果の切り抜き後の周辺光量補正の適用量を調節。",
+						"任意のスライダーにカーソルを合わせ（クリック不要）て「ダイヤル」<span class='sprite-key key-icon-06'></span> を回すことで、パラメーター値を調節できます。",
+						"「C1」<span class='sprite-key key-icon-07'></span> ：補正前のみを表示。"
+					],
+					"des": [],
+					"imgUrl": "",
+					"videoUrl": "i5fXRvPBI7U",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "プリセットの新規作成",
+					"text": null,
+					"des": [
+						"TourBoxコンソールのプリセットリストエリアの<span class='sprite-key key-icon-13'></span> アイコンをクリックし、プリセットを新規作成します。",
+						"ポップアップで新しいプリセットに名前を付けて、プリセットのタイプを選択します。",
+						"プリセットのタイプは、デフォルトプリセットのPhotoshopプリセットとLightroomプリセット以外、ブランクプリセットの新規作成もあります。"
+					],
+					"imgUrl": "",
+					"videoUrl": "kH6yPEuEeUk",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "プリセットの設定",
+					"text": null,
+					"des": [
+						"プリセット設定エリアで現在のプリセットに対する設定及び編集ができます。",
+						"プリセット設定エリアの各行は、TourBoxのノブ部分、メインボタン部分、キットボタン部分、またはその組み合わせ操作に対応しています。行をクリックし、それに対応する機能を編集できます。",
+						"ポップアップで必要な機能を選択するか、キーボードでショートカットを直接に入力するかにより、機能を設定します。"
+					],
+					"imgUrl": "",
+					"videoUrl": "L7O41s2GH5s",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"回転系のボタンを回したり、他のボタンを押すことで、対応する行をすばやく見つけて、設定することができます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "sNQm3GESUJQ",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "タグの作成",
+					"text": null,
+					"des": [
+						"プリセットを設定する時、入力したショートカットにタグを付けることができます。<span class='sprite-key key-icon-12'></span> アイコンをクリックすると、タグを追加・編集することができ、【OK】をクリックすると保存します。",
+						"タグは該当するソフトウエアにおけるショートカットの機能について説明します。",
+						"ショートカットにタグがある場合、タグが優先的にTourBoxコンソールに表示されます。それ以外の場合は、キー値が表示されます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "rIq_J55RaUU",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"プリセット名の左側にある<span class='sprite-key key-icon-11'></span> アイコンをクリックして、タグ管理画面が開けられ、本プリセットのタグを大量に追加・管理することができます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "51s0gKLCYh0",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "インポート&エクスポート",
+					"text": [
+						"プリセット名の左側にある<span class='sprite-key key-icon-11'></span> アイコンをクリックして、プリセットをインポート/エクスポートすることができます。"
+					],
+					"des": null,
+					"imgUrl": "",
+					"videoUrl": "TkdKeDTpCgc",
+					"videoError": true
+	
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"TourBox公式サイトで新しいプリセットを常に更新し、ダウンロード及びシェアすることができます。",
+						"自分のプリセットをエクスポートして他人にシェアすることができ、TourBoxフォーラムで他人がシェアしたプリセットをダウンロードして使用することもできます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "",
+					"videoError": true
+				}
+			]
+		],
+		[
+			[
+				{
+					"title": "HUD",
+					"text": null,
+					"des": [
+						"HUDは十字キーのプロンプトで、画面に常駐して、十字キーの各方向に対応する機能をリアルタイムで確認することができます。",
+						"「トップ」<span class='sprite-key key-icon-04'></span> 或いは「サイド」<span class='sprite-key key-icon-02'></span> を押すと、HUDが「トップ」<span class='sprite-key key-icon-04'></span> +十字キー<span class='sprite-key key-icon-01'></span> または「サイド」<span class='sprite-key key-icon-02'></span> +十字キー<span class='sprite-key key-icon-01'></span> が対応する機能を切替表示します。"
+					],
+					"imgUrl": "",
+					"videoUrl": "KqHqmEs-vCY",
+					"videoError": true
+				},
+				{
+					"title": "",
+					"text": null,
+					"des": [
+						"ステータスバーメニューで十字キーのHUDを開閉することができます。",
+						"任意のボタンをHUDの表示/非表示（build-in機能）に設定することができます。",
+						"マウスでHUDをスクリーンの任意の位置にドラッグできます。HUDを右クリックし、HUDを設定できます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "qGZLiraJjOs",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "ガイド機能",
+					"text": [
+						"ガイドでは、TourBoxのレーアウトを三つの部分に分けて表示し、ユーザーがプリセット機能をすばやく確認することができます。",
+						"任意のボタンをガイドの表示/非表示（build-in機能）に設定し、TourBoxの機能配置をすばやく確認することができます。"
+					],
+					"des": [
+						"ノブ部分：「ノブ」、「スクロール」、「ダイヤル」",
+						"メインボタン部分：「トール」、 「ショート」、 「トップ」、 「サイド」",
+						"キットボタン部分：十字キー、「C1」、「C2」"
+					],
+					"imgUrl": "",
+					"videoUrl": "QM_ms-qWCp0",
+					"videoError": true
+				}
+			],
+			[
+				{
+					"title": "プリセットオートスイッチ",
+					"text": null,
+					"des": [
+						"オートスイッチ機能をオンにすれば、プリセットは自動的に切り替えることができます。",
+						"ソフトウェアを相応のプリセットと関連させます。",
+						"関連したソフトを開けます。(プリセットは関連するソフトによってシームレスに切り替えることができます)。"
+					],
+					"imgUrl": "",
+					"videoUrl": "4BxYpQBNB_A",
+					"videoError": true
+				},
+				{
+					"title": "プリセットの切替",
+					"text": null,
+					"des": [
+						"プリセットリストエリアで、プリセットの <span class='sprite-key key-icon-16'></span> アイコンを点灯すると、それを常用プリセットとして設定することができます。",
+						"任意のボタンをプリセットの切替（build-in機能）に設定することができます。",
+						"プリセットをドラッグしてプリセット順を調整できます。"
+					],
+					"imgUrl": "",
+					"videoUrl": "oXJ_kR4YBRY",
+					"videoError": true
+				}
+			]
+		]
+	]
+}

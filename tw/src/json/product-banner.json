@@ -1,0 +1,93 @@
+{
+	"banner":{
+		"title1":"真正的創作工具",
+		"title2":"藝術家的最強武器",
+		"title3":"",
+		"bannerBg":"//r.tourboxtech.com/tw/src/images/product-banner.jpg",
+		"mobileBannerBg":"//r.tourboxtech.com/tw/src/images/product-banner-mobile.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/tw/src/images/product-banner-mobile_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/tw/src/images/product-banner-mobile_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/tw/src/images/product-banner-mobile_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/tw/src/images/product-banner-mobile_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/tw/src/images/product-banner_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/tw/src/images/product-banner_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/tw/src/images/product-banner_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/tw/src/images/product-banner_04.jpg"
+	},
+
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/index-first-second.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/tw/src/images/index-first-second-mobile.png"
+	},
+	"spellBanner": {
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/product-spell-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/tw/src/images/product-spell-banner-mobile.jpg"
+	},
+	"thirdBanner": {
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/product-third-section-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/tw/src/images/product-third-section-banner-mobile.jpg"
+	},
+	"footerBanner": {
+		"bannerBg": "//r.tourboxtech.com/tw/src/images/product-third-section-banner02.jpg"
+	},
+	"firstDes": {
+		"title1": "創作者",
+		"title2": "再也不會被複雜的快捷鍵所困擾，擺脫鍵盤單調低效率的輸入方式，一手掌握整個創作流程。",
+		"text": "不論是筆刷控制、影片與聲音剪輯、畫面控制、參數調整還是工具切換等操作，都可以用TourBox，以最直覺的方式簡單操作。"
+	},
+	"lantern": {
+		"describeList": [
+			{
+				"title": "多維佈局，單手免視操作",
+				"text": "TourBox採用正側面結合的整體設計，讓您無需移動手腕即可輕鬆掌控整個設備。"
+			},
+			{
+				"title": "邊緣的流線設計",
+				"text": "降低長時間創作過程中的疲勞感"
+			},
+			{
+				"title": "耐用性強",
+				"text": "超過20萬次使用強度的元零件校正"
+			},
+			{
+				"title": "Type-c的介面",
+				"text": "更好的通用性和更快的速度"
+			},
+			{
+				"title": "雙系統",
+				"text": "支持 Windows 和 Mac OS 系統"
+			}
+		],
+		"hoverList": [
+			{
+				"title": "01",
+				"text": "多維佈局"
+			},
+			{
+				"title": "02",
+				"text": "流線設計"
+			},
+			{
+				"title": "03",
+				"text": "耐用性強"
+			},
+			{
+				"title": "04",
+				"text": "Type-c的介面"
+			},
+			{
+				"title": "05",
+				"text": "支持Windows和Mac"
+			}
+		],
+		"slideList": [
+			"//r.tourboxtech.com/tw/src/images/gs-banner.png",
+			"//r.tourboxtech.com/tw/src/images/product-first-second-main04.png",
+			"//r.tourboxtech.com/tw/src/images/product-first-second-main08.jpg",
+			"//r.tourboxtech.com/tw/src/images/product-first-second-main05.png",
+			"//r.tourboxtech.com/tw/src/images/product-first-second-main07.jpg"
+		]
+	}
+
+	
+}

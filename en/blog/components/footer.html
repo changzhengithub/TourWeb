@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<style type="text/css">
+	.tourbox-footer {
+		width: 100%;
+		min-height: 3.2rem;
+		background-color: rgba(22, 29, 37, 1);
+	}
+
+	.tourbox-footer>.footer-center {
+		position: relative;
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		width: 12.6rem;
+		margin: 0 auto;
+		padding: 0.5rem 1rem 0 1rem;
+	}
+
+	.tourbox-footer>.footer-center>.center-left {
+		width: 3.2rem;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-title {
+		width: 100%;
+		line-height: 1.2;
+		font-weight: 500;
+		font-size: 0.16rem;
+		color: #fff;
+	}
+	
+	.tourbox-footer>.footer-center>.center-left>.left-text {
+		width: 100%;
+		padding: .1rem 0;
+		line-height: 1.2;
+		font-size: 0.14rem;
+		font-weight: 200;
+		color: #fff;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-form {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		width: 100%;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-form>.form-input {
+		width: 1.8rem;
+		height: .36rem;
+		padding: 0.06rem 0.12rem;
+		font-size: .14rem;
+		color: #fff;
+		border-top: 1px solid #999;
+		border-bottom: 1px solid #999;
+		border-left: 1px solid #999;
+		border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+		background: transparent;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-form>.form-submit {
+		position: relative;
+		width: .45rem;
+		border: none;
+		outline: none;
+		border-top-right-radius: 4px;
+		border-bottom-right-radius: 4px;
+		background-color: #999;
+		cursor: pointer;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-form>.form-submit>span {
+		font-size: .2rem;
+		font-weight: 700;
+		color: #333;
+	}
+
+
+	.tourbox-footer>.footer-center>.center-left>.left-tip {
+		width: 100%;
+		padding: .05rem 0;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-tip>.tip-msg {
+		width: 100%;
+		line-height: 1.2;
+		font-size: .16rem;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-link {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		width: 100%;
+		margin: .3rem 0 .5rem 0;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-link>.link-item {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: center;
+		align-items: center;
+		width: .3rem;
+		height: .3rem;
+		border-radius: 50%;
+		margin-right: .15rem;
+		text-decoration: none;
+		background-color: #fff;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-link>.link-item>.iconfont {
+		font-size: .18rem;
+		color: #333;
+	}
+
+	.tourbox-footer>.footer-center>.center-left>.left-inc {
+		width: 100%;
+		font-size: .12rem;
+		color: #fff;
+	}
+
+
+
+	.tourbox-footer>.footer-center>.center-right {
+		display: flex;
+		display: -webkit-flex;
+		justify-content: flex-start;
+		width: 7.6rem;
+		padding-left: .4rem;
+	}
+
+	.tourbox-footer>.footer-center>.center-right>.right-list {
+		width: 25%;
+	}
+
+
+	.tourbox-footer>.footer-center>.center-right>.right-list>.title {
+		font-weight: bold;
+		font-size: 0.16rem;
+		color: #fff;
+		line-height: 1.5;
+		margin-bottom: .3rem;
+	}
+
+	.tourbox-footer>.footer-center>.center-right>.right-list>a {
+		display: block;
+		width: 100%;
+		margin-bottom: .2rem;
+		line-height: 1.5;
+		font-size: .12rem;
+		font-weight: 200;
+		color: #fff;
+		text-decoration: none;
+	}
+
+
+	/* white theme */
+
+	.theme-white {
+		background-color: #fff;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-title {
+		color: #333;
+	}
+	
+	.theme-white>.footer-center>.center-left>.left-text {
+		color: #333;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-form>.form-input {
+		color: #333;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-form>.form-submit {
+		background-color: #333;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-form>.form-submit>span {
+		color: #ccc;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-link>.link-item {
+		background-color: #333;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-link>.link-item>.iconfont {
+		color: #fff;
+	}
+
+	.theme-white>.footer-center>.center-left>.left-inc {
+		color: #333;
+	}
+
+	.theme-white>.footer-center>.center-right>.right-list>.title {
+		color: #333;
+	}
+
+	.theme-white>.footer-center>.center-right>.right-list>a {
+		color: #333;
+	}
+
+</style>
+
+<div class="tourbox-footer" :class="{'theme-white': themeSelect}" id="tourbox-footer"  v-cloak>
+	<div class="footer-center">
+		<div class="center-left">
+			<p class="left-title">{{leftData.title}}</p>
+			<p class="left-text">{{leftData.description}}</p>
+			<div class="left-form">
+				<input class="form-input" v-model="email" type="text" :placeholder="leftData.placeholder" @input="clearTipMessage">
+				<button class="form-submit" :disabled="isDisabled" @click="subscribeUs" type="button" >
+					<span class="iconfont iconarrow-right"></span>
+				</button>
+			</div>
+			<div class="left-tip">
+				<p class="tip-msg" :style="{color: tipColor}">{{tipMsg}}</p>
+			</div>
+			<div class="left-link">
+				<a class="link-item" :title="item.name" :href="item.url" target="_blank" v-for="(item, index) in leftData.links" :key="index">
+					<span class="iconfont" :class="item.class"></span>
+				</a>
+			</div>
+			<p class="left-inc">{{leftData.inc}}</p>
+		</div>
+
+		<div class="center-right">
+			<div class="right-list" v-for="(item, index) in rightData" :key="index">
+				<h3 class="title">{{item.name}}</h3>
+				<a :href="link.url" :target="link.target ? link.target : '_self'" v-for="link in item.children">{{link.name}}</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el: "#tourbox-footer",
+		data: {
+			tipMsg: "",
+			email: "",
+			tipColor: '',
+			leftData: {},
+			rightData: [],
+			isDisabled: false,
+			themeSelect: false
+		},
+		mounted: function () {
+			var _this = this;
+			_this.getUrl();
+			_this.getFootBars();
+		},
+		methods: {
+			getUrl: function () {
+				var _this = this;
+				var index = location.pathname.lastIndexOf("/");
+				if (index > -1) {
+					var page = location.pathname.substring(index + 1);
+					if (page == "index.html" || page == "" || page == "/" || page == "product.html") {
+						this.themeSelect = true
+					}
+				}
+			},
+			getFootBars: function () {
+				var _this = this;
+				$.getJSON("/en/blog/src/json/footer-bars.json", function (result) {
+					_this.leftData = result.left;
+					_this.rightData = result.right;
+				})
+			},
+			clearTipMessage () {
+				if (!this.tipMsg) return
+				this.tipMsg = ''
+			},
+			// 提交邮箱
+			subscribeUs: function () {
+				var _this = this;
+				_this.isDisabled = true
+				if (!_this.email) {
+					_this.isDisabled = false
+					return
+				}
+				if (!_this.isEmail(_this.email)) {
+					_this.tipMsg = _this.leftData.emailError
+					_this.email = ""
+					_this.tipColor = "#da4f49"
+					_this.isDisabled = false
+					return
+				}
+				$.ajax({
+					url: "https://www.tourboxtech.com/shop-api/email",
+					type: "post",
+					dataType: "json",
+					data: {
+						"email": _this.email,
+						"source": "en"
+					},
+					success: function () {
+						_this.tipMsg = _this.leftData.emailSuccess
+						_this.tipColor = "#5bb75b"
+						_this.email = ""
+						_this.isDisabled = false
+					},
+					error: function () {
+						_this.tipMsg = _this.leftData.emailAlready
+						_this.tipColor = "#da4f49"
+						_this.email = ""
+						_this.isDisabled = false
+					}
+				})
+			},
+			isEmail: function (str) {
+				var re = /^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/;
+				if (re.test(str) != true) {
+					return false;
+				} else {
+					return true;
+				}
+			}
+		}
+	})
+</script>

@@ -1,0 +1,11 @@
+{
+	"title":"FAQ",
+	"prefix":{
+		"text":"Support",
+		"url":"support.html"
+	},
+	"suffix":{
+		"text":"FAQ",
+		"url":"faq.html"
+	}
+}

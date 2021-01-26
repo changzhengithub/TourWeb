@@ -1,0 +1,127 @@
+[
+	{
+		"name": "Home",
+		"href": "/en/index.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": true
+	},
+	{
+		"name": "Product",
+		"href": "/en/product.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": true
+	},
+	{
+		"name": "Forum",
+		"target":"_blank",
+		"mobileShow": true,
+		"pcShow": false,
+		"href": "https://forum.tourboxtech.com/"
+	},
+	{
+		"name": "News",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false,
+		"href": "/en/news.html"
+	},
+	{
+		"name": "Affiliate Program",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false,
+		"href": "/en/affiliate.html"
+	},
+	{
+		"name": "Explore",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "Forum",
+				"link": "https://forum.tourboxtech.com/",
+				"target":"_blank"
+			},
+			{
+				"linkName": "News",
+				"link": "/en/news.html",
+				"target":"_self"
+			},
+			{
+				"linkName": "Affiliate Program",
+				"link": "/en/affiliate.html",
+				"target":"_self"
+			}
+		]
+	},
+	{
+		"name": "Downloads",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "Software",
+				"link": "/en/downloads.html",
+				"target":"_self"
+			},
+			{
+				"linkName": "Presets",
+				"link": "/en/presets.html",
+				"target":"_self"
+			}
+		]
+	},
+	{
+		"name": "Software",
+		"href": "/en/downloads.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "Presets",
+		"href": "/en/presets.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "User Manual",
+		"href": "/en/manual.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "FAQ",
+		"href": "/en/faq.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "Support",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "User Manual",
+				"link": "/en/manual.html",
+				"target":"_self"
+			},
+			{
+				"linkName": "FAQ",
+				"link": "/en/faq.html",
+				"target":"_self"
+			}
+		]
+	}
+]

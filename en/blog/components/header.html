@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<head>
+	<style type="text/css">
+		.index-nav {
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 999;
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			padding: 0 1rem 0 1.2rem;
+			background-color: #fff;
+			border-bottom: 1px solid #f1f1f1;
+			box-shadow: 0 2px 2px #eee;
+		}
+
+		.index-nav>.nav-bar {
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			justify-content: flex-start;
+			align-items: center;
+			height: 100%;
+		}
+
+		.index-nav>.nav-bar>.bar-logo {
+			width: 0.4rem;
+			height: 0.27rem;
+		}
+
+		.index-nav>.nav-bar>.bar-logo>a {
+			width: 100%;
+			height: 100%;
+		}
+
+		.index-nav>.nav-bar>.bar-logo>a>img {
+			width: 100%;
+			height: 100%;
+		}
+
+		.index-nav>.nav-bar>.bar-list {
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			justify-content: flex-start;
+			height: 100%;
+			margin-left: 0.1rem;
+
+		}
+
+		.index-nav>.nav-bar>.bar-list>.list-item {
+			position: relative;
+			height: 100%;
+		}
+
+		.index-nav>.nav-bar>.bar-list>.list-item>a {
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			align-items: center;
+			height: 100%;
+			padding: 0 .2rem;
+			color: #333;
+			text-decoration: none;
+			font-size: .14rem;
+		}
+
+		.item-fold {
+			position: relative;
+			display: flex;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			justify-content: center;
+			align-items: center;
+			height: 100%;
+			padding: 0 .2rem;
+			color: #333;
+			text-decoration: none;
+			font-size: .14rem;
+			cursor: pointer;
+		}
+
+		.item-fold>.iconfont {
+			font-size: .14rem;
+			color: #666;
+			margin-right: .1rem;
+		}
+
+		.item-fold>.fold-select {
+			position: absolute;
+			left: 50%;
+			z-index: 9;
+			display: none;
+			width: 1.3rem;
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			border-bottom-left-radius: .05rem;
+			border-bottom-right-radius: .05rem;
+			box-shadow: 0px 0px 2px #ccc;
+			transform: translateX(-50%);
+			-webkit-transform: translateX(-50%);
+		}
+
+		.item-fold>.fold-select>.select-item {
+			position: relative;
+			display: flex;
+			display: -webkit-flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: .4rem;
+			background-color: rgba(255, 255, 255, 1);
+		}
+
+		.item-fold>.fold-select>.select-item:hover {
+			background-color: #eee;
+		}
+
+		.item-fold>.fold-select>.select-item::after {
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			z-index: 9;
+			display: block;
+			content: "";
+			width: 80%;
+			height: 1px;
+			background: #eee;
+			transform: translateX(-50%);
+		}
+
+		.item-fold>.fold-select>.select-item:last-child {
+			border-bottom-left-radius: .05rem;
+			border-bottom-right-radius: .05rem;
+		}
+
+		.item-fold>.fold-select>.select-item>a {
+			height: 100%;
+			line-height: .4rem;
+			color: #333;
+			text-decoration: none;
+			font-size: .14rem;
+		}
+
+		.nav-language {
+			position: relative;
+			display: flex;
+			display: -webkit-flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 100%;
+		}
+
+		.nav-language>a {
+			padding: .06rem .2rem .06rem .2rem;
+			margin-right: .1rem;
+			text-align: center;
+			font-size: .12rem;
+			font-weight: 700;
+			color: #fff;
+			border-radius: .05rem;
+			background-image: linear-gradient(to bottom, #42adff, #02C9F0);
+		}
+	</style>
+
+</head>
+
+<div class="index-nav" v-cloak id="nav">
+	<div class="nav-bar">
+		<div class="bar-logo">
+			<a class="logo-link" href="index.html">
+				<img src="//r.tourboxtech.com/en/basic-img/logo-black-2.0.png" alt="logo">
+			</a>
+		</div>
+		<div class="bar-list">
+			<div class="list-item" v-for="(item, index) in bars" :key="index" v-if="item.pcShow">
+				<a :href="item.href" :target="item.target" v-if="item.href">{{item.name}}</a>
+				<div class="item-fold" v-if="!item.href" @mouseenter="mouseEnter('.selcetIndex'+index)"
+					@mouseleave="mouseLeave('.selcetIndex'+index)">
+					<span>{{item.name}}</span>
+					<ul class="fold-select top" :class="'selcetIndex'+index">
+						<li class="select-item" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+							<a :href="linkItem.link" :target="linkItem.target">{{linkItem.linkName}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="nav-language">
+		<div id='product-component-1589254179271' style="width: 100px !important;"></div>
+		<!-- <a :href="url" target="_blank" type="button" class="btn btn-default">Buy Now</a> -->
+		<div class="item-fold" @mouseenter="mouseEnter('.language')" @mouseleave="mouseLeave('.language')">
+			<span class="iconfont iconlanguage"></span>
+			<span>{{languageText}}</span>
+			<ul class="fold-select language top">
+				<li class="select-item" @click="checkLanguage('cn')">简体中文</li>
+				<li class="select-item" @click="checkLanguage('tw')">繁體中文</li>
+				<li class="select-item" @click="checkLanguage('kr')">한국어</li>
+				<li class="select-item" @click="checkLanguage('jp')">日本語</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	new Vue({
+		el: "#nav",
+		data: {
+			languageText: 'English',
+			bars: [],
+			url: "https://store.tourboxtech.com/products/tourbox"
+		},
+		mounted: function () {
+			var _this = this;
+			_this.getBars();
+		},
+		methods: {
+			checkLanguage: function (lan) {
+				var _this = this;
+				var localUrl = window.location.href;
+				if (localUrl.indexOf('en/') == -1) return
+				var arr1 = localUrl.split('en/');
+				if (localUrl.indexOf('affiliate') != -1 && lan == 'cn') {
+					window.location.href = arr1[0] + lan;
+					return
+				}
+				if (arr1[1]) {
+					window.location.href = arr1[0] + lan + '/' + arr1[1];
+				} else {
+					window.location.href = arr1[0] + lan;
+				}
+			},
+			getBars: function () {
+				var _this = this;
+				$.getJSON("/en/blog/src/json/bars.json", function (result) {
+					_this.bars = result;
+				})
+			},
+			mouseEnter: function (dom) {
+				$(dom).stop().slideDown();
+			},
+			mouseLeave: function (dom) {
+				$(dom).stop().slideUp();
+			}
+		}
+	})
+</script>
+<script type="text/javascript">
+	/*<![CDATA[*/
+	(function () {
+		var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+		if (window.ShopifyBuy) {
+			if (window.ShopifyBuy.UI) {
+				ShopifyBuyInit();
+			} else {
+				loadScript();
+			}
+		} else {
+			loadScript();
+		}
+
+		function loadScript() {
+			var script = document.createElement('script');
+			script.async = true;
+			script.src = scriptURL;
+			(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+			script.onload = ShopifyBuyInit;
+		}
+
+		function ShopifyBuyInit() {
+			var client = ShopifyBuy.buildClient({
+				domain: 'store.tourboxtech.com',
+				storefrontAccessToken: 'f642429bcb9aa5193c0c42eac9a176e4',
+			});
+			ShopifyBuy.UI.onReady(client).then(function (ui) {
+				ui.createComponent('product', {
+					id: '4826136182917',
+					node: document.getElementById('product-component-1589254179271'),
+					moneyFormat: '%24%7B%7Bamount%7D%7D',
+					options: {
+						"product": {
+							"styles": {
+								"product": {
+									"width": "100px"
+								},
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-size": "16px",
+									"padding": "5px 10px 6px 10px",
+									"margin-top": "-20px !important",
+									"border-radius": "6px",
+									"outline": "none",
+									"background-image": "linear-gradient(to bottom, #42adff, #02C9F0);"
+								},
+								"quantityInput": {
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px"
+								}
+							},
+							"buttonDestination": "checkout",
+							"contents": {
+								"img": false,
+								"title": false,
+								"price": false
+							},
+							"text": {
+								"button": "Buy Now"
+							},
+							"googleFonts": [
+								"Open Sans"
+							]
+						},
+						"productSet": {
+							"styles": {
+								"products": {
+									"@media (min-width: 601px)": {
+										"margin-left": "-20px"
+									}
+								}
+							}
+						},
+						"modalProduct": {
+							"contents": {
+								"img": false,
+								"imgWithCarousel": true,
+								"button": false,
+								"buttonWithQuantity": true
+							},
+							"styles": {
+								"product": {
+									"@media (min-width: 601px)": {
+										"max-width": "100%",
+										"margin-left": "0px",
+										"margin-bottom": "0px"
+									}
+								},
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									"background-color": "#21bbf7",
+									":focus": {
+										"background-color": "#1ea8de"
+									},
+									"border-radius": "6px"
+								},
+								"quantityInput": {
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px"
+								}
+							},
+							"googleFonts": [
+								"Open Sans"
+							],
+							"text": {
+								"button": "Add to cart"
+							}
+						},
+						"cart": {
+							"styles": {
+								"button": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"font-size": "16px",
+									"padding-top": "16px",
+									"padding-bottom": "16px",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									"background-color": "#21bbf7",
+									":focus": {
+										"background-color": "#1ea8de"
+									},
+									"border-radius": "6px"
+								}
+							},
+							"text": {
+								"total": "Subtotal",
+								"button": "Checkout"
+							},
+							"popup": false,
+							"googleFonts": [
+								"Open Sans"
+							]
+						},
+						"toggle": {
+							"styles": {
+								"toggle": {
+									"font-family": "Open Sans, sans-serif",
+									"font-weight": "bold",
+									"background-color": "#21bbf7",
+									":hover": {
+										"background-color": "#1ea8de"
+									},
+									":focus": {
+										"background-color": "#1ea8de"
+									}
+								},
+								"count": {
+									"font-size": "16px"
+								}
+							},
+							"googleFonts": [
+								"Open Sans"
+							]
+						}
+					},
+				});
+			});
+		}
+	})();
+	/*]]>*/
+</script>

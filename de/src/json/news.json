@@ -1,0 +1,74 @@
+{
+	"news":[
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news07.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail06.jpg",
+			"time": "May.2020",
+			"timeYear": "2020",
+			"timeMonth": "May",
+			"title": "TourBox erreichte Crowdfunding-Ziel in Taiwan",
+			"update_time": 1579065760,
+			"summarize": "Während der Crowd-Raising-Aktivitäten von TourBox auf der Website www.zeczec.com wurden 10,7 Millionen NT $ und 2800 Unterstützer in 70 Tagen erfolgreich gesammelt."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news06.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/index-news.jpg",
+			"time": "Mar.2020",
+			"timeYear": "2020",
+			"timeMonth": "Mar",
+			"title": "TourBox mit großem Erfolg beim Makuake-Crowdfunding",
+			"update_time": 1579065760,
+			"summarize": "In den 60 Tagen des Makuake-Crowdfundings hat TourBox in Japan einen gewaltigen Erfolg erzielt – 2.800 Unterstützer steuerten 38 Millionen Yen bei."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news05.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail05.jpg",
+			"time": "Jan.2020",
+			"timeYear": "2020",
+			"timeMonth": "Jan",
+			"title": "Treffen auf der CES",
+			"update_time": 1579065760,
+			"summarize": "Das TourBox Tech-Team hat von 7. bis 10. Januar 2020 an der CES 2020 in Las Vegas teilgenommen. Dort konnte man uns an Stand Nr. 52823, Sands Expo, Ebene 1, Halle G im EUREKA PARK treffen."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news04.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail04.jpg",
+			"time": "Dec.2019",
+			"timeYear": "2019",
+			"timeMonth": "Dec",
+			"update_time": 1579065601,
+			"title": "TourBox startete Crowdfunding auf Makuake",
+			"summarize": "Am 17. Dezember 2019 startete TourBox auf Makuake ein Crowdfunding für den japanischen Markt. Noch am Starttag wurden 5 Millionen Yen erreicht. Am 5. Januar 2020 stand der Crowdfunding-Betrag bei über 14 Millionen Yen."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news03.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail03.jpg",
+			"time": "Oct.2019",
+			"timeYear": "2019",
+			"timeMonth": "Oct",
+			"update_time": 1579065681,
+			"title": "TourBox nahm an der Elektronikmesse HKTDC in Hong Kong teil",
+			"summarize": "TourBox Tech hat von 14. bis 16. Oktober 2019 an der Elektronik-Herbstmesse in Hong Kong teilgenommen. Während der Messe stellte TourBox eine neue Generation von Mensch-Computer-Interaktionslösungen vor."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news02.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail02.jpg",
+			"time": "Aug.2019",
+			"timeYear": "2019",
+			"timeMonth": "Aug",
+			"update_time": 1579065912,
+			"title": "TourBox schloss die Massenproduktion ab",
+			"summarize": "Im Juli 2019 hat TourBox die Massenproduktion abgeschlossen und die ersten Geräte an seine Kunden ausgeliefert. Die TourBox-Software wurde auf Version 1.1 aktualisiert, die von den Kunden viel Lob erhielt."
+		},
+		{
+			"imgUrl": "//r.tourboxtech.com/en/src/images/news01.jpg",
+			"imgDetailUrl": "//r.tourboxtech.com/en/src/images/news-detail01.jpg",
+			"time": "Jan.2019",
+			"timeYear": "2019",
+			"timeMonth": "Jan",
+			"update_time": 1579017600,
+			"title": "Knospung - TourBox startete Crowdfunding auf Kickstarter",
+			"summarize": "Am 8. Oktober 2018 startete TourBox eine Crowdfunding-Aktion auf Kickstarter und erhielt seine Finanzierung von über 2.000 Nutzern aus 58 Ländern. Der Crowdfunding-Gesamtbetrag betrug mehr als 220.000 US-Dollar."
+		}
+	]
+}

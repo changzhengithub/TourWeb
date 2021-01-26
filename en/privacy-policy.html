@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="description" content="This privacy notice discloses the privacy practices for (https://www.tourboxtech.com). This privacy notice applies solely to information collected by this website.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+		<title>TourBox Website Privacy Policy</title>
+		<!-- public resources -->
+		<link rel="canonical" href="https://www.tourboxtech.com/" />
+		<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+		<link rel="stylesheet" type="text/css" href="css/global.css" />
+		<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+		<!-- page private resources -->
+		<link rel="stylesheet" type="text/css" href="css/privacyPolicy.css" />
+
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+			gtag('config', 'UA-123518466-3');
+		</script>
+	</head>
+	<body>
+		<!-- header -->
+		<header id="header"></header>
+		<div id="container" v-cloak>
+			<p class="container-title">{{policyData.title}}</p>
+			<div class="container-artical">
+				<div class="artical-detail" v-html="policyData.policy"></div>
+			</div>
+		</div>
+		<div id="footer"></div>
+
+		<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/pages/privacyPolicy.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

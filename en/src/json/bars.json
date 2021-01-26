@@ -1,0 +1,118 @@
+{
+	"deskList": [
+		{
+			"name": "Home",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "Product",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "Explore",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "Forum",
+					"link": "https://forum.tourboxtech.com/",
+					"target":"_blank"
+				},
+				{
+					"linkName": "News",
+					"link": "news.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "Affiliate Program",
+					"link": "affiliate.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "Downloads",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "Software",
+					"link": "downloads.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "Presets",
+					"link": "presets.html",
+					"target":"_self"
+				}
+			]
+		},
+		{
+			"name": "Support",
+			"href": "javascript:;",
+			"target":"_self",
+			"linkList": [
+				{
+					"linkName": "User Manual",
+					"link": "manual.html",
+					"target":"_self"
+				},
+				{
+					"linkName": "FAQ",
+					"link": "faq.html",
+					"target":"_self"
+				}
+			]
+		}
+
+	],
+	"mobileList": [
+		{
+			"name": "Home",
+			"href": "index.html",
+			"target":"_self"
+		},
+		{
+			"name": "Product",
+			"href": "product.html",
+			"target":"_self"
+		},
+		{
+			"name": "Forum",
+			"href": "https://forum.tourboxtech.com/",
+			"target":"_blank"
+		},
+		{
+			"name": "News",
+			"href": "news.html",
+			"target":"_self"
+		},
+		{
+			"name": "Affiliate Program",
+			"href": "affiliate.html",
+			"target":"_self"
+		},
+		{
+			"name": "Software",
+			"href": "downloads.html",
+			"target":"_self"
+		},
+		{
+			"name": "Presets",
+			"href": "presets.html",
+			"target":"_self"
+		},
+		{
+			"name": "User Manual",
+			"href": "manual.html",
+			"target":"_self"
+		},
+		{
+			"name": "FAQ",
+			"href": "faq.html",
+			"target":"_self"
+		}
+	]
+}

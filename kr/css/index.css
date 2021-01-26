@@ -1,0 +1,91 @@
+[v-cloak]{display:none}
+.font-title{font-size:.5rem}
+.font-text{font-size:.18rem}
+@keyframes topAnimate{0%{opacity:0;transform:translate3d(0,100%,0)}
+100%{opacity:1;transform:translate3d(0,0%,0)}
+}.index{width:100%;min-height:100vh}
+.header{transition:background-color .8s;background-color:rgba(255,255,255,.9)}
+.header-buy>span{display:none}
+.header-buy{position:absolute;top:50%;right:1.8rem;z-index:9;transform:translateY(-50%)}
+.header-buy>a {
+  height: .28rem;
+  padding: 0 .15rem;
+  font-size: .14rem;
+  color: #fff;
+  background-image: linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);
+  border-radius: .15rem;
+}
+.header-desk .desk-language{margin-left:1.2rem}
+.header .buy-active{position:fixed;top:0}
+.header-black{background-color:rgba(29,29,31,0.3);box-shadow:none}
+.header-black>.header-desk .nav-logo{background-image:url('//r.tourboxtech.com/kr/basic-img/logo-white-2.0.png')}
+.header-black>.header-desk .item-link{color:#fff}
+.header-black>.header-desk .bar-item::before{background-color:#fff}
+.header-black>.header-desk .bar-item::after{background-color:#fff}
+.header-black>.header-desk .sub-link{color:#fff}
+.header-black>.header-desk .language-default{color:#fff}
+.header-black>.header-desk .language-select>.select-item{color:#fff}
+.header-black>.header-desk .item-bar{background-color:rgba(29,29,31,0.72);box-shadow:none}
+.header-black>.header-desk .sub-link:hover{background-color:rgba(200,200,200,0.5)}
+.header-black>.header-desk .language-select{background-color:rgba(29,29,31,0.72);box-shadow:none}
+.header-black>.header-desk .language-select>.select-item:hover{background-color:rgba(200,200,200,0.5)}
+.index-main{width:100%;padding-bottom:.3rem;background-color:#fff}
+.main-banner{position:relative;z-index:9;width:100%;height:100vh;background-image:url('//r.tourboxtech.com/kr/src/images/product-banner-2.0.1.jpg');background-position:center 0;background-repeat:no-repeat;background-size:contain;margin-bottom:.3rem}
+.main-banner .banner-headline{width:100%;height:100%;padding-top:25vh}
+.banner-headline>.headline-name{width:100%;text-align:center;font-size:1.2rem;text-shadow:0px 2px 4px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-name>span{font-size:.8rem;letter-spacing:-1px;color:#fff}
+.banner-headline>.headline-title{width:100%;margin-bottom:.1rem;text-align:center;font-size:.4rem;text-shadow:0px 2px 4px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-price{width:100%;margin-bottom:.3rem;text-align:center;font-size:.26rem;text-shadow:0px 2px 4px #000;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link{width:100%;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link>.link-item{margin:0 .2rem;font-size:.16rem;color:#2997ff;text-shadow:1px 1px #262626}
+.banner-headline>.headline-link>.link-item>i{margin-top:5px;font-size:.16rem}
+.main-banner .banner-headline>.top-animate{animation:topAnimate 1s .5s forwards}
+.main-banner .banner-headline>.middle-animate{animation:topAnimate .8s .8s forwards}
+.main-banner .banner-headline>.bottom-animate{animation:topAnimate .5s 1.2s forwards}
+.main-banner .banner-headline>.link-animate{animation:topAnimate .5s 1.3s forwards}
+.mian-update{width:100%;padding:0 .1rem;background-color:#fff}
+.mian-update>.update-item{position:relative;width:50%;height:4.5rem; padding: 0 .5rem;background-position:center center;background-repeat:no-repeat;background-size:contain}
+.mian-update>.update-item>.item-bg{position:absolute;left:0;top:0;right:0;bottom:0;z-index:0;width:100%;height:100%;padding:0 .1rem}
+.mian-update>.update-item>.item-bg>img{width:100%;height:100%}
+.mian-update>.update-item>.item-content{position:relative;z-index:1;width:100%;height:100%;padding-top:.6rem;text-align:center}
+.mian-update>.update-item>.item-content>h1{font-size:.3rem;color:#fff;font-weight:400;line-height:1.5}
+.mian-update>.update-item>.item-content>a{display:block;margin-top:.1rem;font-size:.16rem;color:#2a96fe;font-weight:400;line-height:1.5}
+.mian-update>.update-item>.item-content>a>i{font-size:.16rem;color:#2a96fe;font-weight:400;line-height:1.5}
+.mian-update>.update-item>.item-active>h1{font-size:.3rem;color:#000000;font-weight:400;line-height:1.5}
+@media only screen and (max-width:767px){.font-title{font-size:.3rem}
+.font-text{font-size:.18rem}
+.header{position:absolute}
+.header-desk .desk-language{margin-left:0}
+.header-buy>span{display:block}
+.header-buy{position:absolute;top:.44rem;left:0;right:0;z-index:99;width:100%;height:.44rem;padding:0 .2rem 0 .2rem;font-size:.18rem;color:#fff;background-color:#1C1C1E;transform:translateY(0%)}
+.header-buy>a {
+  height: .28rem;
+  padding: 0 .15rem;
+  font-size: .14rem;
+  color: #fff;
+  background-image: linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);
+  border-radius: .15rem;
+}
+.index-main{width:100%;padding-bottom:.3rem;background-color:#fff}
+.main-banner{position:relative;z-index:9;width:100%;height:6.67rem;margin-bottom:.1rem;background-image:url('//r.tourboxtech.com/kr/src/images/product-banner-mobile-2.0.1.jpg');background-position:center 0;background-repeat:no-repeat;background-size:contain}
+.main-banner .banner-headline{width:100%;height:100%;padding-top:30vh}
+.banner-headline>.headline-name{width:100%;margin-bottom:.2rem;text-align:center;font-family:'AvenirNext';font-size:.5rem;text-shadow:1px 2px 2px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-name>span{font-size:.5rem;letter-spacing:-1px;color:#fff}
+.banner-headline>.headline-title{width:100%;padding: 0 .3rem;margin-bottom:.2rem;text-align:center;font-size:.26rem;text-shadow:1px 2px 2px #000;letter-spacing:-1px;color:#fff;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-price{width:100%;margin-bottom:.3rem;text-align:center;font-size:.2rem;color:#fff;text-shadow:1px 2px 2px #000;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link{width:100%;opacity:0;transform:translate3d(0,100%,0)}
+.banner-headline>.headline-link>.link-item{margin:0 .1rem;font-size:.16rem;color:#2997ff;text-shadow:none}
+.banner-headline>.headline-link>.link-item>i{margin-top:0;font-size:.16rem}
+.main-banner .banner-headline>.top-animate{animation:topAnimate 0.8s forwards}
+.main-banner .banner-headline>.middle-animate{animation:topAnimate .6s .2s forwards}
+.main-banner .banner-headline>.bottom-animate{animation:topAnimate .4s .4s forwards}
+.main-banner .banner-headline>.link-animate{animation:topAnimate .4s 0.5s forwards}
+.mian-update{padding:0 0rem}
+.mian-update>.update-item{width:100%;height:2.4rem;padding: 0 .2rem;margin-bottom:.1rem;background-position:center center;background-repeat:no-repeat;background-size:cover}
+.mian-update>.update-item>.item-bg{padding:0}
+.mian-update>.update-item>.item-content{padding-top:.4rem}
+.mian-update>.update-item>.item-content>h1{font-size:.22rem;line-height:1.2}
+.mian-update>.update-item>.item-content>a{font-size:.14rem}
+.mian-update>.update-item>.item-content>a>i{font-size:.14rem;}
+.mian-update>.update-item>.item-active>h1{font-size:.22rem;line-height:1.2}
+}

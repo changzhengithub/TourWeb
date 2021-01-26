@@ -1,0 +1,107 @@
+{
+	"right":[
+		{
+			"name": "TourBox",
+			"children": [{
+					"name": "Über uns",
+					"url": "about-us.html"
+				},
+				{
+					"name": "Kontakt",
+					"url": "contact-us.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Rechtliches",
+			"children": [{
+					"name": "Nutzungsbedingungen",
+					"url": "terms-of-use.html"
+				},
+				{
+					"name": "Datenschutz-Richtlinie",
+					"url": "privacy-policy.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Erkunden",
+			"children": [
+				{
+					"name": "Forum",
+					"target":"_blank",
+					"url": "https://forum.tourboxtech.com/"
+				},
+				{
+					"name": "Nachrichten",
+					"url": "news.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Downloads",
+			"children": [
+				{
+					"name": "Software",
+					"url": "downloads.html"
+				},
+				{
+					"name": "Voreinstellungen",
+					"url": "presets.html"
+				}
+			],
+			"open":false
+		},
+		{
+			"name": "Support",
+			"children": [
+				{
+					"name": "Benutzerhandbuch",
+					"url": "manual.html"
+				},
+				{
+					"name": "Häufig gestellte Fragen",
+					"url": "faq.html"
+				},
+				{
+					"name": "Hilfe Center",
+					"url": "support.html"
+				}
+			],
+			"open":false
+		}
+	],
+	"left": {
+		"title": "Abonnieren",
+		"description": "Erhalten Sie aktuelle News von TourBox",
+		"inc": "2020 TourBox Tech Inc. All Right Reserved.",
+		"placeholder": "Ihre E-Mail-Adresse",
+		"emailError": "E-Mail-Fehler",
+		"emailSuccess": "Abonnement erfolgreich",
+		"emailAlready": "Sie haben bereits abonniert!",
+		"links": [{
+				"name": "facebook",
+				"url": "https://www.facebook.com/TourBoxofficial",
+				"class": "iconfackbook"
+			},
+			{
+				"name": "twitter",
+				"url": "https://twitter.com/Tourboxtech",
+				"class": "iconTwitter"
+			},
+			{
+				"name": "instagram",
+				"url": "https://www.instagram.com/tourboxofficial/",
+				"class": "iconInstagram"
+			},
+			{
+				"name": "youtube",
+				"url": "https://www.youtube.com/channel/UCm5jP_n7uAJDNkSFp3u299Q",
+				"class": "iconyoutube"
+			}
+		]
+	}
+}

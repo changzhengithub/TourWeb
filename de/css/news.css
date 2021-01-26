@@ -1,0 +1,160 @@
+[v-cloak] {
+	display: none;
+}
+
+#container {
+	position: relative;
+	width: 100%;
+	min-height: 8rem;
+	background-color: #f9f9f9;
+}
+
+
+.news-list {
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	width: 9.6rem;
+	margin: 0 auto;
+	padding-top: .5rem;
+	padding-bottom: .5rem;
+}
+
+.news-list>.list-item {
+	width: 2.8rem;
+	margin: 0 .2rem .5rem .2rem;
+}
+
+.item-img {
+	display: block;
+	width: 100%;
+	height: 1.92rem;
+	margin-bottom: .2rem;
+	text-decoration: none;
+	overflow: hidden;
+	/* cursor: pointer; */
+}
+
+.item-img>img {
+	width: 100%;
+	height: 100%;
+	transition: all .4s ease;
+	-webkit-transition: all .4s ease;
+}
+
+.item-img>img:hover {
+	transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform-origin: center center;
+	-webkit-transform-origin: center center;
+}
+
+.item-time {
+	width: 100%;
+	margin-bottom: .1rem;
+	font-size: .12rem;
+	color: #1bd17b;
+}
+
+.item-title {
+	display: block;
+	width: 100%;
+	margin-bottom: .15rem;
+	text-decoration: none;
+}
+
+.item-title>p {
+	width: 100%;
+	line-height: 1.5;
+	font-size: .14rem;
+	color: #333333;
+	font-weight: 500;
+	transition: color 0.2s;
+}
+
+.item-title>p:hover,
+.item-title>p:focus {
+	color: #f9007a;
+}
+
+.item-summarize {
+	width: 100%;
+}
+
+.summarize-text {
+	width: 100%;
+	line-height: 1.5;
+	font-size: .12rem;
+	color: #555;
+	word-spacing: .02rem;
+	/* overflow : hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical; */
+}
+
+
+@media only screen and (max-width:767px) {
+	.news-list {
+		display: flex;
+		display: -webkit-flex;
+		flex-wrap: wrap;
+		width: 100%;
+		margin: 0 auto;
+		padding-top: .3rem;
+		padding-bottom: .3rem;
+	}
+
+	.news-list>.list-item {
+		width: 100%;
+		margin: 0 0 .5rem 0;
+	}
+	
+	.item-time {
+		padding: 0 .2rem;
+	}
+
+	.item-img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin-bottom: .1rem;
+		text-decoration: none;
+	}
+
+	.item-img>img {
+		width: 100%;
+		height: auto;
+	}
+
+	.item-title {
+		display: block;
+		width: 100%;
+		padding: 0 .2rem;
+		margin-bottom: .15rem;
+		text-decoration: none;
+	}
+
+	.item-title>p {
+		width: 100%;
+		line-height: 1.5;
+		font-size: .2rem;
+		color: #333333;
+		font-weight: 500;
+	}
+
+	.item-summarize {
+		width: 100%;
+	}
+
+	.summarize-text {
+		width: 100%;
+		padding: 0 .2rem;
+		line-height: 1.5;
+		font-size: .16rem;
+		color: #555;
+		word-spacing: .02rem;
+	}
+
+}

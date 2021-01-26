@@ -1,0 +1,981 @@
+<style type="text/css">
+	#header-container {
+		width: 100%;
+		height: 100%;
+	}
+	/* desk */
+	.header-desk{visibility:visible;width:100%;height:100%}
+	.header-mobile{visibility:hidden;height:0}
+	.header-desk>.desk-nav{height:100%}
+	.header-desk .nav-logo{display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%}
+	.header-desk .nav-logo>img{width:100%;height:100%}
+	.header-desk .nav-bar{height:100%}
+	.header-desk .bar-item{position:relative;width:1.2rem;height:100%}
+	.header-desk .bar-item::after{position:absolute;top:50%;right:0;z-index:9;display:block;content:"";width:1px;height:.17rem;background-color:#bbbbbb;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
+	.header-desk .bar-item:last-of-type:after{display:none}
+	.header-desk .bar-item::before{position:absolute;left:50%;bottom:0.1rem;z-index:9;display:block;content:"";width:40%;height:2px;opacity:0;background-color:#6d6c6c;-webkit-transform:translateX(-50%);transform:translateX(-50%);transition:opacity .5s}
+	.header-desk .item-link{width:100%;height:100%;font-size:.14rem;color:#6d6d6d}
+	.header-desk .item-bar{position:absolute;left:0;top:.55rem;z-index:9;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 2px 1px #eee}
+	.header-desk .bar-sub{width:100%;height:.3rem}
+	.header-desk .sub-link{width:100%;height:100%;font-size:.12rem;color:#6d6d6d}
+	.header-desk .bar-item:hover::before{opacity:1}
+	.header-desk .bar-item:hover .item-bar{display:block}
+	.header-desk .sub-link:hover{background-color:#f2f2f2;color:#333}
+	.header-desk .desk-buy{height:.3rem;padding:0 .15rem;margin:0 0rem 0 .2rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);cursor:pointer}
+	.header-desk .desk-language{position:relative;height:100%;padding:0 .2rem;margin-left:.2rem;cursor:pointer}
+	.header-desk .language-default{width:100%;height:100%;font-size:.14rem;color:#6a6a6a}
+	.header-desk .language-default>i{font-size:.2rem;color:#3d6df6}
+	.header-desk .language-select{position:absolute;top:.55rem;left:0;z-index:1;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 1px 0px #eee}
+	.header-desk .select-item{width:100%;height:.3rem;font-size:.12rem;color:#6d6d6d}
+	.header-desk .desk-language:hover .language-select{display:block}
+	.header-desk .select-item:hover{background-color:#f2f2f2;color:#333}
+
+	/* 登录 */
+	.desk-auth {
+		height: 100%;
+	}
+	.desk-auth>.auth-user {
+		position: relative;
+		height: 100%;
+	}
+	.desk-auth>.auth-user>.user-head {
+		width: .5rem;
+		height: 100%;
+		cursor: pointer;
+	}
+	.desk-auth>.auth-user>.user-head>i {
+		font-size: .16rem;
+		color: #333;
+	}
+	.desk-auth>.auth-user>.user-menu {
+		position: absolute;
+		left: 50%;
+		top: .55rem;
+		z-index: 9;
+		display: none;
+		width: 1rem;
+		background-color: #fff;
+		box-shadow:1px 1px 1px 0px #eee;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.desk-auth>.auth-user>.user-menu>.menu-item {
+		width: 100%;
+		height: .3rem;
+		font-size: .12rem;
+		color: #1C1C1E;
+		cursor: pointer;
+	}
+	.desk-auth>.auth-user>.user-menu>.menu-item:hover {
+		background-color:#f2f2f2;
+		color:#333;
+	}
+
+	.desk-auth>.auth-user:hover .user-menu {
+		display: block;
+	}
+
+	
+	.desk-auth>.auth-container {
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		z-index: 9999;
+		padding-top: 10vh;
+		background-color: rgba(0,0,0,.8);
+	}
+	.desk-auth .contaienr-wrapper {
+		width: 510px;
+		height: 800px;
+		padding: 50px 0 0 0;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+	.desk-auth .wrapper-logo {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.desk-auth .wrapper-logo>a>i {
+		font-size: 60px;
+		color: #727172;
+	}
+	.desk-auth .wrapper-title {
+		width: 100%;
+		margin-bottom: 30px;
+		font-size: 28px;
+		color: #7F7F7F;
+		text-align: center;
+	}
+
+	.desk-auth .wrapper-login {
+		width: 100%;
+	}
+
+	.desk-auth .wrapper-register {
+		width: 100%;
+	}
+
+	.login-form, .register-form, .activate-form, .complete-form {
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	.form-tip {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 20px;
+		color: #38a858;
+		font-weight: 200;
+		line-height: 1.3;
+		text-align: center;
+	}
+
+	.form-item {
+		width: 100%;
+		padding-top: 15px;
+	}
+
+	.form-item>.item-input {
+		position: relative;
+		width: 100%;
+		height: 50px;
+		margin-bottom: 5px;
+		border: 1px solid #bbb;
+		border-radius: 2px;
+	}
+
+	.form-item>.item-input>input {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding: 0 10px;
+		font-size: 14px;
+		color: #333;
+		border: none;
+		background: transparent;
+	}
+	.form-item>.item-input>input::placeholder {
+		color: #7F7F7F;
+	}
+
+
+	.form-item>.item-active {
+		border: 1px solid #f04848;
+	}
+
+	.form-item>.item-active>input {
+		color: #f04848;
+	}
+
+	.form-item>.item-active>input::placeholder {
+		color: #f04848;
+	}
+
+	.form-item>.item-tip {
+		width: 100%;
+		padding-left: 10px;
+		font-size: 12px;
+		color: #f04848;
+	}
+
+	.form-submit {
+		width: 100%;
+	}
+	
+	.form-submit-margin-40 {
+		margin-top: 40px;
+	}
+	.form-submit-margin-20 {
+		margin-top: 20px;
+	}
+
+	.form-submit>button {
+		width: 100%;
+		height: 50px;
+		font-size: 16px;
+		color: #fff;
+		border-radius: 5px;
+		background-color: #44a8f2;
+		border: 1px solid #44a8f2;
+		cursor: pointer;
+	}
+
+	.form-submit>.submit-active {
+		background-color: #d7d7d7;
+		border: 1px solid #d7d7d7;
+		cursor: not-allowed;
+	}
+
+	.form-code {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.form-code>button {
+		width: 100%;
+		height: 50px;
+		font-size: 14px;
+		color: #fff;
+		border-radius: 5px;
+		background-color: #44a8f2;
+		border: 1px solid #44a8f2;
+		cursor: pointer;
+		transition: all 0.2s linear;
+	}
+	
+	.code-active>button {
+		color: #44a8f2;
+		background: #fff;
+		cursor: not-allowed;
+	}
+
+	.form-verification {
+		width: 100%;
+		height: 50px;
+		margin-top: 20px;
+		margin-bottom: 30px;
+		border: 1px solid #ccc;
+	}
+
+	.form-protocol {
+		width: 100%;
+		padding-left: 5px;
+		margin-bottom: 15px;
+	}
+	.form-protocol>i {
+		font-size: 16px;
+		color: #44A9F1;
+	}
+	.form-protocol>p {
+		margin-left: 5px;
+		line-height: 1.3;
+		font-size: 12px;
+		color: #7f7f7f;
+	}
+	.form-protocol>p>a {
+		color: #333;
+	}
+
+	.form-link {
+		width: 100%;
+		margin-top: 20px;
+		font-size: 14px;
+		color: #44a9f2;
+	}
+	.form-link>span {
+		cursor: pointer;
+	}
+
+	.form-complete {
+		width: 100%;
+		margin: 20px 0;
+	}
+	.form-complete>button {
+		width: 100%;
+		height: 50px;
+		font-size: 14px;
+		color: #44a8f2;
+		border-radius: 5px;
+		background-color: #fff;
+		border: 1px solid #44a8f2;
+		cursor: pointer;
+	}
+
+
+	/* mobile */
+	@media only screen and (max-width:767px){
+	.header-desk{visibility:hidden;width:100%;height:0;overflow:hidden}
+	.header-mobile{visibility:visible;height:100%}
+	.header-mobile .mobile-logo{position:absolute;left:50%;top:50%;z-index:9;display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%;transform:translate(-50%,-50%)}
+	.header-mobile .mobile-logo>img{width:100%;height:100%}
+	.header-mobile .nav-toggle>i{font-size:.24rem;color:#6a6a6a}
+	.header-mobile>.mobile-nav{position:relative;z-index:100}
+	.header-mobile .nav-list{position:fixed;top:.44rem;left:0;right:0;z-index:999;display:none;width:100vw;height:calc(100vh - 0.44rem);background-color:#fff}
+	.header-mobile .list-item{position:relative;width:100%}
+	.header-mobile .list-item::after{position:absolute;top:auto;right:auto;bottom:0;left:0;z-index:9;content:"";width:100%;height:1px;background-color:#ddd;-webkit-transform:translateY(0%);transform:translateY(0%)}
+	.header-mobile .list-item:last-of-type:after{display:none}
+	.header-mobile .item-link{width:100%;height:.4rem;padding:0 .1rem 0 .25rem;font-size:.16rem;color:#6d6d6d}
+	.header-mobile .item-link>i{font-size:.2rem;color:#6d6d6d}
+	.header-mobile .language-default{width:100%;height:100%;font-size:.16rem;color:#6a6a6a}
+	.header-mobile .language-default>i{font-size:.2rem;color:#3d6df6}
+	.header-mobile .icon-active>i{font-size:.24rem;color:#6a6a6a}
+	.header-mobile .language-select{position:fixed;top:.44rem;left:0;z-index:999;display:none;width:100%;height:calc(100vh - 0.44rem);background-color:rgba(255,255,255,1)}
+	.header-mobile .select-title{width:100%;height:.4rem;padding:0 .2rem;font-size:.14rem;color:#303233;background-color:#f7f9fa}
+	.header-mobile .select-item{width:100%;height:.4rem;padding:0 .2rem;font-size:.16rem}
+	.header-mobile .select-item>span:first-of-type{color:#333}
+	.header-mobile .select-item>span:last-of-type{color:#a2a7aa}
+	.header-mobile .mobile-buy{position:absolute;top:.44rem;left:0;right:0;z-index:99;width:100%;height:.44rem;padding:0 .2rem;font-size:.18rem;color:#fff;background-color:#1C1C1E}
+	.header-mobile .buy{height:.3rem;padding:0 .15rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%)}
+	}
+</style>
+<div id="header-container" v-cloak>
+	<div class="header-desk flex-vc">
+		<nav class="desk-nav flex-vb flex-1">
+			<a class="nav-logo" href="index.html"></a>
+			<ul class="nav-bar flex-vc">
+				<li class="bar-item" v-for="(item, index) in navList" :key="index">
+					<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+					<ul class="item-bar" v-if="item.linkList">
+						<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+							<a class="sub-link flex-center" :href="linkItem.link"
+								:target="linkItem.target">{{linkItem.linkName}}</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+		<div class="desk-language ">
+			<div class="language-default flex-vb">
+				<span>简体中文</span>
+				<i class="iconfont icondian"></i>
+			</div>
+			<ul class="language-select">
+				<li class="select-item flex-center" @click="checkLanguage('en')">English</li>
+				<li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
+				<li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
+				<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+				<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+			</ul>
+		</div>
+		<!-- 登录 -->
+		<div class="desk-auth">
+			<div class="auth-user">
+				<div class="user-head flex-center">
+					<i class="iconfont iconkehu"></i>
+				</div>
+				<div class="user-menu" @click="openModal">
+					<div class="menu-item flex-center" @click="openLogin"><span>登录</span></div>
+					<div class="menu-item flex-center" @click="openRegister"><span>注册</span></div>
+				</div>
+			</div>
+			<div class="auth-container" v-if="modalShow" @click="closeModal">
+				<div class="contaienr-wrapper" @click.stop>
+					<div class="wrapper-logo flex-center">
+						<a href="index.html"><i class="iconfont iconlogo"></i></a>
+					</div>
+					<div class="wrapper-title"><span>{{wrapperTitle}}</span></div>
+					<div class="wrapper-login" v-if="loginShow">
+						<div class="login-form" key="login">
+							<div class="form-item">
+								<div class="item-input">
+									<input type="text" placeholder="邮箱*" v-model="loginEmail" @focus="getFocus" @blur="blurFocus($event, 'verifyEmail', loginEmail)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-item">
+								<div class="item-input flex-vc">
+									<input type="password" placeholder="密码*" v-model="loginPassword" @focus="getFocus" @blur="blurFocus($event, 'verifyPassword', loginPassword)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-verification" v-if="loginCodeShow"></div>
+							<div class="form-submit form-submit-margin-40">
+								<button :class="{'submit-active': !allowLogin}" :disabled="!allowLogin" @click="login">登录</button>
+							</div>
+							<div class="form-link flex-vb">
+								<span @click="toRegister">注册TourBox账号</span>
+								<span @click="toForgot(0)">找回密码</span>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper-register" v-if="registerShow">
+						<div class="register-form" key="register" v-show="registerFirstStep">
+							<div class="form-item">
+								<div class="item-input">
+									<input type="text" v-model="registerEmail" placeholder="邮箱*" @focus="getFocus" @blur="blurFocus($event, 'verifyEmail', registerEmail)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="password" v-model="registerPassword" placeholder="密码*" @focus="getFocus" @blur="blurFocus($event, 'verifyPassword', registerPassword)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="password" v-model="registerConfirm" placeholder="再次输入密码*" @focus="getFocus" @blur="blurFocus($event, 'verifyConfirm', registerConfirm)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-verification"></div>
+							<div class="form-protocol flex" @click="isSelectUpdate = !isSelectUpdate">
+								<i class="iconfont " :class="isSelectUpdate ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+								<p>获取TourBox最新产品、服务、软件升级等信息。</p>
+							</div>
+							<div class="form-protocol flex" @click="isSelectProtocol = !isSelectProtocol">
+								<i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+								<p>同意并愿意遵守TourBox创新 <a href="">隐私政策</a> 和 <a href="">使用条款</a>。</p>
+							</div>
+							<div class="form-submit">
+								<button :class="{'submit-active': !allowRegister}" :disabled="!allowRegister" @click="register">注册</button>
+							</div>
+							<div class="form-link flex-vb">
+								<span @click="toLogin">已有账户</span>
+								<span @click="toForgot(1)">找回密码</span>
+							</div>
+						</div>
+						<div class="activate-form" key="activate" v-show="registerSecondStep">
+							<div class="form-tip"><span>激活验证码已发送至您的邮箱，请登录邮箱查看</span></div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="text" v-model="activateCode" placeholder="请输入验证码*" @focus="getFocus" @blur="blurFocus($event, 'verifyCode', activateCode)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-code" :class="{'code-active':codeDisabled}">
+								<button :disabled="codeDisabled" @click="sendVerfiyCode(0)">{{countDownText}}</button>
+							</div>
+							<div class="form-submit">
+								<button  @click="toRegisterFirst">上一步</button>
+							</div>
+							<div class="form-submit form-submit-margin-20">
+								<button :class="{'submit-active': !allowActivate}" :disabled="!allowActivate" @click="activateEmail">下一步</button>
+							</div>
+						</div>
+						<div class="complete-form" key="complete" v-show="registerlastStep">
+							<div class="form-tip"><span>{{completeText}}</span></div>
+							<div class="form-complete">
+								<button @click="backRefreshPage">立即返回</button>
+							</div>
+						</div>
+					</div>
+					<div class="wrapper-forgot" v-if="forgotShow">
+						<div class="login-form" key="forgot" v-show="forgotFirstStep">
+							<div class="form-item">
+								<div class="item-input">
+									<input type="text" placeholder="邮箱*" v-model="forgotEmail" @focus="getFocus" @blur="blurFocus($event, 'verifyEmail', forgotEmail)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-submit form-submit-margin-40">
+								<button  @click="forgotBackPreStep">上一步</button>
+							</div>
+							<div class="form-submit form-submit-margin-20">
+								<button :class="{'submit-active': !allowForgot}" :disabled="!allowForgot" @click="isExistEmail">下一步</button>
+							</div>
+						</div>
+						<div class="activate-form" key="findPwd" v-show="forgotSecondStep">
+							<div class="form-tip"><span>验证码已发送至您的邮箱，请登录邮箱查看</span></div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="text" v-model="forgotCode" placeholder="请输入验证码*" @focus="getFocus" @blur="blurFocus($event, 'verifyCode', forgotCode)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-code" :class="{'code-active':codeDisabled}">
+								<button :disabled="codeDisabled" @click="sendVerfiyCode(1)">{{countDownText}}</button>
+							</div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="password" v-model="forgotPassword" placeholder="密码*" @focus="getFocus" @blur="blurFocus($event, 'verifyPassword', forgotPassword)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-item">
+								<div class="item-input">
+									<input type="password" v-model="forgotConfirm" placeholder="再次输入密码*" @focus="getFocus" @blur="blurFocus($event, 'verifyConfirm', forgotConfirm)">
+								</div>
+								<p class="item-tip"></p>
+							</div>
+							<div class="form-submit form-submit-margin-20">
+								<button  @click="backForgotFirst">上一步</button>
+							</div>
+							<div class="form-submit form-submit-margin-20">
+								<button :class="{'submit-active': !allowFindPwd}" :disabled="!allowFindPwd" @click="findPassword">下一步</button>
+							</div>
+						</div>
+						<div class="complete-form" key="againLogin" v-show="forgotLastStep">
+							<div class="form-tip"><span>{{completeText}}</span></div>
+							<div class="form-complete">
+								<button @click="loginAgain">重新登录</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-mobile flex-vb">
+		<div class="mobile-nav">
+			<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+				<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+			</div>
+			<ul class="nav-list">
+				<li class="list-item" v-for="(item, index) in navList" :key="index">
+					<a class="item-link flex-vb" :href="item.href" :target="item.target">
+						<span>{{item.name}}</span>
+						<i class="iconfont iconarrow-right"></i>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<a class="mobile-logo" href="index.html"></a>
+		<div class="mobile-language " v-show="!openMenuShow">
+			<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+				<span v-show="!openLanguageShow">简体中文</span>
+				<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+			</div>
+			<ul class="language-select">
+				<li class="select-title flex-vc"><span>选择语言</span></li>
+				<li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span>
+				<li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
+				<li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
+				<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+				<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script>
+	new Vue({
+		el: "#header-container",
+		data: {
+			isM: false,
+			openMenuShow: false,
+			openLanguageShow: false,
+			navList: [],
+			modalShow: false,
+
+			tipMsg: '',
+			wrapperTitle: '登录',
+			preStepType: 0,
+			loginShow: false,
+			loginEmail: '',
+			loginPassword: '',
+			loginCode: '',
+			loginCodeShow: false,
+			
+			registerShow: false,
+			registerEmail: '4156654@qq.com',
+			registerPassword: '123456789',
+			registerConfirm: '123456789',
+			registerCode: '123456',
+			isSelectProtocol: true,
+			isSelectUpdate: true,
+			registerFirstStep: false,
+			registerSecondStep: false,
+			registerlastStep: false,
+			
+			activateCode: '',
+			countDownTimer: null,
+			codeDisabled: true,
+			countDownText: '',
+			countDownSec: 0,
+			refreshTimer: null,
+			verfiyCodeType: undefined, // 验证码类型 0 激活码 1 找回密码
+			
+			forgotShow: false,
+			forgotFirstStep: false,
+			forgotSecondStep: false,
+			forgotLastStep: false,
+			forgotEmail: '4681674@qq.com',
+			forgotCode: '123456',
+			forgotPassword: '123456789',
+			forgotConfirm: '123456789',
+
+			completeText: '',
+		},
+		created: function() {
+			var that = this;
+			that.judgeIsMobile()
+			that.getNavList();
+			// that.sendVerfiyCode();
+		},
+		computed: {
+			allowLogin: function() {
+				var that = this;
+				if (that.loginCodeShow) {
+					return that.verifyEmail(that.loginEmail) && that.verifyPassword(that.loginPassword) && that.verifyCode(that.loginCode)
+				} else {
+					return that.verifyEmail(that.loginEmail) && that.verifyPassword(that.loginPassword)
+				}
+			},
+			allowRegister: function() {
+				var that = this;
+				return that.verifyEmail(that.registerEmail) && that.verifyPassword(that.registerPassword) && that.verifyConfirm(that.registerConfirm) && that.verifyCode(that.registerCode) && that.isSelectProtocol
+			},
+			allowActivate: function() {
+				var that = this;
+				return that.verifyCode(that.activateCode)
+			},
+			allowForgot: function() {
+				var that = this;
+				return that.verifyEmail(that.forgotEmail)
+			},
+			allowFindPwd: function() {
+				var that = this;
+				return that.verifyPassword(that.forgotPassword) && that.verifyConfirm(that.forgotConfirm) && that.verifyCode(that.forgotCode)
+			},
+		},
+		methods: {
+			getNavList: function () {
+				var that = this;
+				$.getJSON("src/json/bars.json", function (result) {
+					that.navList = that.isM ? result.mobileList : result.deskList;
+				})
+			},
+			openLogin: function() {
+				var that = this;
+				that.wrapperTitle = '登录'
+				that.loginShow = true
+				that.registerShow = false
+			},
+			openRegister: function() {
+				var that = this;
+				that.wrapperTitle = '注册'
+				that.registerShow = true
+				that.registerFirstStep = true
+				that.loginShow = false
+			},
+			selectProtocol: function() {
+				var that = this;
+				that.isSelectProtocol = !that.isSelectProtocol
+			},
+			forgotBackPreStep: function() {
+				var that = this;
+				if (that.preStepType === 0) that.toLogin()
+				if (that.preStepType === 1) that.toRegister()
+			},
+			toRegister: function() {
+				var that = this;
+				that.registerShow = true
+				that.registerFirstStep = true
+				that.registerSecondStep = false
+				that.loginShow = false
+				that.forgotShow = false
+			},
+			toLogin: function() {
+				var that = this;
+				that.registerShow = false
+				that.loginShow = true
+				that.forgotShow = false
+				that.registerFirstStep = false
+			},
+			toForgot: function(index) {
+				var that = this;
+				that.loginShow = false
+				that.registerShow = false
+				that.forgotShow = true
+				that.forgotFirstStep = true
+				that.preStepType = index
+			},
+			backForgotFirst: function() {
+				var that = this;
+				that.forgotFirstStep = true
+				that.forgotSecondStep = false
+			},
+			toRegisterFirst: function() {
+				var that = this;
+				that.registerFirstStep = true
+				that.registerSecondStep = false
+			},
+			// 登录
+			login: function() {
+				var that = this;
+				if (!that.verifyEmail(that.loginEmail) || !that.verifyPassword(that.loginPassword)) return
+				if (that.loginCodeShow && !that.verifyCode(that.loginCode)) return
+				console.log('登录成功');
+				// 更新状态
+				that.modalShow = false
+			},
+			// 注册
+			register: function() {
+				var that = this;
+				if (!that.verifyEmail(that.registerEmail) || !that.verifyPassword(that.registerPassword) || !that.verifyConfirm(that.registerConfirm) || !that.verifyCode(that.registerCode) || !that.isSelectProtocol) return
+				console.log('注册成功');
+				// 更新状态
+				// that.modalShow = false
+				that.registerFirstStep = false
+				that.registerSecondStep = true
+				if (that.verfiyCodeType !== 0) {
+					clearInterval(that.countDownTimer);
+					that.countDownTimer = null
+				}
+				if (!that.countDownTimer) that.sendVerfiyCode(0);
+			},
+			// 激活邮箱
+			activateEmail: function() {
+				var that = this;
+				if (!that.verifyCode(that.activateCode)) return
+				// 激活
+				console.log('激活成功');
+				that.registerFirstStep = false
+				that.registerSecondStep = false
+				that.registerlastStep = true
+				that.wrapperTitle = '账户已激活'
+				// 倒计时刷新页面
+				that.countDownBack();
+			},
+			// 倒计时刷新页面
+			countDownBack: function() {
+				var that = this;
+				that.completeText = '5秒后刷新页面'
+				var time = 5;
+				that.refreshTimer = setInterval(() => {
+					time--
+					if (time >= 0) {
+						that.completeText = `${time}秒后刷新页面`;
+					} else {
+						that.backRefreshPage();
+					}
+				}, 1000)
+			},
+			// 状态刷新
+			backRefreshPage: function() {
+				var that = this;
+				clearInterval(that.refreshTimer);
+				window.location.reload();
+			},
+
+			// 验证邮箱是否存在
+			isExistEmail: function() {
+				var that = this;
+				if (!that.verifyEmail(that.forgotEmail)) return
+				// 验证邮箱
+				console.log('邮箱存在');
+				if (that.verfiyCodeType !== 1) {
+					clearInterval(that.countDownTimer);
+					that.countDownTimer = null
+				}
+				if (!that.countDownTimer) that.sendVerfiyCode(1);
+				that.forgotFirstStep = false
+				that.forgotSecondStep = true
+				that.forgotLastStep = false
+			},
+			// 找回密码
+			findPassword: function() {
+				var that = this;
+				if (!that.verifyCode(that.forgotCode) || !that.verifyPassword(that.forgotPassword) || !that.verifyConfirm(that.forgotConfirm)) return
+				// 找回密码
+				console.log('找回密码成功');
+				that.forgotFirstStep = false
+				that.forgotSecondStep = false
+				that.forgotLastStep = true
+				that.wrapperTitle = '密码修改成功'
+			},
+			// 重新登录
+			loginAgain: function() {
+				var that = this;
+				that.loginEmail = that.forgotEmail
+				that.forgotLastStep = false
+				that.registerShow = false
+				that.forgotShow = false
+				that.loginShow = true
+			},
+
+			// 发送邮箱验证码
+			sendVerfiyCode: function(codyType) {
+				var that = this;
+				that.verfiyCodeType = codyType
+				that.countDownText = `重新发送邮件(30)S`;
+				that.countDown();
+				// 发送验证码
+				console.log('获取激活码');
+			},
+			// 倒计时
+			countDown: function() {
+				var that = this;
+				that.countDownSec = 30
+				that.codeDisabled = true
+				that.countDownTimer = setInterval(() => {
+					that.countDownSec--
+					if (that.countDownSec > 0) {
+						that.countDownText = `重新发送邮件(${that.countDownSec})S`;
+					} else {
+						that.countDownText = `发送邮件`;
+						clearInterval(that.countDownTimer);
+						that.countDownTimer = null
+						that.codeDisabled = false;
+					}
+				}, 1000)
+			},
+
+			getFocus(e) {
+				var that = this;
+				that.tipMsg = ''
+				$(e.currentTarget).parent().removeClass('item-active');
+				$(e.currentTarget).parent().next().hide().text()
+			},
+			blurFocus(e, fn, value) {
+				var that = this;
+				if (!that[fn](value)) {
+					$(e.currentTarget).parent().next().show().text(that.tipMsg)
+					$(e.currentTarget).parent().addClass('item-active')
+				}
+			},
+			openModal: function() {
+				var that = this;
+				that.modalShow = true
+				$('body').css({
+					overflow: 'hidden'
+				})
+			},
+			closeModal: function() {
+				var that = this;
+				that.modalShow = false
+				that.registerShow = false
+				that.forgotShow = false
+				that.loginShow = false
+				$('body').css({
+					overflow: 'auto'
+				})
+			},
+
+			verifyEmail: function(email) {
+				var that = this;
+				email = email ? email.replace(/\s+/g, '') : email
+				if (!email) {
+					that.tipMsg = '邮箱不能为空'
+					return false
+				} else {
+					const pat = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+					if (!pat.test(email)) {
+						that.tipMsg = '邮箱格式错误'
+						return false
+					}
+				}
+				return true
+			},
+			verifyUserName: function(name) {
+				var that = this;
+				name = name ? name.replace(/\s+/g, '') : name
+				if (!name) {
+					that.tipMsg = '名称不能为空'
+					return false
+				} else {
+					var pat = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/)
+					if (!pat.test(name)) {
+						that.tipMsg = '名称格式错误'
+						return false
+					}
+				}
+				return true
+			},
+			verifyPassword: function(password) {
+				var that = this;
+				password = password ? password.replace(/\s+/g, '') : password
+				if (!password) {
+					that.tipMsg = '密码不能为空'
+					return false
+				} else {
+					const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
+					if (!pat.test(password)) {
+						that.tipMsg = '密码格式错误'
+						return false
+					}
+				}
+				return true
+			},
+			verifyConfirm: function(confirm) {
+				var that = this;
+				confirm = confirm ? confirm.replace(/\s+/g, '') : confirm
+				if (!confirm) {
+					that.tipMsg = '确认密码不能为空'
+					return false
+				} else {
+					const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
+					if (!pat.test(confirm) || confirm !== that.registerPassword) {
+						that.tipMsg = '确认密码与新密码不一致，请重新输入'
+						return false
+					}
+				}
+				return true
+			},
+			verifyPhone: function(phone) {
+				var that = this;
+				phone = phone ? phone.replace(/\s+/g, '') : phone
+				if (!phone) {
+					that.tipMsg = '请输入手机号'
+					return false
+				} else {
+					const pat = new RegExp('^(?:13|14|15|17|18)[0-9]{9}$', 'i')
+					if (!pat.test(phone)) {
+						that.tipMsg = '手机号格式错误'
+						return false
+					}
+				}
+				return true
+			},
+			verifyCode: function(code) {
+				var that = this;
+				code = code ? code.replace(/\s+/g, '') : code
+				if (!code) {
+					that.tipMsg = '请输入验证码'
+					return false
+				} else {
+					const pat = new RegExp('^[0-9]{6}$', 'i')
+					if (!pat.test(code)) {
+						that.tipMsg = '验证码格式错误'
+						return false
+					}
+				}
+				return true
+			},
+
+			openMenu: function(){
+				var that = this;
+				that.openMenuShow = !that.openMenuShow;
+				that.openLanguageShow = false;
+				$(".header-mobile .nav-list").slideToggle("fast");
+			},
+			openLanguage: function(){
+				var that = this;
+				that.openLanguageShow = !that.openLanguageShow;
+				that.openMenuShow = false;
+				$(".header-mobile .language-select").slideToggle("fast");
+			},
+			checkLanguage: function (lan) {
+				window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
+			},
+			judgeIsMobile: function () {
+				var that = this;
+				if (window.innerWidth < 768) {
+					that.isM = true;
+				} else {
+					that.isM = false;
+				}
+				window.addEventListener('resize', function (e) {
+					if (window.innerWidth < 768) {
+						that.isM = true;
+					} else {
+						that.isM = false;
+					}
+				})
+			}
+		}
+	})
+	// $(document).ready(function() {
+	// 	languageSwitch('.header-desk .select-item');
+	// 	languageSwitch('.header-mobile .select-item');
+	// 	$('.header-mobile .nav-toggle').click(function() {
+	// 		$('.header-mobile .nav-list').slideToggle(300);
+	// 		$('.header-mobile .language-default').toggle();
+	// 		$('.header-mobile .nav-toggle .iconfont').toggleClass('iconclose');
+	// 	})
+	// 	$('.header-mobile .language-default').click(function() {
+	// 		$(this).toggleClass('icon-active');
+	// 		$('.header-mobile .language-select').slideToggle(300);
+	// 		$('.header-mobile .language-default .iconfont').toggleClass('iconclose')
+	// 		$('.header-mobile .nav-toggle, .header-mobile .language-default span').toggle();
+	// 	})
+	// 	function languageSwitch(name) {
+	// 		var languageList = ['en', 'tw', 'jp', 'kr', 'de'];
+	// 		$(name).each(function(i) {
+	// 			$(this).click(function() {
+	// 				// var localUrl = window.location.href;
+	// 				// if (localUrl.indexOf('cn/') == -1) return
+	// 				// var arr1 = localUrl.split('cn/');
+	// 				// if (arr1[1]) {
+	// 				// 	window.location.href = arr1[0] + languageList[i] + '/' + arr1[1];
+	// 				// } else {
+	// 				// 	window.location.href = arr1[0] + languageList[i];
+	// 				// }
+	// 				window.location.href = '//www.tourboxtech.com/' + languageList[i] + window.location.pathname;
+	// 			})
+	// 		})
+	// 	}
+	// })
+</script>

@@ -1,0 +1,93 @@
+{
+	"banner":{
+		"title1":"진정한 창의적인 도구,",
+		"title2":"아티스트의 가장 강력한 무기",
+		"title3":"",
+		"bannerBg":"//r.tourboxtech.com/kr/src/images/product-banner.jpg",
+		"mobileBannerBg":"//r.tourboxtech.com/kr/src/images/product-banner-mobile.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/kr/src/images/product-banner-mobile_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/kr/src/images/product-banner-mobile_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/kr/src/images/product-banner-mobile_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/kr/src/images/product-banner-mobile_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/kr/src/images/product-banner_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/kr/src/images/product-banner_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/kr/src/images/product-banner_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/kr/src/images/product-banner_04.jpg"
+	},
+
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/kr/src/images/index-first-second.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/kr/src/images/index-first-second-mobile.png"
+	},
+	"spellBanner": {
+		"bannerBg": "//r.tourboxtech.com/kr/src/images/product-spell-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/kr/src/images/product-spell-banner-mobile.jpg"
+	},
+	"thirdBanner": {
+		"bannerBg": "//r.tourboxtech.com/kr/src/images/product-third-section-banner.jpg",
+		"mobileBannerbg": "//r.tourboxtech.com/kr/src/images/product-third-section-banner-mobile.jpg"
+	},
+	"footerBanner": {
+		"bannerBg": "//r.tourboxtech.com/kr/src/images/product-third-section-banner02.jpg"
+	},
+	"firstDes": {
+		"title1": "創作者",
+		"title2": "再也不會被複雜的快捷鍵所困擾，擺脫鍵盤單調低效率的輸入方式，一手掌握整個創作流程。",
+		"text": "不論是筆刷控制、影片與聲音剪輯、畫面控制、參數調整還是工具切換等操作，都可以用TourBox，以最直覺的方式簡單操作。"
+	},
+	"lantern": {
+		"describeList": [
+			{
+				"title": "다차원 레이아웃, 한 손 조작",
+				"text": "TourBox는 앞면과 측면을 결합한 다차원 레이아웃을 채택하여, 손목을 움직이지 않고도 전체 장치를 쉽게 다룰 수 있습니다."
+			},
+			{
+				"title": "유선형 디자인",
+				"text": "고강도 창작에 따른 피로 감소"
+			},
+			{
+				"title": "강한 내구성",
+				"text": "20만 번을 넘은 부품 사용 강도"
+			},
+			{
+				"title": "type-c 포트",
+				"text": "넓게 적용 및 빠른 데이터 전송"
+			},
+			{
+				"title": "듀얼시스템",
+				"text": "Windows 및 Mac OS시스템 모두 지원"
+			}
+		],
+		"hoverList": [
+			{
+				"title": "01",
+				"text": "다차원 레이아웃"
+			},
+			{
+				"title": "02",
+				"text": "유선형 디자인"
+			},
+			{
+				"title": "03",
+				"text": "강한 내구성"
+			},
+			{
+				"title": "04",
+				"text": "type-c 포트"
+			},
+			{
+				"title": "05",
+				"text": "Win/ Mac 지원"
+			}
+		],
+		"slideList": [
+			"//r.tourboxtech.com/kr/src/images/gs-banner.png",
+			"//r.tourboxtech.com/kr/src/images/product-first-second-main04.png",
+			"//r.tourboxtech.com/kr/src/images/product-first-second-main08.jpg",
+			"//r.tourboxtech.com/kr/src/images/product-first-second-main05.png",
+			"//r.tourboxtech.com/kr/src/images/product-first-second-main07.jpg"
+		]
+	}
+
+	
+}

@@ -1,0 +1,27 @@
+[
+	{
+		"name":"macOS",
+		"date":"2019-08-02",
+		"url":"src/downloads/Mac_OSX_VCP_Driver.zip"
+	},
+	{
+		"name":"Windows 7 32 bit",
+		"date":"2019-08-02",
+		"url":"src/downloads/CP210x_Windows7_8_Drivers_32bit.zip"
+	},
+	{
+		"name":"Windows 7 64 bit",
+		"date":"2019-08-02",
+		"url":"src/downloads/CP210x_Windows7_8_Drivers_64bit.zip"
+	},
+	{
+		"name":"Windows 10 32 bit",
+		"date":"2019-08-02",
+		"url":"src/downloads/CP210x_Windows10_Drivers_32bit.zip"
+	},
+	{
+		"name":"Windows 10 64 bit",
+		"date":"2019-08-02",
+		"url":"src/downloads/CP210x_Windows10_Drivers_64bit.zip"
+	}
+]

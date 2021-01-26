@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description"
+	content="TourBox is an innovative controller for any creative software like Photoshop, Lightroom, PaintTool SAI, Capture one, Final cut pro, Premiere, and more. The comprehensive customised feature can adapt to any work scenarios. Our application TourBox Console can deeply customise the TourBox. You can preset the TourBox based on your usage habits in different software. Personalise your TourBox to fit your workflow and create your own presets!" />
+	<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<meta name="p:domain_verify" content="d9a145c3c388a5a0309748c004f9f8e7" />
+	<title>TourBox - Preset</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/preset.css" />
+	<!--[if lte IE 9]>
+	<script>alert('Please upgrade or change your browser'); window.location = 'error.html'; </script>
+	<![endif]-->
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-3"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-3');
+	</script>
+</head>
+
+<body>
+	<!-- header -->
+	<header id="header"></header>
+	<div id="container" v-cloak>
+		<div class="container-preset">
+			<div class="preset-nav">
+				<div class="nav-item" :class="{'nav-active': navActiveIndex == index}" v-for="(item, index) in presetNav"
+					:key="index" @click="selectNav(index)">
+					<span>{{item}}</span>
+				</div>
+			</div>
+			<div class="preset-subnav">
+				<div class="subnav-item" :class="{'subnav-active': subnavActiveIndex == index}"
+					v-for="(item, index) in presetSubnav" :key="index" @click="selectSubnav(item.subnavIndex, index)">
+					<span>{{item.title}}</span>
+				</div>
+			</div>
+			<div class="preset-filter">
+				<div class="filter-source filter-item" @mouseenter="mouseEnter('.source')" @mouseleave="mouseLeave('.source')">
+					<span>{{sourceText}}</span>
+					<span class="iconfont iconarrow-down"></span>
+					<div class="item-select source">
+						<p v-for="(item, index) in presetSource" :key="index" @click="selectSource(item.sourceIndex)">
+							{{item.source}}</p>
+					</div>
+				</div>
+				<div class="filter-language filter-item" @mouseenter="mouseEnter('.lan')" @mouseleave="mouseLeave('.lan')">
+					<span>{{languageText}}</span>
+					<span class="iconfont iconarrow-down"></span>
+					<div class="item-select lan">
+						<p v-for="(item, index) in presetLan" :key="index" @click="selectLanguage(item.languageIndex)">
+							{{item.language}}</p>
+					</div>
+				</div>
+			</div>
+			<div class="preset-empty" v-if="!resultList.length">
+				<div class="empty-icon">
+					<i class="iconfont iconnodata"></i>
+				</div>
+				<span>預設準備中</span>
+			</div>
+			<div class="preset-list" v-if="resultList.length">
+				<transition-group name="fade" tag="div">
+					<div class="list-item" v-for="(item, index) in resultList" :key="index">
+						<p class="item-title"><span>{{item.title}}</span> <span>by {{item.from}}</span></p>
+						<div class="item-text">
+							<p class="text-language" v-if="item.author"><span>用戶: </span><span>{{item.author}}</span></p>
+							<p class="text-language"><span>語言: </span><span>{{item.language}}</span></p>
+							<p class="text-time"><span>日期: </span><span>{{item.date}}</span></p>
+							<p class="text-system"><span>系統: </span><span>{{item.system}}</span></p>
+						</div>
+						<div class="item-btm">
+							<div class="btm-link" @mouseenter="mouseEnter('.linkSelect'+index)"
+								@mouseleave="mouseLeave('.linkSelect'+index)">
+								<span>下載</span>
+								<div class="link-download"  v-if="item.downloadUrlList.length == 1" @click="downloadPreset(item.downloadUrlList[0].url)"></div>
+								<div class="link-list" :class="'linkSelect'+index" v-if="item.downloadUrlList.length > 1">
+									<div class="list-download" v-for="(linkItem, linkIndex) in item.downloadUrlList" :key="linkIndex" @click="downloadPreset(linkItem.url)">{{linkItem.lan}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</transition-group>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- footer -->
+	<div id="footer"></div>
+	
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/FileSaver.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/preset.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,40 @@
+{
+	"banner":{
+		"title1":"TOURBOX",
+		"title2":"前所未有的創意軟體控制器",
+		"description":"專為數位創作者而誕生",
+		"buttonName": "詳しくはこちら",
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/index-banner-2.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/jp/src/images/index-banner-mobile02.jpg",
+		"mobileBannerBg1": "//r.tourboxtech.com/jp/src/images/index-banner-mobile02_01.jpg",
+		"mobileBannerBg2": "//r.tourboxtech.com/jp/src/images/index-banner-mobile02_02.jpg",
+		"mobileBannerBg3": "//r.tourboxtech.com/jp/src/images/index-banner-mobile02_03.jpg",
+		"mobileBannerBg4": "//r.tourboxtech.com/jp/src/images/index-banner-mobile02_04.jpg",
+		"bannerBg1": "//r.tourboxtech.com/jp/src/images/index-banner-2_01.jpg",
+		"bannerBg2": "//r.tourboxtech.com/jp/src/images/index-banner-2_02.jpg",
+		"bannerBg3": "//r.tourboxtech.com/jp/src/images/index-banner-2_03.jpg",
+		"bannerBg4": "//r.tourboxtech.com/jp/src/images/index-banner-2_04.jpg"
+	},
+	"firstSection": {
+		"bannerBg": "//r.tourboxtech.com/jp/src/images/index-first-seconds.jpg",
+		"mobileBannerBg": "//r.tourboxtech.com/jp/src/images/index-first-seconds-mobile.png"
+	},
+	"updata": {
+		"updataTitle": "Tourboxコンソール2.0　既に登場！",
+		"updataTextMannary": "追加機能：",
+		"updataTextDes": [
+			"Lightroomにおける多くの性能を最適化。Lightroom専用のBuilt-in機能セットと新しいデフォルトプリセットを追加し、操作体験を大幅に向上させる。",
+			"「Tour」ボタンのカスタマイズ機能を解禁。",
+			"多言語対応を最適化。",
+			"H U DシステムにLightroom向けのHSL設定用ポップアップウィンドウを追加。"
+		],
+		"updataBtnName": "ダウンロード"
+	},
+	"indexNew": {
+		"newTitle": "ニュースセンター",
+		"newYear": "2020",
+		"newMonth": "Feb",
+		"newText": "日本クラファンプロジェクト 大盛況につき終了！",
+		"newBtnName": "MORE>"
+	}
+}

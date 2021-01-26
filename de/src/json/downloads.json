@@ -1,0 +1,272 @@
+{
+	"versions": [
+		{
+			"editionNum": "Version 2.2.4",
+			"editionDate": "14. Januar 2021",
+			"versionTitle": "Version 2.2.4 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Bessere Anpassung der Software an verschiedene externe Tastaturen.",
+						"Hinzufügen von globalen Prozessen. Die Voreinstellung ist einem globalen Prozess zugeordnet und schaltet automatisch auf die Voreinstellung um, wenn Sie zu einem Prozess wechseln, der der Voreinstellung nicht zugeordnet ist.",
+						"Hinzufügen von integrierten Funktionen im Zusammenhang mit der Farbklassifizierung in Lightroom.",
+						"Behebung von Fehlern zur Verbesserung der Leistung."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version 2.2.3",
+			"editionDate": "21. December 2020",
+			"versionTitle": "Version 2.2.3 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Beheben Sie Fehler."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version 2.2.2",
+			"editionDate": "14. December 2020",
+			"versionTitle": "Version 2.2.2 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf 2.1 aktualisiert, wodurch die Fehler (Bug) behoben wurden.",
+						"Importvoreinstellungstaste wurde hinzugefügt.",
+						"Es optimiert die Anzeige des UI.",
+						"Die Datenbank wurde aktualisiert, und Stabilität und Leistung wurden verbessert.",
+						"Apple Silicon unterstützt."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version 2.2.1",
+			"editionDate": "20. November 2020",
+			"versionTitle": "Version 2.2.1 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Optimieren Sie den Tastenkombinationsmechanismus.",
+						"Optimieren Sie die Leistung.",
+						"Beschleunigen Sie die voreingestellte Umschaltung.",
+						"Beschleunigen Sie die Geräteverbindung.",
+						"Beheben Sie Fehler."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version 2.2",
+			"editionDate": "17. Oktober 2020",
+			"versionTitle": "Version 2.2 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf Version 2.0 aktualisiert, neue Kombinationen wurden hinzugefügt: Kleine Taste + C1 & Kleine Taste + C2.",
+						"Funktionen für Premiere wurden hinzugefügt.",
+						"Premiere-Standard-Voreinstellungen wurden hinzugefügt: Premiere-Bearbeitungs-Voreinstellung und Premiere-Farbkorrektur-Voreinstellung.",
+						"Die Anzahl der Voreinstellungen, die gespeichert werden können, wurde auf 30 erhöht.",
+						"Mehrere Voreinstellungen können mit derselben Software verknüpft werden, um unterschiedliche Workflows zu bedienen.",
+						"Wenn mehrere Voreinstellungen mit derselben Software verknüpft sind, können Sie mit der Funktion ‚Voreinstellungen umschalten‘ zwischen diesen Voreinstellungen wechseln.",
+						"Für Drehvorgänge wurde ein Niedriggeschwindigkeits-Modus hinzugefügt.",
+						"Der Modus zum Senden des Befehls nach dem Loslassen wurde für Große Taste, Kleine Taste, Quertaste und Seitentaste hinzugefügt.",
+						"Wenn die „Funktion zum automatischen Umschalten von Voreinstellungen“ aktiv ist, werden Größe, Position, Farbe und Transparenz des HUD für jede Software automatisch gespeichert.",
+						"Die Anzeige des HUDs wurde optimiert.",
+						"Auswahl für optionale Meldungen hinzugefügt.",
+						"Lightroom-Plugin verbessert, Fehler behoben.",
+						"Bedienung von Console optimiert.",
+						"Neu unterstützte Sprachen: Deutsch, Französisch, Spanisch und Italienisch."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.2.1.3",
+			"editionDate": "2020.08.08",
+			"versionTitle": "Version 2.1.3 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf Version 1.7 aktualisiert, samt optimiertem Einsatz von Doppelklicks.",
+						"Anwendungssymbole werden angezeigt, wenn die Funktion zum automatischen Umschalten von Voreinstellungen aktiv ist.",
+						"Der Anzeigeeffekt und die Geschwindigkeit aller Hilfetexte in TourBox Console wurden optimiert."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.2.1.2",
+			"editionDate": "2020.07.24",
+			"versionTitle": "Version 2.1.2 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf Version 1.6 aktualisiert, um die Genauigkeit von Drehknopf, Scrollrad und Einstellrad zu optimieren.",
+						"Funktion hinzugefügt: Bewegen des Timeline-Zeigers.Sie können diese Funktion auf Drehknopf, Scrollrad oder Einstellrad legen und den Timeline-Zeiger in Final Cut Pro, Premiere Pro und anderen Videobearbeitungsprogrammen entsprechend der Drehgeschwindigkeit dynamisch bewegen.",
+						"Der Mechanismus zum Senden von Tastenkürzeln wurde optimiert.",
+						"Funktionen, die sich auf das Mausrad beziehen, wurden verbessert.",
+						"Wenn Sie die Verbindung mit der TourBox trennen, wird das HUD automatisch geschlossen.",
+						"Der Firmware-Aktualisierungsmechanismus wurde optimiert.",
+						"Neu unterstützte Sprache: Vereinfachtes Chinesisch hinzugefügt."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.2.1.1",
+			"editionDate": "2020.07.16",
+			"versionTitle": "Version 2.1.1 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf Version 1.4 aktualisiert, wodurch Fehler behoben wurden.",
+						"Umschaltung für langes Drücken von Tasten wurde hinzugefügt, um fortlaufend Befehle zu senden.Aktivieren Sie die Funktion für langes Drücken von Tasten, um fortlaufende Befehle zu senden, indem Sie das RPT-Symbol im entsprechenden Bereich anklicken.",
+						"Das HUD kann die Einstellung der Deckkraft nun intelligent vornehmen."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.2.1",
+			"editionDate": "2020.07.13",
+			"versionTitle": "Version 2.1 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Firmware wurde auf Version 1.3 aktualisiert, wodurch das Problem behoben wurde, dass das Gerät nach einem Ruhezustand des Systems und Firmware-Fehlern neu eingesteckt wurden musste.",
+						"Die Funktion zur automatischen Anwahl von Voreinstellungen für die jeweilige Software wurde hinzugefügt.",
+						"Die Funktionen zur Übertragung von Tastenkürzeln wurden optimiert.",
+						"Mehrere Funktionen für Adobe Lightroom wurden hinzugefügt.",
+						"Die Funktion zum Einstellen von Parametern in den Werkzeugen von Adobe Lightroom wurde hinzugefügt.",
+						"Die Photoshop-Funktionen wurden optimiert.",
+						"Funktionen für Maustasten und Mausrad hinzugefügt.",
+						"Option für den automatischen Start beim Einschalten des Computers hinzugefügt.",
+						"Tasten können jetzt gehalten werden, um Befehle kontinuierlich zu senden.",
+						"Das Problem, das für „Einfügen“ keine Eingabe möglich ist, wurde behoben.",
+						"Der HUD-Status kann gespeichert wurden.",
+						"Schnittstellen-Optimierung und Fehlerbehebungen."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.2.0",
+			"editionDate": "2020.04.29",
+			"versionTitle": "Version 2.0 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Vollständiger Satz Funktionen für Lightroom hinzugefügt, Lightroom-Voreinstellung überarbeitet und optimiert, was das Arbeiten in Lightroom deutlich verbessern sollte.",
+						"Die Funktion der Tour-Taste ist jetzt anpassbar.",
+						"Benutzeroberfläche für Mehrsprachigkeit optimiert.",
+						"Neues Popup-Fenster für die HSL-Einstellungen von Lightroom ins HUD-System eingefügt.",
+						"Probleme einiger Mac-Benutzer mit Störungen bei Pinselfluss und Deckkraft in Photoshop behoben.",
+						"Problem mit ALT und Mausbedienung behoben.",
+						"Bekannte Fehler in den Tags behoben.",
+						"Erstellen neuer Voreinstellungen optimiert.",
+						"Verschiedene Fehlerbehebungen."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.1.1.4",
+			"editionDate": "2020.3",
+			"versionTitle": "Version 1.1.4 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "Integrierte Funktionen:",
+					"textList": [
+						"Neue Parameter-Einstellung (dynamisch) hinzugefügt – Die Einstellung des Parameters kann entsprechend der Drehgeschwindigkeit dynamisch vorgenommen werden."
+					]
+				},
+				{
+					"title": "Mehrsprachigkeit:",
+					"textList": [
+						"Japanisch hinzugefügt.",
+						"Traditionelles Chinesisch hinzugefügt.",
+						"Koreanisch hinzugefügt."
+					]
+				},
+				{
+					"title": "Fehlerbehebungen:",
+					"textList": [
+						"Anzeige- und Interaktionsprobleme von Popup-Fenstern wurden behoben.",
+						"MacOS-Verbindungsprobleme wurden behoben"
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.1.1",
+			"editionDate": "2019.12",
+			"versionTitle": "Version 1.1 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Die Optionen „Tags bearbeiten“, „Importieren“ und „Exportieren“ wurden in das Dropdown-Menü der Voreinstellungen verschoben.",
+						"Tour-Taste und der HUD-Einstellungen den Einstellungen hinzugefügt.",
+						"Lieblingssymbol hinzugefügt. Voreinstellungen können jetzt als Favoriten markiert und mit der Tour-Taste angewählt werden.",
+						"Eine Standard-Voreinstellung für Adobe Lightroom hinzugefügt.",
+						"Mehrsprachigkeit: Verknüpfungen werden unterstützt.",
+						"Weitere Funktionen hinzugefügt.",
+						"Tag-System verbessert. Tags des aktuellen Tastenkürzels können in den Voreinstellungen bearbeitet werden.",
+						"Funktion zum Zurücksetzen von Voreinstellungen optimiert. Zurücksetzen der Voreinstellung auf die ursprünglich importierte Voreinstellung wird jetzt unterstützt.",
+						"Anzeige von Console und Handbuch optimiert.",
+						"HUD-Anzeige optimiert, interaktive Effekte hinzugefügt.",
+						"Hilfe-Informationen optimiert.",
+						"Probleme mit Verbindung behoben, Verbindungsgeschwindigkeit optimiert.",
+						"Leistung verbessert und Fehler behoben."
+					]
+				}
+			]
+		},
+		{
+			"editionNum": "Version.1.1 Beta",
+			"editionDate": "2019.10",
+			"versionTitle": "Version V 1.1 Beta – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "",
+					"textList": [
+						"Offizielle Lightroom-Voreinstellungen hinzugefügt.",
+						"Anzeige der Bedienoberfläche (Console, Handbuch und HUD) wurde optimiert.",
+						"Verbindungsstabilität wurde verbessert.",
+						"Mehrsprachigkeit wurde ausgebaut.",
+						"Funktion der Tour-Taste wurde erweitert, Funktion zum Umschalten der Voreinstellung hinzugefügt.",
+						"Neue Funktionen hinzugefügt.",
+						"Leistung verbessert und Fehler behoben."
+					]
+				}
+			]
+		}
+	]
+}

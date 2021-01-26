@@ -1,0 +1,115 @@
+[
+	{
+		"name": "主页",
+		"href": "/cn/index.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": true
+	},
+	{
+		"name": "产品",
+		"href": "/cn/product.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": true
+	},
+	{
+		"name": "论坛",
+		"target":"_blank",
+		"mobileShow": true,
+		"pcShow": false,
+		"href": "https://forum.tourboxtech.com/"
+	},
+	{
+		"name": "新闻",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false,
+		"href": "/cn/news.html"
+	},
+	{
+		"name": "探索",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "论坛",
+				"link": "https://forum.tourboxtech.com/",
+				"target":"_blank"
+			},
+			{
+				"linkName": "新闻",
+				"link": "/cn/news.html",
+				"target":"_self"
+			}
+		]
+	},
+	{
+		"name": "下载中心",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "软件",
+				"link": "/cn/downloads.html",
+				"target":"_self"
+			},
+			{
+				"linkName": "预设",
+				"link": "/cn/presets.html",
+				"target":"_self"
+			}
+		]
+	},
+	{
+		"name": "软件",
+		"href": "/cn/downloads.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "预设",
+		"href": "/cn/presets.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "说明书",
+		"href": "/cn/manual.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "常见问题",
+		"href": "/cn/faq.html",
+		"target":"_self",
+		"mobileShow": true,
+		"pcShow": false
+	},
+	{
+		"name": "支持",
+		"href": "",
+		"target":"_self",
+		"mobileShow": false,
+		"pcShow": true,
+		"linkList": [
+			{
+				"linkName": "说明书",
+				"link": "/cn/manual.html",
+				"target":"_self"
+			},
+			{
+				"linkName": "常见问题",
+				"link": "/cn/faq.html",
+				"target":"_self"
+			}
+		]
+	}
+]

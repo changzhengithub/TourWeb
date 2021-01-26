@@ -1,0 +1,316 @@
+<style type="text/css">
+	/* desk */
+	.header-desk{visibility:visible;width:9rem;margin: 0 auto;height:100%}
+	.header-mobile{visibility:hidden;height:0}
+	.header-desk>.desk-nav{
+		height:100%;
+	}
+	.header-desk .nav-logo{
+		height:100%;
+		overflow: hidden;
+	}
+	.header-desk .nav-logo>i{
+		font-size: .34rem;
+		color: #fff;
+	}
+	.header-desk .nav-bar{height:100%}
+	.header-desk .bar-item{
+		position:relative;
+		/* width:1.2rem; */
+		height:100%;
+		padding: 0 .25rem;
+	}
+	/* .header-desk .bar-item::after{position:absolute;top:50%;right:0;z-index:9;display:block;content:"";width:1px;height:.17rem;background-color:#bbbbbb;-webkit-transform:translateY(-50%);transform:translateY(-50%)} */
+	.header-desk .bar-item:last-of-type:after{display:none}
+	.header-desk .bar-item::before{position:absolute;left:50%;bottom:1px;z-index:9;display:block;content:"";width:60%;height:2px;opacity:0;background-color:#fff;-webkit-transform:translateX(-50%);transform:translateX(-50%);}
+	.header-desk .item-link{width:100%;height:100%;font-size:.12rem;color:#fff}
+	.header-desk .item-bar{
+		position:absolute;
+		left:50%;top:.4rem;z-index:9;
+		display:none;
+		width:100%;
+		padding-bottom:.05rem;
+		background-color:rgba(2,0,1,.9);
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.header-desk .bar-item:nth-of-type(3)>.item-bar{
+		width: 1.3rem;
+	}
+	.header-desk .bar-sub{
+		width:100%;
+		height:.3rem;
+	}
+	.header-desk .sub-link{width:100%;height:100%;font-size:.12rem;color:#fff}
+	.header-desk .bar-item:hover::before{opacity:1}
+	.header-desk .bar-item:hover .item-bar{display:block}
+	.header-desk .sub-link:hover{background-color:#333333;color:#fff}
+	.header-desk .desk-buy{height:.3rem;padding:0 .15rem;margin:0 0rem 0 .2rem;font-size:.12rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);cursor:pointer}
+
+	.desk-shop {
+  position: relative;
+	height: 100%;
+	margin: 0 .25rem 0 .25rem;
+  cursor: pointer;
+}
+
+.desk-shop:hover .shop-list{
+  visibility: visible;
+}
+.desk-shop>.shop-title {
+	width: .8rem;
+	height: .24rem;
+  font-size: .12rem;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0071e3;
+}
+
+.desk-shop>.shop-list {
+  position: absolute;
+  left: 50%;
+  top: .4rem;
+  z-index: 9;
+  visibility: hidden;
+	width: 1.3rem;
+  padding-bottom:.05rem;
+	background-color:rgba(2,0,1,.9);
+	box-shadow:1px 1px 2px 1px #eee;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+}
+
+.desk-shop>.shop-list>.list-item {
+  width:100%;
+  height:.3rem;
+  font-size: 12px;
+}
+.desk-shop>.shop-list>.list-item>a {
+  font-family: Open Sans, sans-serif;
+  font-size: 13px;
+  color:#fff;
+}
+.desk-shop>.shop-list>.list-item:hover{background-color:#333333;color:#fff}
+
+	.header-desk .desk-language{position:relative;height:100%;padding:0 .2rem;cursor:pointer}
+	.header-desk .language-default{width:100%;height:100%;font-size:.12rem;color:#a9a9a9}
+	.header-desk .language-default>i{font-size:.14rem;color:#a9a9a9;margin-right: .05rem;}
+	.header-desk .language-select{position:absolute;top:.4rem;left:0;z-index:1;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(2,0,1,.9);box-shadow:1px 1px 1px 0px #eee}
+	.header-desk .select-item{width:100%;height:.3rem;font-size:.12rem;color:#fff}
+	.header-desk .desk-language:hover .language-select{display:block}
+	.header-desk .select-item:hover{background-color:#333;color:#fff}
+	/* mobile */
+	@media only screen and (max-width:767px){
+	.header-desk{visibility:hidden;width:100%;height:0;overflow:hidden}
+	.header-mobile{visibility:visible;height:100%}
+	.header-mobile .mobile-logo{position:absolute;left:50%;top:50%;z-index:9;display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.com/en/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%;transform:translate(-50%,-50%)}
+	.header-mobile .mobile-logo>img{width:100%;height:100%}
+	.header-mobile .nav-toggle>i{font-size:.24rem;color:#6a6a6a}
+	.header-mobile>.mobile-nav{position:relative;z-index:100}
+	.header-mobile .nav-list{position:fixed;top:.44rem;left:0;right:0;z-index:999;display:none;width:100vw;height:calc(100vh - 0.44rem);background-color:#fff}
+	.header-mobile .list-item{position:relative;width:100%}
+	.header-mobile .list-item::after{position:absolute;top:auto;right:auto;bottom:0;left:0;z-index:9;content:"";width:100%;height:1px;background-color:#ddd;-webkit-transform:translateY(0%);transform:translateY(0%)}
+	.header-mobile .list-item:last-of-type:after{display:none}
+	.header-mobile .item-link{width:100%;height:.4rem;padding:0 .1rem 0 .25rem;font-size:.16rem;color:#6d6d6d}
+	.header-mobile .item-link>i{font-size:.2rem;color:#6d6d6d}
+	.header-mobile .language-default{width:100%;height:100%;font-size:.16rem;color:#6a6a6a}
+	.header-mobile .language-default>i{font-size:.2rem;color:#3d6df6}
+	.header-mobile .icon-active>i{font-size:.24rem;color:#6a6a6a}
+	.header-mobile .language-select{position:fixed;top:.44rem;left:0;z-index:999;display:none;width:100%;height:calc(100vh - 0.44rem);background-color:rgba(255,255,255,1)}
+	.header-mobile .select-title{width:100%;height:.4rem;padding:0 .2rem;font-size:.14rem;color:#303233;background-color:#f7f9fa}
+	.header-mobile .select-item{width:100%;height:.4rem;padding:0 .2rem;font-size:.16rem}
+	.header-mobile .select-item>span:first-of-type{color:#333}
+	.header-mobile .select-item>span:last-of-type{color:#a2a7aa}
+	.header-mobile .mobile-buy{position:absolute;top:.44rem;left:0;right:0;z-index:99;width:100%;height:.44rem;padding:0 .2rem;font-size:.18rem;color:#fff;background-color:#1C1C1E}
+	.header-mobile .buy{height:.3rem;padding:0 .15rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%)}
+	}
+</style>
+<div class="header-desk flex-vc">
+	<nav class="desk-nav flex-vb flex-1">
+		<a class="nav-logo flex-center" href="index.html">
+			<i class="iconfont iconlogo"></i>
+		</a>
+		<ul class="nav-bar flex-vc">
+			<li class="bar-item">
+				<a class="item-link flex-center" href="index.html" target="_self">Home</a>
+			</li>
+			<li class="bar-item">
+				<a class="item-link flex-center" href="product.html" target="_self">Product</a>
+			</li>
+			<li class="bar-item">
+				<a class="item-link flex-center" href="javascript:;">Explore</a>
+				<ul class="item-bar">
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="https://forum.tourboxtech.com/" target="_blank">Forum</a>
+					</li>
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="news.html" target="_self">News</a>
+					</li>
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="affiliate.html" target="_self">Affiliate Program</a>
+					</li>
+				</ul>
+			</li>
+			<li class="bar-item">
+				<a class="item-link flex-center" href="javascript:;">Downloads</a>
+				<ul class="item-bar">
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="downloads.html" target="_self">Software</a>
+					</li>
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="presets.html" target="_self">Presets</a>
+					</li>
+				</ul>
+			</li>
+			<li class="bar-item">
+				<a class="item-link flex-center" href="javascript:;">Support</a>
+				<ul class="item-bar">
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="manual.html" target="_self">User Manual</a>
+					</li>
+					<li class="bar-sub">
+						<a class="sub-link flex-center" href="faq.html" target="_self">FAQ</a>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</nav>
+	<div class="desk-shop flex-center">
+		<div class="shop-title flex-center"><span>Buy Now</span></div>
+		<div class="shop-list">
+			<div class="list-item flex-center">
+				<a href="shopify-buy.html" target="_blank">TourBox Store</a>
+			</div>
+			<div class="list-item flex-center">
+				<a href="https://www.amazon.com/dp/B08HCV1JGB?ref=myi_title_dp" target="_blank">Amazon Store</a>
+			</div>
+		</div>
+	</div>
+	<div class="desk-language ">
+		<div class="language-default flex-vb">
+			<i class="iconfont iconlanguage1"></i>
+			<span>English</span>
+		</div>
+		<ul class="language-select">
+			<li class="select-item flex-center">简体中文</li>
+			<li class="select-item flex-center">繁體中文</li>
+			<li class="select-item flex-center">日本語</li>
+			<li class="select-item flex-center">한국어</li>
+			<li class="select-item flex-center" >Deutsch</li>
+		</ul>
+	</div>
+</div>
+<div class="header-mobile flex-vb">
+	<div class="mobile-nav">
+		<div class="nav-toggle">
+			<i class="iconfont iconbars"></i>
+		</div>
+		<ul class="nav-list">
+			<li class="list-item">
+				<a class="item-link flex-vb" href="index.html" target="_self">
+					<span>Home</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="product.html" target="_self">
+					<span>Product</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="https://forum.tourboxtech.com/" target="_blank">
+					<span>Forum</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="news.html" target="_self">
+					<span>News</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="affiliate.html" target="_self">
+					<span>Affiliate Program</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="downloads.html" target="_self">
+					<span>Software</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="presets.html" target="_self">
+					<span>Presets</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="manual.html" target="_self">
+					<span>User Manual</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+			<li class="list-item">
+				<a class="item-link flex-vb" href="faq.html" target="_self">
+					<span>FAQ</span>
+					<i class="iconfont iconarrow-right"></i>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<a class="mobile-logo" href="index.html"></a>
+	<div class="mobile-language">
+		<div class="language-default flex-vc">
+			<span v-show="!openLanguageShow">English</span>
+			<i class="iconfont icondian"></i>
+		</div>
+		<ul class="language-select">
+			<li class="select-title flex-vc"><span>Select Language</span></li>
+			<li class="select-item flex-vb"><span>中国大陆</span><span>简体中文</span></li>
+			<li class="select-item flex-vb"><span>中国台湾</span><span>繁體中文</span></li>
+			<li class="select-item flex-vb"><span>日本</span><span>日本語</span></li>
+			<li class="select-item flex-vb"><span>대한민국</span><span>한국어</span></li>
+			<li class="select-item flex-vb"><span>Deutschland</span><span>Deutsch</span></li>
+		</ul>
+	</div>
+</div>
+<script>
+	$(document).ready(function() {
+		languageSwitch('.header-desk .select-item');
+		languageSwitch('.header-mobile .select-item');
+		$('.header-mobile .nav-toggle').click(function() {
+			$('.header-mobile .nav-list').slideToggle(300);
+			$('.header-mobile .language-default').toggle();
+			$('.header-mobile .nav-toggle .iconfont').toggleClass('iconclose');
+		})
+		$('.header-mobile .language-default').click(function() {
+			$(this).toggleClass('icon-active');
+			$('.header-mobile .language-select').slideToggle(300);
+			$('.header-mobile .language-default .iconfont').toggleClass('iconclose')
+			$('.header-mobile .nav-toggle, .header-mobile .language-default span').toggle();
+		})
+		function languageSwitch(name) {
+			var languageList = ['cn', 'tw', 'jp', 'kr', 'de'];
+			$(name).each(function(i) {
+				$(this).click(function() {
+					var localUrl = window.location.href;
+					if (localUrl.indexOf('en/') == -1) return
+					var arr1 = localUrl.split('en/');
+					if (languageList[i] == 'cn' && localUrl.indexOf('affiliate') != -1 || languageList[i] == 'de' && localUrl.indexOf('affiliate') != -1) {
+						window.location.href = arr1[0] + languageList[i];
+						return
+					}
+					if (arr1[1]) {
+						window.location.href = arr1[0] + languageList[i] + '/' + arr1[1];
+					} else {
+						window.location.href = arr1[0] + languageList[i];
+					}
+				})
+			})
+		}
+	})
+</script>

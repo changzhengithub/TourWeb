@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+	<title>TourBox製品について</title>
+	<!-- public resources -->
+	<link rel="canonical" href="https://www.tourboxtech.com/" />
+	<link rel="shortcut icon" type="image/ico" href="basic-img/favicon.ico" />
+	<link rel="stylesheet" type="text/css" href="css/global.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="plugins/iconfont/iconfont.css" />
+	<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/product.css" />
+	<!-- Facebook Pixel Code -->
+	<script>
+		! function (f, b, e, v, n, t, s) {
+			if (f.fbq) return;
+			n = f.fbq = function () {
+				n.callMethod ?
+					n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+			};
+			if (!f._fbq) f._fbq = n;
+			n.push = n;
+			n.loaded = !0;
+			n.version = '2.0';
+			n.queue = [];
+			t = b.createElement(e);
+			t.async = !0;
+			t.src = v;
+			s = b.getElementsByTagName(e)[0];
+			s.parentNode.insertBefore(t, s)
+		}(window, document, 'script',
+			'https://connect.facebook.net/en_US/fbevents.js');
+		fbq('init', '2381781905282258');
+		fbq('track', 'PageView');
+	</script>
+	<noscript>
+		<img height="1" width="1" style="display:none"
+			src="https://www.facebook.com/tr?id=2381781905282258&ev=PageView&noscript=1" />
+	</noscript>
+	<!-- End Facebook Pixel Code -->
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123518466-5"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+		gtag('config', 'UA-123518466-5');
+	</script>
+</head>
+
+<body>
+	<section id="index" class="index" v-cloak>
+		<!-- header -->
+		<header class="header">
+			<div class="header-desk flex-vc">
+				<nav class="desk-nav flex-vb flex-1">
+					<a class="nav-logo" href="index.html"></a>
+					<ul class="nav-bar flex-vc">
+						<li class="bar-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+							<ul class="item-bar" v-if="item.linkList">
+								<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+									<a class="sub-link flex-center" :href="linkItem.link"
+										:target="linkItem.target">{{linkItem.linkName}}</a>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+				<div class="desk-language ">
+					<div class="language-default flex-vb">
+						<span>日本語</span>
+						<i class="iconfont icondian"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-item flex-center" @click="checkLanguage('cn')">简体中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('en')">English</li>
+						<li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
+						<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+						<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="header-mobile flex-vb">
+				<div class="mobile-nav">
+					<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+						<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+					</div>
+					<ul class="nav-list">
+						<li class="list-item" v-for="(item, index) in navList" :key="index">
+							<a class="item-link flex-vb" :href="item.href" :target="item.target">
+								<span>{{item.name}}</span>
+								<i class="iconfont iconarrow-right"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+				<a class="mobile-logo" href="index.html"></a>
+				<div class="mobile-language" v-show="!openMenuShow">
+					<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+						<span v-show="!openLanguageShow">日本語</span>
+						<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+					</div>
+					<ul class="language-select">
+						<li class="select-title flex-vc"><span>表示言語を選択</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('cn')"><span>中国大陆</span><span>简体中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+						<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
+					</ul>
+				</div>
+			</div>
+			<div class="header-buy flex-vb">
+				<span>TourBox 2020</span> <span>【期間限定お得セット】</span>
+				<div id='product-component-1590566537063' style="width: 100px !important;"></div>
+			</div>
+		</header>
+
+		<!-- main -->
+		<main class="index-main">
+			<!-- global fixed video -->
+			<section class="main-player">
+				<div class="player-video flex-center">
+					<div class="video-close" @click.prevent="closePlayer">
+						<span class="iconfont iconclose"></span>
+					</div>
+					<div class="video-container"></div>
+				</div>
+			</section>
+			<!-- banner -->
+			<section class="main-banner">
+				<div class="banner-container">
+					<div class="container-content">
+						<div class="content-detail">
+							<p class="detail-title font-title">思いのままに「創造」</p>
+							<p class="detail-text">
+								TourBoxはノブによる調整機能と最適化したボタンで、創造力を思いのままの形にする全く新しいソフトウエアコントローラーです。人間工学に基づいたデザインで、全ての作業が片手で完了。さらにビルド・イン機能で、イラスト制作や写真加工などあらゆる作業をよりスピーディーに、より効率的に、よりシームレスに処理。<span>TourBox
+									2020年版が、これまでにない創造体験をもたらします。</span></p>
+							<p class="detail-subtitle">TourBox 2020年版が、これまでにない創造体験をもたらします。</p>
+							<div class="detail-link flex-center">
+								<div class="link-item flex-vc" @click="openFixedVideo('CN5noAYTu34')">
+									<span>動画を見る</span>
+									<i class="iconfont iconbofang"></i>
+								</div>
+								<div class="link-item flex-vc" @click="openFixedVideo('KnRKJcLDi1Y')">
+									<span>TourBoxのユーザー</span>
+									<i class="iconfont iconbofang"></i>
+								</div>
+							</div>
+						</div>
+						<div class="content-next">
+							<p class="next-title font-title">まるで、ゲームのような操作感。</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- second -->
+			<section class="section-second">
+				<div class="second-wrapper">
+					<section class="wrapper-full wrapper-first">
+						<div class="first-title">
+							<p class="title-text font-title">まるで、ゲームのような操作感。</p>
+						</div>
+						<div class="full-sticky">
+							<div class="sticky-element">
+								<div class="element-top"></div>
+								<div class="element-right"></div>
+								<div class="element-bottom"></div>
+								<div class="element-left"></div>
+								<div class="element-play">
+									<video id="second-first-video" v-if="!isAndroid"
+									muted="true"
+									loop="true"
+									playsinline
+									webkit-playsinline="true"
+									x5-video-player-type="h5"
+									x-webkit-airplay="true"
+									x5-video-orientation="portraint" 
+									x5-video-player-fullscreen="true"
+									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-01-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-01-mobile-2.0.1.mp4'"
+									></video>
+									<!-- For Android -->
+  								<canvas id="second-first-canvas" v-if="isAndroid"></canvas>
+									<figure class="play-image"></figure>
+								</div>
+								<div class="element-text">
+									<p class="font-text">
+										片手でイラストを描きながら、もう片方の手でTourBoxを操作。ノブを回してブラシのサイズ、流量、硬さ、不透明度を自由に調整し、スクロールで画面サイズをコントロール、さらにボタンを押したままで画面をドラッグ。TourBoxなら、この一連の操作が腕を動かすことなく指だけで楽々完了します。マウスやタブレットと一緒に使えば、完璧です。
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<section class="wrapper-card wrapper-second">
+						<div class="card-detail flex-vc">
+							<div class="detail-left">
+								<p>このような操作は、</p>
+								<p>とても楽しい！</p>
+							</div>
+							<div class="detail-right">
+								<p>Adobe
+									Lightroomでは、ノブを回すだけで、露光量、コントラスト、シャドウ、ハイライトなどのさまざまなパラメーター値を簡単に調整できます。<span>クリエイターはパラメーターバーに注意を払う必要はなく、画像だけに集中できます。</span>
+								</p>
+							</div>
+						</div>
+						<div class="card-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+								poster="//r.tourboxtech.com/jp/src/images/product-second-02-mask-2.0.png"
+								data-src="//r.tourboxtech.com/jp/src/videos/product-second-02-2.0.2.mp4"></video>
+						</div>
+					</section>
+
+					<section class="wrapper-card wrapper-third">
+						<div class="card-detail flex-vc">
+							<div class="detail-left">
+								<p>機能制御をクールに。</p>
+							</div>
+							<div class="detail-right">
+								<p>これこそ私がいつも欲しかった編集ツールだ！<span>迅速なタイムライン移動やズーム、１フレームの前進/後退などの機能をダイヤル、ノブ、スクロールで思うままにコントロールできます。</span></p>
+							</div>
+						</div>
+						<div class="card-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+								poster="//r.tourboxtech.com/jp/src/images/product-second-03-mask-2.0.png"
+								data-src="//r.tourboxtech.com/jp/src/videos/product-second-03-2.0.2.mp4"></video>
+						</div>
+					</section>
+
+					<section class="wrapper-full wrapper-fourth">
+						<div class="fourth-title">
+							<div class="title-desk">
+								<p class="font-title">細かく調整できるノブは、正確でなめらか。</p>
+							</div>
+							<div class="title-mobile">
+								<p class="font-title">細かく調整できるノブは、</p>
+								<p class="font-title">正確でなめらか。</p>
+							</div>
+						</div>
+						<div class="full-sticky">
+							<div class="sticky-element">
+								<div class="element-top"></div>
+								<div class="element-right"></div>
+								<div class="element-bottom"></div>
+								<div class="element-left"></div>
+								<div class="element-play">
+									<video id="second-fourth-video" v-if="!isAndroid"
+									muted="true" 
+									loop="true"
+									playsinline
+									webkit-playsinline="true"
+									x5-video-player-type="h5"
+									x-webkit-airplay="true"
+									x5-video-orientation="portraint" 
+									x5-video-player-fullscreen="true"
+									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-04-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-04-mobile-2.0.1.mp4'"></video>
+									<canvas id="second-fourth-canvas" v-if="isAndroid"></canvas>
+									<figure class="play-image"></figure>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			</section>
+			<!-- third -->
+			<section class="section-third">
+				<div class="third-title">
+					<div class="title-desk">
+						<p class="font-subtitle">トールボタン、ショートボタン、トップボタン、サイドボタンを指先が自然に探し出せる。 </p>
+					</div>
+					<div class="title-mobile">
+						<p class="font-subtitle">トールボタン、ショートボタン、トップボタン、サイドボタンを指先が自然に探し出せる。 </p>
+					</div>
+				</div>
+				<div class="third-banner lazy" data-bg="//r.tourboxtech.com/jp/src/images/product-third01-2.0.2.png"></div>
+			</section>
+			<!-- fourth -->
+			<section class="section-fourth">
+				<div class="fourth-title">
+					<p class="font-subtitle">そう、こんなコントローラーが欲しかった。</p>
+				</div>
+				<div class="swiper-container">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/jp/src/images/product-fourth-swiper01-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-subtitle">そう、こんなコントローラーが欲しかった。</p>
+								<div class="detail-summary">
+									<p class="font-subtitle">品質のこだわり</p>
+								</div>
+								<div class="detail-text">
+									<p>人間工学に基づいたデザインと20万回の耐久性テストを通した厳選された部品を使用。手のひらにぴったり。これは電子玩具ではなく、クリエイターのための真のツールです。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/jp/src/images/product-fourth-swiper02-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-subtitle">そう、こんなコントローラーが欲しかった。</p>
+								<div class="detail-summary">
+									<p class="font-subtitle">片手デバイス</p>
+								</div>
+								<div class="detail-text">
+									<p>マウスに近いサイズで片手でブラインドタッチ。ポータブル性は高くて、何処でも何時でも創作にサポートできます。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/jp/src/images/product-fourth-swiper03-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-subtitle">そう、こんなコントローラーが欲しかった。</p>
+								<div class="detail-summary">
+									<p class="font-subtitle">安定感</p>
+								</div>
+								<div class="detail-text">
+									<p>ちょうどいい重量をもって、とても安定。滑りにくくて心強く使用できます。</p>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/jp/src/images/product-fourth-swiper04-2.0.4.jpg"></div>
+							<div class="slide-detail">
+								<p class="detail-title font-subtitle">そう、こんなコントローラーが欲しかった。</p>
+								<div class="detail-summary">
+									<p class="font-subtitle">肌にやさしい</p>
+								</div>
+								<div class="detail-text">
+									<p>TourBoxの表面にはラバーペイントを使用。肌のように優しくて、冷たさを感じません。</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</section>
+			<!-- fifth -->
+			<section class="section-fifth">
+				<div class="fifth-content">
+					<div class="fifth-title">
+						<p class="title font-subtitle">仕事が楽しくなる、シームレスな操作。</p>
+					</div>
+					<div class="fifth-text">
+						<p class="text font-text ">
+							スライダーの移動や数値の調整、コマ送り、クイック検索など、TourBoxはダイヤルひとつで正確にコントロール。マウスを使う必要はもうありません。画面の拡大・縮小や回転、タイムラインのサイズ変更などのナビゲーション操作も、ノブ、スクロール、ダイヤルとトールボタン、ショートボタン、トップボタン、サイドボタンを組み合わせることで、より効率良く処理できます。
+						</p>
+					</div>
+					<div class="fifth-list flex-vb flex-wrap">
+						<div class="list-item" :class="item.className" v-for="(item, index) in toastVideoList" :key="index"
+							@click="openSubToast(index)">
+							<div class="item-icon"></div>
+							<p>{{item.itemText}}</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- fifth fixed toast video -->
+			<section class="fifth-toast" v-show="subToastShow" @click="closeSubToast">
+				<div class="toast-content">
+					<div class="content-detail" @click.stop>
+						<div class="content-close" @click="closeSubToast">
+							<i class="iconfont iconclose-circle"></i>
+						</div>
+						<div class="content-title">
+							<p>{{subTitle}}</p>
+						</div>
+						<div class="content-text">
+							<p v-html="subText"></p>
+						</div>
+						<div class="content-player">
+							<div class="player-shade flex-center" v-if="!fifthToastIconShow">
+								<i class="iconfont iconvideoplay" @click="playSubToastVideo"></i>
+							</div>
+							<div class="player-video">
+								<video id="subToastVideo" playsinline webkit-playsinline="true" poster="" src=""></video>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- sixth -->
+			<section class="section-sixth">
+				<div class="sixth-title">
+					<p class="font-subtitle">カスタマイズで、より使いやすく。</p>
+				</div>
+				<div class="sixth-sticky">
+					<div class="sticky-title">
+						<p class="font-subtitle">カスタマイズで、より使いやすく。</p>
+					</div>
+					<div class="sticky-element">
+						<figure class="element-image lazy" data-bg="//r.tourboxtech.com/jp/src/images/product-sixth-scale-2.0.png">
+						</figure>
+						<div class="element-play">
+							<div class="play-shade flex-center">
+								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
+							</div>
+							<video id="sixth-video" class="lazy" playsinline webkit-playsinline="true" muted="true" loop="true"
+								data-src="//r.tourboxtech.com/jp/src/videos/product-sixth-01-2.0.2.mp4"></video>
+							<figure class="play-image lazy"
+								data-bg="//r.tourboxtech.com/jp/src/images/product-sixth-01-mask-2.0.1.png">
+							</figure>
+						</div>
+					</div>
+					<div class="sticky-text">
+						<p class="font-text">
+							ショートカットキーをTourBoxに登録するだけで、ソフトウェアの操作難易度を大幅に下がらせ、作業効率と創作体験を向上させることができます。また、独自の使用習慣や愛用ソフトウェアに応じて専属のTourBoxを作り上げることもできます。
+						</p>
+					</div>
+				</div>
+				<div class="sixth-detail">
+					<div class="detail-sticky">
+						<div class="sticky-float">
+							<div class="float-first">
+								<p class="font-text">
+									ショートカットキーをTourBoxに登録するだけで、ソフトウェアの操作難易度を大幅に下がらせ、作業効率と創作体験を向上させることができます。また、独自の使用習慣や愛用ソフトウェアに応じて専属のTourBoxを作り上げることもできます。
+								</p>
+							</div>
+
+							<div class="float-second float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> ショートカットキーが苦手？ </p>
+									</div>
+									<div class="title-mobile">
+										<p>ショートカットキーが苦手？</p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										TourBoxなら、ソフトウエアのショートカットキーに実際の機能が分かる見やすいラベルをつけ、直感的かつインタラクティブなプロンプトシステムで驚くほど簡単に操作できます。さらに、モニターに常駐するインタラクティブ式HUD、ボタンひとつで呼び出せるガイドマップ、そして完璧なブラインド操作を実現する独自のキーポジションで、覚えにくく押しにくいショートカットキーをすぐにマスターできます。
+									</p>
+								</div>
+							</div>
+
+							<div class="float-third float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> 同時に複数のソフトを使いたい？ </p>
+									</div>
+									<div class="title-mobile">
+										<p>同時に複数のソフトを使いたい？</p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										クリエイターにとって、同時に複数のソフトウエアを使うことは日常的です。TourBoxはソフトウエアに合わせてプリセットフォームを自動で切り替えますので、作業がよりスムーズにはかどります。
+										ChromeやYouTubeをご使用している場合でも、TourBoxは対応するプリセットに自動的に切り替えることができます。
+									</p>
+								</div>
+							</div>
+							<div class="float-fourth float-chunk">
+								<div class="chunk-title">
+									<div class="title-desk">
+										<p> マウスの機能をカスタマイズして操作したい？ </p>
+									</div>
+									<div class="title-mobile">
+										<p>マウスの機能をカスタマイズして操作したい？</p>
+									</div>
+								</div>
+								<div class="chunk-text">
+									<p class="font-text">
+										キーボードのショートカットキーだけでなく、マウスの機能もTourBoxに完全にマッピングできます。マウスの左ボタン、右ボタン、ホイールをボタンに登録し、思い通りに操作できます。
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="sticky-banner">
+							<div class="banner-bg lazy"
+								:data-bg="!isM ? '//r.tourboxtech.com/jp/src/images/product-sixth-no-2.0.4.jpg' : '//r.tourboxtech.com/jp/src/images/product-sixth-no-mobile-2.0.4.jpg'">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="sixth-youtube">
+					<div class="youtube-title">
+						<p class="font-subtitle">一度使ったら、もう手放せない。</p>
+					</div>
+					<div class="youtube-text">
+						<p class="font-text ">
+							TourBoxは、ハードウエアもソフトウエアも完全にユーザーの立場から出発してデザインされており、ラベル機能とプロンプトシステムで誰でもすぐに使いこなせます。きっと使っていくうちに、まるで体の一部のように感じることでしょう。片手で操作できるレイアウト、直感的な入力方法、強力なカスタマイズ機能によって、全てが思いのまま。真のツールとは、自分の手のように最も直感的な方法で創作、思考、コントロールができ、本気でクリエイターをサポートします。一度使ったら、もう手放せません。
+						</p>
+					</div>
+					<div class="youtube-banner lazy"
+						:data-bg="!isM ? '//r.tourboxtech.com/jp/src/images/product-sixth-youtube-2.0.4.jpg' : '//r.tourboxtech.com/jp/src/images/product-sixth-youtube-mobile-2.0.4.jpg'"
+						@click="openFixedVideo('KnRKJcLDi1Y')">
+						<div class="banner-watch flex-vc">
+							<span>TourBoxのユーザー</span>
+							<i class="iconfont iconbofang"></i>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- seventh -->
+			<section class="section-seventh">
+				<div class="seventh-title">
+					<p>クリエイターのための究極のコントローラー</p>
+				</div>
+				<div class="seventh-summary">
+					<p>TourBox 2020</p>
+				</div>
+				<div class="seventh-price">
+					<p>￥19600</p>
+				</div>
+				<div class="seventh-buy flex-center">
+					<div id='product-component-1600308267264'></div>
+				</div>
+			</section>
+		</main>
+
+	</section>
+	<!-- footer -->
+	<footer class="footer" id="footer"></footer>
+
+	<script src="js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/adapter.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/lazyload.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jsmpeg.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/pages/product.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/global.load.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/scroll.js" type="text/javascript" charset="utf-8"></script>
+
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		(function () {
+			initLazy();
+
+			function initLazy() {
+				new LazyLoad({
+					threshold: 800
+				});
+			}
+			var scriptURL = 'https://sdks.shopifycdn.com/buy-button/latest/buy-button-storefront.min.js';
+			if (window.ShopifyBuy) {
+				if (window.ShopifyBuy.UI) {
+					ShopifyBuyInit();
+				} else {
+					loadScript();
+				}
+			} else {
+				loadScript();
+			}
+
+			function loadScript() {
+				var script = document.createElement('script');
+				script.async = true;
+				script.src = scriptURL;
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(script);
+				script.onload = function () {
+					ShopifyBuyInit1();
+					ShopifyBuyInit2();
+				};
+			}
+
+			function ShopifyBuyInit1() {
+				var client = ShopifyBuy.buildClient({
+					domain: 'store-jp.tourboxtech.com',
+					storefrontAccessToken: '9b35d6b8b9e5e4af281628030e936e78',
+				});
+				ShopifyBuy.UI.onReady(client).then(function (ui) {
+					ui.createComponent('product', {
+						id: '4741680988219',
+						node: document.getElementById('product-component-1590566537063'),
+						moneyFormat: '%C2%A5%7B%7Bamount_no_decimals%7D%7D',
+						options: {
+							"product": {
+								"styles": {
+									"product": {
+										"width": "100px"
+									},
+									"button": {
+										"font-family": "Open Sans, sans-serif",
+										"font-size": "15px",
+										"padding": "5px 16px 5px 18px",
+										"margin-top": "-20px !important",
+										"border-radius": "20px",
+										"outline": "none",
+										"background-image": "linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);"
+									},
+									"quantityInput": {
+										"font-size": "16px",
+										"padding-top": "16px",
+										"padding-bottom": "16px"
+									}
+								},
+								"buttonDestination": "checkout",
+								"contents": {
+									"img": false,
+									"title": false,
+									"price": false
+								},
+								"text": {
+									"button": "購入"
+								}
+							},
+							"productSet": {
+								"styles": {
+									"products": {
+										"@media (min-width: 601px)": {
+											"margin-left": "-20px"
+										}
+									}
+								}
+							},
+							"modalProduct": {
+								"contents": {
+									"img": false,
+									"imgWithCarousel": true,
+									"button": false,
+									"buttonWithQuantity": true
+								},
+								"styles": {
+									"product": {
+										"@media (min-width: 601px)": {
+											"max-width": "100%",
+											"margin-left": "0px",
+											"margin-bottom": "0px"
+										}
+									},
+									"button": {
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										"background-color": "#26b9f8",
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								},
+								"text": {
+									"button": "Add to cart"
+								}
+							},
+							"cart": {
+								"styles": {
+									"button": {
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										"background-color": "#26b9f8",
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								},
+								"text": {
+									"total": "Subtotal",
+									"button": "Checkout"
+								},
+								"popup": false
+							},
+							"toggle": {
+								"styles": {
+									"toggle": {
+										"background-color": "#26b9f8",
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								}
+							}
+						},
+					});
+				});
+			}
+
+
+			function ShopifyBuyInit2() {
+				var client = ShopifyBuy.buildClient({
+					domain: 'store-jp.tourboxtech.com',
+					storefrontAccessToken: '9b35d6b8b9e5e4af281628030e936e78',
+				});
+				ShopifyBuy.UI.onReady(client).then(function (ui) {
+					ui.createComponent('product', {
+						id: '4741680988219',
+						node: document.getElementById('product-component-1600308267264'),
+						moneyFormat: '%C2%A5%7B%7Bamount_no_decimals%7D%7D',
+						options: {
+							"product": {
+								"styles": {
+									"product": {
+										"@media (min-width: 601px)": {
+											"max-width": "calc(25% - 20px)",
+											"margin-left": "20px",
+											"margin-bottom": "50px"
+										}
+									},
+									"button": {
+										"font-family": "Open Sans, sans-serif",
+										"font-size": "18px",
+										"padding-top": "12px",
+										"padding-bottom": "12px",
+										"color": "#FAFAFA",
+										"background-color": "#37383a",
+										":hover": {
+											"background-color": "#37383a"
+										},
+										":focus": {
+											"background-color": "#37383a"
+										},
+									}
+								},
+								"buttonDestination": "checkout",
+								"contents": {
+									"img": false,
+									"title": false,
+									"price": false
+								},
+								"text": {
+									"button": "購入する"
+								}
+							},
+							"productSet": {
+								"styles": {
+									"products": {
+										"@media (min-width: 601px)": {
+											"margin-left": "-20px"
+										}
+									}
+								}
+							},
+							"modalProduct": {
+								"contents": {
+									"img": false,
+									"imgWithCarousel": true,
+									"button": false,
+									"buttonWithQuantity": true
+								},
+								"styles": {
+									"product": {
+										"@media (min-width: 601px)": {
+											"max-width": "100%",
+											"margin-left": "0px",
+											"margin-bottom": "0px"
+										}
+									},
+									"button": {
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										"background-color": "#26b9f8",
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								},
+								"text": {
+									"button": "Add to cart"
+								}
+							},
+							"cart": {
+								"styles": {
+									"button": {
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										"background-color": "#26b9f8",
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								},
+								"text": {
+									"total": "Subtotal",
+									"button": "Checkout"
+								},
+								"popup": false
+							},
+							"toggle": {
+								"styles": {
+									"toggle": {
+										"background-color": "#26b9f8",
+										":hover": {
+											"background-color": "#22a7df"
+										},
+										":focus": {
+											"background-color": "#22a7df"
+										}
+									}
+								}
+							}
+						},
+					});
+				});
+			}
+
+		})();
+		/*]]>*/
+	</script>
+</body>
+
+</html>

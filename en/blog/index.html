@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TourBox - Blog</title>
+	<link rel="shortcut icon" type="image/ico" href="//r.tourboxtech.com/en/basic-img/favicon.ico" />
+  <link rel="stylesheet" type="text/css" href="/en/css/global.css" />
+  <link rel="stylesheet" type="text/css" href="/en/blog/css/index.css" />
+  <script src="/en/js/jquery-3.4.1.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/en/js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+  <script src="/en/js/adapter.js" type="text/javascript" charset="utf-8"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+
+<body>
+
+  <!-- header -->
+	<header id="header"></header>
+  <div id="app">
+    <router-view></router-view>
+  </div>
+
+  <!-- footer -->
+  <div id="footer"></div>
+  <script src="/en/blog/js/pages/index.js" type="text/javascript" charset="utf-8"></script>
+
+  <script type="text/javascript">
+		if ($(window).innerWidth() >= 768) {
+			$("#header").load("/en/blog/components/header.html");
+			$("#footer").load("/en/blog/components/footer.html");
+		} else {
+			$("#header").show();
+			$("#header").load("/en/blog/components/m_header.html");
+			$("#footer").load("/en/blog/components/m_footer.html");
+		}
+		$(window).resize(function () {
+			if ($(window).innerWidth() >= 768) {
+				$("#header").load("/en/blog/components/header.html");
+				$("#footer").load("/en/blog/components/footer.html");
+			} else {
+				$("#header").show();
+				$("#header").load("/en/blog/components/m_header.html");
+				$("#footer").load("/en/blog/components/m_footer.html");
+			}
+		})
+	</script>
+</body>
+
+</html>
