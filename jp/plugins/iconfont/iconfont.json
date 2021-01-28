@@ -6,6 +6,125 @@
   "description": "",
   "glyphs": [
     {
+      "icon_id": "19249645",
+      "name": "Play Button",
+      "font_class": "PlayButton",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "19238065",
+      "name": "language",
+      "font_class": "language1",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "19223713",
+      "name": "Logo",
+      "font_class": "logo",
+      "unicode": "e86a",
+      "unicode_decimal": 59498
+    },
+    {
+      "icon_id": "19219656",
+      "name": "email",
+      "font_class": "email",
+      "unicode": "e616",
+      "unicode_decimal": 58902
+    },
+    {
+      "icon_id": "19219495",
+      "name": "facebook",
+      "font_class": "fackbook",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "19219496",
+      "name": "instagram",
+      "font_class": "Instagram",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "19219497",
+      "name": "twitter",
+      "font_class": "Twitter",
+      "unicode": "e611",
+      "unicode_decimal": 58897
+    },
+    {
+      "icon_id": "19219498",
+      "name": "youtube",
+      "font_class": "youtube",
+      "unicode": "e612",
+      "unicode_decimal": 58898
+    },
+    {
+      "icon_id": "19219499",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e614",
+      "unicode_decimal": 58900
+    },
+    {
+      "icon_id": "9109993",
+      "name": "triangle",
+      "font_class": "triangle",
+      "unicode": "e73e",
+      "unicode_decimal": 59198
+    },
+    {
+      "icon_id": "9339014",
+      "name": "Triangle",
+      "font_class": "Triangle",
+      "unicode": "e74b",
+      "unicode_decimal": 59211
+    },
+    {
+      "icon_id": "19074814",
+      "name": "Video and audio editing",
+      "font_class": "Videoandaudioediting",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "19074734",
+      "name": "Tool switching",
+      "font_class": "Toolswitching",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "19074729",
+      "name": "Parameter control",
+      "font_class": "Parametercontrol",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "19074713",
+      "name": "Image control",
+      "font_class": "Imagecontrol",
+      "unicode": "e608",
+      "unicode_decimal": 58888
+    },
+    {
+      "icon_id": "19074688",
+      "name": "Brush control",
+      "font_class": "Brushcontrol",
+      "unicode": "e603",
+      "unicode_decimal": 58883
+    },
+    {
+      "icon_id": "14835599",
+      "name": "右箭头",
+      "font_class": "arrowRight",
+      "unicode": "e65d",
+      "unicode_decimal": 58973
+    },
+    {
       "icon_id": "812063",
       "name": "点",
       "font_class": "dian",
@@ -60,41 +179,6 @@
       "font_class": "stop",
       "unicode": "e698",
       "unicode_decimal": 59032
-    },
-    {
-      "icon_id": "3360655",
-      "name": "fackbook",
-      "font_class": "fackbook",
-      "unicode": "e626",
-      "unicode_decimal": 58918
-    },
-    {
-      "icon_id": "6626176",
-      "name": "Instagram",
-      "font_class": "Instagram",
-      "unicode": "e60e",
-      "unicode_decimal": 58894
-    },
-    {
-      "icon_id": "7600883",
-      "name": "Twitter",
-      "font_class": "Twitter",
-      "unicode": "e636",
-      "unicode_decimal": 58934
-    },
-    {
-      "icon_id": "9143518",
-      "name": "you-tube",
-      "font_class": "youtube",
-      "unicode": "e643",
-      "unicode_decimal": 58947
-    },
-    {
-      "icon_id": "9277879",
-      "name": "we-chat",
-      "font_class": "wechat",
-      "unicode": "e70e",
-      "unicode_decimal": 59150
     },
     {
       "icon_id": "952442",
