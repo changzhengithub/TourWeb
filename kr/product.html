@@ -112,124 +112,137 @@
 			</section>
 			<!-- banner -->
 			<section class="main-banner">
-				<div class="banner-container">
-					<div class="container-content">
-						<div class="content-detail">
-							<p class="detail-title font-title">원하신 대로 사용하기</p>
-							<p class="detail-text">완전히 새롭게 조정된 노브와 최적화된 버튼을 가진 TourBox는 창작 조작에 막힘없이, 창작자가 자신 있게 컨트롤하게 만듭니다. 인체 공학적 디자인으로 창작 프로세스를 한 손에 컨트롤할 수 있습니다. 내장 기능이 다양한 사용 상황에 맞게 만들어지며, 일러스트 제작, 디자인, 사진 편집 또는 비디오 편집과 상관없이, 직관적이고 간편한 조작으로 더 빠르게, 더 효율적으로 보다 원활하게 처리할 수 있습니다. <span>TourBox 2020 버전은 전례 없는  컨트롤 경험을 제공해 드립니다.</span></p>
-							<p class="detail-subtitle">TourBox 2020 버전은 전례 없는  컨트롤 경험을 제공해 드립니다.</p>
-							<div class="detail-link flex-center">
-								<div class="link-item flex-vc"
-									@click="openFixedVideo('5NTc0ZzxmaY')">
-									<span>동영상 시청하기</span>
-									<i class="iconfont iconbofang"></i>
-								</div>
-								<div class="link-item flex-vc"
-									@click="openFixedVideo('KnRKJcLDi1Y')">
-									<span>그들이 모두 사용하고 있습니다</span>
-									<i class="iconfont iconbofang"></i>
-								</div>
-							</div>
-						</div>
-						<div class="content-next">
-							<p class="next-title font-title">아하! 작업은 색칠 게임을 하는 것과 같습니다.</p>
+				<div class="banner-overflow">
+					<div class="overflow-title">
+						<p>사용하기</p>
+						<p>원하시는 대로</p>
+					</div>
+					<div class="overflow-move">
+						<div class="move-img"></div>
+					</div>
+				</div>
+				<div class="banner-detail">
+					<div class="detail-title">
+						<p>사용하기</p>
+						<p>원하시는 대로</p>
+					</div>
+					<div class="detail-text">
+						<p>완전히 새롭게 조정된 노브와 최적화된 버튼을 가진 TourBox는 창작자가 작업 편집할 때 막힘 없이 자신 있게 할 수 있도록 도와주는 컨트롤러입니다. 인체 공학적 디자인으로 창작 과정을 한 손에 컨트롤할 수 있습니다. 내장 기능이 다양한 사용 상황에 맞게 만들어지며 일러스트 제작이든, 디자인이든, 사진 편집이든 또는 비디오 편집이든 다 사용 가능하고 직관적이고 간편한 조작으로 더 빠르게, 더 효율적으로 보다 원활하게 처리할 수 있습니다. </p>
+					</div>
+					<div class="detail-tip flex-center">
+						<p>TourBox 2020 버전은<span>&nbsp;</span></p>
+						<p>전례 없는 컨트롤 체험을 제공해 드립니다.</p>
+						<i class="iconfont iconPlayButton" @click="openFixedVideo('5NTc0ZzxmaY')"></i>
+					</div>
+					<div class="detail-link">
+						<div class="link-item" @click="openFixedVideo('5NTc0ZzxmaY')">
+							<span>watch video</span>
+							<i class="iconfont iconbofang" :class="{'iconarrow-right': isM}"></i>
 						</div>
 					</div>
 				</div>
-				<!-- <div class="banner-section"></div> -->
 			</section>
 			<!-- second -->
 			<section class="section-second">
 				<div class="second-wrapper">
 					<section class="wrapper-full wrapper-first">
-						<div class="first-title">
-							<p class="title-text font-title">아하! 작업은 색칠 게임을 하는 것과 같습니다.</p>
-						</div>
 						<div class="full-sticky">
 							<div class="sticky-element">
-								<div class="element-top"></div>
-								<div class="element-right"></div>
-								<div class="element-bottom"></div>
-								<div class="element-left"></div>
+								<div class="element-title">
+									<p>아하!</p>
+									<p>색칠 게임 하듯이</p>
+									<p>작업 진행이 가능하다.</p>
+								</div>
+								<div class="element-cover cover-top"></div>
+								<div class="element-cover cover-right"></div>
+								<div class="element-cover cover-bottom"></div>
+								<div class="element-cover cover-left"></div>
 								<div class="element-play">
 									<video id="second-first-video" v-if="!isAndroid"
-									muted="true"
-									loop="true"
-									playsinline
-									webkit-playsinline="true"
-									x5-video-player-type="h5"
-									x-webkit-airplay="true"
-									x5-video-orientation="portraint" 
-									x5-video-player-fullscreen="true"
-									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-01-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-01-mobile-2.0.1.mp4'"
+										muted="true"
+										loop="true"
+										playsinline
+										webkit-playsinline="true"
+										x5-video-player-type="h5"
+										x-webkit-airplay="true"
+										x5-video-orientation="portraint" 
+										x5-video-player-fullscreen="true"
+										:src="!isM ? '//r.tourboxtech.com/kr/src/videos/product-second-01-2.0.2.mp4' : '//r.tourboxtech.com/kr/src/videos/product-second-01-mobile-2.0.2.mp4'"
 									></video>
 									<!-- For Android -->
   								<canvas id="second-first-canvas" v-if="isAndroid"></canvas>
 									<figure class="play-image"></figure>
 								</div>
 								<div class="element-text">
-									<p class="font-text">
-										그림을 그리면서 TourBox의 노브를 돌려 원하는 브러시의 크기, 흐름, 경도, 투명도를 자유롭게 조절할 수 있고, 스크롤로 화면 크기를 확대 및 축소하거나, 버튼을 눌러 화면을 드래그 할 수 있습니다. 이 모든 컨트롤은 TourBox라면 팔을 움직이지 않고 한손으로 쉽게 조작 가능합니다. 마우스나 디지털 패널과 함께 사용하면 더욱더 완벽합니다.
-									</p>
+									<p>그림을 그리며 TourBox의 노브를 돌려 원하는 브러시의 크기, 흐름, 경도, 투명도를 자유롭게 조절할 수 있고 스크롤로 화면 크기를 확대 또는 축소하거나 버튼을 눌러 화면을 드래그할 수 있습니다. 이 모든 컨트롤은 TourBox로 하시면 팔을 움직이지실 필요는 없고 한 손으로 쉽게 조작 가능합니다. 마우스나 그래픽 타블렛과 함께 사용하시면 더욱더 완벽합니다.</p>
 								</div>
 							</div>
 						</div>
 					</section>
 
 					<section class="wrapper-card wrapper-second">
-						<div class="card-detail flex-vc">
-							<div class="detail-left">
-								<p>이러한 작업은 즐겁습니다.</p>
-								<!-- <p>我开始为之着迷</p> -->
-							</div>
-							<div class="detail-right">
-								<p>Adobe Lightroom에서는 노브를 간단히 돌리는 것만으로 노출, 대비도, 그림자, 하이라이트 등 다양한 파라미터 갑을 쉽게 조정할 수 있습니다.<span>눈은 파라미터 막대를 볼 필요가 전혀 없으므로 이미지의 변화에만 집중하여, 창작 그 자체에 회귀합시다.</span></p>
-							</div>
+						<div class="card-title">
+							<p>작업은 즐겁게 하자</p>
 						</div>
 						<div class="card-play">
 							<div class="play-shade flex-center">
 								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
 							</div>
-							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+							<video class="lazy" 
+								:autoplay="!isM" 
+								muted="true"
+								loop="true"
+								playsinline
+								webkit-playsinline="true"
+								x5-video-player-type="h5"
+								x-webkit-airplay="true"
+								x5-video-orientation="portraint" 
+								x5-video-player-fullscreen="true"
 								poster="//r.tourboxtech.com/kr/src/images/product-second-02-mask-2.0.png"
 								data-src="//r.tourboxtech.com/kr/src/videos/product-second-02-2.0.2.mp4"></video>
+						</div>
+						<div class="card-text">
+							<p>Adobe Lightroom에서는 노브를 간단히 돌리기만 하면 노출, 대비도, 그림자, 하이라이트 등 다양한 파라미터 값을 쉽게 조정할 수 있습니다. 눈으로 파라미터 항목을 보실 필요가 전혀 없으므로 이미지의 변화를 주시하여 창작 자체에 집중합시다.</p>
 						</div>
 					</section>
 
 					<section class="wrapper-card wrapper-third">
-						<div class="card-detail flex-vc">
-							<div class="detail-left">
-								<p>정말 쿨합니다!</p>
-							</div>
-							<div class="detail-right">
-								<p>이런 다이얼, 노브, 스크롤은 이야말로 내가 항상 원했던 편집 도구들입니다.<span>빠른 타임 라인의 이동, 프레임 별 스텝핑, 또는 타임 라인의 확대/축소 등 무엇이든 TourBox로 원하는 작업을 수행 할 수 있습니다.</span></p>
-							</div>
+						<div class="card-title">
+							<p>작업은 쿨하게 하자</p>
 						</div>
 						<div class="card-play">
 							<div class="play-shade flex-center">
 								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
 							</div>
-							<video class="lazy" :autoplay="!isM" muted="true" playsinline webkit-playsinline="true" loop="true"
+							<video class="lazy"
+								:autoplay="!isM" 
+								muted="true" 
+								loop="true"
+								playsinline
+								webkit-playsinline="true"
+								x5-video-player-type="h5"
+								x-webkit-airplay="true"
+								x5-video-orientation="portraint" 
+								x5-video-player-fullscreen="true"
 								poster="//r.tourboxtech.com/kr/src/images/product-second-03-mask-2.0.png"
 								data-src="//r.tourboxtech.com/kr/src/videos/product-second-03-2.0.2.mp4"></video>
+						</div>
+						<div class="card-text">
+							<p>이런 다이얼, 노브, 스크롤이야말로 제가 항상 원했던 편집 도구입니다.타임라인 빠른 이동, 프레임 속도 조정 또는 타임라인의 확대/축소 등 모두 다 TourBox로 원하는 작업을 수행하실 수 있습니다.</p>
 						</div>
 					</section>
 
 					<section class="wrapper-full wrapper-fourth">
-						<div class="fourth-title">
-							<div class="title-desk">
-								<p class="font-title">공들여 조정된 노브는 정확하고 순조럽고 매끄럽습니다.</p>
-							</div>
-							<div class="title-mobile">
-								<p class="font-title">공들여 조정된 노브는 정확하고 순조럽고 매끄럽습니다.</p>
-							</div>
+						<div class="full-title">
+							<p>새롭게 조정된 노브는</p>
+							<p>보다 정확하고 막임 없으며 원활해진다.</p>
 						</div>
 						<div class="full-sticky">
 							<div class="sticky-element">
-								<div class="element-top"></div>
-								<div class="element-right"></div>
-								<div class="element-bottom"></div>
-								<div class="element-left"></div>
+								<div class="element-cover cover-top"></div>
+								<div class="element-cover cover-right"></div>
+								<div class="element-cover cover-bottom"></div>
+								<div class="element-cover cover-left"></div>
 								<div class="element-play">
 									<video id="second-fourth-video" v-if="!isAndroid"
 									muted="true" 
@@ -240,7 +253,7 @@
 									x-webkit-airplay="true"
 									x5-video-orientation="portraint" 
 									x5-video-player-fullscreen="true"
-									:src="!isM ? '//r.tourboxtech.com/en/src/videos/product-second-04-2.0.1.mp4' : '//r.tourboxtech.com/en/src/videos/product-second-04-mobile-2.0.1.mp4'"></video>
+									:src="!isM ? '//r.tourboxtech.com/kr/src/videos/product-second-04-2.0.2.mp4' : '//r.tourboxtech.com/kr/src/videos/product-second-04-mobile-2.0.2.mp4'"></video>
 									<canvas id="second-fourth-canvas" v-if="isAndroid"></canvas>
 									<figure class="play-image"></figure>
 								</div>
@@ -252,131 +265,112 @@
 			<!-- third -->
 			<section class="section-third">
 				<div class="third-title">
-					<div class="title-desk">
-						<p class="font-title">톨 버튼, 쇼트 버튼,톱 버튼,사이드 키를 손가락이 자연스럽게 찾아 낼 수가 있습니다. </p>
-					</div>
-					<div class="title-mobile">
-						<p class="font-title">톨 버튼, 쇼트 버튼,톱 버튼, </p>
-						<p class="font-title">사이드 키를 손가락이 자연스럽게 찾아 낼 수가 있습니다.</p>
-					</div>
+					<p>톨 버튼, 쇼트 버튼, 톱 버튼,</p>
+					<p>사이드 키를 손가락으로</p>
+					<p>자연스럽게 찾을 수 있습니다.</p>
 				</div>
-				<div class="third-banner lazy" data-bg="//r.tourboxtech.com/kr/src/images/product-third01-2.0.4.png"></div>
+				<div class="third-banner lazy" data-bg="//r.tourboxtech.com/kr/src/images/product-third01-2.1.6.png"></div>
 			</section>
 			<!-- fourth -->
 			<section class="section-fourth">
 				<div class="fourth-title">
-					<p class="font-title">맞아, 이것이 내가 원하는 컨트롤러입니다.</p>
-				</div>
+					<p class="title-small">맞다.</p>
+					<p class="title-normal">이것이 바로 내가</p>
+					<p class="title-normal">원하는 컨트롤러이다.</p>
+        </div>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
-						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+						<div class="swiper-slide" :class="{'swiper-no-swiping': !isM}">
 							<div class="slide-banner lazy"
-								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper01-2.0.4.jpg"></div>
-							<div class="slide-detail">
-								<p class="detail-title font-title">맞아, 이것이 내가 원하는 컨트롤러입니다.</p>
-								<div class="detail-summary">
-									<p class="font-title">정밀 제조</p>
-								</div>
-								<div class="detail-text">
-									<p>엄선된 제조 공정과 인체 공학적 디자인으로 손바닥과 완벽하게 딱 맞습니다. 이는 전자 장난감이 아니라, 20 만 번의 내구성 테스트를 거친 크리에이터를 위한 진정한 도구입니다.</p>
-								</div>
+								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper01-2.1.jpg"></div>
+							<p class="slide-title">정밀한 제조</p>
+							<div class="slide-text">
+								<p>엄선된 제조 공정과 인체 공학적 디자인으로 손바닥과 완벽하게 조합됩니다. 본 제품은 전자 장난감이 아니라 내구성 테스트를 20만 번이나  거쳐 크리에이터를 위해 특별히 디자인된 진정한 도구입니다.</p>
 							</div>
 						</div>
-						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+						<div class="swiper-slide" :class="{'swiper-no-swiping': !isM}">
 							<div class="slide-banner lazy"
-								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper02-2.0.4.jpg"></div>
-							<div class="slide-detail">
-								<p class="detail-title font-title">맞아, 이것이 내가 원하는 컨트롤러입니다.</p>
-								<div class="detail-summary">
-									<p class="font-title">한 손으로 조작</p>
-								</div>
-								<div class="detail-text">
-									<p>한 손에 블라인드 터치로 조작 가능하며, 적당한 사이즈로 휴대하기도 쉽고, 사무실이나 커피 숍에서 어디서나 언제든지 창작을 시작할 수 있습니다.</p>
-								</div>
+                data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper02-2.1.jpg"></div>
+              <p class="slide-title">한 손으로 조작 가능</p>
+              <div class="slide-text">
+                <p>버튼을 안 보고 한 손으로 조작 가능하며 사이즈가 적당해서 소지하기 편하기 때문에 사무실이든 커피숍이든 언제 어디든  작업을 시작하실 수 있습니다.</p>
+              </div>
+						</div>
+						<div class="swiper-slide" :class="{'swiper-no-swiping': !isM}">
+							<div class="slide-banner lazy"
+								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper03-2.1.jpg"></div>
+							<p class="slide-title">안정적이고 믿을 만한 제품</p>
+							<div class="slide-text">
+								<p>적당한 무게에 안정적이고 쉽게 흔들리지 않아서 편하고 자신 있게 작업을 진행할 수 있습니다.</p>
 							</div>
 						</div>
-						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
+						<div class="swiper-slide" :class="{'swiper-no-swiping': !isM}">
 							<div class="slide-banner lazy"
-								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper03-2.0.4.jpg"></div>
-							<div class="slide-detail">
-								<p class="detail-title font-title">맞아, 이것이 내가 원하는 컨트롤러입니다.</p>
-								<div class="detail-summary">
-									<p class="font-title">견고하고 신뢰할 수 있음</p>
-								</div>
-								<div class="detail-text">
-									<p>절한 무게로 인해 안정적이고, 쉽게 움직이지 않고, 자신 있게 조작할 수 있습니다.</p>
-									<!-- <p>让操作信心十足。</p> -->
-								</div>
-							</div>
-						</div>
-						<div class="swiper-slide flex-vc" :class="{' swiper-no-swiping': !isM}">
-							<div class="slide-banner lazy"
-								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper04-2.0.4.jpg"></div>
-							<div class="slide-detail">
-								<p class="detail-title font-title">맞아, 이것이 내가 원하는 컨트롤러입니다.</p>
-								<div class="detail-summary">
-									<p class="font-title">촉감이 좋음</p>
-								</div>
-								<div class="detail-text">
-									<p>좋은 촉감, 편안하고 촉촉하며 차가운 느낌이 전혀 없습니다.</p>
-								</div>
+								data-bg="//r.tourboxtech.com/kr/src/images/product-fourth-swiper04-2.1.jpg"></div>
+							<p class="slide-title">탁월한 촉감</p>
+							<div class="slide-text">
+								<p>제품을 만져 보시면 보드랍고 편안한 촉감이 느껴지실 수 있습니다. 반면에 차가운 느낌이 전혀 안 납니다.</p>
 							</div>
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
 				</div>
+				<!-- <div class="fifth-nav">
+					<div class="nav-list">
+						<div class="list-item flex-v-center" :class="{'list-active': swiperActiveIndex == index}" 
+						v-for="(item, index) in swiperButtonList" :key="index" @click="switchSwiper(index)">{{item}}</div>
+					</div>
+				</div> -->
 			</section>
 			<!-- fifth -->
 			<section class="section-fifth">
-				<div class="fifth-content">
-					<div class="fifth-title">
-						<p class="title font-title">컨트롤의 재미를 즐기십시오.</p>
-					</div>
-					<div class="fifth-text">
-						<p class="text font-text ">이미지 확대 / 축소, 캔버스 회전, 타임 라인 확대 / 축소 등과 같은 일련의 탐색 작업에서 TourBox의 스크롤, 노브 및 다이얼은 사이드 키 ,톨 버튼, 쇼트  버튼, 및 기타 버튼들을 함께 사용하여 고급 기능을 수행 할 수 있습니다. </p>
-					</div>
-					<div class="fifth-list flex-vb flex-wrap">
-						<div class="list-item" :class="item.className" v-for="(item, index) in toastVideoList" :key="index"
-							@click="openSubToast(index)">
-							<div class="item-icon"></div>
+				<div class="fifth-title">
+					<p>마음껏 즐겨라!</p>
+					<p>재미있게 컨트롤하자.</p>
+				</div>
+				<div class="fifth-text">
+					<p class="text">이미지 확대/축소, 캔버스 회전, 타임라인 확대/축소 등 일련의 편집 작업을 진행하실 때 TourBox의 스크롤, 노브, 다이얼, 이 3까지 버튼과 사이드 버튼, 톨 버튼, 쇼트 버튼 등 기타 버튼들을 함께 사용하시면 다른 고급스로운 기능을 실행할 수 있습니다.</p>
+				</div>
+				<div class="fifth-tab">
+					<div class="tab-nav flex-vb">
+						<div class="nav-item flex-v-center" :class="{'nav-active': toastActiveIndex == index}" v-for="(item, index) in toastVideoList" :key="index"
+							@click="switchToast(index)" >
+							<i class="iconfont" :class="item.icon"></i>
 							<p>{{item.itemText}}</p>
 						</div>
 					</div>
-				</div>
-			</section>
-			<!-- fifth fixed toast video -->
-			<section class="fifth-toast" v-show="subToastShow" @click="closeSubToast">
-				<div class="toast-content">
-					<div class="content-detail" @click.stop>
-						<div class="content-close" @click="closeSubToast">
-							<i class="iconfont iconclose-circle"></i>
-						</div>
-						<div class="content-title">
-							<p>{{subTitle}}</p>
-						</div>
-						<div class="content-text">
-							<p v-html="subText"></p>
-						</div>
-						<div class="content-player">
+					<div class="tab-panel">
+						<div class="panel-player">
 							<div class="player-shade flex-center" v-if="!fifthToastIconShow">
 								<i class="iconfont iconvideoplay" @click="playSubToastVideo"></i>
 							</div>
 							<div class="player-video">
-								<video id="subToastVideo" playsinline webkit-playsinline="true" poster="" src=""></video>
+								<video
+									loop="true"
+									muted="true"
+									playsinline
+									webkit-playsinline="true"
+									x5-video-player-type="h5"
+									x-webkit-airplay="true"
+									x5-video-orientation="portraint" 
+									x5-video-player-fullscreen="true"
+									id="subToastVideo" 
+									:src="toastVideoList[toastActiveIndex].videoUrl"
+								></video>
 							</div>
 						</div>
+						<p class="panel-title">{{toastVideoList[toastActiveIndex].subTitle}}</p>
+						<p class="panel-text" v-html="toastVideoList[toastActiveIndex].subText"></p>
 					</div>
 				</div>
 			</section>
 			<!-- sixth -->
 			<section class="section-sixth">
 				<div class="sixth-title">
-					<p class="font-title">맞춤형 시스템으로 마음껏 창의력을 발휘하세요.</p>
+					<p>커스터마이저블 시스템으로</p>
+					<p>마음껏 창의력을 발휘하여라!</p>
 				</div>
 				<div class="sixth-sticky">
-					<div class="sticky-title">
-						<p class="font-title">맞춤형 시스템으로 마음껏 창의력을 발휘하세요.</p>
-					</div>
 					<div class="sticky-element">
 						<figure class="element-image lazy" data-bg="//r.tourboxtech.com/kr/src/images/product-sixth-scale-2.0.png">
 						</figure>
@@ -384,73 +378,66 @@
 							<div class="play-shade flex-center">
 								<i class="iconfont iconvideoplay" @click="playCardVideo"></i>
 							</div>
-							<video id="sixth-video" class="lazy" playsinline webkit-playsinline="true" muted="true" loop="true"
+							<video id="sixth-video" class="lazy"
+								loop="true"
+								muted="true"
+								playsinline
+								webkit-playsinline="true"
+								x5-video-player-type="h5"
+								x-webkit-airplay="true"
+								x5-video-orientation="portraint" 
+								x5-video-player-fullscreen="true"
 								data-src="//r.tourboxtech.com/kr/src/videos/product-sixth-01-2.0.2.mp4"></video>
-							<figure class="play-image lazy" data-bg="//r.tourboxtech.com/kr/src/images/product-sixth-01-mask-2.0.4.jpg"></figure>
+							<figure class="play-image lazy" data-bg="//r.tourboxtech.com/kr/src/images/product-sixth-01-mask-2.0.4.jpg">
+							</figure>
 						</div>
 					</div>
 					<div class="sticky-text">
-						<p class="font-text">
-							소프트웨어에서 사용하는 바로 가기 키를 TourBox에 설정하기 만하면, 작업의 난이도를 대폭 줄이고, 작업의 효율성을 크게 높이며, 창작 경험을 향상시킬 수 있습니다. 자신의 사용 습관과 소프트웨어 종류에 따라, 자신 만의 TourBox를 구성할 수도 있습니다.
-						</p>
+						<p>해당 소프트웨어에서 사용하시는 단축키를 TourBox 에 맵핑하시기만 하면 작업의 난이도를 대단히 줄여 주고 효율성도 크게 높여 주며 더 좋은 창작 체험을 얻으실 수 있습니다. 자신의 습관과 취향에 맞게 각 소프트웨어별로 자신만의 TourBox 배치가 가능합니다.</p>
 					</div>
 				</div>
 				<div class="sixth-detail">
 					<div class="detail-sticky">
 						<div class="sticky-float">
 							<div class="float-first">
-								<p class="font-text">
-									소프트웨어에서 사용하는 바로 가기 키를 TourBox에 설정하기 만하면, 작업의 난이도를 대폭 줄이고, 작업의 효율성을 크게 높이며, 창작 경험을 향상시킬 수 있습니다. 자신의 사용 습관과 소프트웨어 종류에 따라, 자신 만의 TourBox를 구성할 수도 있습니다.
-								</p>
+								<p>해당 소프트웨어에서 사용하시는 단축키를 TourBox 에 맵핑하시기만 하면 작업의 난이도를 대단히 줄여 주고 효율성도 크게 높여 주며 더 좋은 창작 체험을 얻으실 수 있습니다. 자신의 습관과 취향에 맞게 각 소프트웨어별로 자신만의 TourBox 배치가 가능합니다. </p>
 							</div>
 
 							<div class="float-second float-chunk">
-								<div class="chunk-title">
-									<div class="title-desk">
-										<p> 바로 가기 키에 익숙하지 않습니까?<span>아무 문제가 없습니다!</span> </p>
-									</div>
-									<div class="title-mobile">
-										<p>바로 가기 키에 익숙하지 않습니까?</p>
-										<p><span>아무 문제가 없습니다!</span></p>
-									</div>
-								</div>
+								<div class="chunk-title flex-center">
+									<p>단축키에 대해서 익숙하지 않다고?</p>
+                </div>
+                <div class="chunk-summary">
+                  <p>문제가 없다!</p>
+                </div>
 								<div class="chunk-text">
-									<p class="font-text">
-										모든 크리에이티브 소프트웨어의 바로 가기 키에는 그의 실제 기능을 설명하기 위해, 읽기 쉬운 라벨이 있을 수 있습니다. 강력하고 직관적인 대화형 프롬프트 시스템으로 TourBox의 사용은 매우 간단합니다. 화면에 상주 할 수 있는 대화형 HUD, 클릭 한 번으로 팝업 할 수 있는 시각화 된 내비게이션 맵, 완벽한 블라인드 작업을 위한 TourBox의 독특한 키 위치, 기억하기 어렵고 누르기 어려운 키보드 바로 가기 키에서 벗어나, 대신 강력하고 직관적인 버튼 레이아웃을 즐기십시오.
-									</p>
+									<p>각 크리에이티브 소프트웨어 단축키들의 실제 기능을 설명할 수 있도록 알아보기 쉬운 라벨이 배치되어 있습니다. 직관적이고 강한 대화형 프롬프트 시스템으로</p>
+									<p>TourBox 사용은 매우 간단해집니다. 스크린에 항상 보이는 대화형HUD, 한번 클릭하면 블러오는 시각화된 편집 필드, 버튼을 안 보고도 작업을 진행할 수 있게 특별히 디자인된 TourBox 버튼 위치, 형태과 조합하게 되면 다양한 스프트웨어를 보다 쉽게 조작할 수 있습니다. 기억하기 어렵고 누르기 불편한 단축키 고민까지 완벽하게 해결됩니다.</p>
 								</div>
 							</div>
 
 							<div class="float-third float-chunk">
-								<div class="chunk-title">
-									<div class="title-desk">
-										<p>여러 세트의 크리에이티브 소프트웨어를 동시에 사용 하십니까?<span>아무 문제가 없습니다!</span> </p>
-									</div>
-									<div class="title-mobile">
-										<p>여러 세트의 크리에이티브 소프트웨어를 동시에 사용 하십니까?</p>
-										<p><span>아무 문제가 없습니다!</span></p>
-									</div>
-								</div>
+								<div class="chunk-title flex-center">
+									<p>여러 세트의 크리에이티브 소프트웨어를<span>&nbsp;</span></p>
+									<p>동시에 사용할 때 전환 가능할까?</p>
+                </div>
+                <div class="chunk-summary">
+                  <p>문제가 없다!</p>
+                </div>
 								<div class="chunk-text">
-									<p class="font-text">
-										창작 과정에서 TourBox는 다양한 창의적 소프트웨어에 따라, 자동으로 사전 설정 목록을 무의미하게 전환하여, 창작 과정을 더욱더 원활하게 만듭니다. 심지어 Chrome, YouTube 등과 같은 다른 소프트웨어를 사용하는 경우에도, TourBox는 자동으로 해당 사전 설정 목록으로 전환할 수 있습니다.
-									</p>
+									<p>작업하는 동안 사용하시는 크리에이티브 스프트웨어에 따라 TourBox는 자동적으로 사전 설정 리스트를 전환하여 작업 과정이 더욱 원활하게 만들어집니다. 심지어 Chrome, YouTube 등 기타 스프트웨어를 함께 사용하시는 경우에도 TourBox를 통하여 해당 사전 설정 리스트는 자동전환이 됩니다.</p>
 								</div>
 							</div>
 							<div class="float-fourth float-chunk">
-								<div class="chunk-title">
-									<div class="title-desk">
-										<p> 마우스 기능을 TourBox에 사용자 지정하시겠습니까?<span>아무 문제가 없습니다!</span> </p>
-									</div>
-									<div class="title-mobile">
-										<p>마우스 기능을 TourBox에 사용자 지정하시겠습니까?</p>
-										<p><span>아무 문제가 없습니다!</span></p>
-									</div>
-								</div>
+								<div class="chunk-title flex-center">
+									<p>마우스 기능을<span>&nbsp;</span></p>
+									<p>TourBox에 맵핑해서 사용해도 될까 ? </p>
+                </div>
+                <div class="chunk-summary">
+                  <p>문제가 없다!</p>
+                </div>
 								<div class="chunk-text">
-									<p class="font-text">
-										모든 키보드의 바로 가기 키는 물론, 마우스의 기능까지 TourBox에 완벽하게 설정할 수 있습니다. 왼쪽 버튼, 오른쪽 버튼, 중간 버튼, 스크롤 휠 등 상관없이, 더 많은 가능성을 실현하십시오.
-									</p>
+									<p>단축키는 물론이고 마우스 기능까지 TourBox에 완벽하게 맵핑해서 사용할 수 있습니다. 왼쪽 버튼이든 오른쪽 버튼이든 중간 버튼이든 스크롤 휠이든 원하시는 대로 직접 한번 설정해 보세요.</p>
 								</div>
 							</div>
 						</div>
@@ -464,36 +451,38 @@
 
 				<div class="sixth-youtube">
 					<div class="youtube-title">
-						<p class="font-title">한 번 사용하면, 그의 매력에 푹 빠집니다.</p>
+						<p>한번만 사용해 보시면 그의</p>
+            <p>매력에 푹 빠진다.</p>
 					</div>
 					<div class="youtube-text">
-						<p class="font-text ">
-							TourBox의 디자인은 하드웨어이든 소프트웨어이든 모두 사용자의 입장에서 출발하였으며, 사용하다 보면, 마치 몸의 일부처럼 느낄 것입니다. 한 손으로 조작할 수 있는 레이아웃, 직관적인 입력 방법 및 강력한 사용자 정의 기능은 작업 효율성을 새로운 수준으로 끌어 올릴 수 있습니다. 맞습니다. 진정한 도구는 자신의 손처럼 가장 직관적인 방법으로 창작, 생각, 컨트롤 할 수 있도록 지원합니다. 
-						</p>
+						<p>하드웨어 측면이든 소프트웨어 측면이든 사용자의 입장이야말로 TourBox 다자인의 유일한 출발점입니다. 사용하다 보면 분명히 하나의 공통체로 되었다는 실감이 나옵니다. 한 손으로 조작 가능한 레이아웃, 직관적인 입력 형태, 커스터마이저블 시스템을 통해서 보다 효율적인 창작이 가능합니다. 진정한 도구는 자신의 손의 기능을 확장하고 창작가가 제일 직관적인 방식으로 생각할 수 있고  컨트롤할 수 있으며 작업할 수 있도록 하는 도구라고 해도 과언이 아닙니다. </p>
+					</div>
+					<div class="youtube-watch" @click="openFixedVideo('KnRKJcLDi1Y')">
+						<span>투어박스는 바로 이러한 존재입니다.</span>
+						<i class="iconfont icontriangle"></i>
 					</div>
 					<div class="youtube-banner lazy"
-						:data-bg="!isM ? '//r.tourboxtech.com/kr/src/images/product-sixth-youtube-2.0.4.jpg' : '//r.tourboxtech.com/kr/src/images/product-sixth-youtube-mobile-2.0.4.jpg'"
+						:data-bg="!isM ? '//r.tourboxtech.com/kr/src/images/product-sixth-youtube-2.1.jpg' : '//r.tourboxtech.com/kr/src/images/product-sixth-youtube-mobile-2.1.jpg'"
 						@click="openFixedVideo('KnRKJcLDi1Y')">
-						<div class="banner-watch flex-vc">
-							<span>그들이 모두 사용하고 있습니다</span>
-							<i class="iconfont iconbofang"></i>
-						</div>
 					</div>
 				</div>
 			</section>
 			<!-- seventh -->
 			<section class="section-seventh">
 				<div class="seventh-title">
-					<p>크리에이터를 위한 최고의 컨트롤러</p>
+					<p>TourBox</p>
 				</div>
 				<div class="seventh-summary">
-					<p>TourBox 2020</p>
+					<p>크리에이터를 위한 최고의 컨트롤러</p>
+				</div>
+				<div class="seventh-banner">
+					<img src="//r.tourboxtech.com/kr/src/images/product-buy-now-2.1.jpg" alt="TourBox">
 				</div>
 				<div class="seventh-price">
 					<p>$169</p>
 				</div>
 				<div class="seventh-buy flex-center">
-					<a class="flex-center" href="shopify-buy.html" target="_blank">구매하기</a>
+					<a class="flex-center" href="shopify-buy.html" target="_blank">바로 구매하기</a>
 				</div>
 			</section>
 		</main>
