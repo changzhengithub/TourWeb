@@ -175,14 +175,12 @@ $(document).ready(function () {
       $('.wrapper-first .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFirstStickyTop);
       $('.wrapper-fourth .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFourthStickyTop);
       $('.wrapper-first .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
-      $('.wrapper-fourth .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFourthStickyTop + screenH * 0.3);
       $('.wrapper-first .sticky-element').toggleClass('element-active-title', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
       $('.wrapper-first .sticky-element').toggleClass('element-active-text', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
     } else {
       $('.wrapper-first .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFirstStickyTop);
       $('.wrapper-fourth .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFourthStickyTop);
       $('.wrapper-first .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
-      $('.wrapper-fourth .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFourthStickyTop + screenH * 0.3);
       $('.wrapper-first .sticky-element').toggleClass('element-active-title', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
       $('.wrapper-first .sticky-element').toggleClass('element-active-text', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
       $('.wrapper-first .element-text').toggleClass('element-text-hide', scrollH >= secondTop + wrapperFirstHeight - screenH * 0.9);

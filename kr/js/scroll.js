@@ -3,11 +3,11 @@ $(document).ready(function () {
   var screenW = $(window).width();
   var headerH = $('.header').innerHeight();
   var wrapperFirstTop = $('.wrapper-first').offset().top;
-  var wrapperFirstTitleH = window.flag ? $('.wrapper-first .first-title').innerHeight() : 0;
-  var wrapperFirstStickyTop = wrapperFirstTop + wrapperFirstTitleH;
+  // var wrapperFirstTitleH = window.flag ? $('.wrapper-first .first-title').innerHeight() : 0;
+  var wrapperFirstStickyTop = wrapperFirstTop;
   var wrapperSecondTop = $('.wrapper-second').offset().top;
   var wrapperFourthTop = $('.wrapper-fourth').offset().top;
-  var wrapperFourthTitleH = $('.wrapper-fourth .fourth-title').innerHeight();
+  var wrapperFourthTitleH = $('.wrapper-fourth .full-title').innerHeight();
   var wrapperFourthStickyTop = wrapperFourthTop + wrapperFourthTitleH;
   var wrapperFirstHeight = $('.wrapper-first').innerHeight();
   var sixthVideoW = $('#sixth-video').innerWidth();
@@ -16,6 +16,7 @@ $(document).ready(function () {
   var sixthDetailH = $('.section-sixth .sixth-detail').innerHeight();
   var secondTop = $('.section-second').offset().top;
   var thirdTop = $('.section-third').offset().top;
+  var fourthTop = $('.section-fourth').offset().top;
   var fifthTop = $('.section-fifth').offset().top;
   var sixthTop = $('.section-sixth').offset().top;
   var sevenTop = $('.section-seventh').offset().top;
@@ -30,10 +31,11 @@ $(document).ready(function () {
   function refreshPage() {
     initEnterAnimate();
     headerNavGradient(currentTop);
+    bannerImgMove(currentTop);
     bannerTitleGradient(currentTop);
-    firstNextTitleShow(currentTop);
-    firstNextTitleMove(currentTop);
-    bannerBgGradient(currentTop);
+    // firstNextTitleShow(currentTop);
+    // firstNextTitleMove(currentTop);
+    // bannerBgGradient(currentTop);
     secondVideoEffect(currentTop);
     wrapperFourthTitle(currentTop);
     wrapperFourthTitleMove(currentTop);
@@ -58,10 +60,11 @@ $(document).ready(function () {
   function scrollEvent() {
     var scrollH = $('html').scrollTop();
     headerNavGradient(scrollH);
+    bannerImgMove(scrollH);
     bannerTitleGradient(scrollH);
-    bannerBgGradient(scrollH);
-    firstNextTitleShow(scrollH);
-    firstNextTitleMove(scrollH);
+    // bannerBgGradient(scrollH);
+    // firstNextTitleShow(scrollH);
+    // firstNextTitleMove(scrollH);
     secondVideoEffect(scrollH);
     wrapperFourthTitle(scrollH);
     wrapperFourthTitleMove(scrollH);
@@ -73,25 +76,40 @@ $(document).ready(function () {
     if (window.flag) {
       $('header .header-buy').toggleClass('buy-active', scrollH > headerH);
     } else {
-      if (scrollH >= wrapperFirstStickyTop && scrollH <= wrapperSecondTop || scrollH > wrapperFourthStickyTop && scrollH < thirdTop || sixthVideoH * sixVideoRate > screenH - headerH * 2 && scrollH <= sevenTop) {
+      if (scrollH >= wrapperFirstStickyTop && scrollH <= wrapperSecondTop || scrollH > wrapperFourthStickyTop && scrollH < fourthTop || sixthVideoH * sixVideoRate > screenH - headerH * 2 && scrollH <= sevenTop) {
         if (!$('.header').hasClass('header-black')) $('.header').addClass('header-black');
       } else {
         if ($('.header').hasClass('header-black')) $('.header').removeClass('header-black');
       }
     }
   }
+  function bannerImgMove(scrollH) {
+    if (window.flag) return
+    var moveSize = screenH * 0.8;
+    var scrollStart = 0;
+    var scrollEnd = screenH * 1.5;
+    var scrollSize = screenH * 1.5
+    if (scrollH >= scrollStart && scrollH <= scrollEnd) {
+      var tranY = (scrollH - scrollStart) / scrollSize * moveSize;
+    }
+    if (scrollH < scrollStart) tranY = 0;
+    if (scrollH > scrollEnd) tranY = moveSize;
+    $('.main-banner .move-img').css({
+      transform: 'matrix(1, 0, 0, 1, 0, ' + -tranY + ')'
+    })
+  }
   function bannerTitleGradient(scrollH) {
     if (window.flag) return
-    var scrollStart = screenH;
-    var scrollEnd = screenH * 1.8;
-    var scrollSize = screenH * 0.8;
+    var scrollStart = 0;
+    var scrollEnd = screenH * 0.5;
+    var scrollSize = screenH * 0.5;
     if (scrollH >= scrollStart && scrollH <= scrollEnd) {
-      var aph = 1 - (scrollH - scrollStart) / scrollSize;
+      var aph = (scrollH - scrollStart) / scrollSize;
     }
-    if (scrollH < scrollStart) aph = 1;
-    if (scrollH > scrollEnd) aph = 0;
+    if (scrollH < scrollStart) aph = 0;
+    if (scrollH > scrollEnd) aph = 1;
     requestAnimationFrame(function () {
-      $('.main-banner .content-detail').css({
+      $('.main-banner .banner-detail').css({
         opacity: aph,
       });
     })
@@ -153,11 +171,20 @@ $(document).ready(function () {
   function secondVideoEffect(scrollH) {
     videoCanPlay('#second-first-video', scrollH, wrapperFirstStickyTop);
     videoCanPlay('#second-fourth-video', scrollH, wrapperFourthStickyTop);
-    $('.wrapper-first .sticky-element').toggleClass('sticky-scale', scrollH >= wrapperFirstStickyTop);
-    $('.wrapper-first .sticky-element').toggleClass('sticky-active', scrollH >= wrapperFirstStickyTop + screenH);
-    $('.wrapper-fourth .sticky-element').toggleClass('sticky-scale', scrollH >= wrapperFourthStickyTop);
-    $('.wrapper-fourth .sticky-element').toggleClass('sticky-active', scrollH >= wrapperFourthStickyTop + screenH);
-    $('.wrapper-first .element-text').toggleClass('element-text-active', scrollH >= secondTop + wrapperFirstHeight - screenH * 0.9);
+    if (window.flag) {
+      $('.wrapper-first .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFirstStickyTop);
+      $('.wrapper-fourth .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFourthStickyTop);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-title', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-text', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+    } else {
+      $('.wrapper-first .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFirstStickyTop);
+      $('.wrapper-fourth .sticky-element').toggleClass('element-active-scale', scrollH >= wrapperFourthStickyTop);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-bg', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-title', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+      $('.wrapper-first .sticky-element').toggleClass('element-active-text', scrollH >= wrapperFirstStickyTop + screenH * 0.3);
+      $('.wrapper-first .element-text').toggleClass('element-text-hide', scrollH >= secondTop + wrapperFirstHeight - screenH * 0.9);
+    }
   }
   function videoCanPlay(videoId, scrollH, start) {
     if (!window.flag && $(videoId)[0].readyState === 4) {
@@ -197,19 +224,21 @@ $(document).ready(function () {
     });
   }
   function fifthTitleShow(scrollH) {
+    if(window.flag) return
     $('.section-fifth .title').stop().toggleClass('title-active', scrollH >= fifthTop - screenH * 0.6);
     $('.section-fifth .text').stop().toggleClass('text-active', scrollH >= fifthTop - screenH * 0.5);
-    $('.section-fifth .fifth-list').stop().toggleClass('fifth-active', scrollH >= fifthTop - screenH * 0.2);
+    // $('.section-fifth .nav-item').stop().toggleClass('item-transform', scrollH >= fifthTop - screenH * 0.2);
   }
   function sixthAnimate(scrollH) {
     sixthGradient('.float-first', scrollH, sixthDetailTop + screenH * 0.4, sixthDetailTop + screenH * 0.6, sixthDetailTop + screenH * 1.4, sixthDetailTop + screenH * 1.6);
     if (window.flag) {
-      $('.section-fifth .fifth-content').toggleClass('section-fifth-active', scrollH > sixthTop - screenH * 0.3);
+      sixthMobileBannerShow(scrollH);
+      $('.section-fifth').toggleClass('section-fifth-active', scrollH > sixthTop - screenH * 0.3);
+      $('.section-sixth .sixth-title').toggleClass('title-active', scrollH > sixthTop - screenH * 0.3);
       $('.section-sixth .sixth-sticky').toggleClass('sticky-active', scrollH > sixthTop - screenH * 0.3);
       sixthGradient('.float-second', scrollH, sixthDetailTop - screenH * 0.8, sixthDetailTop, sixthDetailTop + screenH, sixthDetailTop + screenH * 1.2);
       sixthGradient('.float-third', scrollH, sixthDetailTop + screenH * 1.2, sixthDetailTop + screenH * 1.4, sixthDetailTop + screenH * 2.4, sixthDetailTop + screenH * 2.6);
       sixthGradient('.float-fourth', scrollH, sixthDetailTop + screenH * 2.6, sixthDetailTop + screenH * 2.8, sixthDetailTop + screenH * 3.8, sixthDetailTop + screenH * 4);
-      sixthMobileBannerShow(scrollH)
     } else {
       sixthVideoScale(scrollH);
       sixthBgGradient(scrollH);
@@ -264,6 +293,7 @@ $(document).ready(function () {
       $('.sixth-youtube').hide();
     }
   }
+
   function sixthMobileBannerShow(scrollH) {
     if (scrollH >= sixthDetailTop + sixthDetailH - screenH * 1.5) {
       $('.sixth-youtube').show();
@@ -271,6 +301,8 @@ $(document).ready(function () {
       $('.sixth-youtube').hide();
     }
   }
+  
+  
   function sixthGradient(element, scrollH, enterStart, enterEnd, leaveStart, leaveEnd) {
     var aph, tranY;
     var tranYSize = screenH * 0.6;
