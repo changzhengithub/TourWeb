@@ -1,1102 +1,1687 @@
 <style type="text/css">
-	#header-container {
-		width: 100%;
-		height: 100%;
-	}
-	/* desk */
-	.header-desk{visibility:visible;width:100%;height:100%}
-	.header-mobile{visibility:hidden;height:0}
-	.header-desk>.desk-nav{height:100%}
-	.header-desk .nav-logo{display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%}
-	.header-desk .nav-logo>img{width:100%;height:100%}
-	.header-desk .nav-bar{height:100%}
-	.header-desk .bar-item{position:relative;width:1.2rem;height:100%}
-	.header-desk .bar-item::after{position:absolute;top:50%;right:0;z-index:9;display:block;content:"";width:1px;height:.17rem;background-color:#bbbbbb;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
-	.header-desk .bar-item:last-of-type:after{display:none}
-	.header-desk .bar-item::before{position:absolute;left:50%;bottom:0.1rem;z-index:9;display:block;content:"";width:40%;height:2px;opacity:0;background-color:#6d6c6c;-webkit-transform:translateX(-50%);transform:translateX(-50%);transition:opacity .5s}
-	.header-desk .item-link{width:100%;height:100%;font-size:.14rem;color:#6d6d6d}
-	.header-desk .item-bar{position:absolute;left:0;top:.55rem;z-index:9;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 2px 1px #eee}
-	.header-desk .bar-sub{width:100%;height:.3rem}
-	.header-desk .sub-link{width:100%;height:100%;font-size:.12rem;color:#6d6d6d}
-	.header-desk .bar-item:hover::before{opacity:1}
-	.header-desk .bar-item:hover .item-bar{display:block}
-	.header-desk .sub-link:hover{background-color:#f2f2f2;color:#333}
-	.header-desk .desk-buy{height:.3rem;padding:0 .15rem;margin:0 0rem 0 .2rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%);cursor:pointer}
-	.header-desk .desk-language{position:relative;height:100%;padding:0 .2rem;margin-left:.2rem;cursor:pointer}
-	.header-desk .language-default{width:100%;height:100%;font-size:.14rem;color:#6a6a6a}
-	.header-desk .language-default>i{font-size:.2rem;color:#3d6df6}
-	.header-desk .language-select{position:absolute;top:.55rem;left:0;z-index:1;display:none;width:100%;padding-bottom:.05rem;background-color:rgba(255,255,255,.8);box-shadow:1px 1px 1px 0px #eee}
-	.header-desk .select-item{width:100%;height:.3rem;font-size:.12rem;color:#6d6d6d}
-	.header-desk .desk-language:hover .language-select{display:block}
-	.header-desk .select-item:hover{background-color:#f2f2f2;color:#333}
+  #header-container {
+    width: 100%;
+    height: 100%;
+  }
 
-	/* 登录 */
-	.desk-auth {
-		height: 100%;
-	}
-	.desk-auth>.auth-user {
-		position: relative;
-		height: 100%;
-	}
-	.desk-auth>.auth-user>.user-head {
-		width: .5rem;
-		height: 100%;
-		cursor: pointer;
-	}
-	.desk-auth>.auth-user>.user-head>i {
-		font-size: .16rem;
-		color: #333;
-	}
-	.desk-auth>.auth-user>.user-menu {
-		position: absolute;
-		left: 50%;
-		top: .55rem;
-		z-index: 9;
-		display: none;
-		width: 1rem;
-		background-color: #fff;
-		box-shadow:1px 1px 1px 0px #eee;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
-	}
-	.desk-auth>.auth-user>.user-menu>.menu-item {
-		width: 100%;
-		height: .3rem;
-		font-size: .12rem;
-		color: #1C1C1E;
-		cursor: pointer;
-	}
-	.desk-auth>.auth-user>.user-menu>.menu-item:hover {
-		background-color:#f2f2f2;
-		color:#333;
-	}
+  /* desk */
+  .header-desk {
+    visibility: visible;
+    width: 100%;
+    height: 100%
+  }
 
-	.desk-auth>.auth-user:hover .user-menu {
-		display: block;
-	}
+  .header-mobile {
+    visibility: hidden;
+    height: 0
+  }
 
-	
-	.desk-auth>.auth-container {
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		z-index: 999;
-		padding-top: 10vh;
-		background-color: rgba(0,0,0,.8);
-	}
-	.desk-auth .contaienr-wrapper {
-		width: 510px;
-		height: 800px;
-		padding: 50px 0 0 0;
-		margin: 0 auto;
-		background-color: #fff;
-		overflow: auto;
-	}
-	.desk-auth .wrapper-logo {
-		width: 100%;
-		margin-bottom: 10px;
-	}
-	.desk-auth .wrapper-logo>a>i {
-		font-size: 60px;
-		color: #727172;
-	}
-	.desk-auth .wrapper-title {
-		width: 100%;
-		margin-bottom: 30px;
-		font-size: 28px;
-		color: #7F7F7F;
-		text-align: center;
-	}
+  .header-desk>.desk-nav {
+    height: 100%
+  }
 
-	.desk-auth .wrapper-login {
-		width: 100%;
-	}
+  .header-desk .nav-logo {
+    display: block;
+    width: 0.4rem;
+    height: 0.27rem;
+    background-image: url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+  }
 
-	.desk-auth .wrapper-register {
-		width: 100%;
-	}
+  .header-desk .nav-logo>img {
+    width: 100%;
+    height: 100%
+  }
 
-	.login-form, .register-form, .activate-form, .complete-form {
-		width: 300px;
-		margin: 0 auto;
-	}
+  .header-desk .nav-bar {
+    height: 100%
+  }
 
+  .header-desk .bar-item {
+    position: relative;
+    width: 1.2rem;
+    height: 100%
+  }
 
-	.desk-auth .wrapper-form {
-		width: 300px;
-		margin: 0 auto;
-	}
+  .header-desk .bar-item::after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 9;
+    display: block;
+    content: "";
+    width: 1px;
+    height: .17rem;
+    background-color: #bbbbbb;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%)
+  }
 
-	.form-tip {
-		width: 100%;
-		margin-bottom: 20px;
-		font-size: 20px;
-		color: #38a858;
-		font-weight: 200;
-		line-height: 1.3;
-		text-align: center;
-	}
+  .header-desk .bar-item:last-of-type:after {
+    display: none
+  }
 
-	.form-item {
-		width: 100%;
-		padding-top: 15px;
-	}
+  .header-desk .bar-item::before {
+    position: absolute;
+    left: 50%;
+    bottom: 0.1rem;
+    z-index: 9;
+    display: block;
+    content: "";
+    width: 40%;
+    height: 2px;
+    opacity: 0;
+    background-color: #6d6c6c;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    transition: opacity .5s
+  }
 
-	.form-item>.item-input {
-		position: relative;
-		width: 100%;
-		height: 50px;
-		margin-bottom: 5px;
-		border: 1px solid #bbb;
-		border-radius: 2px;
-	}
+  .header-desk .item-link {
+    width: 100%;
+    height: 100%;
+    font-size: .14rem;
+    color: #6d6d6d
+  }
 
-	.form-item>.item-input>input {
-		display: block;
-		width: 100%;
-		height: 100%;
-		padding: 0 10px;
-		font-size: 14px;
-		color: #333;
-		border: none;
-		background: transparent;
-	}
-	.form-item>.item-input>input::placeholder {
-		color: #7F7F7F;
-	}
+  .header-desk .item-bar {
+    position: absolute;
+    left: 0;
+    top: .55rem;
+    z-index: 9;
+    display: none;
+    width: 100%;
+    padding-bottom: .05rem;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 1px 1px 2px 1px #eee
+  }
 
+  .header-desk .bar-sub {
+    width: 100%;
+    height: .3rem
+  }
 
-	.form-item>.item-active {
-		border: 1px solid #f04848;
-	}
+  .header-desk .sub-link {
+    width: 100%;
+    height: 100%;
+    font-size: .12rem;
+    color: #6d6d6d
+  }
 
-	.form-item>.item-active>input {
-		color: #f04848;
-	}
+  .header-desk .bar-item:hover::before {
+    opacity: 1
+  }
 
-	.form-item>.item-active>input::placeholder {
-		color: #f04848;
-	}
+  .header-desk .bar-item:hover .item-bar {
+    display: block
+  }
 
-	.form-item>.item-tip {
-		width: 100%;
-		padding-left: 10px;
-		font-size: 12px;
-		color: #f04848;
-	}
+  .header-desk .sub-link:hover {
+    background-color: #f2f2f2;
+    color: #333
+  }
 
-	.form-submit {
-		width: 100%;
-	}
-	
-	.form-submit-margin-20 {
-		margin-top: 20px;
-	}
-	.form-submit-margin-40 {
-		margin-top: 40px;
-	}
+  .header-desk .desk-buy {
+    height: .3rem;
+    padding: 0 .15rem;
+    margin: 0 0rem 0 .2rem;
+    font-size: .14rem;
+    color: #fff;
+    border-radius: .55rem;
+    background: linear-gradient(218deg, #004ffc 4%, #3f6ef6 94%);
+    cursor: pointer
+  }
 
-	.form-submit>button {
-		width: 100%;
-		height: 50px;
-		font-size: 16px;
-		color: #fff;
-		border-radius: 5px;
-		background-color: #44a8f2;
-		border: 1px solid #44a8f2;
-		cursor: pointer;
-	}
+  .header-desk .desk-language {
+    position: relative;
+    height: 100%;
+    padding: 0 .2rem;
+    margin-left: .2rem;
+    cursor: pointer
+  }
 
-	.form-submit>.submit-active {
-		background-color: #d7d7d7;
-		border: 1px solid #d7d7d7;
-		cursor: not-allowed;
-	}
+  .header-desk .language-default {
+    width: 100%;
+    height: 100%;
+    font-size: .14rem;
+    color: #6a6a6a
+  }
 
-	.form-code {
-		width: 100%;
-		margin: 20px 0;
-	}
+  .header-desk .language-default>i {
+    font-size: .2rem;
+    color: #3d6df6
+  }
 
-	.form-code>button {
-		width: 100%;
-		height: 50px;
-		font-size: 14px;
-		color: #fff;
-		border-radius: 5px;
-		background-color: #44a8f2;
-		border: 1px solid #44a8f2;
-		cursor: pointer;
-		transition: all 0.2s linear;
-	}
-	
-	.code-active>button {
-		color: #44a8f2;
-		background: #fff;
-		cursor: not-allowed;
-	}
+  .header-desk .language-select {
+    position: absolute;
+    top: .55rem;
+    left: 0;
+    z-index: 1;
+    display: none;
+    width: 100%;
+    padding-bottom: .05rem;
+    background-color: rgba(255, 255, 255, .8);
+    box-shadow: 1px 1px 1px 0px #eee
+  }
 
-	.form-verification {
-		width: 100%;
-		height: 50px;
-		margin-top: 20px;
-		margin-bottom: 30px;
-		border: 1px solid #ccc;
-	}
+  .header-desk .select-item {
+    width: 100%;
+    height: .3rem;
+    font-size: .12rem;
+    color: #6d6d6d
+  }
 
-	.form-protocol {
-		width: 100%;
-		padding-left: 5px;
-		margin-bottom: 15px;
-	}
-	.form-protocol>i {
-		font-size: 16px;
-		color: #44A9F1;
-	}
-	.form-protocol>p {
-		margin-left: 5px;
-		line-height: 1.3;
-		font-size: 12px;
-		color: #7f7f7f;
-	}
-	.form-protocol>p>a {
-		color: #333;
-	}
+  .header-desk .desk-language:hover .language-select {
+    display: block
+  }
 
-	.form-skip {
-		width: 100%;
-		margin-top: 20px;
-		font-size: 14px;
-		color: #44a9f2;
-	}
-	.form-skip>span {
-		cursor: pointer;
-	}
+  .header-desk .select-item:hover {
+    background-color: #f2f2f2;
+    color: #333
+  }
 
-	.form-complete {
-		width: 100%;
-		margin: 20px 0;
-	}
-	.form-complete>button {
-		width: 100%;
-		height: 50px;
-		font-size: 14px;
-		color: #44a8f2;
-		border-radius: 5px;
-		background-color: #fff;
-		border: 1px solid #44a8f2;
-		cursor: pointer;
-	}
+  /* 登录 */
+  .desk-auth {
+    height: 100%;
+  }
 
-	.auth-load {
-		position: fixed;
-		left: 0;
-		right: 0;
-		top: 0;
-		bottom: 0;
-		z-index: 9999;
-		padding-top: 10vh;
-		background-color: rgba(0,0,0,.8);
-	}
+  .desk-auth>.auth-user {
+    position: relative;
+    height: 100%;
+  }
 
-	.auth-load>i {
-		font-size: 30px;
-		color: #fff;
-	}
+  .desk-auth>.auth-user>.user-head {
+    width: .5rem;
+    height: 100%;
+    cursor: pointer;
+  }
 
-	.fade-enter-active, .fade-leave-active {
-		transition: all .3s ease-in;
-	}
+  .desk-auth>.auth-user>.user-head>i {
+    font-size: .16rem;
+    color: #333;
+  }
 
-	.fade-enter, .fade-leave-to {
-		opacity: 0;
-	}
+  .desk-auth>.auth-user>.user-menu {
+    position: absolute;
+    left: 50%;
+    top: .55rem;
+    z-index: 9;
+    display: none;
+    width: 1rem;
+    background-color: #fff;
+    box-shadow: 1px 1px 1px 0px #eee;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+  }
+
+  .desk-auth>.auth-user>.user-menu>.menu-item {
+    width: 100%;
+    height: .3rem;
+    font-size: .12rem;
+    color: #1C1C1E;
+    cursor: pointer;
+  }
+
+  .desk-auth>.auth-user>.user-menu>.menu-item:hover {
+    background-color: #f2f2f2;
+    color: #333;
+  }
+
+  .desk-auth>.auth-user:hover .user-menu {
+    display: block;
+  }
 
 
-	/* mobile */
-	@media only screen and (max-width:767px){
-	.header-desk{visibility:hidden;width:100%;height:0;overflow:hidden}
-	.header-mobile{visibility:visible;height:100%}
-	.header-mobile .mobile-logo{position:absolute;left:50%;top:50%;z-index:9;display:block;width:0.4rem;height:0.27rem;background-image:url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');background-position:center center;background-repeat:no-repeat;background-size:100% 100%;transform:translate(-50%,-50%)}
-	.header-mobile .mobile-logo>img{width:100%;height:100%}
-	.header-mobile .nav-toggle>i{font-size:.24rem;color:#6a6a6a}
-	.header-mobile>.mobile-nav{position:relative;z-index:100}
-	.header-mobile .nav-list{position:fixed;top:.44rem;left:0;right:0;z-index:999;display:none;width:100vw;height:calc(100vh - 0.44rem);background-color:#fff}
-	.header-mobile .list-item{position:relative;width:100%}
-	.header-mobile .list-item::after{position:absolute;top:auto;right:auto;bottom:0;left:0;z-index:9;content:"";width:100%;height:1px;background-color:#ddd;-webkit-transform:translateY(0%);transform:translateY(0%)}
-	.header-mobile .list-item:last-of-type:after{display:none}
-	.header-mobile .item-link{width:100%;height:.4rem;padding:0 .1rem 0 .25rem;font-size:.16rem;color:#6d6d6d}
-	.header-mobile .item-link>i{font-size:.2rem;color:#6d6d6d}
-	.header-mobile .language-default{width:100%;height:100%;font-size:.16rem;color:#6a6a6a}
-	.header-mobile .language-default>i{font-size:.2rem;color:#3d6df6}
-	.header-mobile .icon-active>i{font-size:.24rem;color:#6a6a6a}
-	.header-mobile .language-select{position:fixed;top:.44rem;left:0;z-index:999;display:none;width:100%;height:calc(100vh - 0.44rem);background-color:rgba(255,255,255,1)}
-	.header-mobile .select-title{width:100%;height:.4rem;padding:0 .2rem;font-size:.14rem;color:#303233;background-color:#f7f9fa}
-	.header-mobile .select-item{width:100%;height:.4rem;padding:0 .2rem;font-size:.16rem}
-	.header-mobile .select-item>span:first-of-type{color:#333}
-	.header-mobile .select-item>span:last-of-type{color:#a2a7aa}
-	.header-mobile .mobile-buy{position:absolute;top:.44rem;left:0;right:0;z-index:99;width:100%;height:.44rem;padding:0 .2rem;font-size:.18rem;color:#fff;background-color:#1C1C1E}
-	.header-mobile .buy{height:.3rem;padding:0 .15rem;font-size:.14rem;color:#fff;border-radius:.55rem;background:linear-gradient(218deg,#004ffc 4%,#3f6ef6 94%)}
-	}
+  .auth-container {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 999;
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .auth-container>.contaienr-wrapper {
+    width: 510px;
+    height: 800px;
+    padding: 50px 0 0 0;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: auto;
+  }
+
+  .auth-container .wrapper-logo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .auth-container .wrapper-logo>a>i {
+    font-size: 60px;
+    color: #727172;
+  }
+
+  .auth-container .wrapper-title {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 28px;
+    color: #7F7F7F;
+    text-align: center;
+  }
+
+  .auth-container .wrapper-login {
+    width: 100%;
+  }
+
+  .auth-container .wrapper-register {
+    width: 100%;
+  }
+
+  .login-form,
+  .register-form,
+  .activate-form,
+  .complete-form {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+
+  .auth-container .wrapper-form {
+    width: 300px;
+    margin: 0 auto;
+  }
+
+  .form-tip {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #38a858;
+    font-weight: 200;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .form-item {
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .form-item>.item-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 5px;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+  }
+
+  .form-item>.item-input>input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    background: transparent;
+  }
+
+  .form-item>.item-input>input::placeholder {
+    color: #7F7F7F;
+  }
+
+
+  .form-item>.item-active {
+    border: 1px solid #f04848;
+  }
+
+  .form-item>.item-active>input {
+    color: #f04848;
+  }
+
+  .form-item>.item-active>input::placeholder {
+    color: #f04848;
+  }
+
+  .form-item>.item-tip {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 12px;
+    color: #f04848;
+  }
+
+  .form-submit {
+    width: 100%;
+  }
+
+  .form-submit-margin-20 {
+    margin-top: 20px;
+  }
+
+  .form-submit-margin-40 {
+    margin-top: 40px;
+  }
+
+  .form-submit>button {
+    width: 100%;
+    height: 50px;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #44a8f2;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+  }
+
+  .form-submit>.submit-active {
+    background-color: #d7d7d7;
+    border: 1px solid #d7d7d7;
+    cursor: not-allowed;
+  }
+
+  .form-code {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-code>button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #44a8f2;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  .code-active>button {
+    color: #44a8f2;
+    background: #fff;
+    cursor: not-allowed;
+  }
+
+  .form-verification {
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+  }
+
+  .form-slide {
+    /* height: 40px; */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    /* border: 1px solid #ccc; */
+  }
+
+  .verify-wrap {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #e5e5e5;
+    border: 1px solid #e0e0e0;
+  }
+
+  .verify-wrap .drag-btn {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 50px;
+    height: 40px;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAA/UlEQVRYhe3XLc9GYBjG8eN6dkdFIQuqoCiCbj6ob2CCIplRaJKqEHT3c/kAz66Xc/fLnvO3UY7N/jNmxDAMF77AQ57iOH53x5/GccTPuyNUcSg1DqXGodQ4lNr/CC3LEsuyaG8mrEKzLEPXdZjnWWszYRXq+z7yPMc0Tej7XnkzYf2Muq6LoiiwrivatsV1XUrby0Mlx3Huu7fvO5qmUd50kL31QgijTdXD+gq/zvNEVVXwPA9pmipvOqxDj+O4Q4IgQJIkypsuq9Bt21DXNaIoug/VzYRVqHw55J0Kw1BrMyHkXyj/3BHiUGocSo1DqXEota8Jvb/18hP16Z7qL3h/w53n4AAAAABJRU5ErkJggg==) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 2;
+    cursor: move;
+  }
+
+  .verify-wrap .suc-drag-btn {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAACA0lEQVRYhe2Y2yuDYRzHv7PJYc5zKspYSRMymStXu5NCs5W4csEfwJ+gSA53csg1F4R/gSu0OcWSmNIQkfMcEvu9tdpY79793leo91Nbbft993x6nj2/52kal8v1gX+Ajp4sFstve4jidrsR99sSUlFFlUYVVRpVVGl0SnyJ934VaxczOLpdwd3bufBeWnw+StLrYc1tQ3FqnewxZIk+vz9g7rAHO9dL3z67efXBfTkrPCqymtBqGkaiNoU9FnvpSXJyzx5R8itUQ7WU4cIWnT/qhe9xS3I91VKGC0uUfpPbV4uSajUhQ1CGshxYorRxpGDObECf1Ysm40DM2a+wNhPt7mhUZzvhMI1Aq9HBkFgUUzYSrBkNtiDCkGBES/Eg8pLKwiSdplFB8uRhEzMH3RGzsSC7j9oKe1CT4wi0oEZMeRzITy4XJOM0WkFy2uOE//1O7jA8UWrm1CeJ5dMxlGXYoI/PQrd5AQlavagkZTmwlt4UOHGCnPs9wkw+vl0jSZcWdSZDsz8uas1tD3t99rSL8b0W3Lz4cHy/LrrctYEjlQNr6Y2ptag0NIf10gv/Pvo3akRzlOGe++yTyV4yhAJ9leR6qqUMF7YoXTC6zPPChSMaVEO1ci4lstoTDdxROhE4Fjv/9jUvCIkoISPGv7nhq6JKo4oqjSqqNEIfpf8f/zqf+36643RPeo8AAAAASUVORK5CYII=) no-repeat center center;
+    background-size: 100% 100%
+  }
+
+  .verify-wrap .drag-progress {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 40px;
+    border-top: 1px solid #7ac23c;
+    border-top: 1px solid #7ac23c;
+    width: 0;
+    background-color: #7ac23c;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px
+  }
+
+  .verify-wrap .fix-tips,
+  .verify-msg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 1px;
+    height: 100%;
+    color: #51555c;
+    z-index: 1;
+    line-height: 38px;
+    font-size: 12px;
+    text-align: center
+  }
+
+  .verify-wrap .verify-msg {
+    background-color: #7ac23c;
+    color: #fff;
+    display: none
+  }
+
+  .form-protocol {
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+
+  .form-protocol>i {
+    font-size: 16px;
+    color: #44A9F1;
+  }
+
+  .form-protocol>p {
+    margin-left: 5px;
+    line-height: 1.3;
+    font-size: 12px;
+    color: #7f7f7f;
+  }
+
+  .form-protocol>p>a {
+    color: #333;
+  }
+
+  .form-skip {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #44a9f2;
+  }
+
+  .form-skip>span {
+    cursor: pointer;
+  }
+
+  .form-complete {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-complete>button {
+    width: 100%;
+    height: 50px;
+    font-size: 14px;
+    color: #44a8f2;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+  }
+
+  .auth-load {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .auth-load>i {
+    font-size: 30px;
+    color: #fff;
+  }
+
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: all .3s ease-in;
+  }
+
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+
+  /* mobile */
+  @media only screen and (max-width:767px) {
+    .header-desk {
+      visibility: hidden;
+      width: 100%;
+      height: 0;
+      overflow: hidden
+    }
+
+    .header-mobile {
+      visibility: visible;
+      height: 100%
+    }
+
+    .header-mobile .mobile-logo {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 9;
+      display: block;
+      width: 0.4rem;
+      height: 0.27rem;
+      background-image: url('//r.tourboxtech.cn/basic-img/logo-black-2.0.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      transform: translate(-50%, -50%)
+    }
+
+    .header-mobile .mobile-logo>img {
+      width: 100%;
+      height: 100%
+    }
+
+    .header-mobile .nav-toggle>i {
+      font-size: .24rem;
+      color: #6a6a6a
+    }
+
+    .header-mobile>.mobile-nav {
+      position: relative;
+      z-index: 100
+    }
+
+    .header-mobile .nav-list {
+      position: fixed;
+      top: .44rem;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      display: none;
+      width: 100vw;
+      height: calc(100vh - 0.44rem);
+      background-color: #fff
+    }
+
+    .header-mobile .list-item {
+      position: relative;
+      width: 100%
+    }
+
+    .header-mobile .list-item::after {
+      position: absolute;
+      top: auto;
+      right: auto;
+      bottom: 0;
+      left: 0;
+      z-index: 9;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #ddd;
+      -webkit-transform: translateY(0%);
+      transform: translateY(0%)
+    }
+
+    .header-mobile .list-item:last-of-type:after {
+      display: none
+    }
+
+    .header-mobile .item-link {
+      width: 100%;
+      height: .4rem;
+      padding: 0 .1rem 0 .25rem;
+      font-size: .16rem;
+      color: #6d6d6d
+    }
+
+    .header-mobile .item-link>i {
+      font-size: .2rem;
+      color: #6d6d6d
+    }
+
+    .header-mobile .language-default {
+      width: 100%;
+      height: 100%;
+      font-size: .16rem;
+      color: #6a6a6a
+    }
+
+    .header-mobile .language-default>i {
+      font-size: .2rem;
+      color: #3d6df6
+    }
+
+    .header-mobile .icon-active>i {
+      font-size: .24rem;
+      color: #6a6a6a
+    }
+
+    .header-mobile .language-select {
+      position: fixed;
+      top: .44rem;
+      left: 0;
+      z-index: 999;
+      display: none;
+      width: 100%;
+      height: calc(100vh - 0.44rem);
+      background-color: rgba(255, 255, 255, 1)
+    }
+
+    .header-mobile .select-title {
+      width: 100%;
+      height: .4rem;
+      padding: 0 .2rem;
+      font-size: .14rem;
+      color: #303233;
+      background-color: #f7f9fa
+    }
+
+    .header-mobile .select-item {
+      width: 100%;
+      height: .4rem;
+      padding: 0 .2rem;
+      font-size: .16rem
+    }
+
+    .header-mobile .select-item>span:first-of-type {
+      color: #333
+    }
+
+    .header-mobile .select-item>span:last-of-type {
+      color: #a2a7aa
+    }
+
+    .header-mobile .mobile-buy {
+      position: absolute;
+      top: .44rem;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      width: 100%;
+      height: .44rem;
+      padding: 0 .2rem;
+      font-size: .18rem;
+      color: #fff;
+      background-color: #1C1C1E
+    }
+
+    .header-mobile .buy {
+      height: .3rem;
+      padding: 0 .15rem;
+      font-size: .14rem;
+      color: #fff;
+      border-radius: .55rem;
+      background: linear-gradient(218deg, #004ffc 4%, #3f6ef6 94%)
+    }
+  }
 </style>
 <div id="header-container" v-cloak>
-	<div class="header-desk flex-vc">
-		<nav class="desk-nav flex-vb flex-1">
-			<a class="nav-logo" href="index.html"></a>
-			<ul class="nav-bar flex-vc">
-				<li class="bar-item" v-for="(item, index) in navList" :key="index">
-					<a class="item-link flex-center" :href="item.href">{{item.name}}</a>
-					<ul class="item-bar" v-if="item.linkList">
-						<li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
-							<a class="sub-link flex-center" :href="linkItem.link"
-								:target="linkItem.target">{{linkItem.linkName}}</a>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-		<div class="desk-language ">
-			<div class="language-default flex-vb">
-				<span>简体中文</span>
-				<i class="iconfont icondian"></i>
-			</div>
-			<ul class="language-select">
-				<li class="select-item flex-center" @click="checkLanguage('en')">English</li>
-				<li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
-				<li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
-				<li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
-				<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
-			</ul>
-		</div>
-		<!-- 登录 -->
-		<div class="desk-auth">
-			<div class="auth-user">
-				<div class="user-head flex-center">
-					<i class="iconfont iconkehu"></i>
-				</div>
-				<div class="user-menu" @click="openModal">
-					<div class="menu-item flex-center" @click="openLogin('login')"><span>登录</span></div>
-					<div class="menu-item flex-center" @click="openRegister('register')"><span>注册</span></div>
-				</div>
-			</div>
-			<transition name="fade">
-				<div class="auth-container" v-if="modalShow" @click="closeModal">
-					<div class="contaienr-wrapper" @click.stop>
-						<div class="wrapper-logo flex-center">
-							<a href="index.html"><i class="iconfont iconlogo"></i></a>
-						</div>
-						<div class="wrapper-title"><span>{{formState.text.title}}</span></div>
-						<div class="wrapper-form">
-							<div class="form-tip"><span>{{formState.text.tipText}}</span></div>
-							<!-- 邮箱 -->
-							<div class="form-item" v-show="formState.show.email">
-								<div class="item-input">
-									<input type="text" placeholder="邮箱*" v-model="email" @focus="getFocus" @blur="blurFocus($event, 'verifyEmail', email)">
-								</div>
-								<p class="item-tip"></p>
-							</div>
-							<!-- 验证码 -->
-							<div class="form-item" v-show="formState.show.code">
-								<div class="item-input">
-									<input type="text" v-model="code" placeholder="请输入验证码*" @focus="getFocus" @blur="blurFocus($event, 'verifyCode', code)">
-								</div>
-								<p class="item-tip"></p>
-							</div>
-							<div class="form-code" :class="{'code-active':codeDisabled}" v-show="formState.show.code">
-								<button :disabled="codeDisabled" @click="sendVerfiyCode(0)">{{formState.text.codeText}}</button>
-							</div>
-							<!-- 密码 -->
-							<div class="form-item" v-show="formState.show.password">
-								<div class="item-input flex-vc">
-									<input type="password" placeholder="密码*" v-model="password" @focus="getFocus" @blur="blurFocus($event, 'verifyPassword', password)">
-								</div>
-								<p class="item-tip"></p>
-							</div>
-							<!-- 确认密码 -->
-							<div class="form-item" v-show="formState.show.confirm">
-								<div class="item-input">
-									<input type="password" v-model="confirm" placeholder="再次输入密码*" @focus="getFocus" @blur="blurFocus($event, 'verifyConfirm', confirm)">
-								</div>
-								<p class="item-tip"></p>
-							</div>
-							<!-- 图形验证码 -->
-							<div class="form-verification" v-show="formState.show.verify"></div>
-							<!-- 协议 -->
-							<div class="form-protocol flex" @click="isSelectUpdate = !isSelectUpdate" v-show="formState.show.protocol">
-								<i class="iconfont " :class="isSelectUpdate ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
-								<p>获取TourBox最新产品、服务、软件升级等信息。</p>
-							</div>
-							<div class="form-protocol flex" @click="isSelectProtocol = !isSelectProtocol" v-show="formState.show.protocol">
-								<i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
-								<p>同意并愿意遵守TourBox创新 <a href="">隐私政策</a> 和 <a href="">使用条款</a>。</p>
-							</div>
-							<!-- 返回 -->
-							<div class="form-submit form-submit-margin-20" v-show="formState.show.prev">
-								<button  @click="backPrev">{{formState.text.prevText}}</button>
-							</div>
-							<!-- 提交 -->
-							<div class="form-submit form-submit-margin-20" :class="{'form-submit-margin-40': formState.type == 'login'}" v-show="formState.show.submit">
-								<button :class="{'submit-active': !allowSubmit}" :disabled="!allowSubmit" @click="submitEvent">{{formState.text.submitText}}</button>
-							</div>
-	
-							<!-- 跳转 -->
-							<div class="form-skip flex-vb" v-if="formState.show.skip">
-								<span @click="skipStep(formState.skipType.left)">{{formState.skip.leftText}}</span>
-								<span @click="skipStep(formState.skipType.right)">{{formState.skip.rightText}}</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</transition>
-			<transition name="fade">
-				<div class="auth-load flex-center" v-if="loadShow">
-					<i class="iconfont iconloading"></i>
-				</div>
-			</transition>
-		</div>
-	</div>
-	<div class="header-mobile flex-vb">
-		<div class="mobile-nav">
-			<div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
-				<i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
-			</div>
-			<ul class="nav-list">
-				<li class="list-item" v-for="(item, index) in navList" :key="index">
-					<a class="item-link flex-vb" :href="item.href" :target="item.target">
-						<span>{{item.name}}</span>
-						<i class="iconfont iconarrow-right"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<a class="mobile-logo" href="index.html"></a>
-		<div class="mobile-language " v-show="!openMenuShow">
-			<div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
-				<span v-show="!openLanguageShow">简体中文</span>
-				<i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
-			</div>
-			<ul class="language-select">
-				<li class="select-title flex-vc"><span>选择语言</span></li>
-				<li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span>
-				<li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
-				<li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
-				<li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
-				<li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
-			</ul>
-		</div>
-	</div>
+  <div class="header-desk flex-vc">
+    <nav class="desk-nav flex-vb flex-1">
+      <a class="nav-logo" href="index.html"></a>
+      <ul class="nav-bar flex-vc">
+        <li class="bar-item" v-for="(item, index) in navList" :key="index">
+          <a class="item-link flex-center" :href="item.href">{{item.name}}</a>
+          <ul class="item-bar" v-if="item.linkList">
+            <li class="bar-sub" v-for="(linkItem, linkIndex) in item.linkList" :key="linkIndex">
+              <a class="sub-link flex-center" :href="linkItem.link" :target="linkItem.target">{{linkItem.linkName}}</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <div class="desk-language ">
+      <div class="language-default flex-vb">
+        <span>简体中文</span>
+        <i class="iconfont icondian"></i>
+      </div>
+      <ul class="language-select">
+        <li class="select-item flex-center" @click="checkLanguage('en')">English</li>
+        <li class="select-item flex-center" @click="checkLanguage('tw')">繁體中文</li>
+        <li class="select-item flex-center" @click="checkLanguage('jp')">日本語</li>
+        <li class="select-item flex-center" @click="checkLanguage('kr')">한국어</li>
+        <li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
+      </ul>
+    </div>
+    <!-- 登录 -->
+    <div class="desk-auth">
+      <div class="auth-user">
+        <div class="user-head flex-center">
+          <i class="iconfont iconkehu"></i>
+        </div>
+        <div class="user-menu" @click="openModal">
+          <div class="menu-item flex-center" @click="openLogin('login')"><span>登录</span></div>
+          <div class="menu-item flex-center" @click="openRegister('register')"><span>注册</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="header-mobile flex-vb">
+    <div class="mobile-nav">
+      <div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+        <i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
+      </div>
+      <ul class="nav-list">
+        <li class="list-item" v-for="(item, index) in navList" :key="index">
+          <a class="item-link flex-vb" :href="item.href" :target="item.target">
+            <span>{{item.name}}</span>
+            <i class="iconfont iconarrow-right"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <a class="mobile-logo" href="index.html"></a>
+    <div class="mobile-language " v-show="!openMenuShow">
+      <div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
+        <span v-show="!openLanguageShow">简体中文</span>
+        <i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
+      </div>
+      <ul class="language-select">
+        <li class="select-title flex-vc"><span>选择语言</span></li>
+        <li class="select-item flex-vb" @click="checkLanguage('en')"><span>United States</span><span>English</span>
+        <li class="select-item flex-vb" @click="checkLanguage('tw')"><span>中国台湾</span><span>繁體中文</span></li>
+        <li class="select-item flex-vb" @click="checkLanguage('jp')"><span>日本</span><span>日本語</span></li>
+        <li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
+        <li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <transition name="fade">
+    <div class="auth-container" v-show="modalShow" @click="closeModal">
+      <div class="contaienr-wrapper" @click.stop>
+        <div class="wrapper-logo flex-center">
+          <a href="index.html"><i class="iconfont iconlogo"></i></a>
+        </div>
+        <div class="wrapper-title"><span>{{formState.text.title}}</span></div>
+        <div class="wrapper-form">
+          <div class="form-tip"><span>{{formState.text.tipText}}</span></div>
+          <!-- 邮箱 -->
+          <div class="form-item" v-show="formState.show.email">
+            <div class="item-input">
+              <input type="text" placeholder="邮箱*" v-model="email" @focus="getFocus"
+                @blur="blurFocus($event, 'verifyEmail', email)">
+            </div>
+            <p class="item-tip"></p>
+          </div>
+          <!-- 验证码 -->
+          <div class="form-item" v-show="formState.show.code">
+            <div class="item-input">
+              <input type="text" v-model="code" placeholder="请输入验证码*" @focus="getFocus"
+                @blur="blurFocus($event, 'verifyCode', code)">
+            </div>
+            <p class="item-tip"></p>
+          </div>
+          <div class="form-code" :class="{'code-active':codeDisabled}" v-show="formState.show.code">
+            <button :disabled="codeDisabled" @click="resetCountDown">{{formState.text.codeText}}</button>
+          </div>
+          <!-- 密码 -->
+          <div class="form-item" v-show="formState.show.password">
+            <div class="item-input flex-vc">
+              <input type="password" placeholder="密码*" v-model="password" @focus="getFocus"
+                @blur="blurFocus($event, 'verifyPassword', password)">
+            </div>
+            <p class="item-tip"></p>
+          </div>
+          <!-- 确认密码 -->
+          <div class="form-item" v-show="formState.show.confirm">
+            <div class="item-input">
+              <input type="password" v-model="confirm" placeholder="再次输入密码*" @focus="getFocus"
+                @blur="blurFocus($event, 'verifyConfirm', confirm)">
+            </div>
+            <p class="item-tip"></p>
+          </div>
+          <!-- 滑块验证码 -->
+          <div class="form-slide" v-show="formState.show.slide">
+            <!-- 滑动验证 -->
+            <div class="verify-wrap" id="verify-wrap">
+              <div class="drag-progress dragProgress"></div>
+              <span class="drag-btn dragBtn"></span>
+              <span class="fix-tips fixTips">请向右滑动滑块</span>
+              <span class="verify-msg sucMsg">验证通过</span>
+            </div>
+          </div>
+          <!-- 图形验证码 -->
+          <div class="form-verification" v-show="formState.show.verify"></div>
+          <!-- 协议 -->
+          <div class="form-protocol flex" @click="isSelectUpdate = !isSelectUpdate" v-show="formState.show.protocol">
+            <i class="iconfont " :class="isSelectUpdate ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+            <p>获取TourBox最新产品、服务、软件升级等信息。</p>
+          </div>
+          <div class="form-protocol flex" @click="isSelectProtocol = !isSelectProtocol"
+            v-show="formState.show.protocol">
+            <i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+            <p>同意并愿意遵守TourBox创新 <a href="">隐私政策</a> 和 <a href="">使用条款</a>。</p>
+          </div>
+          <!-- 返回 -->
+          <div class="form-submit form-submit-margin-20" v-show="formState.show.prev">
+            <button @click="backPrev">{{formState.text.prevText}}</button>
+          </div>
+          <!-- 提交 -->
+          <div class="form-submit form-submit-margin-20" :class="{'form-submit-margin-40': formState.type == 'login'}"
+            v-show="formState.show.submit">
+            <button :class="{'submit-active': !allowSubmit}" :disabled="!allowSubmit"
+              @click="submitEvent">{{formState.text.submitText}}</button>
+          </div>
+
+          <!-- 跳转 -->
+          <div class="form-skip flex-vb" v-if="formState.show.skip">
+            <span @click="skipStep(formState.skipType.left)">{{formState.skip.leftText}}</span>
+            <span @click="skipStep(formState.skipType.right)">{{formState.skip.rightText}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+  <transition name="fade">
+    <div class="auth-load flex-center" v-if="loadShow">
+      <i class="iconfont iconloading"></i>
+    </div>
+  </transition>
 </div>
 <script>
-	new Vue({
-		el: "#header-container",
-		data: {
-			isM: false,
-			openMenuShow: false,
-			openLanguageShow: false,
+  new Vue({
+    el: "#header-container",
+    data: {
+      isM: false,
+      openMenuShow: false,
+      openLanguageShow: false,
       navList: [],
-      
+
       baseUrl: 'https://apimgr.hfyouzhi.com/mock/77/shop-api/',
-			modalShow: false,
-			loadShow: false,
-			tipMsg: '',
-			formType: '',
-			backFormType: '',
-			formState: {},
-			formStatus: new Map([
-				['login', {
-					type: 'login',
-					submitType: 'login',
-					show: {
-						email: true,
-						password: true,
-						verify: false,
-						submit: true,
-						skip: true
-					},
-					text: {
-						title: '登录',
-						submitText: '登录'
-					},
-					skip: {
-						leftText: '注册TourBox账号',
-						rightText: '找回密码'
-					},
-					skipType: {
-						left: 'register',
-						right: 'forgot'
-					}
-				}],
-				['register', {
-					type: 'register',
-					submitType: 'register',
-					show: {
-						email: true,
-						password: true,
-						confirm: true,
-						verify: true,
-						protocol: true,
-						submit: true,
-						skip: true
-					},
-					text: {
-						title: '注册',
-						submitText: '提交'
-					},
-					skip: {
-						leftText: '已有账户',
-						rightText: '找回密码'
-					},
-					skipType: {
-						left: 'login',
-						right: 'forgot'
-					}
-				}],
-				['register-activate', {
-					type: 'register-activate',
-					submitType: 'activateEmail',
-					show: {
-						tip: true,
-						code: true,
-						prev: true,
-						submit: true
-					},
-					text: {
-						title: '激活账户',
-						tipText: '激活验证码已发送至您的邮箱，请登录邮箱查看',
-						codeText: '',
-						prevText: '上一步',
-						submitText: '下一步'
-					}
-				}],
-				['register-complete', {
-					type: 'register-complete',
-					submitType: 'backRefreshPage',
-					show: {
-						tip: true,
-						submit: true
-					},
-					text: {
-						title: '账户已激活',
-						tipText: '5秒后返回当前页',
-						submitText: '立即返回'
-					}
-				}],
-				['forgot', {
-					type: 'forgot',
-					submitType: 'isExistEmail',
-					show: {
-						email: true,
-						prev: true,
-						submit: true
-					},
-					text: {
-						title: '密码找回',
-						prevText: '返回',
-						submitText: '下一步'
-					}
-				}],
-				['forgot-reset', {
-					type: 'forgot-reset',
-					submitType: 'findPassword',
-					show: {
-						tip: true,
-						code: true,
-						password: true,
-						confirm: true,
-						prev: true,
-						submit: true
-					},
-					text: {
-						title: '密码找回',
-						tipText: '验证码已发送至您的邮箱，请登录邮箱查看',
-						codeText: '',
-						prevText: '返回',
-						submitText: '提交'
-					}
-				}],
-				['forgot-complete', {
-					type: 'forgot-complete',
-					submitType: 'loginAgain',
-					show: {
-						submit: true
-					},
-					text: {
-						title: '密码修改成功',
-						submitText: '重新登录'
-					}
-				}],
-			]),
+      modalShow: false,
+      loadShow: false,
+      tipMsg: '',
+      formType: '',
+      backFormType: '',
+      formState: {},
+      formStatus: new Map([
+        ['login', {
+          type: 'login',
+          submitType: 'login',
+          show: {
+            email: true,
+            password: true,
+            verify: false,
+            slide: false,
+            submit: true,
+            skip: true
+          },
+          text: {
+            title: '登录',
+            submitText: '登录'
+          },
+          skip: {
+            leftText: '注册TourBox账号',
+            rightText: '找回密码'
+          },
+          skipType: {
+            left: 'register',
+            right: 'forgot'
+          }
+        }],
+        ['register', {
+          type: 'register',
+          submitType: 'register',
+          show: {
+            email: true,
+            password: true,
+            confirm: true,
+            slide: true,
+            protocol: true,
+            submit: true,
+            skip: true
+          },
+          text: {
+            title: '注册',
+            submitText: '提交'
+          },
+          skip: {
+            leftText: '已有账户',
+            rightText: '找回密码'
+          },
+          skipType: {
+            left: 'login',
+            right: 'forgot'
+          }
+        }],
+        ['register-activate', {
+          type: 'register-activate',
+          submitType: 'activateEmail',
+          show: {
+            tip: true,
+            code: true,
+            prev: true,
+            submit: true
+          },
+          text: {
+            title: '激活账户',
+            tipText: '激活验证码已发送至您的邮箱，请登录邮箱查看',
+            codeText: '',
+            prevText: '上一步',
+            submitText: '下一步'
+          }
+        }],
+        ['register-complete', {
+          type: 'register-complete',
+          submitType: 'backRefreshPage',
+          show: {
+            tip: true,
+            submit: true
+          },
+          text: {
+            title: '账户已激活',
+            tipText: '5秒后返回当前页',
+            submitText: '立即返回'
+          }
+        }],
+        ['forgot', {
+          type: 'forgot',
+          submitType: 'isExistEmail',
+          show: {
+            email: true,
+            prev: true,
+            submit: true
+          },
+          text: {
+            title: '密码找回',
+            prevText: '返回',
+            submitText: '下一步'
+          }
+        }],
+        ['forgot-reset', {
+          type: 'forgot-reset',
+          submitType: 'findPassword',
+          show: {
+            tip: true,
+            code: true,
+            password: true,
+            confirm: true,
+            prev: true,
+            submit: true
+          },
+          text: {
+            title: '密码找回',
+            tipText: '验证码已发送至您的邮箱，请登录邮箱查看',
+            codeText: '',
+            prevText: '返回',
+            submitText: '提交'
+          }
+        }],
+        ['forgot-complete', {
+          type: 'forgot-complete',
+          submitType: 'loginAgain',
+          show: {
+            submit: true
+          },
+          text: {
+            title: '密码修改成功',
+            submitText: '重新登录'
+          }
+        }],
+      ]),
 
-			email: '4156654@qq.com',
-			password: '123456789',
-			confirm: '123456789',
-			verify: '123456',
-			code: '',
-			isSelectProtocol: true,
-			isSelectUpdate: true,
-			countDownTimer: null,
-			refreshTimer: null,
-			codeDisabled: true,
-			countDownSec: 0,
-			verfiyCodeType: undefined, // 验证码类型 0 激活码 1 找回密码
-			preStepType: 0 // 判断从哪跳转到忘记密码 0 登录 1 注册
-		},
-		created: function() {
-			var that = this;
-			that.judgeIsMobile()
-			that.getNavList();
-			// that.sendVerfiyCode();
-		},
-		computed: {
-			allowSubmit: function() {
-				var that = this;
-				switch (that.formType) {
-					case 'login':
-						if (that.formState.show.code) {
-							return that.verifyEmail(that.email) && that.verifyPassword(that.password) && that.verifyCode(that.verify)
-						} else {
-							return that.verifyEmail(that.email) && that.verifyPassword(that.password)
-						}
-						break;
-					case 'register':
-						return that.verifyEmail(that.email) && that.verifyPassword(that.password) && that.verifyConfirm(that.confirm) && that.verifyCode(that.verify) && that.isSelectProtocol
-						break;
-					case 'register-activate':
-						return that.verifyCode(that.code)
-						break;
-					case 'register-complete':
-						return true
-						break;
-					case 'forgot':
-						return that.verifyEmail(that.email)
-						break;
-					case 'forgot-reset':
-						return that.verifyPassword(that.password) && that.verifyConfirm(that.confirm) && that.verifyCode(that.code)
-						break;
-					case 'forgot-complete':
-						return true
-						break;
-				}
-			}
-		},
-		methods: {
-			getNavList: function () {
-				var that = this;
-				$.getJSON("src/json/bars.json", function (result) {
-					that.navList = that.isM ? result.mobileList : result.deskList;
-				})
-			},
+      email: '',
+      sameEmail: '', // 记录注册是否同一邮箱
+      password: '',
+      confirm: '',
+      verify: '',
+      code: '',
+      isSelectProtocol: true,
+      isSelectUpdate: true,
+      countDownTimer: null,
+      refreshTimer: null,
+      codeDisabled: true,
+      countDownSec: 0,
+      countDownType: undefined, // 验证码类型 0 激活码 1 找回密码
+      preStepType: 0, // 判断从哪跳转到忘记密码 0 登录 1 注册
 
-			// 打开登录
-			openLogin: function(type) {
-				var that = this;
-				that.getState(type)
-			},
-
-			// 打开注册
-			openRegister: function(type) {
-				var that = this;
-				that.getState(type)
-			},
-
-			// 切换状态
-			getState: function(type) {
-				var that = this;
-				that.backFormType = that.formType
-				that.formType = type
-				that.formState = that.formStatus.get(that.formType)
-				that.submitEvent = that[that.formState.submitType]
-			},
-
-			// 返回上一状态
-			backPrev: function() {
-				var that = this;
-				if (that.formType === 'forgot') {
-					if (that.preStepType === 0) that.backFormType = 'login'
-					if (that.preStepType === 1) that.backFormType = 'register'
-				}
-				if (that.backFormType) that.getState(that.backFormType)
-			},
-
-			// 状态跳转
-			skipStep: function(type) {
-				var that = this;
-				if (that.formType === 'login') that.preStepType = 0
-				if (that.formType === 'register') that.preStepType = 1
-				that.getState(type)
-			},
-
-			// 登录
-			login: function() {
-				var that = this;
-				if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password)) return
-				if (that.formState.show.code && !that.verifyCode(that.verify)) return
-				that.loadShow = true
-				setTimeout(function() {
-					console.log('登录成功');
-					// 更新状态
-					that.loadShow = false
-					that.modalShow = false
-				}, 3000)
-			},
-			// 注册
-			register: function() {
-				var that = this;
-        if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password) || !that.verifyConfirm(that.confirm) || !that.verifyCode(that.verify) || !that.isSelectProtocol) return
-        that.loadShow = true
-        $.ajax({
-					url: `${that.baseUrl}user-register`,
-					type: "post",
-					dataType: "json",
-					data: {
-						email: that.email,
-						password: that.password
-					},
-					success: function (data) {
-            that.loadShow = false
-            // 是否激活
-            if (!data.is_activated) {
-              console.log('注册成功');
-              console.log(data)
-              // 跳转到邮箱激活
-              that.getState('register-activate');
-              if (that.verfiyCodeType !== 0) {
-              	clearInterval(that.countDownTimer);
-              	that.countDownTimer = null
-              }
-              if (!that.countDownTimer) that.sendVerfiyCode(0);
+      slideEl: null,
+      slideBtn: null,
+      slideProEle: null,
+      slideSucMsgEle: null,
+      slideFixTipsEle: null,
+      touchX: 0,
+      maxSlideWid: undefined,
+      slideFinishState: false, // 滑块验证是否完成
+    },
+    created: function () {
+      var that = this;
+      that.judgeIsMobile()
+      that.getNavList();
+      that.getState('login')
+    },
+    updated: function () {
+      var that = this;
+      that.$nextTick(function () {
+        that.initEle();
+        that.initSlideEvent();
+      })
+    },
+    computed: {
+      allowSubmit: function () {
+        var that = this;
+        switch (that.formType) {
+          case 'login':
+            if (that.formState.show.code) {
+              return that.verifyEmail(that.email) && that.verifyPassword(that.password) && that.verifyCode(that
+                .verify)
+            } else {
+              return that.verifyEmail(that.email) && that.verifyPassword(that.password)
             }
-					},
-					error: function (err) {
-            alert(err)
-					}
-				})
-			},
-
-			// 激活邮箱
-			activateEmail: function() {
-				var that = this;
-				if (!that.verifyCode(that.code)) return
-				// 激活
-
-				console.log('激活成功');
-				that.getState('register-complete');
-				// 倒计时刷新页面
-				that.countDownBack();
-			},
-
-			// 注册完成倒计时刷新页面
-			countDownBack: function() {
-				var that = this;
-				that.formState.text.tipText = '5秒后刷新页面'
-				var time = 5;
-				that.refreshTimer = setInterval(() => {
-					time--
-					if (time >= 0) {
-						that.formState.text.tipText = `${time}秒后刷新页面`;
-					} else {
-						that.backRefreshPage();
-					}
-				}, 1000)
-			},
-			// 状态刷新
-			backRefreshPage: function() {
-				var that = this;
-				clearInterval(that.refreshTimer);
-				window.location.reload();
-			},
-
-			// 验证邮箱是否存在
-			isExistEmail: function() {
-				var that = this;
-				if (!that.verifyEmail(that.email)) return
-				// 验证邮箱
-
-				console.log('邮箱存在');
-				that.getState('forgot-reset');
-				if (that.verfiyCodeType !== 1) {
-					clearInterval(that.countDownTimer);
-					that.countDownTimer = null
-				}
-				if (!that.countDownTimer) that.sendVerfiyCode(1);
-			},
-
-			// 找回密码
-			findPassword: function() {
-				var that = this;
-				if (!that.verifyCode(that.code) || !that.verifyPassword(that.password) || !that.verifyConfirm(that.confirm)) return
-				// 找回密码
-
-				console.log('找回密码成功');
-				that.getState('forgot-complete');
-			},
-			// 找回密码后重新登录
-			loginAgain: function() {
-				var that = this;
-				that.getState('login');
-			},
-
-			// 发送邮箱验证码
-			sendVerfiyCode: function(codyType) {
-				var that = this;
-				that.verfiyCodeType = codyType
-				that.formState.text.codeText = `重新发送邮件(30)S`;
-        that.countDown();
-        that.loadShow = true
-        $.ajax({
-					url: `${that.baseUrl}user-register`,
-					type: "post",
-					dataType: "json",
-					data: {
-						email: that.email,
-						password: that.password
-					},
-					success: function (data) {
-            that.loadShow = false
-            // 是否激活
-            if (!data.is_activated) {
-              console.log('注册成功');
-              console.log(data)
-              // 跳转到邮箱激活
-              that.getState('register-activate');
-              if (that.verfiyCodeType !== 0) {
-              	clearInterval(that.countDownTimer);
-              	that.countDownTimer = null
-              }
-              if (!that.countDownTimer) that.sendVerfiyCode(0);
-            }
-					},
-					error: function (err) {
-            alert(err)
-					}
-				})
-				// 发送验证码
-				console.log('获取激活码');
-			},
-			// 倒计时
-			countDown: function() {
-				var that = this;
-				that.countDownSec = 30
-				that.codeDisabled = true
-				that.countDownTimer = setInterval(() => {
-					that.countDownSec--
-					if (that.countDownSec > 0) {
-						that.formState.text.codeText = `重新发送邮件(${that.countDownSec})S`;
-					} else {
-						that.formState.text.codeText = `发送邮件`;
-						clearInterval(that.countDownTimer);
-						that.countDownTimer = null
-						that.codeDisabled = false;
-					}
-				}, 1000)
+            break;
+          case 'register':
+            return that.verifyEmail(that.email) && that.verifyPassword(that.password) && that.verifyConfirm(that
+              .confirm) && that.slideFinishState && that.isSelectProtocol
+            break;
+          case 'register-activate':
+            return that.verifyCode(that.code)
+            break;
+          case 'register-complete':
+            return true
+            break;
+          case 'forgot':
+            return that.verifyEmail(that.email)
+            break;
+          case 'forgot-reset':
+            return that.verifyPassword(that.password) && that.verifyConfirm(that.confirm) && that.verifyCode(that
+              .code)
+            break;
+          case 'forgot-complete':
+            return true
+            break;
+        }
+      }
+    },
+    methods: {
+      getNavList: function () {
+        var that = this;
+        $.getJSON("src/json/bars.json", function (result) {
+          that.navList = that.isM ? result.mobileList : result.deskList;
+        })
       },
-      
-      request: function() {
-        $.ajax({
-					url: "http://www.tourboxtech.cn/shop-api/email",
-					type: "post",
-					dataType: "json",
-					data: {
-						"email": _this.email,
-						"source": "cn"
-					},
-					success: function () {
-						_this.tipMsg = _this.leftData.emailSuccess
-						_this.tipColor = "#5bb75b"
-						_this.email = ""
-						_this.isDisabled = false
-					},
-					error: function () {
-						_this.tipMsg = _this.leftData.emailAlready
-						_this.tipColor = "#da4f49"
-						_this.email = ""
-						_this.isDisabled = false
-					}
-				})
+      // 打开登录
+      openLogin: function (type) {
+        var that = this;
+        that.getState(type);
+        that.resetVerify();
       },
 
-			getFocus(e) {
-				var that = this;
-				that.tipMsg = ''
-				$(e.currentTarget).parent().removeClass('item-active');
-				$(e.currentTarget).parent().next().hide().text()
-			},
-			blurFocus(e, fn, value) {
-				var that = this;
-				if (!that[fn](value)) {
-					$(e.currentTarget).parent().next().show().text(that.tipMsg)
-					$(e.currentTarget).parent().addClass('item-active')
-				}
-			},
-			openModal: function() {
-				var that = this;
-				that.modalShow = true
-				$('body').css({
-					overflow: 'hidden'
-				})
-			},
-			closeModal: function() {
-				var that = this;
-				that.modalShow = false
-				$('body').css({
-					overflow: 'auto'
-				})
-			},
+      // 打开注册
+      openRegister: function (type) {
+        var that = this;
+        that.getState(type);
+        that.resetVerify();
+      },
 
-			verifyEmail: function(email) {
-				var that = this;
-				email = email ? email.replace(/\s+/g, '') : email
-				if (!email) {
-					that.tipMsg = '邮箱不能为空'
-					return false
-				} else {
-					const pat = new RegExp(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
-					if (!pat.test(email)) {
-						that.tipMsg = '邮箱格式错误'
-						return false
-					}
-				}
-				return true
-			},
-			verifyPassword: function(password) {
-				var that = this;
-				password = password ? password.replace(/\s+/g, '') : password
-				if (!password) {
-					that.tipMsg = '密码不能为空'
-					return false
-				} else {
-					const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
-					if (!pat.test(password)) {
-						that.tipMsg = '密码格式错误'
-						return false
-					}
-				}
-				return true
-			},
-			verifyConfirm: function(confirm) {
-				var that = this;
-				confirm = confirm ? confirm.replace(/\s+/g, '') : confirm
-				if (!confirm) {
-					that.tipMsg = '确认密码不能为空'
-					return false
-				} else {
-					const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
-					if (!pat.test(confirm) || confirm !== that.password) {
-						that.tipMsg = '确认密码与新密码不一致，请重新输入'
-						return false
-					}
-				}
-				return true
-			},
-			verifyCode: function(code) {
-				var that = this;
-				code = code ? code.replace(/\s+/g, '') : code
-				if (!code) {
-					that.tipMsg = '请输入验证码'
-					return false
-				} else {
-					const pat = new RegExp(/^[0-9]{6}$/)
-					if (!pat.test(code)) {
-						that.tipMsg = '验证码格式错误'
-						return false
-					}
-				}
-				return true
-			},
-			verifyUserName: function(name) {
-				var that = this;
-				name = name ? name.replace(/\s+/g, '') : name
-				if (!name) {
-					that.tipMsg = '名称不能为空'
-					return false
-				} else {
-					var pat = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/)
-					if (!pat.test(name)) {
-						that.tipMsg = '名称格式错误'
-						return false
-					}
-				}
-				return true
-			},
-			verifyPhone: function(phone) {
-				var that = this;
-				phone = phone ? phone.replace(/\s+/g, '') : phone
-				if (!phone) {
-					that.tipMsg = '请输入手机号'
-					return false
-				} else {
-					const pat = new RegExp('^(?:13|14|15|17|18)[0-9]{9}$', 'i')
-					if (!pat.test(phone)) {
-						that.tipMsg = '手机号格式错误'
-						return false
-					}
-				}
-				return true
-			},
+      // 切换状态
+      getState: function (type) {
+        var that = this;
+        that.backFormType = that.formType
+        that.formType = type
+        that.formState = that.formStatus.get(that.formType)
+        that.submitEvent = that[that.formState.submitType]
+      },
 
-			openMenu: function(){
-				var that = this;
-				that.openMenuShow = !that.openMenuShow;
-				that.openLanguageShow = false;
-				$(".header-mobile .nav-list").slideToggle("fast");
-			},
-			openLanguage: function(){
-				var that = this;
-				that.openLanguageShow = !that.openLanguageShow;
-				that.openMenuShow = false;
-				$(".header-mobile .language-select").slideToggle("fast");
-			},
-			checkLanguage: function (lan) {
-				window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
-			},
-			judgeIsMobile: function () {
-				var that = this;
-				if (window.innerWidth < 768) {
-					that.isM = true;
-				} else {
-					that.isM = false;
-				}
-				window.addEventListener('resize', function (e) {
-					if (window.innerWidth < 768) {
-						that.isM = true;
-					} else {
-						that.isM = false;
-					}
-				})
-			}
-		}
-	})
-	// $(document).ready(function() {
-	// 	languageSwitch('.header-desk .select-item');
-	// 	languageSwitch('.header-mobile .select-item');
-	// 	$('.header-mobile .nav-toggle').click(function() {
-	// 		$('.header-mobile .nav-list').slideToggle(300);
-	// 		$('.header-mobile .language-default').toggle();
-	// 		$('.header-mobile .nav-toggle .iconfont').toggleClass('iconclose');
-	// 	})
-	// 	$('.header-mobile .language-default').click(function() {
-	// 		$(this).toggleClass('icon-active');
-	// 		$('.header-mobile .language-select').slideToggle(300);
-	// 		$('.header-mobile .language-default .iconfont').toggleClass('iconclose')
-	// 		$('.header-mobile .nav-toggle, .header-mobile .language-default span').toggle();
-	// 	})
-	// 	function languageSwitch(name) {
-	// 		var languageList = ['en', 'tw', 'jp', 'kr', 'de'];
-	// 		$(name).each(function(i) {
-	// 			$(this).click(function() {
-	// 				// var localUrl = window.location.href;
-	// 				// if (localUrl.indexOf('cn/') == -1) return
-	// 				// var arr1 = localUrl.split('cn/');
-	// 				// if (arr1[1]) {
-	// 				// 	window.location.href = arr1[0] + languageList[i] + '/' + arr1[1];
-	// 				// } else {
-	// 				// 	window.location.href = arr1[0] + languageList[i];
-	// 				// }
-	// 				window.location.href = '//www.tourboxtech.com/' + languageList[i] + window.location.pathname;
-	// 			})
-	// 		})
-	// 	}
-	// })
+      // 返回上一状态
+      backPrev: function () {
+        var that = this;
+        if (that.formType === 'forgot') {
+          if (that.preStepType === 0) that.backFormType = 'login'
+          if (that.preStepType === 1) that.backFormType = 'register'
+        }
+        if (that.backFormType) that.getState(that.backFormType)
+      },
+
+      // 状态跳转
+      skipStep: function (type) {
+        var that = this;
+        if (that.formType === 'login') that.preStepType = 0
+        if (that.formType === 'register') that.preStepType = 1
+        that.getState(type)
+      },
+
+      // 登录
+      login: function () {
+        var that = this;
+        if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password)) return
+        if (that.formState.show.code && !that.verifyCode(that.verify)) return
+        that.loadShow = true
+        setTimeout(function () {
+          console.log('登录成功');
+          // 更新状态
+          that.loadShow = false
+          that.modalShow = false
+        }, 3000)
+      },
+      // 注册
+      register: function () {
+        var that = this;
+        if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password) || !that.verifyConfirm(that.confirm) || !that.slideFinishState || !that.isSelectProtocol) return
+
+        if (that.sameEmail === that.email && that.countDownTimer) {
+          // 跳转到邮箱激活
+          that.getState('register-activate');
+        } else {
+          that.registerRequest()
+        }
+      },
+      // 注册请求
+      registerRequest: function() {
+        that.loadShow = true
+        $.ajax({
+          url: `${that.baseUrl}user-register`,
+          type: "post",
+          dataType: "json",
+          data: {
+            email: that.email,
+            password: that.password
+          },
+          success: function (data) {
+            that.loadShow = false
+            // 是否激活
+            if (data.is_activated) {
+              console.log('邮箱已存在');
+            } else {
+              console.log('注册成功');
+              console.log(data)
+              // 记录注册后的邮箱
+              that.sameEmail = that.email
+              // 跳转到邮箱激活
+              that.getState('register-activate');
+              that.countDownType = 0
+              clearInterval(that.countDownTimer);
+
+              that.countDown(that.countDownType);
+            }
+          },
+          error: function (err) {
+            alert(err)
+          }
+        })
+      },
+
+      // 激活邮箱
+      activateEmail: function () {
+        var that = this;
+        if (!that.verifyCode(that.code)) return
+        // 激活
+
+        console.log('激活成功');
+        that.getState('register-complete');
+        // 倒计时刷新页面
+        that.countDownBack();
+      },
+
+      // 注册完成倒计时刷新页面
+      countDownBack: function () {
+        var that = this;
+        that.formState.text.tipText = '5秒后刷新页面'
+        var time = 5;
+        that.refreshTimer = setInterval(() => {
+          time--
+          if (time >= 0) {
+            that.formState.text.tipText = `${time}秒后刷新页面`;
+          } else {
+            that.backRefreshPage();
+          }
+        }, 1000)
+      },
+      // 状态刷新
+      backRefreshPage: function () {
+        var that = this;
+        clearInterval(that.refreshTimer);
+        window.location.reload();
+      },
+
+      // 验证邮箱是否存在
+      isExistEmail: function () {
+        var that = this;
+        if (!that.verifyEmail(that.email)) return
+        // 验证邮箱
+
+        console.log('邮箱存在');
+        that.getState('forgot-reset');
+        if (that.countDownType !== 1) {
+          clearInterval(that.countDownTimer);
+          that.countDownTimer = null
+        }
+        if (!that.countDownTimer) that.sendVerfiyCode(1);
+      },
+
+      // 找回密码
+      findPassword: function () {
+        var that = this;
+        if (!that.verifyCode(that.code) || !that.verifyPassword(that.password) || !that.verifyConfirm(that
+            .confirm)) return
+        // 找回密码
+
+        console.log('找回密码成功');
+        that.getState('forgot-complete');
+      },
+      // 找回密码后重新登录
+      loginAgain: function () {
+        var that = this;
+        that.getState('login');
+      },
+
+      // 重新倒计时
+      resetCountDown: function () {
+        var that = this;
+        if (that.countDownType === 0) that.registerRequest()
+
+        if (that.countDownType === 1) {
+          that.formState.text.codeText = `重新发送邮件(45)S`;
+          that.countDownSec = 45
+        }
+      },
+      // 倒计时
+      countDown: function (type) {
+        var that = this;
+        that.codeDisabled = true
+        if (type === 0) {
+          that.formState.text.codeText = `重新发送邮件(30)S`;
+          that.countDownSec = 30
+        }
+        if (type === 1) {
+          that.formState.text.codeText = `重新发送邮件(45)S`;
+          that.countDownSec = 45
+        }
+        that.countDownTimer = setInterval(() => {
+          that.countDownSec--
+          if (that.countDownSec > 0) {
+            that.formState.text.codeText = `重新发送邮件(${that.countDownSec})S`;
+          } else {
+            that.formState.text.codeText = `发送邮件`;
+            clearInterval(that.countDownTimer);
+            that.countDownTimer = null
+            that.codeDisabled = false;
+          }
+        }, 1000)
+      },
+
+      request: function () {
+        $.ajax({
+          url: "http://www.tourboxtech.cn/shop-api/email",
+          type: "post",
+          dataType: "json",
+          data: {
+            "email": that.email,
+            "source": "cn"
+          },
+          success: function () {
+            that.tipMsg = that.leftData.emailSuccess
+            that.tipColor = "#5bb75b"
+            that.email = ""
+            that.isDisabled = false
+          },
+          error: function () {
+            that.tipMsg = that.leftData.emailAlready
+            that.tipColor = "#da4f49"
+            that.email = ""
+            that.isDisabled = false
+          }
+        })
+      },
+
+      getFocus(e) {
+        var that = this;
+        that.tipMsg = ''
+        $(e.currentTarget).parent().removeClass('item-active');
+        $(e.currentTarget).parent().next().hide().text()
+      },
+      blurFocus(e, fn, value) {
+        var that = this;
+        if (!that[fn](value)) {
+          $(e.currentTarget).parent().next().show().text(that.tipMsg)
+          $(e.currentTarget).parent().addClass('item-active')
+        }
+      },
+      openModal: function () {
+        var that = this;
+        that.modalShow = true
+        $('body').css({
+          overflow: 'hidden'
+        })
+      },
+      closeModal: function () {
+        var that = this;
+        that.modalShow = false
+        that.resetVerify();
+        $('body').css({
+          overflow: 'auto'
+        })
+      },
+      // 初始化滑块
+      initEle: function () {
+        var that = this;
+        that.slideEl = $('#verify-wrap')
+        that.slideBtn = that.slideEl.find('.dragBtn');
+        that.slideProEle = that.slideEl.find('.dragProgress');
+        that.slideSucMsgEle = that.slideEl.find('.sucMsg');
+        that.slideFixTipsEle = that.slideEl.find('.fixTips');
+        that.maxSlideWid = that.calSlideWidth();
+      },
+      initSlideEvent: function () {
+        var that = this;
+        that.mouseDown();
+        that.touchStart();
+        that.touchMove();
+        that.touchEnd();
+      },
+      mouseDown: function () {
+        var that = this;
+        var ifThisMousedown = false;
+        that.slideBtn.on('mousedown', function (e) {
+          var distenceX = e.pageX;
+          e.preventDefault();
+          if (that.slideFinishState || that.ifAnimated()) {
+            return false;
+          }
+          ifThisMousedown = true;
+          $(document).mousemove(function (e) {
+            if (!ifThisMousedown) {
+              return false;
+            }
+            that.ifAnimated()
+            var curX = e.pageX - distenceX;
+            if (curX >= that.maxSlideWid) {
+              that.setDragBtnSty(that.maxSlideWid);
+              that.setDragProgressSty(that.maxSlideWid);
+              that.cancelMouseMove();
+              that.successSty();
+              that.slideFinishState = true;
+            } else if (curX <= 0) {
+              that.setDragBtnSty('0');
+              that.setDragProgressSty('0');
+            } else {
+              that.setDragBtnSty(curX);
+              that.setDragProgressSty(curX);
+            }
+          })
+          $(document).mouseup(function () {
+            if (!ifThisMousedown) {
+              return false;
+            }
+            ifThisMousedown = false;
+            if (that.slideFinishState) {
+              that.cancelMouseMove();
+              return false;
+            } else {
+              that.failAnimate();
+              that.cancelMouseMove();
+            }
+          });
+        })
+      },
+      touchStart: function () {
+        var that = this;
+        that.slideBtn.on('touchstart', function (e) {
+          that.touchX = e.originalEvent.targetTouches[0].pageX;
+          if (that.slideFinishState || that.ifAnimated()) {
+            return false;
+          }
+        })
+      },
+      touchMove: function () {
+        var that = this;
+        that.slideBtn.on('touchmove', function (e) {
+          e.preventDefault();
+          var curX = e.originalEvent.targetTouches[0].pageX - that.touchX;
+          if (curX >= that.maxSlideWid) {
+            that.setDragBtnSty(that.maxSlideWid);
+            that.setDragProgressSty(that.maxSlideWid);
+            that.cancelTouchmove();
+            that.successSty();
+            that.slideFinishState = true;
+          } else if (curX <= 0) {
+            that.setDragBtnSty('0');
+            that.setDragProgressSty('0');
+          } else {
+            that.setDragBtnSty(curX);
+            that.setDragProgressSty(curX);
+          }
+        })
+      },
+      touchEnd: function () {
+        var that = this;
+        that.slideBtn.on('touchend', function () {
+          if (that.slideFinishState) {
+            that.cancelTouchmove();
+            return false;
+          } else {
+            that.failAnimate();
+          }
+        })
+      },
+      // 重置滑块验证
+      resetVerify: function () {
+        var that = this;
+        that.slideSucMsgEle.hide();
+        that.slideBtn.removeClass('suc-drag-btn');
+        that.slideFinishState = false;
+        that.slideProEle.css({
+          'width': 0
+        });
+        that.slideBtn.css({
+          'left': '-1px'
+        })
+        that.touchMove();
+      },
+
+      setDragBtnSty: function (left) {
+        var that = this;
+        that.slideBtn.css({
+          'left': left
+        })
+      },
+      setDragProgressSty: function (wid) {
+        var that = this;
+        that.slideProEle.css({
+          'width': wid
+        })
+      },
+      cancelMouseMove: function () {
+        $(document).off('mousemove');
+      },
+      cancelTouchmove: function () {
+        var that = this;
+        that.slideBtn.off('touchmove');
+      },
+      successSty: function () {
+        var that = this;
+        that.slideSucMsgEle.show();
+        that.slideBtn.addClass('suc-drag-btn');
+      },
+      ifAnimated: function () { //判断 是否动画状态
+        var that = this;
+        return that.slideBtn.is(":animated")
+      },
+      failAnimate: function () {
+        var that = this;
+        that.slideBtn.animate({
+          'left': '-1px'
+        }, 200);
+        that.slideProEle.animate({
+          'width': 0
+        }, 200)
+      },
+      getDragBtnWid: function () { //获取滑块的宽度，
+        var that = this;
+        return parseInt(this.slideBtn.width());
+      },
+      getDragWrapWid: function () { //获取  本容器的的宽度，以防万一
+        var that = this;
+        return parseFloat(that.slideEl.outerWidth());
+      },
+      calSlideWidth: function () {
+        var that = this;
+        return that.getDragWrapWid() - that.getDragBtnWid()
+      },
+
+      verifyEmail: function (email) {
+        var that = this;
+        email = email ? email.replace(/\s+/g, '') : email
+        if (!email) {
+          that.tipMsg = '邮箱不能为空'
+          return false
+        } else {
+          const pat = new RegExp(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+            )
+          if (!pat.test(email)) {
+            that.tipMsg = '邮箱格式错误'
+            return false
+          }
+        }
+        return true
+      },
+      verifyPassword: function (password) {
+        var that = this;
+        password = password ? password.replace(/\s+/g, '') : password
+        if (!password) {
+          that.tipMsg = '密码不能为空'
+          return false
+        } else {
+          const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
+          if (!pat.test(password)) {
+            that.tipMsg = '密码格式错误'
+            return false
+          }
+        }
+        return true
+      },
+      verifyConfirm: function (confirm) {
+        var that = this;
+        confirm = confirm ? confirm.replace(/\s+/g, '') : confirm
+        if (!confirm) {
+          that.tipMsg = '确认密码不能为空'
+          return false
+        } else {
+          const pat = new RegExp(/^[a-zA-Z0-9]{8,20}$/)
+          if (!pat.test(confirm) || confirm !== that.password) {
+            that.tipMsg = '确认密码与新密码不一致，请重新输入'
+            return false
+          }
+        }
+        return true
+      },
+      verifyCode: function (code) {
+        var that = this;
+        code = code ? code.replace(/\s+/g, '') : code
+        if (!code) {
+          that.tipMsg = '请输入验证码'
+          return false
+        } else {
+          const pat = new RegExp(/^[0-9]{6}$/)
+          if (!pat.test(code)) {
+            that.tipMsg = '验证码格式错误'
+            return false
+          }
+        }
+        return true
+      },
+      verifyUserName: function (name) {
+        var that = this;
+        name = name ? name.replace(/\s+/g, '') : name
+        if (!name) {
+          that.tipMsg = '名称不能为空'
+          return false
+        } else {
+          var pat = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/)
+          if (!pat.test(name)) {
+            that.tipMsg = '名称格式错误'
+            return false
+          }
+        }
+        return true
+      },
+      verifyPhone: function (phone) {
+        var that = this;
+        phone = phone ? phone.replace(/\s+/g, '') : phone
+        if (!phone) {
+          that.tipMsg = '请输入手机号'
+          return false
+        } else {
+          const pat = new RegExp('^(?:13|14|15|17|18)[0-9]{9}$', 'i')
+          if (!pat.test(phone)) {
+            that.tipMsg = '手机号格式错误'
+            return false
+          }
+        }
+        return true
+      },
+
+      openMenu: function () {
+        var that = this;
+        that.openMenuShow = !that.openMenuShow;
+        that.openLanguageShow = false;
+        $(".header-mobile .nav-list").slideToggle("fast");
+      },
+      openLanguage: function () {
+        var that = this;
+        that.openLanguageShow = !that.openLanguageShow;
+        that.openMenuShow = false;
+        $(".header-mobile .language-select").slideToggle("fast");
+      },
+      checkLanguage: function (lan) {
+        window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
+      },
+      judgeIsMobile: function () {
+        var that = this;
+        if (window.innerWidth < 768) {
+          that.isM = true;
+        } else {
+          that.isM = false;
+        }
+        window.addEventListener('resize', function (e) {
+          if (window.innerWidth < 768) {
+            that.isM = true;
+          } else {
+            that.isM = false;
+          }
+        })
+      }
+    }
+  })
+  // $(document).ready(function() {
+  // 	languageSwitch('.header-desk .select-item');
+  // 	languageSwitch('.header-mobile .select-item');
+  // 	$('.header-mobile .nav-toggle').click(function() {
+  // 		$('.header-mobile .nav-list').slideToggle(300);
+  // 		$('.header-mobile .language-default').toggle();
+  // 		$('.header-mobile .nav-toggle .iconfont').toggleClass('iconclose');
+  // 	})
+  // 	$('.header-mobile .language-default').click(function() {
+  // 		$(this).toggleClass('icon-active');
+  // 		$('.header-mobile .language-select').slideToggle(300);
+  // 		$('.header-mobile .language-default .iconfont').toggleClass('iconclose')
+  // 		$('.header-mobile .nav-toggle, .header-mobile .language-default span').toggle();
+  // 	})
+  // 	function languageSwitch(name) {
+  // 		var languageList = ['en', 'tw', 'jp', 'kr', 'de'];
+  // 		$(name).each(function(i) {
+  // 			$(this).click(function() {
+  // 				// var localUrl = window.location.href;
+  // 				// if (localUrl.indexOf('cn/') == -1) return
+  // 				// var arr1 = localUrl.split('cn/');
+  // 				// if (arr1[1]) {
+  // 				// 	window.location.href = arr1[0] + languageList[i] + '/' + arr1[1];
+  // 				// } else {
+  // 				// 	window.location.href = arr1[0] + languageList[i];
+  // 				// }
+  // 				window.location.href = '//www.tourboxtech.com/' + languageList[i] + window.location.pathname;
+  // 			})
+  // 		})
+  // 	}
+  // })
 </script>
