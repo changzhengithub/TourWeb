@@ -822,7 +822,7 @@
             <p class="item-tip"></p>
           </div>
           <div class="form-code" :class="{'code-active':codeDisabled}" v-show="formState.show.code">
-            <button :disabled="codeDisabled" @click="resetCountDown">{{formState.text.codeText}}</button>
+            <button :disabled="codeDisabled" @click="resetSendCode">{{formState.text.codeText}}</button>
           </div>
           <!-- 密码 -->
           <div class="form-item" v-show="formState.show.password">
@@ -842,7 +842,6 @@
           </div>
           <!-- 滑块验证码 -->
           <div class="form-slide" v-show="formState.show.slide">
-            <!-- 滑动验证 -->
             <div class="verify-wrap" id="verify-wrap">
               <div class="drag-progress dragProgress"></div>
               <span class="drag-btn dragBtn"></span>
@@ -897,12 +896,11 @@
       openLanguageShow: false,
       navList: [],
 
-      baseUrl: 'https://apimgr.hfyouzhi.com/mock/77/shop-api/',
+      baseUrl: 'https://apimgr.hfyouzhi.com/mock/77',
       modalShow: false,
       loadShow: false,
       tipMsg: '',
       formType: '',
-      backFormType: '',
       formState: {},
       formStatus: new Map([
         ['login', {
@@ -1030,10 +1028,11 @@
         }],
       ]),
 
-      email: '',
-      sameEmail: '', // 记录注册是否同一邮箱
-      password: '',
-      confirm: '',
+      email: '87889978@qq.com',
+      copyRegEmail: '', // 记录注册邮箱
+      copyFindEmail: '', // 记录找回邮箱
+      password: '123456789',
+      confirm: '123456789',
       verify: '',
       code: '',
       isSelectProtocol: true,
@@ -1042,8 +1041,8 @@
       refreshTimer: null,
       codeDisabled: true,
       countDownSec: 0,
-      countDownType: undefined, // 验证码类型 0 激活码 1 找回密码
-      preStepType: 0, // 判断从哪跳转到忘记密码 0 登录 1 注册
+      codeStatus: undefined, // 验证码类型 0 激活码 1 找回密码
+      preStepType: 0, // 判断返回状态 0 登录 1 注册
 
       slideEl: null,
       slideBtn: null,
@@ -1126,23 +1125,48 @@
       // 切换状态
       getState: function (type) {
         var that = this;
-        that.backFormType = that.formType
+        that.clearFocus();
         that.formType = type
         that.formState = that.formStatus.get(that.formType)
         that.submitEvent = that[that.formState.submitType]
+        // 清楚数据
+        switch (type) {
+          case 'login':
+            that.email = ''
+            break;
+          case 'register':
+            that.email = that.copyRegEmail
+            that.slideFinishState = false
+            that.resetVerify()
+            break;
+          case 'register-complete':
+            that.copyRegEmail = ''
+            break;
+          case 'forgot':
+            that.email = that.copyFindEmail
+            break;
+          case 'forgot-complete':
+            that.copyFindEmail = ''
+            break;
+          default:
+            // that.copyRegEmail = ''
+            // that.copyFindEmail = ''
+            break;
+        }
       },
 
       // 返回上一状态
       backPrev: function () {
         var that = this;
-        if (that.formType === 'forgot') {
-          if (that.preStepType === 0) that.backFormType = 'login'
-          if (that.preStepType === 1) that.backFormType = 'register'
+        if (that.formType === 'forgot-reset') {
+          that.getState('forgot')
+        } else {
+          if (that.preStepType === 0) that.getState('login')
+          if (that.preStepType === 1) that.getState('register')
         }
-        if (that.backFormType) that.getState(that.backFormType)
       },
 
-      // 状态跳转
+      // 底部状态跳转
       skipStep: function (type) {
         var that = this;
         if (that.formType === 'login') that.preStepType = 0
@@ -1156,20 +1180,38 @@
         if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password)) return
         if (that.formState.show.code && !that.verifyCode(that.verify)) return
         that.loadShow = true
-        setTimeout(function () {
-          console.log('登录成功');
-          // 更新状态
-          that.loadShow = false
-          that.modalShow = false
-        }, 3000)
+        that.loginRequest();
       },
+      loginRequest: function() {
+        var that = this;
+        that.loadShow = true
+        $.ajax({
+          url: `${that.baseUrl}/shop-api/user-auth`,
+          type: "post",
+          dataType: "json",
+          data: {
+            username: that.email,
+            password: that.password
+          },
+          success: function (data) {
+            console.log(data)
+            that.loadShow = false
+            that.modalShow = false
+            that.loginSuccess();
+          },
+          error: function (err) {
+            alert(err)
+          }
+        })
+      },
+      loginSuccess: function() {},
+
       // 注册
       register: function () {
         var that = this;
         if (!that.verifyEmail(that.email) || !that.verifyPassword(that.password) || !that.verifyConfirm(that.confirm) || !that.slideFinishState || !that.isSelectProtocol) return
 
-        if (that.sameEmail === that.email && that.countDownTimer) {
-          // 跳转到邮箱激活
+        if (that.copyRegEmail === that.email && that.countDownTimer && that.codeStatus === 0) {
           that.getState('register-activate');
         } else {
           that.registerRequest()
@@ -1177,9 +1219,10 @@
       },
       // 注册请求
       registerRequest: function() {
+        var that = this;
         that.loadShow = true
         $.ajax({
-          url: `${that.baseUrl}user-register`,
+          url: `${that.baseUrl}/shop-api/user-register`,
           type: "post",
           dataType: "json",
           data: {
@@ -1187,21 +1230,19 @@
             password: that.password
           },
           success: function (data) {
+            console.log(data)
             that.loadShow = false
             // 是否激活
             if (data.is_activated) {
               console.log('邮箱已存在');
             } else {
-              console.log('注册成功');
-              console.log(data)
-              // 记录注册后的邮箱
-              that.sameEmail = that.email
-              // 跳转到邮箱激活
+              that.copyRegEmail = that.email
+              that.preStepType = 1
+              that.codeStatus = 0
               that.getState('register-activate');
-              that.countDownType = 0
               clearInterval(that.countDownTimer);
-
-              that.countDown(that.countDownType);
+              that.countDownTimer = null
+              that.countDown(that.codeStatus);
             }
           },
           error: function (err) {
@@ -1213,13 +1254,29 @@
       // 激活邮箱
       activateEmail: function () {
         var that = this;
-        if (!that.verifyCode(that.code)) return
-        // 激活
+        if (!that.verifyCode(that.code) || !that.verifyEmail(that.email)) return
+        that.loadShow = true
+        $.ajax({
+          url: `${that.baseUrl}/shop-api/user-activate`,
+          type: "post",
+          dataType: "json",
+          data: {
+            email: that.email,
+            code: that.code
+          },
+          success: function (data) {
+            console.log(data)
+            console.log('激活成功');
+            that.loadShow = false
+            that.getState('register-complete');
+            // 倒计时刷新页面
+            that.countDownBack();
+          },
+          error: function (err) {
+            alert(err)
+          }
+        })
 
-        console.log('激活成功');
-        that.getState('register-complete');
-        // 倒计时刷新页面
-        that.countDownBack();
       },
 
       // 注册完成倒计时刷新页面
@@ -1247,15 +1304,33 @@
       isExistEmail: function () {
         var that = this;
         if (!that.verifyEmail(that.email)) return
-        // 验证邮箱
-
-        console.log('邮箱存在');
-        that.getState('forgot-reset');
-        if (that.countDownType !== 1) {
-          clearInterval(that.countDownTimer);
-          that.countDownTimer = null
+        if (that.copyFindEmail === that.email && that.countDownTimer && that.codeStatus === 1) {
+          that.getState('forgot-reset');
+        } else {
+          // 验证邮箱
+          that.existEmailRequest();
         }
-        if (!that.countDownTimer) that.sendVerfiyCode(1);
+      },
+      // 验证邮箱请求
+      existEmailRequest: function() {
+        var that = this;
+        that.loadShow = true
+        $.ajax({
+          url: `${that.baseUrl}/shop-api/forgot-password/${that.email}`,
+          type: "get",
+          success: function (data) {
+            that.loadShow = false
+            that.copyFindEmail = that.email
+            that.codeStatus = 1
+            that.getState('forgot-reset');
+            clearInterval(that.countDownTimer);
+            that.countDownTimer = null
+            that.countDown(that.codeStatus)
+          },
+          error: function (err) {
+            alert(err)
+          }
+        })
       },
 
       // 找回密码
@@ -1264,10 +1339,26 @@
         if (!that.verifyCode(that.code) || !that.verifyPassword(that.password) || !that.verifyConfirm(that
             .confirm)) return
         // 找回密码
-
-        console.log('找回密码成功');
-        that.getState('forgot-complete');
+        that.loadShow = true
+        $.ajax({
+          url: `${that.baseUrl}/shop-api/reset-password`,
+          type: "post",
+          dataType: "json",
+          data: {
+            code: that.code,
+            password: that.password
+          },
+          success: function (data) {
+            console.log(data)
+            console.log('找回密码成功');
+            that.getState('forgot-complete');
+          },
+          error: function (err) {
+            alert(err)
+          }
+        })
       },
+
       // 找回密码后重新登录
       loginAgain: function () {
         var that = this;
@@ -1275,27 +1366,20 @@
       },
 
       // 重新倒计时
-      resetCountDown: function () {
+      resetSendCode: function () {
         var that = this;
-        if (that.countDownType === 0) that.registerRequest()
-
-        if (that.countDownType === 1) {
-          that.formState.text.codeText = `重新发送邮件(45)S`;
-          that.countDownSec = 45
-        }
+        if (that.codeStatus === 0) that.registerRequest();
+        if (that.codeStatus === 1) that.existEmailRequest();
       },
       // 倒计时
       countDown: function (type) {
         var that = this;
-        that.codeDisabled = true
-        if (type === 0) {
-          that.formState.text.codeText = `重新发送邮件(30)S`;
-          that.countDownSec = 30
-        }
-        if (type === 1) {
-          that.formState.text.codeText = `重新发送邮件(45)S`;
-          that.countDownSec = 45
-        }
+        that.codeDisabled = true;
+
+        if (type === 0) that.countDownSec = 30
+        if (type === 1) that.countDownSec = 45
+        that.formState.text.codeText = `重新发送邮件(${that.countDownSec})S`;
+
         that.countDownTimer = setInterval(() => {
           that.countDownSec--
           if (that.countDownSec > 0) {
@@ -1303,52 +1387,36 @@
           } else {
             that.formState.text.codeText = `发送邮件`;
             clearInterval(that.countDownTimer);
-            that.countDownTimer = null
+            that.countDownTimer = null;
             that.codeDisabled = false;
           }
         }, 1000)
       },
 
-      request: function () {
-        $.ajax({
-          url: "http://www.tourboxtech.cn/shop-api/email",
-          type: "post",
-          dataType: "json",
-          data: {
-            "email": that.email,
-            "source": "cn"
-          },
-          success: function () {
-            that.tipMsg = that.leftData.emailSuccess
-            that.tipColor = "#5bb75b"
-            that.email = ""
-            that.isDisabled = false
-          },
-          error: function () {
-            that.tipMsg = that.leftData.emailAlready
-            that.tipColor = "#da4f49"
-            that.email = ""
-            that.isDisabled = false
-          }
-        })
-      },
 
       getFocus(e) {
         var that = this;
         that.tipMsg = ''
-        $(e.currentTarget).parent().removeClass('item-active');
-        $(e.currentTarget).parent().next().hide().text()
+        $(e.currentTarget).parent().removeClass('item-active').next().hide().text();
       },
       blurFocus(e, fn, value) {
         var that = this;
         if (!that[fn](value)) {
-          $(e.currentTarget).parent().next().show().text(that.tipMsg)
-          $(e.currentTarget).parent().addClass('item-active')
+          $(e.currentTarget).parent().addClass('item-active').next().show().text(that.tipMsg);
         }
+      },
+      clearFocus: function() {
+        var that = this;
+        that.tipMsg = ''
+        $('.item-input input').each(function() {
+          $(this).parent().removeClass('item-active').next().hide().text();
+        })
       },
       openModal: function () {
         var that = this;
         that.modalShow = true
+        that.copyRegEmail = ''
+        that.copyFindEmail = ''
         $('body').css({
           overflow: 'hidden'
         })
