@@ -193,7 +193,7 @@
   }
 
   .desk-auth>.auth-user>.user-head {
-    width: .5rem;
+    min-width: .5rem;
     height: 100%;
     cursor: pointer;
   }
@@ -201,6 +201,15 @@
   .desk-auth>.auth-user>.user-head>i {
     font-size: .16rem;
     color: #333;
+  }
+
+  .desk-auth>.auth-user>.user-head>p {
+    width: 1rem;
+    font-size: .16rem;
+    color: #333;
+    white-space: nowrap;       /* 使文本不可换行 */
+    overflow: hidden;          /* 隐藏溢出部分 */ 
+    text-overflow: ellipsis;  
   }
 
   .desk-auth>.auth-user>.user-menu {
@@ -377,8 +386,7 @@
   }
 
   .form-submit>.submit-active {
-    background-color: #d7d7d7;
-    border: 1px solid #d7d7d7;
+    opacity: .6;
     cursor: not-allowed;
   }
 
@@ -420,64 +428,21 @@
     /* border: 1px solid #ccc; */
   }
 
-  .verify-wrap {
-    position: relative;
+  .form-keep {
     width: 100%;
-    height: 40px;
-    background-color: #e5e5e5;
-    border: 1px solid #e0e0e0;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .form-keep>i {
+    font-size: 16px;
+    color: #44A9F1;
   }
 
-  .verify-wrap .drag-btn {
-    position: absolute;
-    left: -1px;
-    top: -1px;
-    width: 50px;
-    height: 40px;
-    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAA/UlEQVRYhe3XLc9GYBjG8eN6dkdFIQuqoCiCbj6ob2CCIplRaJKqEHT3c/kAz66Xc/fLnvO3UY7N/jNmxDAMF77AQ57iOH53x5/GccTPuyNUcSg1DqXGodQ4lNr/CC3LEsuyaG8mrEKzLEPXdZjnWWszYRXq+z7yPMc0Tej7XnkzYf2Muq6LoiiwrivatsV1XUrby0Mlx3Huu7fvO5qmUd50kL31QgijTdXD+gq/zvNEVVXwPA9pmipvOqxDj+O4Q4IgQJIkypsuq9Bt21DXNaIoug/VzYRVqHw55J0Kw1BrMyHkXyj/3BHiUGocSo1DqXEota8Jvb/18hP16Z7qL3h/w53n4AAAAABJRU5ErkJggg==) no-repeat center center;
-    background-size: 100% 100%;
-    z-index: 2;
-    cursor: move;
-  }
-
-  .verify-wrap .suc-drag-btn {
-    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAACA0lEQVRYhe2Y2yuDYRzHv7PJYc5zKspYSRMymStXu5NCs5W4csEfwJ+gSA53csg1F4R/gSu0OcWSmNIQkfMcEvu9tdpY79793leo91Nbbft993x6nj2/52kal8v1gX+Ajp4sFstve4jidrsR99sSUlFFlUYVVRpVVGl0SnyJ934VaxczOLpdwd3bufBeWnw+StLrYc1tQ3FqnewxZIk+vz9g7rAHO9dL3z67efXBfTkrPCqymtBqGkaiNoU9FnvpSXJyzx5R8itUQ7WU4cIWnT/qhe9xS3I91VKGC0uUfpPbV4uSajUhQ1CGshxYorRxpGDObECf1Ysm40DM2a+wNhPt7mhUZzvhMI1Aq9HBkFgUUzYSrBkNtiDCkGBES/Eg8pLKwiSdplFB8uRhEzMH3RGzsSC7j9oKe1CT4wi0oEZMeRzITy4XJOM0WkFy2uOE//1O7jA8UWrm1CeJ5dMxlGXYoI/PQrd5AQlavagkZTmwlt4UOHGCnPs9wkw+vl0jSZcWdSZDsz8uas1tD3t99rSL8b0W3Lz4cHy/LrrctYEjlQNr6Y2ptag0NIf10gv/Pvo3akRzlOGe++yTyV4yhAJ9leR6qqUMF7YoXTC6zPPChSMaVEO1ci4lstoTDdxROhE4Fjv/9jUvCIkoISPGv7nhq6JKo4oqjSqqNEIfpf8f/zqf+36643RPeo8AAAAASUVORK5CYII=) no-repeat center center;
-    background-size: 100% 100%
-  }
-
-  .verify-wrap .drag-progress {
-    position: absolute;
-    left: 0;
-    top: -1px;
-    height: 40px;
-    border-top: 1px solid #7ac23c;
-    border-top: 1px solid #7ac23c;
-    width: 0;
-    background-color: #7ac23c;
-    color: #fff;
-    font-size: 18px;
-    text-align: center;
-    line-height: 40px
-  }
-
-  .verify-wrap .fix-tips,
-  .verify-msg {
-    width: 100%;
-    position: absolute;
-    right: 0;
-    left: 1px;
-    height: 100%;
-    color: #51555c;
-    z-index: 1;
-    line-height: 38px;
+  .form-keep>p {
+    margin-left: 5px;
+    line-height: 1.3;
     font-size: 12px;
-    text-align: center
-  }
-
-  .verify-wrap .verify-msg {
-    background-color: #7ac23c;
-    color: #fff;
-    display: none
+    color: #7f7f7f;
   }
 
   .form-protocol {
@@ -543,6 +508,66 @@
   .auth-load>i {
     font-size: 30px;
     color: #fff;
+  }
+
+  .verify-wrap {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #e5e5e5;
+    border: 1px solid #e0e0e0;
+  }
+
+  .verify-wrap .drag-btn {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 50px;
+    height: 40px;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAA/UlEQVRYhe3XLc9GYBjG8eN6dkdFIQuqoCiCbj6ob2CCIplRaJKqEHT3c/kAz66Xc/fLnvO3UY7N/jNmxDAMF77AQ57iOH53x5/GccTPuyNUcSg1DqXGodQ4lNr/CC3LEsuyaG8mrEKzLEPXdZjnWWszYRXq+z7yPMc0Tej7XnkzYf2Muq6LoiiwrivatsV1XUrby0Mlx3Huu7fvO5qmUd50kL31QgijTdXD+gq/zvNEVVXwPA9pmipvOqxDj+O4Q4IgQJIkypsuq9Bt21DXNaIoug/VzYRVqHw55J0Kw1BrMyHkXyj/3BHiUGocSo1DqXEota8Jvb/18hP16Z7qL3h/w53n4AAAAABJRU5ErkJggg==) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 2;
+    cursor: move;
+  }
+
+  .verify-wrap .suc-drag-btn {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAACA0lEQVRYhe2Y2yuDYRzHv7PJYc5zKspYSRMymStXu5NCs5W4csEfwJ+gSA53csg1F4R/gSu0OcWSmNIQkfMcEvu9tdpY79793leo91Nbbft993x6nj2/52kal8v1gX+Ajp4sFstve4jidrsR99sSUlFFlUYVVRpVVGl0SnyJ934VaxczOLpdwd3bufBeWnw+StLrYc1tQ3FqnewxZIk+vz9g7rAHO9dL3z67efXBfTkrPCqymtBqGkaiNoU9FnvpSXJyzx5R8itUQ7WU4cIWnT/qhe9xS3I91VKGC0uUfpPbV4uSajUhQ1CGshxYorRxpGDObECf1Ysm40DM2a+wNhPt7mhUZzvhMI1Aq9HBkFgUUzYSrBkNtiDCkGBES/Eg8pLKwiSdplFB8uRhEzMH3RGzsSC7j9oKe1CT4wi0oEZMeRzITy4XJOM0WkFy2uOE//1O7jA8UWrm1CeJ5dMxlGXYoI/PQrd5AQlavagkZTmwlt4UOHGCnPs9wkw+vl0jSZcWdSZDsz8uas1tD3t99rSL8b0W3Lz4cHy/LrrctYEjlQNr6Y2ptag0NIf10gv/Pvo3akRzlOGe++yTyV4yhAJ9leR6qqUMF7YoXTC6zPPChSMaVEO1ci4lstoTDdxROhE4Fjv/9jUvCIkoISPGv7nhq6JKo4oqjSqqNEIfpf8f/zqf+36643RPeo8AAAAASUVORK5CYII=) no-repeat center center;
+    background-size: 100% 100%
+  }
+
+  .verify-wrap .drag-progress {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 40px;
+    border-top: 1px solid #7ac23c;
+    border-top: 1px solid #7ac23c;
+    width: 0;
+    background-color: #7ac23c;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px
+  }
+
+  .verify-wrap .fix-tips,
+  .verify-msg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 1px;
+    height: 100%;
+    color: #51555c;
+    z-index: 1;
+    line-height: 38px;
+    font-size: 12px;
+    text-align: center
+  }
+
+  .verify-wrap .verify-msg {
+    background-color: #7ac23c;
+    color: #fff;
+    display: none
   }
 
   .fade-enter-active,
@@ -722,6 +747,395 @@
       border-radius: .55rem;
       background: linear-gradient(218deg, #004ffc 4%, #3f6ef6 94%)
     }
+
+      /* 登录 */
+    .mobile-auth {
+      height: 100%;
+    }
+
+    .mobile-auth>.auth-user {
+      height: 100%;
+    }
+
+    .mobile-auth>.auth-user>.user-head {
+      min-width: .5rem;
+      height: 100%;
+      cursor: pointer;
+    }
+
+    .mobile-auth>.auth-user>.user-head>i {
+      font-size: .16rem;
+      color: #333;
+    }
+
+    .mobile-auth>.auth-user>.user-head>p {
+      width: 1rem;
+      font-size: .16rem;
+      color: #333;
+      white-space: nowrap;       /* 使文本不可换行 */
+      overflow: hidden;          /* 隐藏溢出部分 */ 
+      text-overflow: ellipsis;  
+    }
+
+    .mobile-auth>.auth-user>.user-menu {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: .44rem;
+      z-index: 9;
+      display: none;
+      width: 100vw;
+      background-color: #fff;
+      box-shadow: 1px 1px 1px 0px #eee;
+    }
+
+    .mobile-auth>.auth-user>.user-menu>.menu-item {
+      width: 100%;
+      height: .4rem;
+      font-size: .12rem;
+      color: #1C1C1E;
+      cursor: pointer;
+      border-bottom: 1px solid #eee;
+    }
+
+    .auth-container {
+      position: fixed;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 999;
+      padding-top: 0;
+      background-color: rgba(0, 0, 0, .8);
+    }
+
+  .auth-container>.contaienr-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 5vh .3rem 0 .3rem;
+    margin: 0 auto;
+    background-color: #fff;
+    overflow: auto;
+  }
+
+  .auth-container .wrapper-close {
+    position: absolute;
+    top: .2rem;
+    right: .2rem;
+    z-index: 9;
+  }
+  .auth-container .wrapper-close>i {
+    font-size: .24rem;
+    color: #999;
+  }
+
+  .auth-container .wrapper-logo {
+    width: 100%;
+    margin-bottom: 0rem;
+  }
+
+  .auth-container .wrapper-logo>a>i {
+    font-size: .5rem;
+    color: #727172;
+  }
+
+  .auth-container .wrapper-title {
+    width: 100%;
+    margin-bottom: .1rem;
+    font-size: .2rem;
+    color: #7F7F7F;
+    text-align: center;
+  }
+
+  .auth-container .wrapper-login {
+    width: 100%;
+  }
+
+  .auth-container .wrapper-register {
+    width: 100%;
+  }
+
+  .login-form,
+  .register-form,
+  .activate-form,
+  .complete-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+  .auth-container .wrapper-form {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .form-tip {
+    width: 100%;
+    margin-bottom: .1rem;
+    font-size: .2rem;
+    color: #38a858;
+    font-weight: 200;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  .form-item {
+    width: 100%;
+    padding-top: .15rem;
+  }
+
+  .form-item>.item-input {
+    position: relative;
+    width: 100%;
+    height: .45rem;
+    margin-bottom: .05rem;
+    border: 1px solid #bbb;
+    border-radius: 2px;
+  }
+
+  .form-item>.item-input>input {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    font-size: .14rem;
+    color: #333;
+    border: none;
+    background: transparent;
+  }
+
+  .form-item>.item-input>input::placeholder {
+    color: #7F7F7F;
+  }
+
+
+  .form-item>.item-active {
+    border: 1px solid #f04848;
+  }
+
+  .form-item>.item-active>input {
+    color: #f04848;
+  }
+
+  .form-item>.item-active>input::placeholder {
+    color: #f04848;
+  }
+
+  .form-item>.item-tip {
+    width: 100%;
+    padding-left: 10px;
+    font-size: .12rem;
+    color: #f04848;
+  }
+
+  .form-submit {
+    width: 100%;
+  }
+
+  .form-submit-margin-20 {
+    margin-top: 20px;
+  }
+
+  .form-submit-margin-40 {
+    margin-top: 40px;
+  }
+
+  .form-submit>button {
+    width: 100%;
+    height: .45rem;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #44a8f2;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+  }
+
+  .form-submit>.submit-active {
+    opacity: .6;
+    cursor: not-allowed;
+  }
+
+  .form-code {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-code>button {
+    width: 100%;
+    height: 50px;
+    font-size: .14rem;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #44a8f2;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+    transition: all 0.2s linear;
+  }
+
+  .code-active>button {
+    color: #44a8f2;
+    background: #fff;
+    cursor: not-allowed;
+  }
+
+  .form-verification {
+    width: 100%;
+    height: 50px;
+    margin-top: .2rem;
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+  }
+
+  .form-slide {
+    /* height: 40px; */
+    margin-top: .2rem;
+    margin-bottom: .3rem;
+    /* border: 1px solid #ccc; */
+  }
+
+  .form-keep {
+    width: 100%;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+  .form-keep>i {
+    font-size: 16px;
+    color: #44A9F1;
+  }
+
+  .form-keep>p {
+    margin-left: 5px;
+    line-height: 1.3;
+    font-size: 12px;
+    color: #7f7f7f;
+  }
+
+  .form-protocol {
+    width: 100%;
+    padding-left: 5px;
+    margin-bottom: 15px;
+  }
+
+  .form-protocol>i {
+    font-size: 16px;
+    color: #44A9F1;
+  }
+
+  .form-protocol>p {
+    margin-left: 5px;
+    line-height: 1.3;
+    font-size: 12px;
+    color: #7f7f7f;
+  }
+
+  .form-protocol>p>a {
+    color: #333;
+  }
+
+  .form-skip {
+    width: 100%;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #44a9f2;
+  }
+
+  .form-skip>span {
+    cursor: pointer;
+  }
+
+  .form-complete {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+  .form-complete>button {
+    width: 100%;
+    height: 50px;
+    font-size: .14rem;
+    color: #44a8f2;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #44a8f2;
+    cursor: pointer;
+  }
+
+  .auth-load {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 9999;
+    padding-top: 10vh;
+    background-color: rgba(0, 0, 0, .8);
+  }
+
+  .auth-load>i {
+    font-size: .3rem;
+    color: #fff;
+  }
+
+  .verify-wrap {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background-color: #e5e5e5;
+    border: 1px solid #e0e0e0;
+  }
+
+  .verify-wrap .drag-btn {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    width: 50px;
+    height: 40px;
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAA/UlEQVRYhe3XLc9GYBjG8eN6dkdFIQuqoCiCbj6ob2CCIplRaJKqEHT3c/kAz66Xc/fLnvO3UY7N/jNmxDAMF77AQ57iOH53x5/GccTPuyNUcSg1DqXGodQ4lNr/CC3LEsuyaG8mrEKzLEPXdZjnWWszYRXq+z7yPMc0Tej7XnkzYf2Muq6LoiiwrivatsV1XUrby0Mlx3Huu7fvO5qmUd50kL31QgijTdXD+gq/zvNEVVXwPA9pmipvOqxDj+O4Q4IgQJIkypsuq9Bt21DXNaIoug/VzYRVqHw55J0Kw1BrMyHkXyj/3BHiUGocSo1DqXEota8Jvb/18hP16Z7qL3h/w53n4AAAAABJRU5ErkJggg==) no-repeat center center;
+    background-size: 100% 100%;
+    z-index: 2;
+    cursor: move;
+  }
+
+  .verify-wrap .suc-drag-btn {
+    background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAACA0lEQVRYhe2Y2yuDYRzHv7PJYc5zKspYSRMymStXu5NCs5W4csEfwJ+gSA53csg1F4R/gSu0OcWSmNIQkfMcEvu9tdpY79793leo91Nbbft993x6nj2/52kal8v1gX+Ajp4sFstve4jidrsR99sSUlFFlUYVVRpVVGl0SnyJ934VaxczOLpdwd3bufBeWnw+StLrYc1tQ3FqnewxZIk+vz9g7rAHO9dL3z67efXBfTkrPCqymtBqGkaiNoU9FnvpSXJyzx5R8itUQ7WU4cIWnT/qhe9xS3I91VKGC0uUfpPbV4uSajUhQ1CGshxYorRxpGDObECf1Ysm40DM2a+wNhPt7mhUZzvhMI1Aq9HBkFgUUzYSrBkNtiDCkGBES/Eg8pLKwiSdplFB8uRhEzMH3RGzsSC7j9oKe1CT4wi0oEZMeRzITy4XJOM0WkFy2uOE//1O7jA8UWrm1CeJ5dMxlGXYoI/PQrd5AQlavagkZTmwlt4UOHGCnPs9wkw+vl0jSZcWdSZDsz8uas1tD3t99rSL8b0W3Lz4cHy/LrrctYEjlQNr6Y2ptag0NIf10gv/Pvo3akRzlOGe++yTyV4yhAJ9leR6qqUMF7YoXTC6zPPChSMaVEO1ci4lstoTDdxROhE4Fjv/9jUvCIkoISPGv7nhq6JKo4oqjSqqNEIfpf8f/zqf+36643RPeo8AAAAASUVORK5CYII=) no-repeat center center;
+    background-size: 100% 100%
+  }
+
+  .verify-wrap .drag-progress {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    height: 40px;
+    border-top: 1px solid #7ac23c;
+    border-top: 1px solid #7ac23c;
+    width: 0;
+    background-color: #7ac23c;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 40px
+  }
+
+  .verify-wrap .fix-tips,
+  .verify-msg {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    left: 1px;
+    height: 100%;
+    color: #51555c;
+    z-index: 1;
+    line-height: 38px;
+    font-size: 12px;
+    text-align: center
+  }
+
+  .verify-wrap .verify-msg {
+    background-color: #7ac23c;
+    color: #fff;
+    display: none
+  }
   }
 </style>
 <div id="header-container" v-cloak>
@@ -756,18 +1170,20 @@
     <div class="desk-auth">
       <div class="auth-user">
         <div class="user-head flex-center">
-          <i class="iconfont iconkehu"></i>
+          <i class="iconfont iconyonghu" v-if="!isLogin"></i>
+          <p v-if="isLogin">{{userInfo ? userInfo.email : ''}}</p>
         </div>
         <div class="user-menu" @click="openModal">
-          <div class="menu-item flex-center" @click="openLogin('login')"><span>登录</span></div>
-          <div class="menu-item flex-center" @click="openRegister('register')"><span>注册</span></div>
+          <div class="menu-item flex-center" v-if="!isLogin" @click="openLogin('login')"><span>登录</span></div>
+          <div class="menu-item flex-center" v-if="!isLogin" @click="openRegister('register')"><span>注册</span></div>
+          <div class="menu-item flex-center" v-if="isLogin" @click="logout"><span>退出</span></div>
         </div>
       </div>
     </div>
   </div>
   <div class="header-mobile flex-vb">
     <div class="mobile-nav">
-      <div class="nav-toggle" v-show="!openLanguageShow" @click="openMenu">
+      <div class="nav-toggle" v-show="!mobileAuthShow" @click="openMenu">
         <i class="iconfont iconbars" :class="{iconclose: openMenuShow}"></i>
       </div>
       <ul class="nav-list">
@@ -780,7 +1196,7 @@
       </ul>
     </div>
     <a class="mobile-logo" href="index.html"></a>
-    <div class="mobile-language " v-show="!openMenuShow">
+    <!-- <div class="mobile-language " v-show="!openMenuShow">
       <div class="language-default flex-vc" :class="{'icon-active': openLanguageShow}" @click="openLanguage">
         <span v-show="!openLanguageShow">简体中文</span>
         <i class="iconfont icondian" :class="{iconclose: openLanguageShow}"></i>
@@ -793,12 +1209,27 @@
         <li class="select-item flex-vb" @click="checkLanguage('kr')"><span>대한민국</span><span>한국어</span></li>
         <li class="select-item flex-vb" @click="checkLanguage('de')"><span>Deutschland</span><span>Deutsch</span></li>
       </ul>
+    </div> -->
+    <!-- 登录 -->
+    <div class="mobile-auth" >
+      <div class="auth-user">
+        <div class="user-head flex-center" v-show="!openMenuShow" @click="openMobileAuth">
+          <i class="iconfont iconyonghu" v-if="!isLogin"></i>
+          <p v-if="isLogin">{{userInfo ? userInfo.email : ''}}</p>
+        </div>
+        <div class="user-menu"  @click="openModal">
+          <div class="menu-item flex-center" v-if="!isLogin" @click="openLogin('login')"><span>登录</span></div>
+          <div class="menu-item flex-center" v-if="!isLogin" @click="openRegister('register')"><span>注册</span></div>
+          <div class="menu-item flex-center" v-if="isLogin" @click="logout"><span>退出</span></div>
+        </div>
+      </div>
     </div>
   </div>
 
   <transition name="fade">
     <div class="auth-container" v-show="modalShow" @click="closeModal">
       <div class="contaienr-wrapper" @click.stop>
+        <div class="wrapper-close" v-if="isM" @click="closeModal"><i class="iconfont iconclose"></i></div>
         <div class="wrapper-logo flex-center">
           <a href="index.html"><i class="iconfont iconlogo"></i></a>
         </div>
@@ -808,7 +1239,7 @@
           <!-- 邮箱 -->
           <div class="form-item" v-show="formState.show.email">
             <div class="item-input">
-              <input type="text" placeholder="邮箱*" v-model="email" @focus="getFocus"
+              <input class="input-email" type="text" placeholder="邮箱*" v-model="email" @focus="getFocus"
                 @blur="blurFocus($event, 'verifyEmail', email)">
             </div>
             <p class="item-tip"></p>
@@ -840,6 +1271,11 @@
             </div>
             <p class="item-tip"></p>
           </div>
+          <!-- 保持登录 -->
+          <div class="form-keep flex" @click="keepLogin = !keepLogin" v-show="formState.show.keep">
+            <i class="iconfont " :class="keepLogin ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+            <p>两天内保持登录</p>
+          </div>
           <!-- 滑块验证码 -->
           <div class="form-slide" v-show="formState.show.slide">
             <div class="verify-wrap" id="verify-wrap">
@@ -859,15 +1295,14 @@
           <div class="form-protocol flex" @click="isSelectProtocol = !isSelectProtocol"
             v-show="formState.show.protocol">
             <i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
-            <p>同意并愿意遵守TourBox创新 <a href="">隐私政策</a> 和 <a href="">使用条款</a>。</p>
+            <p>同意并愿意遵守TourBox<a href="privacy-policy.html">隐私政策</a> 和 <a href="terms-of-use.html">使用条款</a>。</p>
           </div>
           <!-- 返回 -->
           <div class="form-submit form-submit-margin-20" v-show="formState.show.prev">
             <button @click="backPrev">{{formState.text.prevText}}</button>
           </div>
           <!-- 提交 -->
-          <div class="form-submit form-submit-margin-20" :class="{'form-submit-margin-40': formState.type == 'login'}"
-            v-show="formState.show.submit">
+          <div class="form-submit form-submit-margin-20" v-show="formState.show.submit">
             <button :class="{'submit-active': !allowSubmit}" :disabled="!allowSubmit"
               @click="submitEvent">{{formState.text.submitText}}</button>
           </div>
@@ -893,6 +1328,7 @@
     data: {
       isM: false,
       openMenuShow: false,
+      mobileAuthShow: false,
       openLanguageShow: false,
       navList: [],
 
@@ -908,6 +1344,7 @@
           submitType: 'login',
           show: {
             email: true,
+            keep: true,
             password: true,
             verify: false,
             slide: false,
@@ -1028,21 +1465,26 @@
         }],
       ]),
 
+      userInfo: null,
+      registerInfo: null,
+      isLogin: false,
       email: '87889978@qq.com',
       copyRegEmail: '', // 记录注册邮箱
       copyFindEmail: '', // 记录找回邮箱
-      password: '123456789',
-      confirm: '123456789',
+      password: '',
+      confirm: '',
       verify: '',
       code: '',
       isSelectProtocol: true,
       isSelectUpdate: true,
+      keepLogin: true,
       countDownTimer: null,
       refreshTimer: null,
       codeDisabled: true,
       countDownSec: 0,
       codeStatus: undefined, // 验证码类型 0 激活码 1 找回密码
       preStepType: 0, // 判断返回状态 0 登录 1 注册
+      expireDate: 2 * 24 * 60 * 60,
 
       slideEl: null,
       slideBtn: null,
@@ -1057,7 +1499,9 @@
       var that = this;
       that.judgeIsMobile()
       that.getNavList();
-      that.getState('login')
+      that.getState('login');
+      that.checkLogin();
+      that.setGlobalSession();
     },
     updated: function () {
       var that = this;
@@ -1114,14 +1558,12 @@
         that.getState(type);
         that.resetVerify();
       },
-
       // 打开注册
       openRegister: function (type) {
         var that = this;
         that.getState(type);
         that.resetVerify();
       },
-
       // 切换状态
       getState: function (type) {
         var that = this;
@@ -1133,11 +1575,12 @@
         switch (type) {
           case 'login':
             that.email = ''
+            that.password = ''
             break;
           case 'register':
             that.email = that.copyRegEmail
             that.slideFinishState = false
-            that.resetVerify()
+            that.resetVerify();
             break;
           case 'register-complete':
             that.copyRegEmail = ''
@@ -1154,24 +1597,53 @@
             break;
         }
       },
-
-      // 返回上一状态
-      backPrev: function () {
+      // 检查是否登录
+      checkLogin: function() {
         var that = this;
-        if (that.formType === 'forgot-reset') {
-          that.getState('forgot')
-        } else {
-          if (that.preStepType === 0) that.getState('login')
-          if (that.preStepType === 1) that.getState('register')
+        var storage = window.localStorage;
+        var session = window.sessionStorage;
+        var currentStamp = Date.now();
+
+        var cacheType = storage.getItem('cacheType');
+        if (cacheType == 1) {
+          session.clear();
+          var expire = storage.getItem('expire_in');
+          if (currentStamp < expire && storage.getItem('userInfo')) {
+            that.isLogin = true
+            that.userInfo = JSON.parse(storage.getItem('userInfo'))
+          } else {
+            that.isLogin = false
+          }
         }
+        if (cacheType == 2 && session.getItem('userInfo')) {
+          that.isLogin = true
+          that.userInfo = JSON.parse(session.getItem('userInfo'))
+        }
+        console.log(that.isLogin)
       },
-
-      // 底部状态跳转
-      skipStep: function (type) {
+      // 给新打开页面设置sessionStorage
+      setGlobalSession: function() {
         var that = this;
-        if (that.formType === 'login') that.preStepType = 0
-        if (that.formType === 'register') that.preStepType = 1
-        that.getState(type)
+        var storage = window.localStorage;
+        var session = window.sessionStorage;
+        // 新页面随便设置一个localStorage来启动storage事件
+        if (!session.getItem('userInfo')) storage.setItem('trigger_before_storage', Date.now());
+        // 所有页面都监听storage事件
+        window.addEventListener('storage', function(event) {
+          if (storage.getItem('cacheType') == 1) return
+          // 判断storage事件来自哪里
+          if (event.key == 'trigger_before_storage') {
+            // 当新页面打开时设置localStorage触发storage事件，在原页面监听到
+            // 设置localStorage，把原页面sessionStorage传进去，然后再把此localStorage删除
+            storage.setItem('trigger_after_storage', session.getItem('userInfo'));
+            storage.removeItem('trigger_after_storage');
+          } else if (event.key == 'trigger_after_storage') {
+            // 监听原页面设置localStorage的storage事件，通过event获取其设置的值
+            // 设置sessionStorage
+            session.setItem('userInfo', event.oldValue);
+            that.checkLogin();
+          }
+        });
       },
 
       // 登录
@@ -1190,21 +1662,52 @@
           type: "post",
           dataType: "json",
           data: {
-            username: that.email,
-            password: that.password
+            email: that.email,
+            password: that.password,
+            expire_in: that.keepLogin ? that.expireDate : 0
           },
           success: function (data) {
             console.log(data)
             that.loadShow = false
             that.modalShow = false
-            that.loginSuccess();
+            that.loginSuccess(data);
           },
           error: function (err) {
             alert(err)
           }
         })
       },
-      loginSuccess: function() {},
+      loginSuccess: function(data) {
+        var that = this;
+        // 缓存登录信息
+        // cacheType 缓存类型 1 storage 2 session
+        var userInfo = JSON.stringify(data);
+        var expire = data.creation_time * 1000 + that.expireDate * 1000
+        var storage = window.localStorage;
+        var session = window.sessionStorage;
+        storage.clear();
+        session.clear();
+        if (that.keepLogin) {
+          storage.setItem('cacheType', 1);
+          storage.setItem('userInfo', userInfo);
+          storage.setItem('expire_in', expire);
+        } else {
+          storage.setItem('cacheType', 2);
+          session.setItem('userInfo', userInfo);
+        }
+        that.checkLogin();
+        that.closeModal();
+      },
+      // 登出
+      logout: function(event) {
+        event.preventDefault();
+        // 请求退出
+        var storage = window.localStorage;
+        var session = window.sessionStorage;
+        storage.clear();
+        session.clear();
+        window.location.reload();
+      },
 
       // 注册
       register: function () {
@@ -1214,6 +1717,7 @@
         if (that.copyRegEmail === that.email && that.countDownTimer && that.codeStatus === 0) {
           that.getState('register-activate');
         } else {
+          that.resetVerify();
           that.registerRequest()
         }
       },
@@ -1232,9 +1736,10 @@
           success: function (data) {
             console.log(data)
             that.loadShow = false
+            that.registerInfo = data
             // 是否激活
             if (data.is_activated) {
-              console.log('邮箱已存在');
+              alert('邮箱已存在');
             } else {
               that.copyRegEmail = that.email
               that.preStepType = 1
@@ -1250,7 +1755,6 @@
           }
         })
       },
-
       // 激活邮箱
       activateEmail: function () {
         var that = this;
@@ -1278,7 +1782,6 @@
         })
 
       },
-
       // 注册完成倒计时刷新页面
       countDownBack: function () {
         var that = this;
@@ -1297,6 +1800,8 @@
       backRefreshPage: function () {
         var that = this;
         clearInterval(that.refreshTimer);
+        that.keepLogin = true
+        that.loginSuccess(that.registerInfo);
         window.location.reload();
       },
 
@@ -1332,7 +1837,6 @@
           }
         })
       },
-
       // 找回密码
       findPassword: function () {
         var that = this;
@@ -1349,6 +1853,7 @@
             password: that.password
           },
           success: function (data) {
+            that.loadShow = false
             console.log(data)
             console.log('找回密码成功');
             that.getState('forgot-complete');
@@ -1358,11 +1863,29 @@
           }
         })
       },
-
       // 找回密码后重新登录
       loginAgain: function () {
         var that = this;
         that.getState('login');
+      },
+
+      // 返回上一状态
+      backPrev: function () {
+        var that = this;
+        if (that.formType === 'forgot-reset') {
+          that.getState('forgot')
+        } else {
+          if (that.preStepType === 0) that.getState('login')
+          if (that.preStepType === 1) that.getState('register')
+        }
+      },
+
+      // 底部状态跳转
+      skipStep: function (type) {
+        var that = this;
+        if (that.formType === 'login') that.preStepType = 0
+        if (that.formType === 'register') that.preStepType = 1
+        that.getState(type)
       },
 
       // 重新倒计时
@@ -1392,8 +1915,7 @@
           }
         }, 1000)
       },
-
-
+      
       getFocus(e) {
         var that = this;
         that.tipMsg = ''
@@ -1403,6 +1925,21 @@
         var that = this;
         if (!that[fn](value)) {
           $(e.currentTarget).parent().addClass('item-active').next().show().text(that.tipMsg);
+          return
+        }
+        // 注册邮箱失焦验证
+        if (that.formType === 'register' && $(e.currentTarget).attr('class') === 'input-email') {
+          $.ajax({
+            url: `${that.baseUrl}/shop-api/email-reg-check/${that.email}`,
+            type: "get",
+            success: function (data) {
+              console.log(data)
+            },
+            error: function (err) {
+              // $(e.currentTarget).parent().addClass('item-active').next().show().text(err);
+              alert(err)
+            }
+          })
         }
       },
       clearFocus: function() {
@@ -1424,9 +1961,60 @@
       closeModal: function () {
         var that = this;
         that.modalShow = false
-        that.resetVerify();
+        if (that.isM) that.openMobileAuth();
         $('body').css({
           overflow: 'auto'
+        })
+      },
+
+      // 重置滑块验证
+      resetVerify: function () {
+        var that = this;
+        that.slideSucMsgEle.hide();
+        that.slideBtn.removeClass('suc-drag-btn');
+        that.slideFinishState = false;
+        that.slideProEle.css({
+          'width': 0
+        });
+        that.slideBtn.css({
+          'left': '-1px'
+        })
+        that.touchMove();
+      },
+      openMenu: function () {
+        var that = this;
+        that.openMenuShow = !that.openMenuShow;
+        that.openLanguageShow = false;
+        $(".header-mobile .nav-list").slideToggle("fast");
+      },
+      openLanguage: function () {
+        var that = this;
+        that.openLanguageShow = !that.openLanguageShow;
+        that.openMenuShow = false;
+        $(".header-mobile .language-select").slideToggle("fast");
+      },
+      checkLanguage: function (lan) {
+        window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
+      },
+      openMobileAuth: function() {
+        var that = this;
+        that.mobileAuthShow = !that.mobileAuthShow;
+        that.openMenuShow = false;
+        $(".mobile-auth .user-menu").slideToggle("fast");
+      },
+      judgeIsMobile: function () {
+        var that = this;
+        if (window.innerWidth < 768) {
+          that.isM = true;
+        } else {
+          that.isM = false;
+        }
+        window.addEventListener('resize', function (e) {
+          if (window.innerWidth < 768) {
+            that.isM = true;
+          } else {
+            that.isM = false;
+          }
         })
       },
       // 初始化滑块
@@ -1450,6 +2038,7 @@
         var that = this;
         var ifThisMousedown = false;
         that.slideBtn.on('mousedown', function (e) {
+          $('.item-input input').blur();
           var distenceX = e.pageX;
           e.preventDefault();
           if (that.slideFinishState || that.ifAnimated()) {
@@ -1531,21 +2120,6 @@
           }
         })
       },
-      // 重置滑块验证
-      resetVerify: function () {
-        var that = this;
-        that.slideSucMsgEle.hide();
-        that.slideBtn.removeClass('suc-drag-btn');
-        that.slideFinishState = false;
-        that.slideProEle.css({
-          'width': 0
-        });
-        that.slideBtn.css({
-          'left': '-1px'
-        })
-        that.touchMove();
-      },
-
       setDragBtnSty: function (left) {
         var that = this;
         that.slideBtn.css({
@@ -1595,7 +2169,6 @@
         var that = this;
         return that.getDragWrapWid() - that.getDragBtnWid()
       },
-
       verifyEmail: function (email) {
         var that = this;
         email = email ? email.replace(/\s+/g, '') : email
@@ -1658,98 +2231,6 @@
         }
         return true
       },
-      verifyUserName: function (name) {
-        var that = this;
-        name = name ? name.replace(/\s+/g, '') : name
-        if (!name) {
-          that.tipMsg = '名称不能为空'
-          return false
-        } else {
-          var pat = new RegExp(/^[a-zA-Z0-9_\u4e00-\u9fa5]{2,16}$/)
-          if (!pat.test(name)) {
-            that.tipMsg = '名称格式错误'
-            return false
-          }
-        }
-        return true
-      },
-      verifyPhone: function (phone) {
-        var that = this;
-        phone = phone ? phone.replace(/\s+/g, '') : phone
-        if (!phone) {
-          that.tipMsg = '请输入手机号'
-          return false
-        } else {
-          const pat = new RegExp('^(?:13|14|15|17|18)[0-9]{9}$', 'i')
-          if (!pat.test(phone)) {
-            that.tipMsg = '手机号格式错误'
-            return false
-          }
-        }
-        return true
-      },
-
-      openMenu: function () {
-        var that = this;
-        that.openMenuShow = !that.openMenuShow;
-        that.openLanguageShow = false;
-        $(".header-mobile .nav-list").slideToggle("fast");
-      },
-      openLanguage: function () {
-        var that = this;
-        that.openLanguageShow = !that.openLanguageShow;
-        that.openMenuShow = false;
-        $(".header-mobile .language-select").slideToggle("fast");
-      },
-      checkLanguage: function (lan) {
-        window.location.href = '//www.tourboxtech.com/' + lan + window.location.pathname;
-      },
-      judgeIsMobile: function () {
-        var that = this;
-        if (window.innerWidth < 768) {
-          that.isM = true;
-        } else {
-          that.isM = false;
-        }
-        window.addEventListener('resize', function (e) {
-          if (window.innerWidth < 768) {
-            that.isM = true;
-          } else {
-            that.isM = false;
-          }
-        })
-      }
     }
   })
-  // $(document).ready(function() {
-  // 	languageSwitch('.header-desk .select-item');
-  // 	languageSwitch('.header-mobile .select-item');
-  // 	$('.header-mobile .nav-toggle').click(function() {
-  // 		$('.header-mobile .nav-list').slideToggle(300);
-  // 		$('.header-mobile .language-default').toggle();
-  // 		$('.header-mobile .nav-toggle .iconfont').toggleClass('iconclose');
-  // 	})
-  // 	$('.header-mobile .language-default').click(function() {
-  // 		$(this).toggleClass('icon-active');
-  // 		$('.header-mobile .language-select').slideToggle(300);
-  // 		$('.header-mobile .language-default .iconfont').toggleClass('iconclose')
-  // 		$('.header-mobile .nav-toggle, .header-mobile .language-default span').toggle();
-  // 	})
-  // 	function languageSwitch(name) {
-  // 		var languageList = ['en', 'tw', 'jp', 'kr', 'de'];
-  // 		$(name).each(function(i) {
-  // 			$(this).click(function() {
-  // 				// var localUrl = window.location.href;
-  // 				// if (localUrl.indexOf('cn/') == -1) return
-  // 				// var arr1 = localUrl.split('cn/');
-  // 				// if (arr1[1]) {
-  // 				// 	window.location.href = arr1[0] + languageList[i] + '/' + arr1[1];
-  // 				// } else {
-  // 				// 	window.location.href = arr1[0] + languageList[i];
-  // 				// }
-  // 				window.location.href = '//www.tourboxtech.com/' + languageList[i] + window.location.pathname;
-  // 			})
-  // 		})
-  // 	}
-  // })
 </script>

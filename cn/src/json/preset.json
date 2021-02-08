@@ -80,6 +80,11 @@
 			"title": "Easy Paint Tool SAI",
 			"status": 1,
 			"subnavIndex": 15
+		},
+		{
+			"title": "After Effects",
+			"status": 2,
+			"subnavIndex": 16
 		}
 	],
 	"presetLan": [
@@ -959,6 +964,27 @@
 			],
 			"downloadNum": 140,
 			"likeNum": 133
+    },
+    {
+			"title":"DaVinci Resolve",
+			"author": "ViccoVlog",
+			"from": "User",
+			"subnavName": "DaVinci Resolve",
+			"status": 7,
+			"language": "CN",
+			"languageStatus": [1],
+			"sourceStatus": 2,
+			"timestamp": 1589353310488,
+			"date": "2021.02",
+			"system": "Win",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/DaVinci_Resolve by ViccoVlog.tb"
+				}
+			],
+			"downloadNum": 140,
+			"likeNum": 133
 		},
 		{
 			"title":"DaVinci Resolve",
@@ -1249,6 +1275,27 @@
 				{
 					"lan": "CN",
 					"url": "src/preset/SAI by asdfzxcv2020.tb"
+				}
+			],
+			"downloadNum": 140,
+			"likeNum": 133
+		},
+		{
+			"title":"After Effects",
+			"author": "xiaobao",
+			"from": "User",
+			"subnavName": "After Effects",
+			"status": 16,
+			"language": "CN",
+			"languageStatus": [1],
+			"sourceStatus": 2,
+			"timestamp": 1589353310488,
+			"date": "2021.02",
+			"system": "Win",
+			"downloadUrlList": [
+				{
+					"lan": "CN",
+					"url": "src/preset/Ae by xiaobao.tb"
 				}
 			],
 			"downloadNum": 140,
