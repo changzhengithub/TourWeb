@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "V.2.2.5",
+			"editionDate": "2021.02.22",
+			"versionTitle": "2.2.5 소프트웨어 업데이트 공지",
+			"summary": "새로운 기능",
+			"desList": [
+				{
+					"title": "버그스 수정.",
+					"textList": []
+				},
+        {
+					"title": "Apple Notarizition를 통과하였습니다.",
+					"textList": [
+						"이번 업데이트 후 TourBox Console 처음 사용 시,  화면에 나타나는 안내에 따라 '보조 기능 권한'을 재부여해야 합니다."
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "V.2.2.4",
 			"editionDate": "2021.01.14",

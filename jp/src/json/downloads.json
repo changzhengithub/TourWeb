@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "V.2.2.5",
+			"editionDate": "2021.2.22",
+			"versionTitle": "2.2.5ソフトウェア更新のお知らせ",
+			"summary": "更新内容",
+			"desList": [
+				{
+					"title": "バグを修正。",
+					"textList": []
+				},
+        {
+					"title": "Appleのアプリ公証を取得しました。",
+					"textList": [
+						"アップデートした後、初めてソフトを開くときはヒントの指示通りアクセシビリティを再度チェックして下さい。"
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "V.2.2.4",
 			"editionDate": "2021.01.14",

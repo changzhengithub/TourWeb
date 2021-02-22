@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "Version 2.2.5",
+			"editionDate": "22. Februar 2021",
+			"versionTitle": "Version 2.2.5 – Hinweise zur Software",
+			"summary": "Neue Funktionen",
+			"desList": [
+				{
+					"title": "Beheben Sie Fehler.",
+					"textList": []
+				},
+        {
+					"title": "Apple-Notarisierung bestanden.",
+					"textList": [
+						"Wenn Sie nach diesem Upgrade die TourBox-Konsole zum ersten Mal öffnen, müssen Sie gemäß den Eingabeaufforderungen erneut die Berechtigung 'Zusatzfunktion' erteilen."
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "Version 2.2.4",
 			"editionDate": "14. Januar 2021",

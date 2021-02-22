@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "V.2.2.5",
+			"editionDate": "2021.02.22",
+			"versionTitle": "2.2.5 Software Release Notes",
+			"summary": "What’s New",
+			"desList": [
+        {
+					"title": "Fix the bugs.",
+					"textList": []
+				},
+				{
+					"title": "TourBox Console software is now notarized by Apple.",
+					"textList": [
+						"After this upgrade, please follow the prompts to recheck TourBox in the Accessibility  when the first time you open it."
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "V.2.2.4",
 			"editionDate": "2021.01.14",

@@ -35,7 +35,7 @@
 				<h1>TOURBOX 콘솔</h1>
 				<div class="detail-parame">
 					<p class="parame-text">소프트웨어 버전 : 2.2.5</p>
-					<p class="parame-text">마지막 업데이트 : 2021.02.08</p>
+					<p class="parame-text">마지막 업데이트 : 2021.02.22</p>
 					<p class="parame-text">파일 크기 : macOS(60M)/Windows(70M)</p>
 					<p class="parame-text">운영 시스템 : Windows 7 이상 / macOS 10.10 이상</p>
 					<p class="parame-text">언어 : 영어, 일본어, 한국어, 중국어(번체), 중국어 간체, 독일어, 프랑스어, 스페인어, 이탈리어</p>
@@ -61,9 +61,9 @@
 						<p class="des-title">{{version.versionTitle}}</p>
 						<p class="des-summary">{{version.summary}}</p>
 						<ul class="des-text" v-for="(des, desIndex) in version.desList" :key="desIndex">
-							<li class="text-title" v-if="des.title" :class="{'list-type': index == versions.length - 3}">{{des.title}}
+							<li class="text-title" v-if="des.title" :class="{'list-type': index == versions.length - 3 || index == versions.length - 14}">{{des.title}}
 							</li>
-							<li class="text-detail" :class="{'list-type': index != versions.length - 3}"
+							<li class="text-detail" :class="{'list-type': index != versions.length - 3 && index != versions.length - 14}"
 								v-for="(text, textIndex) in des.textList" :key="textIndex">{{text}}</li>
 						</ul>
 					</div>
