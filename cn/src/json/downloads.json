@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "V.2.2.5",
+			"editionDate": "2021.02.22",
+			"versionTitle": "2.2.5 软件更新公告",
+			"summary": "新功能",
+			"desList": [
+				{
+					"title": "修复bugs。",
+					"textList": []
+				},
+        {
+					"title": "通过苹果公证。",
+					"textList": [
+						"本次升级后，首次打开TourBox Console，需要根据提示重新赋予“辅助功能权限”。"
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "V.2.2.4",
 			"editionDate": "2021.01.14",

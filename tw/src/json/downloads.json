@@ -1,5 +1,23 @@
 {
 	"versions": [
+    {
+			"editionNum": "V.2.2.5",
+			"editionDate": "2021.02.22",
+			"versionTitle": "2.2.5軟體更新公告",
+			"summary": "新功能",
+			"desList": [
+        {
+					"title": "修復bugs。",
+					"textList": []
+				},
+				{
+					"title": "通過 Apple Notarizition（蘋果公證）。",
+					"textList": [
+						"本次升級後，首次打開TourBox Console，需要根據提示重新允許“輔助使用權限”。"
+					]
+				}
+			]
+		},
 		{
 			"editionNum": "V.2.2.4",
 			"editionDate": "2021.01.14",

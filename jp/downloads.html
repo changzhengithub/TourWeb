@@ -34,19 +34,19 @@
 			<div class="banner-detail">
 				<h1>TOURBOXコンソール</h1>
 				<div class="detail-parame">
-					<p class="parame-text">ソフトウェアバージョン：2.2.4</p>
-					<p class="parame-text">更新時間：2021.01.14（木）</p>
+					<p class="parame-text">ソフトウェアバージョン：2.2.5</p>
+					<p class="parame-text">更新時間：2021.02.22（	月）</p>
 					<p class="parame-text">ファイルサイズ：macOS(60M)/Windows(70M)</p>
 					<p class="parame-text">対応システム：Windows 7以上/macOS 10.10 以上</p>
 					<p class="parame-text">言語：英語、日本語、韓国語、繫体字中国語、簡体字中国語、ドイツ語、フランス語、スペイン語、イタリア語</p>
 				</div>
 				<div class="detail-btn btn-desk">
 					<a href="mac-download.html"><span>macOS</span><i class="iconfont iconmac"></i></a>
-					<a href="src/downloads/TourBox Win_2.2.4.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
+					<a href="src/downloads/TourBox Win_2.2.5.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
 				</div>
 				<div class="detail-btn btn-mobile">
-					<a href="src/downloads/TourBox macOS_2.2.4.zip"><span>macOS</span><i class="iconfont iconmac"></i></a>
-					<a href="src/downloads/TourBox Win_2.2.4.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
+					<a href="src/downloads/TourBox macOS_2.2.5.zip"><span>macOS</span><i class="iconfont iconmac"></i></a>
+					<a href="src/downloads/TourBox Win_2.2.5.zip"><span>Windows</span> <i class="iconfont iconwin"></i></a>
 				</div>
 			</div>
 		</div>
@@ -61,9 +61,9 @@
 						<p class="des-title">{{version.versionTitle}}</p>
 						<p class="des-summary">{{version.summary}}</p>
 						<ul class="des-text" v-for="(des, desIndex) in version.desList" :key="desIndex">
-							<li class="text-title" v-if="des.title" :class="{'list-type': index == versions.length - 3}">{{des.title}}
+							<li class="text-title" v-if="des.title" :class="{'list-type': index == versions.length - 3 || index == versions.length - 14}">{{des.title}}
 							</li>
-							<li class="text-detail" :class="{'list-type': index != versions.length - 3}"
+							<li class="text-detail" :class="{'list-type': index != versions.length - 3 && index != versions.length - 14}"
 								v-for="(text, textIndex) in des.textList" :key="textIndex">{{text}}</li>
 						</ul>
 					</div>
