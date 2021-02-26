@@ -152,10 +152,11 @@
 					url: "https://www.tourboxtech.com/shop-api/email",
 					type: "post",
 					dataType: "json",
-					data: {
+          contentType: "application/json",
+					data: JSON.stringify({
 						"email": _this.email,
 						"source": "de"
-					},
+					}),
 					success: function () {
 						_this.tipMsg = _this.leftData.emailSuccess
 						_this.tipColor = "#5bb75b"

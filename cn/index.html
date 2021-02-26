@@ -68,6 +68,20 @@
 						<li class="select-item flex-center" @click="checkLanguage('de')">Deutsch</li>
 					</ul>
 				</div>
+        <!-- 登录 -->
+        <div class="desk-auth">
+          <div class="auth-user">
+            <div class="user-head flex-center">
+              <i class="iconfont iconyonghu" v-if="!isLogin"></i>
+              <p v-if="isLogin">{{userInfo ? userInfo.email : ''}}</p>
+            </div>
+            <div class="user-menu" @click="openModal">
+              <div class="menu-item flex-center" v-if="!isLogin" @click="openLogin('login')"><span>登录</span></div>
+              <div class="menu-item flex-center" v-if="!isLogin" @click="openRegister('register')"><span>注册</span></div>
+              <div class="menu-item flex-center" v-if="isLogin" @click="logout"><span>退出</span></div>
+            </div>
+          </div>
+        </div>
 			</div>
 
 			<div class="header-mobile flex-vb">
@@ -106,6 +120,107 @@
 				<span>TourBox 2020</span>
 				<a class="flex-center" href="shopify-buy.html" target="_blank">购买</a>
 			</div>
+      <transition name="fade">
+        <div class="auth-container" v-show="modalShow" @click="closeModal">
+          <div class="contaienr-wrapper" @click.stop>
+            <div class="wrapper-close" v-if="isM" @click="closeModal"><i class="iconfont iconclose"></i></div>
+            <div class="wrapper-logo flex-center">
+              <a href="index.html"><i class="iconfont iconlogo"></i></a>
+            </div>
+            <div class="wrapper-title"><span>{{formState.text.title}}</span></div>
+            <div class="wrapper-form">
+              <div class="form-tip"><span>{{formState.text.tipText}}</span></div>
+              <!-- 邮箱 -->
+              <div class="form-item" v-show="formState.show.email">
+                <div class="item-input">
+                  <input class="input-email" type="text" placeholder="邮箱*" v-model="email" @focus="getFocus"
+                    @blur="blurFocus($event, 'verifyEmail', email)">
+                </div>
+                <p class="item-tip"></p>
+              </div>
+              <!-- 验证码 -->
+              <div class="form-item" v-show="formState.show.code">
+                <div class="item-input">
+                  <input type="text" v-model="code" placeholder="请输入验证码*" @focus="getFocus"
+                    @blur="blurFocus($event, 'verifyCode', code)">
+                </div>
+                <p class="item-tip"></p>
+              </div>
+              <div class="form-code" :class="{'code-active':codeDisabled}" v-show="formState.show.code">
+                <button :disabled="codeDisabled" @click="resetSendCode">{{formState.text.codeText}}</button>
+              </div>
+              <!-- 密码 -->
+              <div class="form-item" v-show="formState.show.password">
+                <div class="item-input flex-vc">
+                  <input type="password" placeholder="密码*" v-model="password" @focus="getFocus"
+                    @blur="blurFocus($event, 'verifyPassword', password)">
+                </div>
+                <p class="item-tip"></p>
+              </div>
+              <!-- 确认密码 -->
+              <div class="form-item" v-show="formState.show.confirm">
+                <div class="item-input">
+                  <input type="password" v-model="confirm" placeholder="再次输入密码*" @focus="getFocus"
+                    @blur="blurFocus($event, 'verifyConfirm', confirm)">
+                </div>
+                <p class="item-tip"></p>
+              </div>
+              <!-- 滑块验证码 -->
+              <div class="form-slide" v-show="formState.show.slide">
+                <div class="verify-wrap" id="verify-wrap">
+                  <div class="drag-progress dragProgress"></div>
+                  <span class="drag-btn dragBtn"></span>
+                  <span class="fix-tips fixTips">请向右滑动滑块</span>
+                  <span class="verify-msg sucMsg">验证通过</span>
+                </div>
+              </div>
+              <!-- 图形验证码 -->
+              <div class="form-verification" v-show="formState.show.verify"></div>
+    
+              <!-- 错误信息提示 -->
+              <div class="form-message">
+                <p>{{errorMsg}}</p>
+              </div>
+              <!-- 保持登录 -->
+              <div class="form-keep flex" @click="keepLogin = !keepLogin" v-show="formState.show.keep">
+                <i class="iconfont " :class="keepLogin ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+                <p>两天内保持登录</p>
+              </div>
+              <!-- 协议 -->
+              <div class="form-protocol flex" @click="isSelectUpdate = !isSelectUpdate" v-show="formState.show.protocol">
+                <i class="iconfont " :class="isSelectUpdate ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+                <p>获取TourBox最新产品、服务、软件升级等信息。</p>
+              </div>
+              <div class="form-protocol flex" @click="isSelectProtocol = !isSelectProtocol"
+                v-show="formState.show.protocol">
+                <i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+                <p>同意并愿意遵守TourBox<a href="privacy-policy.html">隐私政策</a> 和 <a href="terms-of-use.html">使用条款</a>。</p>
+              </div>
+              
+              <!-- 返回 -->
+              <div class="form-submit form-submit-margin-20" v-show="formState.show.prev">
+                <button @click="backPrev">{{formState.text.prevText}}</button>
+              </div>
+              <!-- 提交 -->
+              <div class="form-submit form-submit-margin-20" v-show="formState.show.submit">
+                <button :class="{'submit-active': !allowSubmit}" :disabled="!allowSubmit"
+                  @click="submitEvent">{{formState.text.submitText}}</button>
+              </div>
+    
+              <!-- 跳转 -->
+              <div class="form-skip flex-vb" v-if="formState.show.skip">
+                <span @click="skipStep(formState.skipType.left)">{{formState.skip.leftText}}</span>
+                <span @click="skipStep(formState.skipType.right)">{{formState.skip.rightText}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </transition>
+      <transition name="fade">
+        <div class="auth-load flex-center" v-if="loadShow">
+          <i class="iconfont iconloading"></i>
+        </div>
+      </transition>
 		</header>
 		<!-- main -->
 		<main class="index-main">

@@ -51,6 +51,412 @@
 .mian-update>.update-item>.item-content>h1{font-size:.3rem;color:#fff;font-weight:400;line-height:1.5}
 .mian-update>.update-item>.item-content>a{display:block;margin-top:.1rem;font-size:.16rem;color:#2a96fe;font-weight:400;line-height:1.5}
 .mian-update>.update-item>.item-active>h1{font-size:.3rem;color:#000000;font-weight:400;line-height:1.5}
+
+/* 登录 */
+.desk-auth {
+  height: 100%;
+}
+
+.desk-auth>.auth-user {
+  position: relative;
+  height: 100%;
+}
+
+.desk-auth>.auth-user>.user-head {
+  min-width: .5rem;
+  height: 100%;
+  cursor: pointer;
+}
+
+.desk-auth>.auth-user>.user-head>i {
+  font-size: .16rem;
+  color: #333;
+}
+
+.desk-auth>.auth-user>.user-head>p {
+  width: 1rem;
+  font-size: .16rem;
+  color: #333;
+  white-space: nowrap;       /* 使文本不可换行 */
+  overflow: hidden;          /* 隐藏溢出部分 */ 
+  text-overflow: ellipsis;  
+}
+
+.desk-auth>.auth-user>.user-menu {
+  position: absolute;
+  left: 50%;
+  top: .55rem;
+  z-index: 9;
+  display: none;
+  width: 1rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 1px 0px #eee;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.desk-auth>.auth-user>.user-menu>.menu-item {
+  width: 100%;
+  height: .3rem;
+  font-size: .12rem;
+  color: #1C1C1E;
+  cursor: pointer;
+}
+
+.desk-auth>.auth-user>.user-menu>.menu-item:hover {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+.desk-auth>.auth-user:hover .user-menu {
+  display: block;
+}
+
+
+.auth-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  padding-top: 10vh;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.auth-container>.contaienr-wrapper {
+  width: 510px;
+  height: 800px;
+  padding: 50px 0 0 0;
+  margin: 0 auto;
+  background-color: #fff;
+  overflow: auto;
+}
+
+.auth-container .wrapper-logo {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.auth-container .wrapper-logo>a>i {
+  font-size: 60px;
+  color: #727172;
+}
+
+.auth-container .wrapper-title {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #7F7F7F;
+  text-align: center;
+}
+
+.auth-container .wrapper-login {
+  width: 100%;
+}
+
+.auth-container .wrapper-register {
+  width: 100%;
+}
+
+.login-form,
+.register-form,
+.activate-form,
+.complete-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+
+.auth-container .wrapper-form {
+  width: 300px;
+  margin: 0 auto;
+}
+
+.form-tip {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 20px;
+  color: #38a858;
+  font-weight: 200;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.form-item {
+  width: 100%;
+  padding-top: 15px;
+}
+
+.form-item>.item-input {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 5px;
+  border: 1px solid #bbb;
+  border-radius: 2px;
+}
+
+.form-item>.item-input>input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  font-size: 14px;
+  color: #333;
+  border: none;
+  background: transparent;
+}
+
+.form-item>.item-input>input::placeholder {
+  color: #7F7F7F;
+}
+
+
+.form-item>.item-active {
+  border: 1px solid #f04848;
+}
+
+.form-item>.item-active>input {
+  color: #f04848;
+}
+
+.form-item>.item-active>input::placeholder {
+  color: #f04848;
+}
+
+.form-item>.item-tip {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 12px;
+  color: #f04848;
+}
+
+.form-submit {
+  width: 100%;
+}
+
+.form-submit-margin-20 {
+  margin-top: 20px;
+}
+
+.form-submit-margin-40 {
+  margin-top: 40px;
+}
+
+.form-submit>button {
+  width: 100%;
+  height: 50px;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #44a8f2;
+  border: 1px solid #44a8f2;
+  cursor: pointer;
+}
+
+.form-submit>.submit-active {
+  opacity: .6;
+  cursor: not-allowed;
+}
+
+.form-code {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-code>button {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #44a8f2;
+  border: 1px solid #44a8f2;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+
+.code-active>button {
+  color: #44a8f2;
+  background: #fff;
+  cursor: not-allowed;
+}
+
+.form-verification {
+  width: 100%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+}
+
+.form-slide {
+  /* height: 40px; */
+  margin-top: 20px;
+  margin-bottom: 30px;
+  /* border: 1px solid #ccc; */
+}
+
+.form-keep {
+  width: 100%;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.form-keep>i {
+  font-size: 16px;
+  color: #44A9F1;
+}
+
+.form-keep>p {
+  margin-left: 5px;
+  line-height: 1.3;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.form-protocol {
+  width: 100%;
+  padding-left: 5px;
+  margin-bottom: 15px;
+}
+
+.form-protocol>i {
+  font-size: 16px;
+  color: #44A9F1;
+}
+
+.form-protocol>p {
+  margin-left: 5px;
+  line-height: 1.3;
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.form-protocol>p>a {
+  color: #333;
+}
+
+.form-message {
+  width: 100%;
+  padding: 0 0 10px 10px;
+  font-size: 12px;
+  color: #f04848;
+}
+
+.form-skip {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #44a9f2;
+}
+
+.form-skip>span {
+  cursor: pointer;
+}
+
+.form-complete {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.form-complete>button {
+  width: 100%;
+  height: 50px;
+  font-size: 14px;
+  color: #44a8f2;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #44a8f2;
+  cursor: pointer;
+}
+
+.auth-load {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding-top: 10vh;
+  background-color: rgba(0, 0, 0, .8);
+}
+
+.auth-load>i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.verify-wrap {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  background-color: #e5e5e5;
+  border: 1px solid #e0e0e0;
+}
+
+.verify-wrap .drag-btn {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  width: 50px;
+  height: 40px;
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAAA/UlEQVRYhe3XLc9GYBjG8eN6dkdFIQuqoCiCbj6ob2CCIplRaJKqEHT3c/kAz66Xc/fLnvO3UY7N/jNmxDAMF77AQ57iOH53x5/GccTPuyNUcSg1DqXGodQ4lNr/CC3LEsuyaG8mrEKzLEPXdZjnWWszYRXq+z7yPMc0Tej7XnkzYf2Muq6LoiiwrivatsV1XUrby0Mlx3Huu7fvO5qmUd50kL31QgijTdXD+gq/zvNEVVXwPA9pmipvOqxDj+O4Q4IgQJIkypsuq9Bt21DXNaIoug/VzYRVqHw55J0Kw1BrMyHkXyj/3BHiUGocSo1DqXEota8Jvb/18hP16Z7qL3h/w53n4AAAAABJRU5ErkJggg==) no-repeat center center;
+  background-size: 100% 100%;
+  z-index: 2;
+  cursor: move;
+}
+
+.verify-wrap .suc-drag-btn {
+  background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACoAAAAiCAYAAAApkEs2AAACA0lEQVRYhe2Y2yuDYRzHv7PJYc5zKspYSRMymStXu5NCs5W4csEfwJ+gSA53csg1F4R/gSu0OcWSmNIQkfMcEvu9tdpY79793leo91Nbbft993x6nj2/52kal8v1gX+Ajp4sFstve4jidrsR99sSUlFFlUYVVRpVVGl0SnyJ934VaxczOLpdwd3bufBeWnw+StLrYc1tQ3FqnewxZIk+vz9g7rAHO9dL3z67efXBfTkrPCqymtBqGkaiNoU9FnvpSXJyzx5R8itUQ7WU4cIWnT/qhe9xS3I91VKGC0uUfpPbV4uSajUhQ1CGshxYorRxpGDObECf1Ysm40DM2a+wNhPt7mhUZzvhMI1Aq9HBkFgUUzYSrBkNtiDCkGBES/Eg8pLKwiSdplFB8uRhEzMH3RGzsSC7j9oKe1CT4wi0oEZMeRzITy4XJOM0WkFy2uOE//1O7jA8UWrm1CeJ5dMxlGXYoI/PQrd5AQlavagkZTmwlt4UOHGCnPs9wkw+vl0jSZcWdSZDsz8uas1tD3t99rSL8b0W3Lz4cHy/LrrctYEjlQNr6Y2ptag0NIf10gv/Pvo3akRzlOGe++yTyV4yhAJ9leR6qqUMF7YoXTC6zPPChSMaVEO1ci4lstoTDdxROhE4Fjv/9jUvCIkoISPGv7nhq6JKo4oqjSqqNEIfpf8f/zqf+36643RPeo8AAAAASUVORK5CYII=) no-repeat center center;
+  background-size: 100% 100%
+}
+
+.verify-wrap .drag-progress {
+  position: absolute;
+  left: 0;
+  top: -1px;
+  height: 40px;
+  border-top: 1px solid #7ac23c;
+  border-top: 1px solid #7ac23c;
+  width: 0;
+  background-color: #7ac23c;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  line-height: 40px
+}
+
+.verify-wrap .fix-tips,
+.verify-msg {
+  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 1px;
+  height: 100%;
+  color: #51555c;
+  z-index: 1;
+  line-height: 38px;
+  font-size: 12px;
+  text-align: center
+}
+
+.verify-wrap .verify-msg {
+  background-color: #7ac23c;
+  color: #fff;
+  display: none
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all .3s ease-in;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
 @media only screen and (max-width:767px){.font-title{font-size:.3rem}
 .font-text{font-size:.18rem}
 .header{position:absolute}

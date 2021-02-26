@@ -467,6 +467,13 @@
     color: #333;
   }
 
+  .form-message {
+    width: 100%;
+    padding: 0 0 10px 10px;
+    font-size: 12px;
+    color: #f04848;
+  }
+
   .form-skip {
     width: 100%;
     margin-top: 20px;
@@ -1271,11 +1278,6 @@
             </div>
             <p class="item-tip"></p>
           </div>
-          <!-- 保持登录 -->
-          <div class="form-keep flex" @click="keepLogin = !keepLogin" v-show="formState.show.keep">
-            <i class="iconfont " :class="keepLogin ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
-            <p>两天内保持登录</p>
-          </div>
           <!-- 滑块验证码 -->
           <div class="form-slide" v-show="formState.show.slide">
             <div class="verify-wrap" id="verify-wrap">
@@ -1287,6 +1289,16 @@
           </div>
           <!-- 图形验证码 -->
           <div class="form-verification" v-show="formState.show.verify"></div>
+
+          <!-- 错误信息提示 -->
+          <div class="form-message" v-if="errorMsg">
+            <p>{{errorMsg}}</p>
+          </div>
+          <!-- 保持登录 -->
+          <div class="form-keep flex" @click="keepLogin = !keepLogin" v-show="formState.show.keep">
+            <i class="iconfont " :class="keepLogin ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
+            <p>两天内保持登录</p>
+          </div>
           <!-- 协议 -->
           <div class="form-protocol flex" @click="isSelectUpdate = !isSelectUpdate" v-show="formState.show.protocol">
             <i class="iconfont " :class="isSelectUpdate ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
@@ -1297,6 +1309,7 @@
             <i class="iconfont " :class="isSelectProtocol ? 'iconxuanzekuang1' : 'iconxuanzekuang'"></i>
             <p>同意并愿意遵守TourBox<a href="privacy-policy.html">隐私政策</a> 和 <a href="terms-of-use.html">使用条款</a>。</p>
           </div>
+          
           <!-- 返回 -->
           <div class="form-submit form-submit-margin-20" v-show="formState.show.prev">
             <button @click="backPrev">{{formState.text.prevText}}</button>
@@ -1332,10 +1345,12 @@
       openLanguageShow: false,
       navList: [],
 
-      baseUrl: 'https://apimgr.hfyouzhi.com/mock/77',
+      // baseUrl: 'https://apimgr.hfyouzhi.com/mock/77',
+      baseUrl: 'http://localhost:8082',
       modalShow: false,
       loadShow: false,
       tipMsg: '',
+      errorMsg: '',
       formType: '',
       formState: {},
       formStatus: new Map([
@@ -1471,7 +1486,7 @@
       email: '87889978@qq.com',
       copyRegEmail: '', // 记录注册邮箱
       copyFindEmail: '', // 记录找回邮箱
-      password: '',
+      password: '123456789',
       confirm: '',
       verify: '',
       code: '',
@@ -1497,6 +1512,7 @@
     },
     created: function () {
       var that = this;
+      console.log(window.location.href)
       that.judgeIsMobile()
       that.getNavList();
       that.getState('login');
@@ -1574,8 +1590,8 @@
         // 清楚数据
         switch (type) {
           case 'login':
-            that.email = ''
-            that.password = ''
+            // that.email = ''
+            // that.password = ''
             break;
           case 'register':
             that.email = that.copyRegEmail
@@ -1673,7 +1689,9 @@
             that.loginSuccess(data);
           },
           error: function (err) {
-            alert(err)
+            console.log(err)
+            that.loadShow = false
+            that.errorMsg = '邮箱或密码错误'
           }
         })
       },
@@ -1729,10 +1747,8 @@
           url: `${that.baseUrl}/shop-api/user-register`,
           type: "post",
           dataType: "json",
-          data: {
-            email: that.email,
-            password: that.password
-          },
+          contentType: "application/json",
+          data: JSON.stringify({"email": that.email,"password": that.password}),
           success: function (data) {
             console.log(data)
             that.loadShow = false
@@ -1751,7 +1767,9 @@
             }
           },
           error: function (err) {
-            alert(err)
+            console.log(err)
+            // that.errorMsg = err.message
+            that.loadShow = false
           }
         })
       },
@@ -1916,6 +1934,35 @@
         }, 1000)
       },
       
+      // 注册邮箱检测
+      regEmailCheck: function() {
+        var that = this;
+        $.ajax({
+          url: `${that.baseUrl}/shop-api/email-reg-check/${that.email}`,
+          type: "get",
+          dataType: 'json',
+          success: function (data) {
+            console.log(data)
+            that.errorMsg = ''
+          },
+          error: function (err) {
+            console.log(err);
+            if (err.status) {
+              switch (err.status) {
+                case 409:
+                  that.errorMsg = '邮箱已存在'
+                  break;
+                case 400:
+                  that.errorMsg = '参数缺失'
+                  break;
+                case 403:
+                  that.errorMsg = '请求次数过多，请稍后再试'
+                  break;
+              }
+            }
+          }
+        })
+      },
       getFocus(e) {
         var that = this;
         that.tipMsg = ''
@@ -1928,19 +1975,7 @@
           return
         }
         // 注册邮箱失焦验证
-        if (that.formType === 'register' && $(e.currentTarget).attr('class') === 'input-email') {
-          $.ajax({
-            url: `${that.baseUrl}/shop-api/email-reg-check/${that.email}`,
-            type: "get",
-            success: function (data) {
-              console.log(data)
-            },
-            error: function (err) {
-              // $(e.currentTarget).parent().addClass('item-active').next().show().text(err);
-              alert(err)
-            }
-          })
-        }
+        if (that.formType === 'register' && $(e.currentTarget).attr('class') === 'input-email') that.regEmailCheck();
       },
       clearFocus: function() {
         var that = this;
@@ -1949,6 +1984,7 @@
           $(this).parent().removeClass('item-active').next().hide().text();
         })
       },
+
       openModal: function () {
         var that = this;
         that.modalShow = true

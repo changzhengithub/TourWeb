@@ -62,9 +62,8 @@ new Vue({
 				url: "https://www.tourboxtech.com/shop-api/affiliate",
 				type: "post",
 				dataType: "json",
-				data: {
-					"content": str
-				},
+        contentType: "application/json",
+				data: JSON.stringify({"content": str}),
 				success: function () {
 					_this.tipMsg = 'Submitted successfully'
 					_this.tipColor = "#5bb75b"
