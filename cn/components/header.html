@@ -1499,7 +1499,7 @@
       countDownSec: 0,
       codeStatus: undefined, // 验证码类型 0 激活码 1 找回密码
       preStepType: 0, // 判断返回状态 0 登录 1 注册
-      expireDate: 2 * 24 * 60 * 60,
+      expireDate: 2 * 24 * 60 * 60, //过期时间
 
       slideEl: null,
       slideBtn: null,
@@ -1584,14 +1584,15 @@
       getState: function (type) {
         var that = this;
         that.clearFocus();
+        that.errorMsg = ''
         that.formType = type
         that.formState = that.formStatus.get(that.formType)
         that.submitEvent = that[that.formState.submitType]
         // 清楚数据
         switch (type) {
           case 'login':
-            // that.email = ''
-            // that.password = ''
+            that.email = ''
+            that.password = ''
             break;
           case 'register':
             that.email = that.copyRegEmail
@@ -1608,8 +1609,8 @@
             that.copyFindEmail = ''
             break;
           default:
-            // that.copyRegEmail = ''
-            // that.copyFindEmail = ''
+            that.copyRegEmail = ''
+            that.copyFindEmail = ''
             break;
         }
       },
@@ -1618,7 +1619,7 @@
         var that = this;
         var storage = window.localStorage;
         var session = window.sessionStorage;
-        var currentStamp = Date.now();
+        var currentStamp = parseInt(new Date().getTime()/1000);
 
         var cacheType = storage.getItem('cacheType');
         if (cacheType == 1) {
@@ -1677,11 +1678,12 @@
           url: `${that.baseUrl}/shop-api/user-auth`,
           type: "post",
           dataType: "json",
-          data: {
+          contentType: "application/json",
+          data: JSON.stringify({
             email: that.email,
             password: that.password,
             expire_in: that.keepLogin ? that.expireDate : 0
-          },
+          }),
           success: function (data) {
             console.log(data)
             that.loadShow = false
@@ -1691,7 +1693,19 @@
           error: function (err) {
             console.log(err)
             that.loadShow = false
-            that.errorMsg = '邮箱或密码错误'
+            if (err.status) {
+              switch (err.status) {
+                case 400:
+                  that.errorMsg = '参数缺失'
+                  break;
+                case 401:
+                  that.errorMsg = '用户名或密码错误'
+                  break;
+                case 403:
+                  that.errorMsg = '登录超过次数，请30分钟后再试'
+                  break;
+              }
+            }
           }
         })
       },
@@ -1700,7 +1714,7 @@
         // 缓存登录信息
         // cacheType 缓存类型 1 storage 2 session
         var userInfo = JSON.stringify(data);
-        var expire = data.creation_time * 1000 + that.expireDate * 1000
+        var expire = data.creation_time + that.expireDate * 1000
         var storage = window.localStorage;
         var session = window.sessionStorage;
         storage.clear();
@@ -1755,7 +1769,7 @@
             that.registerInfo = data
             // 是否激活
             if (data.is_activated) {
-              alert('邮箱已存在');
+              console.log('邮箱已存在');
             } else {
               that.copyRegEmail = that.email
               that.preStepType = 1
@@ -1768,8 +1782,17 @@
           },
           error: function (err) {
             console.log(err)
-            // that.errorMsg = err.message
             that.loadShow = false
+            if (err.status) {
+              switch (err.status) {
+                case 400:
+                  that.errorMsg = '参数缺失'
+                  break;
+                case 409:
+                  that.errorMsg = '邮箱已激活'
+                  break;
+              }
+            }
           }
         })
       },
@@ -1782,10 +1805,11 @@
           url: `${that.baseUrl}/shop-api/user-activate`,
           type: "post",
           dataType: "json",
-          data: {
+          contentType: "application/json",
+          data: JSON.stringify({
             email: that.email,
             code: that.code
-          },
+          }),
           success: function (data) {
             console.log(data)
             console.log('激活成功');
@@ -1795,10 +1819,26 @@
             that.countDownBack();
           },
           error: function (err) {
-            alert(err)
+            console.log(err);
+            that.loadShow = false
+            if (err.status) {
+              switch (err.status) {
+                case 400:
+                  that.errorMsg = '参数缺失'
+                  break;
+                case 401:
+                  that.errorMsg = '邮箱不存在'
+                  break;
+                case 403:
+                  that.errorMsg = '邮箱与激活码不匹配'
+                  break;
+                case 409:
+                  that.errorMsg = '邮箱已激活'
+                  break;
+              }
+            }
           }
         })
-
       },
       // 注册完成倒计时刷新页面
       countDownBack: function () {
@@ -1841,6 +1881,7 @@
         $.ajax({
           url: `${that.baseUrl}/shop-api/forgot-password/${that.email}`,
           type: "get",
+          dataType: 'json',
           success: function (data) {
             that.loadShow = false
             that.copyFindEmail = that.email
@@ -1851,7 +1892,18 @@
             that.countDown(that.codeStatus)
           },
           error: function (err) {
-            alert(err)
+            console.log(err);
+            that.loadShow = false
+            if (err.status) {
+              switch (err.status) {
+                case 400:
+                  that.errorMsg = '参数缺失'
+                  break;
+                case 404:
+                  that.errorMsg = '邮箱未注册或未激活'
+                  break;
+              }
+            }
           }
         })
       },
@@ -1866,10 +1918,11 @@
           url: `${that.baseUrl}/shop-api/reset-password`,
           type: "post",
           dataType: "json",
-          data: {
+          contentType: "application/json",
+          data: JSON.stringify({
             code: that.code,
             password: that.password
-          },
+          }),
           success: function (data) {
             that.loadShow = false
             console.log(data)
@@ -1877,7 +1930,9 @@
             that.getState('forgot-complete');
           },
           error: function (err) {
-            alert(err)
+            console.log(err);
+            that.loadShow = false
+            if (err.status == 400) that.errorMsg = '参数缺失'
           }
         })
       },
@@ -2053,7 +2108,8 @@
           }
         })
       },
-      // 初始化滑块
+
+      // 滑块验证码初始化
       initEle: function () {
         var that = this;
         that.slideEl = $('#verify-wrap')
@@ -2070,6 +2126,7 @@
         that.touchMove();
         that.touchEnd();
       },
+      // 滑块鼠标滑动
       mouseDown: function () {
         var that = this;
         var ifThisMousedown = false;
@@ -2116,6 +2173,7 @@
           });
         })
       },
+      // 滑块touch滑动开始
       touchStart: function () {
         var that = this;
         that.slideBtn.on('touchstart', function (e) {
@@ -2205,6 +2263,8 @@
         var that = this;
         return that.getDragWrapWid() - that.getDragBtnWid()
       },
+
+      // 输入框验证
       verifyEmail: function (email) {
         var that = this;
         email = email ? email.replace(/\s+/g, '') : email
